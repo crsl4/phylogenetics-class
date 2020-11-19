@@ -40,14 +40,6 @@ By the end of the course, you will be able to
 5. Orally present the results of your own phylogenomic data analyses based on the best scientific and reproducibility practices
 
 
-## Grading and key dates
-- Draft of final report for peer-evaluation (due April 9): 4%
-- Peer evaluation [not evaluating people] (due April 16): 24%
-- Final research report (due April 30): 24%
-- Reproducible script (due April 30): 24% 
-- Final presentation (05/04 or 05/06): 24%
-
-
 ## Textbooks:
 - Phylogenetics in the Genomic Era ([open access book](https://hal.inria.fr/PGE/page/table-of-contents)) by Celine Scornavacca, Frederic Delsuc and Nicolas Galtier
 - Tree thinking: an introduction to phylogenetic biology by David Baum and Stacey Smith (optional)
