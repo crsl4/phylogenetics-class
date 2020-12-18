@@ -11,7 +11,7 @@ Spring 2021: Friday 8:55-9:45am (online via Zoom)
 **Class description:** 
 This course will be a journal club where students will read and discuss the current literature related to phylogenomic analyses. The course will focus on topics relevant for biologists using phylogenomics as part of their research. Topics include model misspecifications and violation of assumptions, propagation of alignment errors into the estimation pipeline, and evaluation of the limits of state-of-the-art methods on a variety of real-life datasets.
 
-**Class website:** TBD
+**Class website:** https://github.com/crsl4/phylogenetics-class/tree/master/PP875
 
 ## Topics
 
