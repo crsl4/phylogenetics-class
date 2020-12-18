@@ -15,7 +15,8 @@ This course will be a journal club where students will read and discuss the curr
 
 ## Topics
 
-- We will read papers related to how the weaknesses and limitations in the inference of phylogenies:
+We will read papers: 
+1. related to weaknesses and limitations in phylogenetic inference:
     - Errors in the alignment/orthology detection
     - Model misspecification
     - Violation of model assumptions e.g.
@@ -24,8 +25,8 @@ This course will be a journal club where students will read and discuss the curr
         - Gene Flow
         - Presence of Paralogs
         - Molecular clock
-- We will read papers related to measures of support and confidence values for phylogenetic estimates
-- We will read papers related to performance evaluations of widely used methods with messy data
+2. related to measures of support and confidence values for phylogenetic estimates
+3. related to performance evaluations of widely used methods with messy data
 
 ## Schedule
 
