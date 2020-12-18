@@ -26,7 +26,7 @@ None, but strongly encouraged:
 - A course in stats/probability
 
 
-**Class website:** TBD
+**Class website:** https://github.com/crsl4/phylogenetics-class
 
 
 ## Learning outcomes
@@ -55,6 +55,41 @@ By the end of the course, you will be able to
 - Molecular dating and divergence time estimation
 - Two roads ahead: concatenation vs coalescent (coestimation vs two-step); likelihood vs bayesian; likelihood vs distance/parsimony
 - Pitfalls in phylogenomics: practical guidelines when analyzing big data
+
+## Schedule
+
+| Session | Topic | Preparation | At the end of the session |
+| :---:   | :---: | :---:       | :---:                     |
+| 01/26
+| 01/28
+| 02/02
+| 02/04
+| 02/09
+| 02/11
+| 02/16
+| 02/18
+| 02/23
+| 02/25
+| 03/02
+| 03/04
+| 03/09
+| 03/11
+| 03/16
+| 03/18
+| 03/23
+| 03/25
+| 03/30
+| 04/01
+| 04/06
+| 04/08
+| 04/13
+| 04/15
+| 04/20
+| 04/22
+| 04/27
+| 04/29
+| 05/04
+| 05/06
 
 
 ## Academic Policies
