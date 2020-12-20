@@ -60,8 +60,7 @@ We will read papers:
 |         | Group 2: Assessing Confidence in Root Placement, [link](https://www.biorxiv.org/content/10.1101/2020.07.31.230144v1)
 | 03/26   | Group 1: Irreproducibility in maximum likelihood, [link](https://www.nature.com/articles/s41467-020-20005-6) | [slides](https://docs.google.com/presentation/d/1IpRZTz_lv3mN2BxhTuBfclxUFzS3M9mBHF1EK00g_Gk/edit?usp=sharing) |
 |         | Group 2: Long branch effects distort maximum likelihood, [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0036593) | |
-| 04/02   | Group 1: ILS in mammals [link](https://academic.oup.com/sysbio/article/66/1/112/2449707)
- | [slides](https://docs.google.com/presentation/d/1SSLh4asEhhVHpb78wna1ubNSMARGBbvH_ygnmsZDdI4/edit?usp=sharing) |
+| 04/02   | Group 1: ILS in mammals [link](https://academic.oup.com/sysbio/article/66/1/112/2449707) | [slides](https://docs.google.com/presentation/d/1SSLh4asEhhVHpb78wna1ubNSMARGBbvH_ygnmsZDdI4/edit?usp=sharing) |
 |         | Group 2: Sources of error inherent in species-tree estimation, [link](https://academic.oup.com/sysbio/article/59/5/573/1647664) | |
 | 04/09   | Group 1: Plant phylogenomics, [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5895195/) | [slides](https://docs.google.com/presentation/d/1k69NgMkRtUQk-ZioKs_W3k-nH-0LJwt9OMFKtPfpmRM/edit?usp=sharing) |
 |         | Group 2: Why Do Phylogenomic Data Sets Yield Conflicting Trees?, [link](https://academic.oup.com/sysbio/article/66/5/857/3091102)
