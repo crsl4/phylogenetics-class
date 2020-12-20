@@ -74,6 +74,3 @@ We will read papers:
 |         | Group 2: The effect of alignment uncertainty, [link](https://bmcevolbiol.biomedcentral.com/articles/10.1186/s12862-019-1534-9) | |
 
 
-## List of papers
-
-TBD
