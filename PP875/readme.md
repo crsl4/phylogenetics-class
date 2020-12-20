@@ -28,12 +28,24 @@ We will read papers:
 2. related to measures of support and confidence values for phylogenetic estimates
 3. related to performance evaluations of widely used methods with messy data
 
+## Format of the class
+
+- The class will follow the structure of a jigsaw dynamic:  
+    - There will be two groups in class: group 1 and group 2
+    - Each group will read one paper ahead of class
+- The class format will be:
+    - 8:55-9:10 (15min): Each group will be in a breakout room where they will discuss their paper and prepare a 10-min presentation for the whole class
+    - 9:10-9:25 (15min): 10-minute presentation of group 1 with 5 minutes for questions
+    - 9:25-9:40 (15min): 10-minute presentation of group 2 with 5 minutes for questions
+    - 9:40-9:45 (5min): Conclusions
+
 ## Schedule
 
-| Session | Topic | Reading | At the end of the session |
-| :---:   | :---: | :---:   | :---:                     |
-| 01/29
-| 02/05
+| Session | Topic        | Reading | Notes |
+| :---:   | :---:        | :---:   | :---:                     |
+| 01/29   | Introduction |         |  |
+| 02/05   | Alignment    | Group 1: Comparison of multiple sequence alignment methods [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0018093) | |
+|         |              | Group 2: Alignathon [link](https://genome.cshlp.org/content/24/12/2077) | |
 | 02/12
 | 02/19
 | 02/26
