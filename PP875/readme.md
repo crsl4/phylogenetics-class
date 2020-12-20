@@ -63,8 +63,7 @@ We will read papers:
 | 04/02   | Group 1: ILS in mammals [link](https://academic.oup.com/sysbio/article/66/1/112/2449707) | [slides](https://docs.google.com/presentation/d/1SSLh4asEhhVHpb78wna1ubNSMARGBbvH_ygnmsZDdI4/edit?usp=sharing) |
 |         | Group 2: Sources of error inherent in species-tree estimation, [link](https://academic.oup.com/sysbio/article/59/5/573/1647664) | |
 | 04/09   | Group 1: Plant phylogenomics, [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5895195/) | [slides](https://docs.google.com/presentation/d/1k69NgMkRtUQk-ZioKs_W3k-nH-0LJwt9OMFKtPfpmRM/edit?usp=sharing) |
-|         | Group 2: Why Do Phylogenomic Data Sets Yield Conflicting Trees?, [link](https://academic.oup.com/sysbio/article/66/5/857/3091102)
- | |
+|         | Group 2: Why Do Phylogenomic Data Sets Yield Conflicting Trees?, [link](https://academic.oup.com/sysbio/article/66/5/857/3091102) | |
 | 04/16   | Group 1: Inferring Ancient Relationships, [link](https://academic.oup.com/icb/article/58/4/623/5049468) | [slides](https://docs.google.com/presentation/d/1CfGru3h2AYQ0QtUwoocla4GZPEA6MBAL6ZoOEJHWMgk/edit?usp=sharing) |
 |         | Group 2: Is recombination a problem?, [link](https://academic.oup.com/sysbio/article/61/4/691/1637909) | |
 | 04/23   | Group 1: Evaluating Fast Maximum Likelihood, [link](https://academic.oup.com/mbe/article/35/2/486/4644721) | [slides](https://docs.google.com/presentation/d/1Jtyio57XKh0jBL1fGyzJQlgj57P3Uptg7ohhFFflA3M/edit?usp=sharing) |
