@@ -1,4 +1,4 @@
-# Botany 563 Phylogenetic Analysis Of Molecular Data (UW-Madison)
+# Botany 563 Phylogenetic Analysis of Molecular Data (UW-Madison)
 
 Spring 2021: Tuesday and Thursday 1:00-2:15pm (online via Zoom)
 
@@ -45,6 +45,20 @@ By the end of the course, you will be able to
 - _Tree thinking: an introduction to phylogenetic biology_ by David Baum and Stacey Smith (optional)
 - _The Phylogenetic Handbook_ by Philippe Lemey, Marco Salemi and Anee-Mieke Vandamme (optional)
 
+## Format of the class
+
+The classes will be a combination of lectures and participative in-class exercises and discussions. Each student is expected to bring to class a dataset that they would like to analyze and homework will involve students applying the material covered in lecture on their respective datasets. There will not be any graded homeworks.
+
+By the end of the semester, we will change the format of the class into active literature discussions where we will do a jigsaw activity: the class will be divided in groups and each group will read a paper ahead of class. During class, we will begin with 15 minutes in breakout rooms where each group will prepare a 10-minute presentation of their paper to present to the whole class.
+
+Out-of-class communication will be done via Slack where students will be able to ask and answer questions regarding the lectures and exercises.
+
+## Grading and key dates
+- Draft of final report for peer-evaluation (due April 9): 5%
+- Peer evaluation of another student's report (due April 16): 5%
+- Final research report (due April 30): 30%
+- Reproducible script (due April 30): 30% 
+- Final presentation (05/04 or 05/06): 30%
 
 ## Topics
 
