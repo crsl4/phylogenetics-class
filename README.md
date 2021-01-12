@@ -62,3 +62,7 @@ By the end of the course, you will be able to
 | 05/04
 | 05/06
 
+
+### More details
+
+See list of topics and academic policies in the [syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md)

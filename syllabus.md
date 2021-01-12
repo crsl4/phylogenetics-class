@@ -41,9 +41,9 @@ By the end of the course, you will be able to
 
 
 ## Textbooks:
-- Phylogenetics in the Genomic Era ([open access book](https://hal.inria.fr/PGE/page/table-of-contents)) by Celine Scornavacca, Frederic Delsuc and Nicolas Galtier
-- Tree thinking: an introduction to phylogenetic biology by David Baum and Stacey Smith (optional)
-- The Phylogenetic Handbook by Philippe Lemey, Marco Salemi and Anee-Mieke Vandamme (optional)
+- _Phylogenetics in the Genomic Era_ ([open access book](https://hal.inria.fr/PGE/page/table-of-contents)) by Celine Scornavacca, Frederic Delsuc and Nicolas Galtier
+- _Tree thinking: an introduction to phylogenetic biology_ by David Baum and Stacey Smith (optional)
+- _The Phylogenetic Handbook_ by Philippe Lemey, Marco Salemi and Anee-Mieke Vandamme (optional)
 
 
 ## Topics
@@ -72,7 +72,7 @@ By the end of the course, you will be able to
 3. Phylogenomics in big data
 
 
-### Topics not covered (if time allows)
+### Topics if time allows
 
 7. Dating
 8. Reconciliation
