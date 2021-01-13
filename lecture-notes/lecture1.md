@@ -57,4 +57,7 @@ Let's see the level of the class on phylogenetics knowledge with [this short pol
 
 ## Learning values
 
-xxx
+To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1uBI-k4m0QDKSib70yAzawDMtbqxB4IC0EopSiYn_I2g/edit?usp=sharing).
+
+
+## Questions?
