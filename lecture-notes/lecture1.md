@@ -59,5 +59,8 @@ Let's see the level of the class on phylogenetics knowledge with [this short pol
 
 To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1uBI-k4m0QDKSib70yAzawDMtbqxB4IC0EopSiYn_I2g/edit?usp=sharing).
 
+## Final housekeeping
+
+Please fill out [this google form](https://docs.google.com/forms/d/e/1FAIpQLSfm7PH03QbfbutanI_567xO3VRecWvMYEVxbzUAgQooBEz77w/viewform?usp=sf_link) with your wiscmail. I will use this list to give you access to the Google Shared Drive with necessary files for in-class exercises.
 
 ## Questions?

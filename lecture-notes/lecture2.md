@@ -28,7 +28,7 @@
 
 ------
 
-# HAL 2.1 To What Extent Current Limits of Phylogenomics Can Be Overcome?
+# [HAL 2.1] To What Extent Current Limits of Phylogenomics Can Be Overcome?
 
 ## Concept flowchart
 
@@ -39,6 +39,10 @@
 ![](../assets/pics/hal2.1-fig1.png)
 
 ![](../assets/pics/hal2.1-fig2.png)
+
+## Class summary
+
+xxx
 
 ## Chapter summary
 
@@ -201,7 +205,15 @@ than modelling partition-wide heterotachy (**Wang et al, 2019** in journal club)
 - Don't disregard potential software error
 - Interesting notion of computational footprint
 
-# Case studies
+# In-class exercise: Case studies in HAL 2.1
+
+**Time:** 20 minutes in breakout rooms and 10 minutes for presentations (5 minutes per group)
+
+**Instructions:** In breakout rooms, review the case study assign to your group and design a 5-minute presentation for the whole class where you answer the question: Which specific cost of over-simplification is illustrated in this case study and what tools were used to address it? Connect your answer to the concepts in the [Concept Flowchart](#concept-flowchart).
+
+**Case studies:** [HAL 2.1](https://hal.inria.fr/PGE/hal-02535366) Section 4. Group 1 will go over Case Study in 4.1 and Group 2 will go over Case Study in 4.2.
+
+**Presentation slides:** Use [these google slides](https://docs.google.com/presentation/d/1kiFcuAt9MpmynXc-PFocqX4RTFmb3VtMMr_S0XZJ_R0/edit?usp=sharing) to plan your presentations.
 
 
   
