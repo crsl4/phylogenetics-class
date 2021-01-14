@@ -14,7 +14,7 @@
 - MJN are constructed with a distance-basec criteria: not suitable for modeling the mutational process in viruses
 
 ------
-![](../assets/pics/mavian.png)
+![](../assets/pics/Mavian.png)
 
 - Distant outgroup (sequence identity between SARS-CoV-2 and the bat virus is only 96.2%)
 
