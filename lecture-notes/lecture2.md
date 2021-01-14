@@ -60,7 +60,7 @@ xxx
 
 **Case studies:** [HAL 2.1](https://hal.inria.fr/PGE/hal-02535366) Section 4. Group 1 will go over Case Study in 4.1 and Group 2 will go over Case Study in 4.2.
 
-**Presentation slides:** Use [these google slides](https://docs.google.com/presentation/d/1kiFcuAt9MpmynXc-PFocqX4RTFmb3VtMMr_S0XZJ_R0/edit?usp=sharing) to plan your presentations.
+**Presentation slides:** Use [these google slides](https://docs.google.com/presentation/d/1kiFcuAt9MpmynXc-PFocqX4RTFmb3VtMMr_S0XZJ_R0/edit?usp=sharing) to plan your presentations. Select a note-taker from each group to write on the slides (suggestion: choose the person whose first name would be the first on an alphabetically sorted list).
 
 
 ## Further reading: short chapter summary
