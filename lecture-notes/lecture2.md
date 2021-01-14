@@ -24,6 +24,8 @@
 
 
 ------
+## To sum up...
+
 ![](../assets/pics/morel.png)
 
 ------
