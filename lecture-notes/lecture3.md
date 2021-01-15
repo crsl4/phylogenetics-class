@@ -1,4 +1,4 @@
-# Lecture 3 (draft)
+# Lecture 3
 
 At the end of today's session, you
 - will be comfortable with markdown/Rmarkdown or text reproducible scripts
