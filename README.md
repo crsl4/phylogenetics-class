@@ -32,7 +32,7 @@ By the end of the course, you will be able to
 | Session | Topic | Reading before class | At the end of the session | Notes |
 | :---:   | :---: | :---:       | :---:                     | :---: |
 | 01/26 | Introduction | [Syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md) | You will know what will be the structure of the class, the learning outcomes and the grading | [lecture1.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture1.md) | 
-| 01/28 | Motivation: why learning phylogenomics? | HAL 2.1 | You will identify the different components in phylogenomic analyses | |
+| 01/28 | Motivation: why learning phylogenomics? | HAL 2.1 | You will identify the different components in phylogenomic analyses | [lecture2.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture2.md) |
 | 02/02 | Reproducibility crash course | [Notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md) | You will be able to follow reproducibility and good computing practices throughout the semester (and beyond) | |
 | 02/04 | Introduction to sequences | | | |
 | 02/09 | Alignment  | | | |

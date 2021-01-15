@@ -1,4 +1,4 @@
-# Lecture 2 (draft)
+# Lecture 2
 
 ## The story of the conundrum of the evolution of COVID19 in four acts
 
@@ -42,13 +42,46 @@
 
 ![](../assets/pics/hal2.1-fig2.png)
 
-## Class summary
+## Cost of over-simplification
 
-xxx
+- Information loss
+    - homology search assumes that sequences were generated under a star-tree topology with equal branch lengths
+    - the model used to quantify similarity implicitly assumes that every position evolves at the same rate and that at most a single substitution has occurred at a given position
+
+- Data errors
+    - Genome annotation errors
+        - often assumes that genomes do not have any evolutionary history
+        - current annotation methods do not model chromosome structure, protein folding or interaction with other genomic regions
+
+- Model violations
+    - Sequence alignment model violations
+        - overlooking sequence function and protein structure, species-specific recombination hotspots and lineage-specific evolutionary rates
+        - indels considered characters instead of historical events
+    - Unrealistic phylogenomic inference models
+        - ignore lineage-specific composition heterogeneity,
+        - ignore site-specific substitution process heterogeneity, 
+        - heterogeneity of site-specific substitution process among lineages (i.e. heteropecilly)
+        - _Def._ Heterotachy refers to variations in lineage-specific evolutionary rates over time. In the field of molecular evolution, the principle of heterotachy states that the substitution rate of sites in a gene can change through time.
+
+- Software errors
+    - script/software does not produce the intended results
+
+## Robustness to errors
+
+- Large data
+    - Phylogenetic signal is additive
+
+- Non-additive errors
+    - Various randomly distributed errors will only produce non-additive signals
+
+- Few inconsistent cases in the ToL
+    - phylogenomic inconsistency due to short internal branches
+    - rapid diversification on ancient speciation events
+    - progressive loss of signal through multiple substitutions
 
 ## Conclusions
-- Importance of data quality
-- We need better models: joint if possible
+- Importance of data quality and model/software choices
+- Methods people: we need better models (joint if possible)
 - Don't disregard potential software error
 - Interesting notion of computational footprint
 
