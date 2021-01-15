@@ -299,7 +299,7 @@ Local after: A--B--D--(merge commit)
 
 **Objective:** Lose the fear of git conflicts.
 
-**Time:** 15 minutes
+**Time:** 20-25 minutes
 
 **Instructions:** 
 
