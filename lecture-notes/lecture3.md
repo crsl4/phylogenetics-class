@@ -142,7 +142,7 @@ Once in the new branch, you can make changes to the files, and these changes wil
 
 Based on Karl Broman's code, I changed my `.bash_profile` file to write the name of the branch where I am in the prompt.
 
-![](assets/pics/prompt.png)
+![](../assets/pics/prompt.png)
 
 See more details in the [bash_profile.md file](https://github.com/crsl4/mindful-programming/blob/master/bash_profile.md).
 
