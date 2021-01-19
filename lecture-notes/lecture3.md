@@ -4,6 +4,11 @@ At the end of today's session, you
 - will be comfortable with markdown/Rmarkdown or text reproducible scripts
 - will be comfortable with the standard git pipeline
 - will lose fear of git/GitHub conflicts
+- will prioritize reproducibility and good computing practices throughout the semester (and beyond)
+
+## Pre-class reading
+
+[My notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md)
 
 ## Reproducibility
 
@@ -362,3 +367,4 @@ Try out the exercises in Jenny Bryan's website:
 - Read [Jenny Bryan's book](https://happygitwithr.com/) if you want to learn more about git and github for R users
 - Read [these notes](http://sethrobertson.github.io/GitFixUm/fixup.html) if you have tried to use git, but made a mistake and don't know how to fix it
 - Read [Karl Broman's class notes](http://kbroman.org/Tools4RR/pages/schedule.html) if you are already a bit reproducible, but want to take your reproducibility skills to the next level
+- Read [Simona Picardi's class notes](https://ecorepsci.github.io/reproducible-science/) for a complete overview of computational tools for reproducible science

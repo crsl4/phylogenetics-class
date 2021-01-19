@@ -1,5 +1,11 @@
 # Lecture 2
 
+At the end of today's session, you will identify the different components in phylogenomic analyses.
+
+## Pre-class reading
+
+[HAL book chapter 2.1](https://www.youtube.com/watch?v=Jnk_4Maf5Fk)
+
 ## The story of the conundrum of the evolution of COVID19 in four acts
 
 ![](../assets/pics/forster.png)
