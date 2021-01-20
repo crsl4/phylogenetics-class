@@ -1,3 +1,20 @@
+---
+title: "Lecture 1"
+author: "Botany 563"
+subtitle: Introduction
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: yes
+      countIncrementalSlides: no
+  html_document:
+    df_print: paged
+---
+class: left, top
+
 # Lecture 1
 
 Welcome to Botany 563: Phylogenetic Analysis of Molecular Data!
@@ -10,6 +27,8 @@ This class is meant to prepare students to perform state-of-the-art phylogenetic
 **What this class is not...**
 This class will not expect students to memorize formulas. There are no exams or homeworks to assess the specific learning of concepts. The class will be graded via a final project where all topics will be applied on a real data analysis of the student's interest.
 
+---
+class: left, top
 
 ## How do I take full advantage of the class?
 
@@ -33,6 +52,8 @@ Slack rules:
 - Do not expect me to answer questions 24/7
 - Use the thumbs-up option to vote for a question that I should go over in class or during office hours
 
+---
+class: left, top
 
 ## Reproducibility and good computing practices quiz
 
@@ -49,18 +70,28 @@ We will learn more about reproducibility in the next class, but here are some re
 - Read [these notes](http://sethrobertson.github.io/GitFixUm/fixup.html) if you have tried to use git, but made a mistake and don't know how to fix it
 - Read [Karl Broman's class notes](http://kbroman.org/Tools4RR/pages/schedule.html) if you are already a bit reproducible, but want to take your reproducibility skills to the next level
 
+---
+class: left, top
 
 ## Phylogenetics background
 
 Let's see the level of the class on phylogenetics knowledge with [this short poll](https://pollev.com/claudiasolis197).
 
+---
+class: left, top
 
 ## Learning values
 
 To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1uBI-k4m0QDKSib70yAzawDMtbqxB4IC0EopSiYn_I2g/edit?usp=sharing).
 
+---
+class: left, top
+
 ## Final housekeeping
 
 Please fill out [this google form](https://docs.google.com/forms/d/e/1FAIpQLSfm7PH03QbfbutanI_567xO3VRecWvMYEVxbzUAgQooBEz77w/viewform?usp=sf_link) with your wiscmail. I will use this list to give you access to the Google Shared Drive with necessary files for in-class exercises.
+
+---
+class: left, top
 
 ## Questions?
