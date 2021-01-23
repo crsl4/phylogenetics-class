@@ -144,7 +144,60 @@ allows large numbers of libraries to be pooled and sequenced simultaneously duri
 
 ![](../assets/pics/multiplex.png)
 
+## Output of sequencing
+
+- Raw reads are stored in a [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format#) file
+    - Line 1: sequence identifier beginning with `@`
+    - Line 2: raw sequence
+    - Line 3: optional identifier or description beginning with `+`
+    - Line 4: quality values of the sequence (byte-represented) from lowest quality (`0x21=!`) to highest quality (`0x7e=~`)
+
+Example: 
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Quality values:
+```
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+```
+
+- The quality score of a base (known as [Phred](https://en.wikipedia.org/wiki/Phred_quality_score) or Q score) is an integer value representing the estimated probability of error
+- Let `P` be the error probability $P=10^{-Q/10}$ and thus, $Q=-10log_{10}(P)$
+
+### Illumina sequence identifiers
+
+Example:
+```
+@HWUSI-EAS100R:6:73:941:1973#0/1
+```
+
+- `HWUSI-EAS100R`: the unique instrument name
+- `6`: flowcell lane
+- `73`: tile number within the flowcell lane
+- `941`: x-coordinate of the cluster within the tile
+- `1973`: y-coordinate of the cluster within the tile
+- `#NNNNNN`: index number for a multiplexed sample (`#0` for no indexing)
+- `/1`: the member of a pair, /1 or /2 (paired-end or mate-pair reads only)
+
+Recent Illumina versions might have different identifier formats.
+
 ## 2. Quality Control (QC)
+
+- We want to assess whether samples have good quality and can be used in further analysis
+- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) is a software that reads the raw sequence (fastq file) as input and returns a html output file with key summary statistics about the quality
+- [MultiQC](https://multiqc.info/) is a software that aggregates the multiple html reports from FastQC
+- Sadly, there is not a consensus threshold on the FastQC metrics to classify samples as good or bad quality
+- [From this bioinformatics blog](https://www.kolabtree.com/blog/a-step-by-step-guide-to-dna-sequencing-data-analysis/): _I expect all samples that have gone through the same procedure (e.g. DNA extraction, library preparation) to have similar quality statistics and a majority of “pass” flags_
+
+## 3. Read trimming
+
+- QC helps to identify problematic samples but it does not improve the actual quality of the reads. To do so, we need to trim reads to remove technical sequences and low-quality ends
+- In short-read sequencing, the DNA sequence is determined one nucleotide at a time (technically, one nucleotide every sequencing cycle)
+- A known issue of sequencing methods is the decay of the accuracy with which nucleotides are determined as sequencing cycles accumulate
 
 
 # More resources
