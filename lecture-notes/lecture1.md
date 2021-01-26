@@ -101,12 +101,16 @@ class: left, top
 
 To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1uBI-k4m0QDKSib70yAzawDMtbqxB4IC0EopSiYn_I2g/edit?usp=sharing).
 
+<div style="text-align:center"><img src="../assets/pics/blackhistorymonth.png" width="350"/></div>
+
 ---
 class: left, top
 
 ## Final housekeeping
 
 Those auditing (not in the official mailing list), please use [this google form](https://docs.google.com/forms/d/e/1FAIpQLSfm7PH03QbfbutanI_567xO3VRecWvMYEVxbzUAgQooBEz77w/viewform?usp=sf_link) with your wiscmail. I will use this list to give you access to the Google Shared Drive with necessary files for in-class exercises.
+
+
 
 ---
 class: left, top
