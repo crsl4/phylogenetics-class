@@ -27,7 +27,7 @@ At the end of today's session, you will identify the different components in phy
 
 ## Pre-class reading
 
-[HAL book chapter 2.1](https://www.youtube.com/watch?v=Jnk_4Maf5Fk)
+[HAL book chapter 2.1](https://hal.inria.fr/PGE/page/table-of-contents)
 
 ---
 class: left, top
