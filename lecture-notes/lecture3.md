@@ -17,14 +17,19 @@ class: left, top
 
 # Lecture 3
 
+## Previous class check up
+- Importance of data quality and model/software choices
+- Methods people: we need better models (joint if possible)
+- Don't disregard potential software error
+
+## Learning objectives for today
 At the end of today's session, you
 - will be comfortable with markdown/Rmarkdown or text reproducible scripts
 - will be comfortable with the standard git pipeline
 - will lose fear of git/GitHub conflicts
 - will prioritize reproducibility and good computing practices throughout the semester (and beyond)
 
-## Pre-class reading
-
+**Pre-class reading:**
 [My notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md)
 
 ---
@@ -63,7 +68,7 @@ class: left, top
 - Copy output from commands as well as the commands if the output is needed to understand the story
 
 #### Don't
-- Use word
+- Use Word
 - Wait until the end to create this file (you will have forgotten important things by then)
 - Simply copy a list of commands
 - Worry about grammar, punctuation, complex sentences
@@ -76,7 +81,7 @@ class: left, top
 When you will publish your work, you want to make your reproducible script available to others.
 This is the time to worry about grammar and beautiful writing
 
-- Improve the writing and the presentation by identifying the key sections of the your work and create a workflow around those key sections
+- Improve the writing and the presentation by identifying the key sections of the your work and create a workflow around those key sections (see my `epi4k/2check-family-completeness.md` script)
 - Remove trials and errors from the main workflow and present them as a separate file
 - Start the script with dependencies and installation: what do people need to have installed and which versions to run your script?
 - Be clear about the datafiles that are used in the script
@@ -131,6 +136,14 @@ class: left, top
 - Install [git](https://happygitwithr.com/install-git.html)
 - Configuration of git [here](https://happygitwithr.com/hello-git.html)
 
+### Stop and check
+- Do you know how to open the terminal?
+- Do you get an actual path (folder location) when you type `which git` in the terminal?
+
+Note: If you are a windows user, you might need a bit more one-on-one help, so it is ok to chat more after class
+
+---
+class: left, top
 
 ### 3.3 Now, you want to start your project: git basics
 
@@ -171,7 +184,7 @@ git commit -m "updated readme"
 git push
 ```
 
-**Note:** If you use RStudio or Visual Studio Code, you can do these commands in the text editor directly (not on the terminal).
+**Note:** If you use RStudio or Visual Studio Code (VSCode), you can do these commands in the text editor directly (not on the terminal).
 
 ---
 class: left, top
@@ -189,89 +202,39 @@ git pull --ff-only  ## pull commits avoiding merge issues
 ---
 class: left, top
 
-### 3.5 Creating branches
 
-The main branch is `master`. New branches are perfect for development of side work or to allow people working in parallel.
-
-Create a new branch:
-```
-git branch new-branch
-```
-
-Change to the new branch:
-```
-git checkout new-branch
-```
-Once in the new branch, you can make changes to the files, and these changes will only appear in the branch (not in `master`).
-
-Based on Karl Broman's code, I changed my `.bash_profile` file to write the name of the branch where I am in the prompt. See more details in the [bash_profile.md file](https://github.com/crsl4/mindful-programming/blob/master/bash_profile.md).
+# Summary until this point
+- git basics
+  - git add
+  - git commit
+  - git push
+- git can be used nicely via the terminal, but there are interfaces (e.g. within RStudio or VSCode) that can be more interactive than the terminal
+- we want to work off a text file (or md file), and use the git basics to have our github version updated at all moment
 
 ---
 class: left, top
 
-When you want to move to a different branch (or back to `master`),
-you should commit (or stash) your work in a branch:
-```
-git commit --all -m "work-in-progress"
-git checkout master
-```
+## 4. Right folder format and filenames
 
-After you've done work on a branch, and you are satisfied with the code, you can merge the changes to the `master` branch:
-```
-git checkout master
-git merge new-branch
-```
+Your project folder should have the following subfolders:
+- scripts
+- data
+- results
+- figures
+- manuscript
 
----
-class: left, top
+Your files should follow the good naming practices. Read [Jenny Bryan's notes](https://speakerdeck.com/jennybc/how-to-name-files). In a nutshell,
 
-#### Merging issues?
-Do not panic! Breathe and keep in mind that your work is safe and secure by the power of git. `git status` helps you identify the problem. 
+- No spaces
+- No symbols
+- Meaningful names
+- Easy to sort
 
-From Jenny Bryan's website:
-```
-git status
-# On branch master
-# You have unmerged paths.
-#   (fix conflicts and run "git commit")
-# 
-# Unmerged paths:
-#   (use "git add <file>..." to mark resolution)
-# 
-#     both modified:      index.html
-# 
-# no changes added to commit (use "git add" and/or "git commit -a")
-```
-The file `index.html` needs to be resolved. 
-We can then open the file to see what lines are in conflict.
 
 ---
 class: left, top
 
-When you open the `index.html` file, this is what you see:
-```
-<<<<<<< HEAD:index.html
-<div id="footer">contact : email.support@github.com</div>
-=======
-<div id="footer">
- please contact us at support@github.com
-</div>
->>>>>>> new-branch:index.html
-```
-In this conflict, the lines between `<<<<<< HEAD:index.html` and `======` are the content from the branch you are currently on. The lines between `=======` and `>>>>>>> new-branch:index.html` are from the feature branch we are merging.
-
-To resolve the conflict, edit this section until it reflects the state you want in the merged result. Pick one version or the other or create a hybrid. Also remove the conflict markers `<<<<<<`, `======` and `>>>>>>`.
-```
-<div id="footer">
-please contact us at email.support@github.com
-</div>
-```
-Now run `git add index.html` and `git commit` to finalize the merge.
-
-Keep in mind that you can always abort a merge with `git merge --abort`.
-
----
-class: left, top
+# 3. More advanced git usage
 
 ### 3.6 Forking other people's repository
 
@@ -368,8 +331,12 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
+
 ---
 class: left, top
+
+#### Merging issues?
+Do not panic! Breathe and keep in mind that your work is safe and secure by the power of git. 
 
 In the abstract, this is the state on github:
 ```
@@ -379,16 +346,42 @@ And this is your local state:
 ```
 A -- B -- D (what you have)
 ```
-The easiest thing is to do `git pull` and then work out the merging issues (like with branches):
+
+
+The easiest thing is to do `git pull` and then work out the merging issues:
 ```
 $ git pull
-Auto-merging foo.R
-CONFLICT (content): Merge conflict in foo.R
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
 Automatic merge failed; fix conflicts and then commit the result.
 ```
-You just have to go to `foo.R` and pick which version you want to keep of the merging conflict, then `git add` and `git commit`.
 
-After this, you get this history:
+The file `index.html` needs to be resolved. 
+We can then open the file to see what lines are in conflict.
+
+---
+class: left, top
+
+When you open the `index.html` file, this is what you see:
+```
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>> remote:index.html
+```
+In this conflict, the lines between `<<<<<< HEAD:index.html` and `======` are the content from the branch you are currently on. The lines between `=======` and `>>>>>>> remote:index.html` are from the remote file version we are merging.
+
+To resolve the conflict, edit this section until it reflects the state you want in the merged result. Pick one version or the other or create a hybrid. Also remove the conflict markers `<<<<<<`, `======` and `>>>>>>`.
+```
+<div id="footer">
+please contact us at email.support@github.com
+</div>
+```
+Now run `git add index.html` and `git commit` to finalize the merge. You do `git push` afterwards with a clean history:
+
 ```
       Remote: A--B--C
 Local before: A--B--D
@@ -420,24 +413,7 @@ which will change as people merge their additions via pull requests. You will ne
 ---
 class: left, top
 
-## 4. Right folder format and filenames
 
-Your project folder should have the following subfolders:
-- scripts
-- data
-- results
-- figures
-- manuscript
-
-Your files should follow the good naming practices. Read [Jenny Bryan's notes](https://speakerdeck.com/jennybc/how-to-name-files). In a nutshell,
-
-- No spaces
-- No symbols
-- Meaningful names
-- Easy to sort
-
----
-class: left, top
 
 ## Homework
 
