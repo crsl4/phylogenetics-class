@@ -8,6 +8,6 @@ n = length(people)
 using Random
 s = 0130140
 Random.seed!(s);
-people[randperm(length(people))]
+people = people[randperm(length(people))]
 group1 = people[1:Integer(n/2)]
 group2 = people[Integer(n/2)+1:n]
