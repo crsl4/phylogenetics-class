@@ -35,10 +35,10 @@ We will read papers:
     - Group 1 will read the Introduction and Results of the paper
     - Group 2 will read the Methods and Conclusions of the paper
 - The class format will be:
-    - 8:55-9:10 (15min): Each group will be in a breakout room where they will discuss the sections of the  paper and prepare a 10-min presentation for the whole class
-    - 9:10-9:25 (15min): 10-minute presentation of group 1 with 5 minutes for questions
-    - 9:25-9:40 (15min): 10-minute presentation of group 2 with 5 minutes for questions
-    - 9:40-9:45 (5min): Conclusions
+    - 8:55-9:15 (20min): Each group will be in a breakout room where they will discuss the sections of the paper and prepare a 10-min presentation for the whole class
+    - 9:15-9:25 (10min): 10-minute presentation of group 1
+    - 9:25-9:35 (10min): 10-minute presentation of group 2 
+    - 9:35-9:45 (10min): Class discussion and questions
 
 ## Schedule
 
