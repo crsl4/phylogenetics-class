@@ -34,11 +34,11 @@ By the end of the course, you will be able to
 | 01/26 | Introduction | [Syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md) | You will know what will be the structure of the class, the learning outcomes and the grading | [lecture1.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture1.md) | 
 | 01/28 | Motivation: why learning phylogenomics? | HAL 2.1 | You will identify the different components in phylogenomic analyses | [lecture2.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture2.md) |
 | 02/02 | Reproducibility crash course | [Notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md) | You will prioritize reproducibility and good computing practices throughout the semester (and beyond) | [lecture3.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture3.md) |
-| 02/04 | Introduction to sequences | Watch [video1](https://www.youtube.com/watch?v=CZeN-IgjYCo), [video2](https://www.youtube.com/watch?v=fCd6B5HRaZ8), and read [Zhang et al, 2019](https://academic.oup.com/isd/article/3/5/3/5573097) | You will be able to describe the next-generation sequencing pipeline (and UCE pipeline) as well as the post-processing bioinformatics steps for quality control | [lecture4.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4.md) |
-| 02/09 | Alignment  | | | |
-| 02/11
-| 02/16 | Orthology detection  | | | |
-| 02/18
+| 02/04 | Continue with reproducibility | Have [git](https://happygitwithr.com/install-git.html) installed | | |
+| 02/09 | Introduction to sequences | Watch [video1](https://www.youtube.com/watch?v=CZeN-IgjYCo), [video2](https://www.youtube.com/watch?v=fCd6B5HRaZ8), and read [Zhang et al, 2019](https://academic.oup.com/isd/article/3/5/3/5573097) | You will be able to describe the next-generation sequencing pipeline (and UCE pipeline) as well as the post-processing bioinformatics steps for quality control | [lecture4.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4.md) |
+| 02/11 | Alignment  | | | |
+| 02/16 | 
+| 02/18 | Orthology detection  | | | |
 | 02/23 | Distance and parsimony methods  | | | |
 | 02/25
 | 03/02 | Models of evolution  | | | |

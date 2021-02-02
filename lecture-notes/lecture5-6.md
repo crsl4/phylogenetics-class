@@ -217,7 +217,7 @@ class: left, top
 # Progressive alignment
 
 ![](..assets/pics/fig9.9.png)
-_Figure 9.2 in Warnow_
+_Figure 9.9 in Warnow_
 
 What are the steps that we need to know?
 
@@ -250,7 +250,68 @@ class: left, top
 
 # Needleman-Wunsch algorithm
 
-aqui voy: falta este tema
+- **Ingredients:** 
+  - Two sequences: $A=a_1 a_2 ...a_m$ and $B=b_1 b_2 ...b_n$
+  - Denote $F(i,j)$ the minimum cost to align $A_i$ and $B_j$ based on 1) cost of gap and 2) cost of substitution
+- **Main principle:** When we want to compute $F(i,j)$, we assume that we have already computed all smaller sequences (sub-problems): $F(i-1,j-1), F(i,j-1), F(i-1,j)$.
+
+The final site of the alignment must take one of the following forms:
+
+1. $a_i$ and $b_j$ are aligned together in the final site. Then the other sites deinfe a pairwise alignment of $A_{i-1}$ and $B_{j-1}$
+2. $a_i$ is aligned with a gap in the final site. Then $A_{i-1}$ and $B_{j}$ defined a pairwise alignment
+3. $b_j$ is aligned with a gap in the final site. Then $A_{i}$ and $B_{j-1}$ defined a pairwise alignment
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm: Example of notation
+
+Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you want to align sites $a_5$ ($i=5$) and $b_3$ ($j=3$)
+
+1. $a_5$ and $b_3$ are aligned together in the final site. Then the other sites deinfe a pairwise alignment of $A_4=a_1 a_2 a_3 a_4$ and $B_2=b_1 b_2$ (we do not know how at this point)
+2. $a_5$ is aligned with a gap in the final site. Then $A_4=a_1 a_2 a_3 a_4$ and $B_3=b_1 b_2 b_3$ defined a pairwise alignment
+3. $b_3$ is aligned with a gap in the final site. Then $A_5=a_1 a_2 a_3 a_4 a_5$ and $B_2=b_1 b_2$ defined a pairwise alignment
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm: Costs
+
+1. $a_i$ and $b_j$ are aligned together in the final site. So, the cost is 0 if $a_i=b_j$ and 1 (or whatever cost of substitution defined) if they are different. Hence, the total cost is $F(i,j) = F(i-1,j-1)+cost(a_i,b_j)$
+Then the other sites deinfe a pairwise alignment of $A_{i-1}$ and $B_{j-1}$
+2. $a_i$ is aligned with a gap in the final site so that cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i-1,j)+1$
+3. $b_j$ is aligned with a gap in the final site so that cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i,j-1)+1$
+
+Finally, $F(i,j)=min (F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 )$.
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm
+
+Steps:
+1. Compute $F(i,j)$ for every $i,j$ and put in a matrix (sometimes denoted dynamic programming (DP) matrix). First column/row correspond to gap and F(0,0)=0
+2. As you fill the matrix, keep track of which of the three entries gave you the minimum with an arrow
+3. Trace back the arrows to construct the alignment (diagonal arrow=nucleotide, vertical/horizontal arrow=gap replacing the nucleotide the arrow is pointing)
+
+![](../assets/pics/fig9.3.png)
+_Figure 9.3 from Warnow_
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm: Example
+
+We want to align $S_1=ATCG$ and $S_2=TCA$ for a cost of substitution of 1 and cost of gap of 1.
+
+
+---
+class: left, top
+
+# Homework: Needleman-Wunsch algorithm
+
+**Instructions:** Redo the same example with a cost of gap of 1 and a cost of substitions of 3.
+
 
 ---
 class: left, top
@@ -273,8 +334,34 @@ class: left, top
 4. Define the cost of putting $a_i, b_j$ together
 5. Use Needleman-Wunsch to align $P_1$ and $P_2$
 
+---
+class: left, top
 
-aqui voy: hacer el ejercicio en el ipad para hacerlo en la clase; ponerlo como in-class activity
+# In-class activity
+
+**Instructions:** Align the two alignments below.
+
+![](..assets/pics/table9.7.png)
+
+
+---
+class: left, top
+
+# Homework
+
+**Instructions:** Continue with the example by calculating the cost for every pair of $a_i$ and $b_j$ and calculate the cost of the alignment below. Can you find another alignment with lower cost using the Needleman-Wunsch algorithm?
+
+![](..assets/pics/table9.9.png)
+
+
+---
+class: left, top
+
+# How to align alignments
+
+If the alignment of profiles is the optimal, then we can translate back to the original sequences:
+
+![](..assets/pics/table9.10.png)
 
 ---
 class: left, top
@@ -286,12 +373,18 @@ Needleman-Wunsch lies at the core of MSA:
 - if we have two sequences, we align them with Needleman-Wunsch
 - if we have two alignments, we first convert them to profiles, and then align the profiles with Needleman-Wunsch
 
-
-
 ---
 class: left, top
 
 # Progressive alignment
+
+### Steps
+
+1. Compute rooted binary tree (guide tree) from pairwise distances
+2. Build MSA from the bottom (leaves) up (root)
+
+![](..assets/pics/fig9.9.png)
+_Figure 9.9 in Warnow_
 
 ### Downsides
 
@@ -302,10 +395,100 @@ class: left, top
     - "polishing": breaks a set of sequences into subsets and re-aligns the induced sub-alignments
     - consistency (more later)
 
+---
+class: left, top
 
-(aqui voy): other methods; which program to choose? manual editing
+# Progressive alignment
 
-aqui podemos hacer pause para hablar de los software
+### Software: ClustalW
+
+- input sequences -> progressive alignment
+- pairwise alignment to create distance matrix and then tree based on NJ
+- sequences are down-weighted compared to how closely related they are to other sequences (to avoid a group of similar sequences to dominate the alignment)
+- different weight matrices are used: 1) for closely related sequences where high scores are given to identities and low scores ow; 2) for distantly related sequences where high scores are given to conservative amino acid matches and low score to identities (BLOSUM, PAM matrices)
+- the program varies the gap penalties (GP) for sequences and positions
+- most widely used option, but several methods have been shown more accurate and fast
+
+[Thompson, 1994, ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/)
+
+---
+class: left, top
+
+# Iterative refinement
+
+![](..assets/pics/muscle.png)
+
+[Edgar, 2004, MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623)
+
+---
+class: left, top
+
+# Iterative refinement
+
+### Software: MUSCLE
+- outperforms ClustalW in most settings but it is less scalable
+- [MAFFT](https://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html) also performs iterative refinement
+
+---
+class: left, top
+
+# Consistency-based scoring
+- consistency-based scoring: overcomes progressive alignment local-minimum problem
+- uses "weighted sum of pairs" (WSP) objective function; we want to find the MSA that maximizes the score of the alignments (or minimizes the cost)
+- Sum-of-pairs alignment
+  - the cost of a given multiple sequence alignment is defined by summing the costs of its site of induced pairwise alignments
+  - given input set S of sequences and the function for computing the cost of any pairwise alignment, find an alignment A on S such that the sum of the induced pairwise alignments is minimized
+
+---
+class: left, top
+
+# Consistency-based scoring
+
+### Software: T-coffee
+- uses intermediate sequences to improve the quality of the pairwise alignment. For example, we are aligning sequences A and C and get a pairwise alignment A-C. We need incorportate an intermediate sequence B, and pairwise A-B and B-C to then obtain the pairwise alignment (A-C)^*
+- generally more accurate than Clustalw; but not scalable to large alignments
+
+---
+class: left, top
+
+# Other algorithms
+
+### Genetic algorithm
+- SAGA uses the WSP objective function but uses genetic algorithms instead of dynamic programming (individual=alignment)
+- very accurate
+- more scalable than t-coffee, but still not super scalable
+
+### Hidden markov model
+- [UPP](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0688-z)
+- [pasta](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4424971/)
+
+### Simultaneous estimation tree/alignment
+- [sate](https://phylo.bio.ku.edu/software/sate/sate.html)
+
+
+---
+class: left, top
+
+# Which program to choose?
+- not a clear answer
+- scalability vs accuracy
+- journal club discussion: [Alignathon](https://genome.cshlp.org/content/24/12/2077)
+- filtering is more important than the specific program used (more on filtering later)
+
+# Other considerations
+
+## Nucleotide vs amino acid sequence
+- when there is choice (protein-coding genes), amino acid alignments are easier to carry out and less ambiguous; also nucleotide alignments do not recognizoe codon as a unit and can break up the reading frame; typically, you align the amino acids and then generate the corresponding nucleotide sequence alignment
+- when sequences are not protein coding, only choice is to align nucleotides
+
+## Manual editing and visualizing alignments
+- manual editing is scary because it is not reproducible
+- but many times it is necessary because automatic alignment methods are not as accurate as they should be
+
+---
+class: left, top
+
+(aqui voy): example software
 
 ---
 class: left, top
