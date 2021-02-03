@@ -20,12 +20,11 @@ class: left, top
 At the end of today's session, you
 - will be able to explain the most widely used algorithms for multiple sequence alignment
 - will be able to assess the strengths and weaknesses of each type of algorithm
-- will learn to use software xxxx
+- will learn to use different software options: ClustalW, T-Coffee and MUSCLE
 
 ## Pre-class work
 
 - Read HAL 2.2
-- Optional reading: HB 3 and [Computational phylogenetics](https://www.amazon.com/Computational-Phylogenetics-Introduction-Designing-Estimation/dp/1107184711) (Warnow) Sections 9.1-9.5, 9.11, 9.12, 9.13
 
 ---
 class: left, top
@@ -448,6 +447,8 @@ class: left, top
 - uses intermediate sequences to improve the quality of the pairwise alignment. For example, we are aligning sequences A and C and get a pairwise alignment A-C. We need incorportate an intermediate sequence B, and pairwise A-B and B-C to then obtain the pairwise alignment (A-C)^*
 - generally more accurate than Clustalw; but not scalable to large alignments
 
+[Notredame, 2000, T-Coffee](https://www.sciencedirect.com/science/article/pii/S0022283600940427)
+
 ---
 class: left, top
 
@@ -485,17 +486,259 @@ class: left, top
 - manual editing is scary because it is not reproducible
 - but many times it is necessary because automatic alignment methods are not as accurate as they should be
 
----
-class: left, top
-
-(aqui voy): example software
 
 ---
 class: left, top
 
-### Filtering alignments
+# Software options
 
-topics
+## ClustalW
 
-software
+- [ClustalW](http://www.clustal.org/clustal2/)
+- From the [docs](http://www.clustal.org/download/clustalw_help.txt):
 
+```
+DATA (sequences)
+
+-INFILE=file.ext                             :input sequences.
+-PROFILE1=file.ext  and  -PROFILE2=file.ext  :profiles (old alignment).
+
+
+                VERBS (do things)
+
+-OPTIONS            :list the command line parameters
+-HELP  or -CHECK    :outline the command line params.
+-FULLHELP           :output full help content.
+-ALIGN              :do full multiple alignment.
+-TREE               :calculate NJ tree.
+-PIM                :output percent identity matrix (while calculating the tree)
+-BOOTSTRAP(=n)      :bootstrap a NJ tree (n= number of bootstraps; def. = 1000).
+-CONVERT            :output the input sequences in a different file format.
+
+
+                PARAMETERS (set things)
+
+***General settings:****
+-INTERACTIVE :read command line, then enter normal interactive menus
+-QUICKTREE   :use FAST algorithm for the alignment guide tree
+-TYPE=       :PROTEIN or DNA sequences
+-NEGATIVE    :protein alignment with negative values in matrix
+-OUTFILE=    :sequence alignment file name
+-OUTPUT=     :GCG, GDE, PHYLIP, PIR or NEXUS
+-OUTORDER=   :INPUT or ALIGNED
+-CASE        :LOWER or UPPER (for GDE output only)
+-SEQNOS=     :OFF or ON (for Clustal output only)
+-SEQNO_RANGE=:OFF or ON (NEW: for all output formats)
+-RANGE=m,n   :sequence range to write starting m to m+n
+-MAXSEQLEN=n :maximum allowed input sequence length
+-QUIET       :Reduce console output to minimum
+-STATS=      :Log some alignents statistics to file
+
+***Multiple Alignments:***
+-NEWTREE=      :file for new guide tree
+-USETREE=      :file for old guide tree
+-MATRIX=       :Protein weight matrix=BLOSUM, PAM, GONNET, ID or filename
+-DNAMATRIX=    :DNA weight matrix=IUB, CLUSTALW or filename
+-GAPOPEN=f     :gap opening penalty        
+-GAPEXT=f      :gap extension penalty
+-ENDGAPS       :no end gap separation pen. 
+-GAPDIST=n     :gap separation pen. range
+-NOPGAP        :residue-specific gaps off  
+-NOHGAP        :hydrophilic gaps off
+-HGAPRESIDUES= :list hydrophilic res.    
+-MAXDIV=n      :% ident. for delay
+-TYPE=         :PROTEIN or DNA
+-TRANSWEIGHT=f :transitions weighting
+-ITERATION=    :NONE or TREE or ALIGNMENT
+-NUMITER=n     :maximum number of iterations to perform
+-NOWEIGHTS     :disable sequence weighting
+```
+
+What are the default values?
+
+Another thing to notice:
+
+```
+==ITERATION==
+
+ A remove first iteration scheme has been added. This can be used to improve the final
+ alignment or improve the alignment at each stage of the progressive alignment. During the 
+ iteration step each sequence is removed in turn and realigned. If the resulting alignment 
+ is better than the  previous alignment it is kept. This process is repeated until the score
+ converges (the  score is not improved) or until the maximum number of iterations is 
+ reached. The user can  iterate at each step of the progressive alignment by setting the 
+ iteration parameter to  TREE or just on the final alignment by seting the iteration 
+ parameter to ALIGNMENT. The default is no iteration. The maximum number of  iterations can 
+ be set using the numiter parameter. The default number of iterations is 3.
+  
+ -ITERATION=    :NONE or TREE or ALIGNMENT
+ 
+ -NUMITER=n     :Maximum number of iterations to perform
+```
+
+**More Questions:** Read the ClustalW [documentation]((http://www.clustal.org/download/clustalw_help.txt)). Is it clear what the algorithm is doing and how to best select the parameters involved? What is missing (if any) from this documentation?
+
+---
+class: left, top
+
+## T-Coffee
+
+- [T-Coffee](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#quick-start-t-coffee)
+
+```shell
+$ t_coffee sample_seq1.fasta
+```
+
+- When aligning, T-Coffee will always at least generate three files:
+  - `sample_seq1.aln` : Multiple Sequence Alignment (ClustalW format by default)
+  - `sample_seq1.dnd` : guide tree (Newick format)
+  - `sample_seq1.html` : colored MSA according to consistency (html format)
+- `T-Coffee` also has a great documentation: http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#document-tcoffee_main_documentation
+- Specifically, it has a good description of the parameters, see [here](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#t-coffee-parameters-flags)
+- Don't forget to check out [M-Coffee](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#m-coffee) that combines the output of eight aligners (MUSCLE, ProbCons, POA, DIALIGN-T, MAFFT, ClustalW, PCMA and T-Coffee)
+
+---
+class: left, top
+
+## MUSCLE
+
+- [MUSCLE](https://www.drive5.com/muscle/)
+- The different parameter options are explained [here](https://www.drive5.com/muscle/manual/options.html)
+- The default settings are chosen for maximum accuracy, but you can change the settings for more speed (see [here](https://www.drive5.com/muscle/manual/index.html))
+
+
+---
+class: left, top
+
+# Homework 1 
+
+### ClustalW
+1. Download [ClustalW](http://www.clustal.org/clustal2/)
+2. Download the `primatesAA.fasta` file from the Phylogenetic Handbook [website](https://www.kuleuven.be/aidslab/phylogenybook/Data_sets.html) (22 primate aminoacid sequences)
+3. Run `ClustalW`, see [docs](http://www.clustal.org/download/clustalw_help.txt)
+
+### T-Coffee
+1. Download [T-Coffee](http://www.tcoffee.org/Projects/tcoffee/index.html#DOWNLOAD)
+2. Run `T-Coffee` on the same `primatesAA.fasta` data. See the [docs](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#quick-start-t-coffee)
+
+### MUSCLE
+1. Download [MUSCLE](https://www.drive5.com/muscle/downloads.htm)
+2. Run `MUSCLE` on the same `primatesAA.fasta` data. See the [docs](https://www.drive5.com/muscle/manual/basic_alignment.html)
+
+
+You can use my reproducible script as guideline: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md)
+
+
+# Homework 2
+
+**Instructions:**
+
+- Choose the alignment method that you like the best (or try different options) on your class dataset
+- Make sure to keep notes in your reproducible script and keep the most updated version on github
+
+---
+class: left, top
+
+## Filtering alignments
+(HAL 2.2)
+
+- MSA is messy and error-prone, so many times we need to filter out poorly aligned regions
+- We need to make sure that we do not remove signal along with the noise
+- The balance depends on the planned downstream analysis: 
+  - Example: misaligned regions impacting a single seauence at one time will have little impact on the phylogeny inference apart from terminal branch length estimations, but they will induce many false positives when searching for loci under positive selection
+- We want automatic MSA cleaning methods, not manual for reproducibility reasons, but there are no options yet
+- Two types of filtering methods:
+    - (take it or leave it) TILI-filtering methods: remove whole sites or whole sequences
+    - masking residues: replace by gap or a symbol representing ambiguity ?,N,X
+
+---
+class: left, top
+
+### What are the problematic regions of an aligment?
+
+![](../assets/pics/fig8hal.png)
+
+---
+class: left, top
+
+### What are the problematic regions of an aligment?
+
+1. poorly informative
+  - patchy: too many gaps (Fig 8a HAL)
+  - regions in the vicinity of patchy regions (Fig 8b HAL)
+
+2. wrongly aligned
+  - misaligned regions (Fig 8c HAL)
+  - low complexity regions with repeated characteristics (Fig 8d HAL)
+
+---
+class: left, top
+
+### What causes problematic MSA regions?
+- Highly divergent or non-homologous sequence fragments
+    - Note that even when sequences are too divergent, or not even homologous, MSA software will still produce an alignment
+    - Somewhere along the gradient from highly similar sequences to highly divergent sequences,
+there is a critical point beyond which to align sequences is not possible, or biologically
+meaningful: too many substitutions or indels have occurred
+
+- High-throughput sequencing or annotation errors 
+    - Sequencing errors -> small indels in nucleotide alignments -> errors in translation
+    - Errors in homology annotation can lead to the inclusion of sequences that are not homologous
+    - This more tricky case occurs
+when all considered sequences are homologous but some are erroneously considered as being
+orthologous (derived from ancestral copy by speciation) while actually being paralogous
+(derived from ancestral copy by duplication)
+
+---
+class: left, top
+
+### Principles underlying filtering methods
+
+- Gaps indicate hard to align and possibly saturated regions 
+    - From a biological viewpoint, it is often assumed that in proteins insertions and deletions are less frequent than point substitutions
+
+- Few/similar residues are expected per site
+- Reliable regions are likely more robust to MSA method variations
+
+- Homologous (fragment of) sequences are expected to be similar (pre-filtering)
+    - For most pipelines, sequence similarity is an initial criterion used to identify homologous sequences
+
+- Orthologous sequences are supposed to be congruent over loci
+(post-filtering)
+
+---
+class: left, top
+
+### TILI-filtering methods vs masking residues methods
+
+![](../assets/pics/fig9hal.png)
+
+- they are fated to remove signals along with noise
+- TILI-filtering methods could still do a great job regarding phylogeny inference if they are able to correctly identify and remove sequences and sites containing more noise than signal
+- In general, masking residues methods are better
+
+---
+class: left, top
+
+## Comparison of filtering methods
+
+![](../assets/pics/fig12hal.png)
+
+---
+class: left, top
+
+## Comparison of filtering methods
+
+![](../assets/pics/table1hal.png)
+
+- [OMM_MACSE pipeline](https://github.com/ranwez/MACSE_V2_PIPELINES) and [HmmCleaner](https://metacpan.org/pod/distribution/Bio-MUST-Apps-HmmCleaner/bin/HmmCleaner.pl) among the best filtering methods, but careful since not simulated data
+
+---
+class: left, top
+
+# Further reading
+
+Learn more
+- Read Chapter 3 of the Phylogenetic Handbook (HB)
+- Read Sections 9.1-9.5, 9.11, 9.12, 9.13 of [Computational phylogenetics](https://www.amazon.com/Computational-Phylogenetics-Introduction-Designing-Estimation/dp/1107184711) (Warnow) 
+- Read HAL 2.3 on a new alignment method `MACSE`
