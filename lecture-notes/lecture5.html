@@ -1,28 +1,38 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 5</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Botany 563" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lecture 5
+## Multiple sequence alignment
+### Botany 563
+
 ---
-title: "Lecture 5-6"
-author: "Botany 563"
-subtitle: "Multiple sequence alignment"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
----
+
 class: left, top
 
-# Lecture 5-6 (draft)
+# Lecture 5
+
+### Previous class check-up
+- We understand sequencing technologies
+- We learned about `phyluce` as a pipeline for phylogenomics on UCEs
+
+### Learning objectives
 
 At the end of today's session, you
 - will be able to explain the most widely used algorithms for multiple sequence alignment
 - will be able to assess the strengths and weaknesses of each type of algorithm
 - will learn to use different software options: ClustalW, T-Coffee and MUSCLE
 
-## Pre-class work
+### Pre-class work
 
 - Read HAL 2.2
 
@@ -31,12 +41,17 @@ class: left, top
 
 # What is multiple sequence alignment (MSA)?
 
-- homology is inferred from an input of sequences that are assumed to have an evolutionary relationship: descended from a common ancestor
-- Intuitively, an MSA method inserts gap characters `-` inside input sequences to produce a set of longer sequences that are all of the same length, such that residues at the same position in different sequences (aligned residues) share some common properties (homology)
-- a crucial step since phylogenetic inference methods assume that residue homology relationships are correctly reflected by the input sequences
+- Homology is inferred from an input of sequences that are assumed to have an evolutionary relationship: descended from a common ancestor
+- Intuitively, an MSA method inserts gap characters (`-`) inside input sequences to produce a set of longer sequences that are all of the same length, such that residues at the same position in different sequences (aligned residues) share some common properties (homology)
+- MSA is a crucial step since phylogenetic inference methods assume that residue homology relationships are correctly reflected by the input sequences
 
+---
+class: left, top
 
-![](../assets/pics/fig9.1.png)
+# What is multiple sequence alignment (MSA)?
+
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig9.1.png" width="750"/&gt;&lt;/div&gt;
+
 _Figure 9.1 in Warnow_
 
 ---
@@ -44,9 +59,10 @@ class: left, top
 
 # What is multiple sequence alignment (MSA)?
 
-- the true MSA reflects the historical substitution, insertion and deletion evolutionary events
+The true MSA reflects the historical substitution, insertion and deletion evolutionary events:
 
-![](../assets/pics/fig9.2.png)
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig9.2.png" width="750"/&gt;&lt;/div&gt;
+
 _Figure 9.2 in Warnow_
 
 ---
@@ -55,7 +71,9 @@ class: left, top
 # Why is it one of the most computationally intensive tasks?
 
 - Alignment can be not identifiable or unique
-- **Example 9.1** Suppose that we knew the _true_ evolutionary events from sequence `ACAT` to `AGAT`. Suppose that we knew that it was not a substitution, but a deletion of `C` (thus creating `AAT`) followed by an insersion of `G`. Even in this scenario (when we know the truth), there are two ways to represent the alignment:
+
+#### Example 9.1
+Suppose that we knew the _true_ evolutionary events from sequence `ACAT` to `AGAT`. Suppose that we knew that it was not a substitution, but a deletion of `C` (thus creating `AAT`) followed by an insersion of `G`. Even in this scenario (when we know the truth), there are two ways to represent the alignment:
 ```
 AC-AT
 A-GAT
@@ -71,7 +89,7 @@ class: left, top
 
 ## In-class activity
 
-**Table 9.1** (Warnow). What would be the alignment of the two sequences: `S=ACATTA` which evolves into `S'=TACA` if we knew the _true_ evolutionary events?
+**Table 9.1** (Warnow). What would be the alignment of the sequence `S=ACATTA` which evolves into `S'=TACA` if we knew the _true_ evolutionary events?
 - deletion of the first two nucleotides `AC`
 - deletion of the second `T`
 - substitution of `T` into `C`
@@ -99,7 +117,9 @@ class: left, top
 ---
 class: left, top
 
-### First key insight for MSA: we are guiding the algorithms by selecting the penalties for evolutionary events: substitutions, deletions, insersions
+### First key insight for MSA
+
+We are guiding the algorithms by selecting the penalties for evolutionary events: substitutions, deletions, insersions
 
 ---
 class: left, top
@@ -141,9 +161,10 @@ class: left, top
 ## 1. Cost of evolutionary events
 ### In-class activity
 
-**Table 9.3** (Warnow). You want to get the sequence alignment between sequences `S=AACT` and `S'=CTGG` when:
+**Table 9.3** (Warnow). How would you align the sequences `S=AACT` and `S'=CTGG` when:
 - cost of gap: 1
 - cost of substitution: 3
+?
 
 
 ---
@@ -168,7 +189,8 @@ There are other ways to measure cost/penalty:
 - sequence identity: number of identical sites in an alignment divided by the total number of aligned positions
 - biochemical similarity when assigning costs of substitutions (Figure 3.4 HB 3): PAM weight matrices and BLOSUM62 weight matrices
 
-![](..assets/pics/blosum62.png)
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/blosum62.png" width="350"/&gt;&lt;/div&gt;
+
 
 - We will continue to use cost for simplicity
 
@@ -182,7 +204,81 @@ class: left, top
 - Pairwise alignment of real sequences would be too difficult to do by hand, so we need smart algorithms: **Needleman-Wunsch algorithm**
 - Needleman-Wunsch is a dynamic programming algorithm
 - Dynamic programming: optimization algorithm that simplifies a complicated problem by breaking it down into simpler sub-problems in a recursive manner
-- Before we study the Needleman-Wunsch algorithm, let's focus on the big picture
+
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm
+
+- **Ingredients:** 
+  - Two sequences: `\(A=a_1 a_2 ...a_m\)` and `\(B=b_1 b_2 ...b_n\)`
+  - 1) cost of gap and 2) cost of substitution
+- Denote `\(F(i,j)\)` the minimum cost to align sub-sequences `\(A_i\)` and `\(B_j\)` based on the costs
+- **Main principle:** When we want to compute `\(F(i,j)\)`, we assume that we have already computed all smaller sequences (sub-problems): `\(F(i-1,j-1), F(i,j-1), F(i-1,j)\)`.
+
+The final site of the alignment must take one of the following forms:
+
+1. `\(a_i\)` and `\(b_j\)` are aligned together in the final site. Then the other sites deinfe a pairwise alignment of `\(A_{i-1}\)` and `\(B_{j-1}\)`
+2. `\(a_i\)` is aligned with a gap in the final site. Then `\(A_{i-1}\)` and `\(B_{j}\)` defined a pairwise alignment
+3. `\(b_j\)` is aligned with a gap in the final site. Then `\(A_{i}\)` and `\(B_{j-1}\)` defined a pairwise alignment
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm
+
+### Example of notation
+
+Let `\(A=a_1 a_2 a_3 a_4 a_5 a_6\)` and `\(B=b_1 b_2 b_3 b_4 b_5\)`, and suppose you want to align sites `\(a_5\)` ( `\(i=5\)` ) and `\(b_3\)` ( `\(j=3\)` )
+
+1. `\(a_5\)` and `\(b_3\)` are aligned together in the final site. Then the other sites define a pairwise alignment of `\(A_4=a_1 a_2 a_3 a_4\)` and `\(B_2=b_1 b_2\)` (we do not know how at this point)
+2. `\(a_5\)` is aligned with a gap in the final site. Then `\(A_4=a_1 a_2 a_3 a_4\)` and `\(B_3=b_1 b_2 b_3\)` define a pairwise alignment
+3. `\(b_3\)` is aligned with a gap in the final site. Then `\(A_5=a_1 a_2 a_3 a_4 a_5\)` and `\(B_2=b_1 b_2\)` define a pairwise alignment
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm: Costs
+
+1. `\(a_i\)` and `\(b_j\)` are aligned together in the final site. So, the cost is 0 if `\(a_i=b_j\)` and 1 (or whatever cost of substitution defined) if they are different. Hence, the total cost is `\(F(i,j) = F(i-1,j-1)+cost(a_i,b_j)\)`
+Then the other sites deinfe a pairwise alignment of `\(A_{i-1}\)` and `\(B_{j-1}\)`
+2. `\(a_i\)` is aligned with a gap in the final site so that cost is 1 (or whatever the cost of gap is). Hence, the the total cost is `\(F(i,j) = F(i-1,j)+1\)`
+3. `\(b_j\)` is aligned with a gap in the final site so that cost is 1 (or whatever the cost of gap is). Hence, the the total cost is `\(F(i,j) = F(i,j-1)+1\)`
+
+Finally, `\(F(i,j)=min (F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 )\)`.
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm
+
+Steps:
+1. Compute `\(F(i,j)\)` for every `\(i,j\)` and put in a matrix (sometimes denoted dynamic programming (DP) matrix). First column/row correspond to gap and F(0,0)=0
+2. As you fill the matrix, keep track of which of the three entries gave you the minimum with an arrow
+3. Trace back the arrows to construct the alignment (diagonal arrow=nucleotide, vertical/horizontal arrow=gap replacing the nucleotide the arrow is pointing)
+
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig9.3.png" width="450"/&gt;&lt;/div&gt;
+
+_Figure 9.3 from Warnow_
+
+---
+class: left, top
+
+# Needleman-Wunsch algorithm
+
+### Example
+
+We want to align `\(S_1=ATCG\)` and `\(S_2=TCA\)` for a cost of substitution of 1 and cost of gap of 2.
+
+
+---
+class: left, top
+
+# Homework: Needleman-Wunsch algorithm
+
+**Instructions:** Redo the same example with a cost of gap of 1 and a cost of substitions of 3.
+
 
 ---
 class: left, top
@@ -190,10 +286,10 @@ class: left, top
 # MSA algorithm
 ## 3. Multiple sequence alignment
 
-- The Needleman-Wunsch is the magic box that allow us to align two sequences
+- The Needleman-Wunsch is the magic algorithm that allows us to align two sequences
 - We want to expand the pairwise sequence alignment to multiple sequence alignment
-- Progressive alignment: the most widely used algorithm (e.g. clustal)
-- Consistency-based scoring: improvement over progressive alignment by using a more strict score function (e.g. t-coffee)
+- Progressive alignment: the most widely used algorithm (e.g. ClustalW)
+- Consistency-based scoring: improvement over progressive alignment by using a more strict score function (e.g. T-Coffee)
 - Iterative refinement algorithm: improvement over progressive alignment by doing sequential alignments until convergence of score (e.g. mafft, muscle)
 
 
@@ -215,101 +311,31 @@ class: left, top
 
 # Progressive alignment
 
-![](..assets/pics/fig9.9.png)
+What are the steps that we need to know?
+
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig9.9.png" width="550"/&gt;&lt;/div&gt;
+
 _Figure 9.9 in Warnow_
 
-What are the steps that we need to know?
+
 
 ---
 class: left, top
 
 # Progressive alignment
 
-1. Align all pairs of sequences using the Needleman-Wunsch magic black box
+1. Align all pairs of sequences using the Needleman-Wunsch algorithm
 2. For every pairwise alignment, we calculate its cost based on the cost of gap (e.g. unit cost) and the cost of substitution (e.g. unit cost)
 3. We estimate the tree from distances: we will learn this in Lecture 8
 4. We build the alignments on the tree from the leaves to the root (bottom-up)  
-  - For the leaves, we build the pairwise alignments for (a,b) and for (d,e) using the Needleman-Wunsch magic black box
+  - For the leaves, we build the pairwise alignments for (a,b) and for (d,e) using the Needleman-Wunsch algorithm
   - For internal nodes, we need to know how to align alignments
 
 #### What are the ingredients that we need to know how to do in order to perform MSA via progressive alignment?
-- Perform pairwise sequence alignment via Needleman-Wunsch
-- Calculate the cost of a pairwise sequence alignment
-- Calculate a tree from distances
-- Perform alignment of alignments
-
-
-**What we still need to learn:**
-
-- Needleman-Wunsch algorithm
-- How to align alignments
-
----
-class: left, top
-
-# Needleman-Wunsch algorithm
-
-- **Ingredients:** 
-  - Two sequences: $A=a_1 a_2 ...a_m$ and $B=b_1 b_2 ...b_n$
-  - Denote $F(i,j)$ the minimum cost to align $A_i$ and $B_j$ based on 1) cost of gap and 2) cost of substitution
-- **Main principle:** When we want to compute $F(i,j)$, we assume that we have already computed all smaller sequences (sub-problems): $F(i-1,j-1), F(i,j-1), F(i-1,j)$.
-
-The final site of the alignment must take one of the following forms:
-
-1. $a_i$ and $b_j$ are aligned together in the final site. Then the other sites deinfe a pairwise alignment of $A_{i-1}$ and $B_{j-1}$
-2. $a_i$ is aligned with a gap in the final site. Then $A_{i-1}$ and $B_{j}$ defined a pairwise alignment
-3. $b_j$ is aligned with a gap in the final site. Then $A_{i}$ and $B_{j-1}$ defined a pairwise alignment
-
----
-class: left, top
-
-# Needleman-Wunsch algorithm: Example of notation
-
-Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you want to align sites $a_5$ ($i=5$) and $b_3$ ($j=3$)
-
-1. $a_5$ and $b_3$ are aligned together in the final site. Then the other sites deinfe a pairwise alignment of $A_4=a_1 a_2 a_3 a_4$ and $B_2=b_1 b_2$ (we do not know how at this point)
-2. $a_5$ is aligned with a gap in the final site. Then $A_4=a_1 a_2 a_3 a_4$ and $B_3=b_1 b_2 b_3$ defined a pairwise alignment
-3. $b_3$ is aligned with a gap in the final site. Then $A_5=a_1 a_2 a_3 a_4 a_5$ and $B_2=b_1 b_2$ defined a pairwise alignment
-
----
-class: left, top
-
-# Needleman-Wunsch algorithm: Costs
-
-1. $a_i$ and $b_j$ are aligned together in the final site. So, the cost is 0 if $a_i=b_j$ and 1 (or whatever cost of substitution defined) if they are different. Hence, the total cost is $F(i,j) = F(i-1,j-1)+cost(a_i,b_j)$
-Then the other sites deinfe a pairwise alignment of $A_{i-1}$ and $B_{j-1}$
-2. $a_i$ is aligned with a gap in the final site so that cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i-1,j)+1$
-3. $b_j$ is aligned with a gap in the final site so that cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i,j-1)+1$
-
-Finally, $F(i,j)=min (F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 )$.
-
----
-class: left, top
-
-# Needleman-Wunsch algorithm
-
-Steps:
-1. Compute $F(i,j)$ for every $i,j$ and put in a matrix (sometimes denoted dynamic programming (DP) matrix). First column/row correspond to gap and F(0,0)=0
-2. As you fill the matrix, keep track of which of the three entries gave you the minimum with an arrow
-3. Trace back the arrows to construct the alignment (diagonal arrow=nucleotide, vertical/horizontal arrow=gap replacing the nucleotide the arrow is pointing)
-
-![](../assets/pics/fig9.3.png)
-_Figure 9.3 from Warnow_
-
----
-class: left, top
-
-# Needleman-Wunsch algorithm: Example
-
-We want to align $S_1=ATCG$ and $S_2=TCA$ for a cost of substitution of 1 and cost of gap of 1.
-
-
----
-class: left, top
-
-# Homework: Needleman-Wunsch algorithm
-
-**Instructions:** Redo the same example with a cost of gap of 1 and a cost of substitions of 3.
+- Perform pairwise sequence alignment via Needleman-Wunsch (check!)
+- Calculate the cost of a pairwise sequence alignment (check!)
+- Calculate a tree from distances (Lecture 8)
+- Perform alignment of alignments (missing)
 
 
 ---
@@ -319,8 +345,11 @@ class: left, top
 
 We need a concept called "profile".
 
-![](..assets/pics/table9.7.png)
-![](..assets/pics/table9.8.png)
+&lt;div class="image123"&gt;
+    &lt;img src="../assets/pics/table9.7.png" height="400"  style="float:left"&gt;
+    &lt;img class="middle-img" src="../assets/pics/table9.8.png" height="400"&gt;
+&lt;/div&gt;
+
 
 ---
 class: left, top
@@ -328,10 +357,10 @@ class: left, top
 # How to align alignments
 
 1. Construct profiles
-2. We want to minimize the expected edit distance between profiles
-3. Treat $a_i$ in $P_1$ and $b_j$ in $P_2$ as generative models: $P(x|a_i)$ is the probability of observing $x$ in position $i$ on $P_1$
-4. Define the cost of putting $a_i, b_j$ together
-5. Use Needleman-Wunsch to align $P_1$ and $P_2$
+2. We want to minimize the expected cost between profiles
+3. Treat `\(a_i\)` in `\(P_1\)` and `\(b_j\)` in `\(P_2\)` as generative models: `\(P(x|a_i)\)` is the probability of observing `\(x\)` in position `\(i\)` on `\(P_1\)`
+4. Define the cost of putting `\(a_i, b_j\)` together
+5. Use Needleman-Wunsch to align `\(P_1\)` and `\(P_2\)`
 
 ---
 class: left, top
@@ -340,34 +369,30 @@ class: left, top
 
 **Instructions:** Align the two alignments below.
 
-![](..assets/pics/table9.7.png)
-
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/table9.7.png" width="550"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
 
 # Homework
 
-**Instructions:** Continue with the example by calculating the cost for every pair of $a_i$ and $b_j$ and calculate the cost of the alignment below. Can you find another alignment with lower cost using the Needleman-Wunsch algorithm?
+**Instructions:** Continue with the example by calculating the cost for every pair of `\(a_i\)` and `\(b_j\)` and calculate the cost of the alignment below. Can you find another alignment with lower cost using the Needleman-Wunsch algorithm?
 
-![](..assets/pics/table9.9.png)
-
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/table9.9.png" width="550"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
 
 # How to align alignments
 
-If the alignment of profiles is the optimal, then we can translate back to the original sequences:
+After we align the profiles, we can translate back to the original sequences:
 
-![](..assets/pics/table9.10.png)
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/table9.10.png" width="550"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
 
-# Needleman-Wunsch algorithm
-
-#### Conclusion: 
+# MSA key insight
 Needleman-Wunsch lies at the core of MSA:
 - if we have two sequences, we align them with Needleman-Wunsch
 - if we have two alignments, we first convert them to profiles, and then align the profiles with Needleman-Wunsch
@@ -382,17 +407,9 @@ class: left, top
 1. Compute rooted binary tree (guide tree) from pairwise distances
 2. Build MSA from the bottom (leaves) up (root)
 
-![](..assets/pics/fig9.9.png)
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig9.9.png" width="400"/&gt;&lt;/div&gt;
+
 _Figure 9.9 in Warnow_
-
-### Downsides
-
-- The guide tree has a big impact on alignments (and we usually estimate an inaccurate tree). Some ways to overcome this issue are
-    - better ways to estimate the tree (maximum likelihood); not very scalable
-    - iteration between tree and alignment; not very scalable
-- Errors made early in the process persist since subsequent mergers never change the alignments they are merging together. Some ways to overcome this issue are 
-    - "polishing": breaks a set of sequences into subsets and re-aligns the induced sub-alignments
-    - consistency (more later)
 
 ---
 class: left, top
@@ -401,7 +418,7 @@ class: left, top
 
 ### Software: ClustalW
 
-- input sequences -> progressive alignment
+- input sequences -&gt; progressive alignment
 - pairwise alignment to create distance matrix and then tree based on NJ
 - sequences are down-weighted compared to how closely related they are to other sequences (to avoid a group of similar sequences to dominate the alignment)
 - different weight matrices are used: 1) for closely related sequences where high scores are given to identities and low scores ow; 2) for distantly related sequences where high scores are given to conservative amino acid matches and low score to identities (BLOSUM, PAM matrices)
@@ -413,9 +430,24 @@ class: left, top
 ---
 class: left, top
 
+# Progressive alignment
+
+### Downsides
+
+- The guide tree has a big impact on alignments (and we usually estimate an inaccurate tree). Some ways to overcome this issue are
+    - better ways to estimate the tree (maximum likelihood); not very scalable
+    - iteration between tree and alignment; not very scalable
+- Errors made early in the process persist since subsequent mergers never change the alignments they are merging together. Some ways to overcome this issue are 
+    - "polishing": breaks a set of sequences into subsets and re-aligns the induced sub-alignments
+    - consistency
+
+
+---
+class: left, top
+
 # Iterative refinement
 
-![](..assets/pics/muscle.png)
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/muscle.png" width="600"/&gt;&lt;/div&gt;
 
 [Edgar, 2004, MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623)
 
@@ -470,21 +502,21 @@ class: left, top
 ---
 class: left, top
 
-# Which program to choose?
+## Which program to choose?
 - not a clear answer
 - scalability vs accuracy
 - journal club discussion: [Alignathon](https://genome.cshlp.org/content/24/12/2077)
 - filtering is more important than the specific program used (more on filtering later)
 
-# Other considerations
+## Other considerations
 
-## Nucleotide vs amino acid sequence
-- when there is choice (protein-coding genes), amino acid alignments are easier to carry out and less ambiguous; also nucleotide alignments do not recognizoe codon as a unit and can break up the reading frame; typically, you align the amino acids and then generate the corresponding nucleotide sequence alignment
-- when sequences are not protein coding, only choice is to align nucleotides
+- Nucleotide vs amino acid sequence
+  - when there is choice (protein-coding genes), amino acid alignments are easier to carry out and less ambiguous; also nucleotide alignments do not recognizoe codon as a unit and can break up the reading frame; typically, you align the amino acids and then generate the corresponding nucleotide sequence alignment
+  - when sequences are not protein coding, only choice is to align nucleotides
 
-## Manual editing and visualizing alignments
-- manual editing is scary because it is not reproducible
-- but many times it is necessary because automatic alignment methods are not as accurate as they should be
+- Manual editing and visualizing alignments
+  - manual editing is scary because it is not reproducible
+  - but many times it is necessary because automatic alignment methods are not as accurate as they should be
 
 
 ---
@@ -514,8 +546,14 @@ DATA (sequences)
 -PIM                :output percent identity matrix (while calculating the tree)
 -BOOTSTRAP(=n)      :bootstrap a NJ tree (n= number of bootstraps; def. = 1000).
 -CONVERT            :output the input sequences in a different file format.
+```
 
+---
+class: left, top
 
+## ClustalW
+
+```
                 PARAMETERS (set things)
 
 ***General settings:****
@@ -533,7 +571,14 @@ DATA (sequences)
 -MAXSEQLEN=n :maximum allowed input sequence length
 -QUIET       :Reduce console output to minimum
 -STATS=      :Log some alignents statistics to file
+```
 
+---
+class: left, top
+
+## ClustalW
+
+```
 ***Multiple Alignments:***
 -NEWTREE=      :file for new guide tree
 -USETREE=      :file for old guide tree
@@ -553,6 +598,11 @@ DATA (sequences)
 -NUMITER=n     :maximum number of iterations to perform
 -NOWEIGHTS     :disable sequence weighting
 ```
+
+---
+class: left, top
+
+## ClustalW
 
 What are the default values?
 
@@ -576,7 +626,7 @@ Another thing to notice:
  -NUMITER=n     :Maximum number of iterations to perform
 ```
 
-**More Questions:** Read the ClustalW [documentation]((http://www.clustal.org/download/clustalw_help.txt)). Is it clear what the algorithm is doing and how to best select the parameters involved? What is missing (if any) from this documentation?
+**Further reading:** Read the ClustalW [documentation](http://www.clustal.org/download/clustalw_help.txt). Is it clear what the algorithm is doing and how to best select the parameters involved? What is missing (if any) from this documentation?
 
 ---
 class: left, top
@@ -593,7 +643,7 @@ $ t_coffee sample_seq1.fasta
   - `sample_seq1.aln` : Multiple Sequence Alignment (ClustalW format by default)
   - `sample_seq1.dnd` : guide tree (Newick format)
   - `sample_seq1.html` : colored MSA according to consistency (html format)
-- `T-Coffee` also has a great documentation: http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#document-tcoffee_main_documentation
+- `T-Coffee` also has a great [documentation](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#document-tcoffee_main_documentation)
 - Specifically, it has a good description of the parameters, see [here](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#t-coffee-parameters-flags)
 - Don't forget to check out [M-Coffee](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#m-coffee) that combines the output of eight aligners (MUSCLE, ProbCons, POA, DIALIGN-T, MAFFT, ClustalW, PCMA and T-Coffee)
 
@@ -628,6 +678,8 @@ class: left, top
 
 You can use my reproducible script as guideline: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md)
 
+---
+class: left, top
 
 # Homework 2
 
@@ -639,7 +691,7 @@ You can use my reproducible script as guideline: [notebook-log.md](https://githu
 ---
 class: left, top
 
-## Filtering alignments
+# Filtering alignments
 (HAL 2.2)
 
 - MSA is messy and error-prone, so many times we need to filter out poorly aligned regions
@@ -656,7 +708,7 @@ class: left, top
 
 ### What are the problematic regions of an aligment?
 
-![](../assets/pics/fig8hal.png)
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig8hal.png" width="400"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
@@ -682,7 +734,7 @@ there is a critical point beyond which to align sequences is not possible, or bi
 meaningful: too many substitutions or indels have occurred
 
 - High-throughput sequencing or annotation errors 
-    - Sequencing errors -> small indels in nucleotide alignments -> errors in translation
+    - Sequencing errors -&gt; small indels in nucleotide alignments -&gt; errors in translation
     - Errors in homology annotation can lead to the inclusion of sequences that are not homologous
     - This more tricky case occurs
 when all considered sequences are homologous but some are erroneously considered as being
@@ -722,14 +774,14 @@ class: left, top
 
 ## Comparison of filtering methods
 
-![](../assets/pics/fig12hal.png)
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig12hal.png" width="700"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
 
 ## Comparison of filtering methods
 
-![](../assets/pics/table1hal.png)
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/table1hal.png" width="500"/&gt;&lt;/div&gt;
 
 - [OMM_MACSE pipeline](https://github.com/ranwez/MACSE_V2_PIPELINES) and [HmmCleaner](https://metacpan.org/pod/distribution/Bio-MUST-Apps-HmmCleaner/bin/HmmCleaner.pl) among the best filtering methods, but careful since not simulated data
 
@@ -742,3 +794,127 @@ Learn more
 - Read Chapter 3 of the Phylogenetic Handbook (HB)
 - Read Sections 9.1-9.5, 9.11, 9.12, 9.13 of [Computational phylogenetics](https://www.amazon.com/Computational-Phylogenetics-Introduction-Designing-Estimation/dp/1107184711) (Warnow) 
 - Read HAL 2.3 on a new alignment method `MACSE`
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
