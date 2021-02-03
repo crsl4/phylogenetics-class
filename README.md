@@ -36,7 +36,7 @@ By the end of the course, you will be able to
 | 02/02 | Reproducibility crash course | [Notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md) | You will prioritize reproducibility and good computing practices throughout the semester (and beyond) | [lecture3.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture3.md) |
 | 02/04 | Continue with reproducibility | Have [git](https://happygitwithr.com/install-git.html) installed | | |
 | 02/09 | Introduction to sequences | Watch [video1](https://www.youtube.com/watch?v=CZeN-IgjYCo), [video2](https://www.youtube.com/watch?v=fCd6B5HRaZ8), and read [Zhang et al, 2019](https://academic.oup.com/isd/article/3/5/3/5573097) | You will be able to describe the next-generation sequencing pipeline (and UCE pipeline) as well as the post-processing bioinformatics steps for quality control | [lecture4.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4.md) |
-| 02/11 | Alignment  | | | |
+| 02/11 | Alignment  | HAL 2.2 | You will be able to explain the most widely used algorithms for multiple sequence alignment | [lecture5.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture5.md) |
 | 02/16 | 
 | 02/18 | Orthology detection  | | | |
 | 02/23 | Distance and parsimony methods  | | | |
