@@ -33,7 +33,7 @@ We will read papers:
 - The class will follow the structure of a jigsaw dynamic:  
     - There will be two groups in class: group 1 and group 2
     - Group 1 will read the Introduction and Results of the paper
-    - Group 2 will read the Methods and Conclusions of the paper
+    - Group 2 will read the Methods and Discussion/Conclusions of the paper
 - The class format will be:
     - 8:55-9:15 (20min): Each group will be in a breakout room where they will discuss the sections of the paper and prepare a 10-min presentation for the whole class
     - 9:15-9:25 (10min): 10-minute presentation of group 1
