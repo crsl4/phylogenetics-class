@@ -144,6 +144,7 @@ Backup[ ]of[ ]*.numbers/
 *.fa
 *.dat
 *.paml
+*fastq*
 
 ### Mathematica
 *.nb
