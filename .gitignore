@@ -1,5 +1,6 @@
 ## this project
 side-docs/*
+data/*
 
 # Compiled source #
 ###################
@@ -143,6 +144,7 @@ Backup[ ]of[ ]*.numbers/
 *.fa
 *.dat
 *.paml
+*fastq*
 
 ### Mathematica
 *.nb

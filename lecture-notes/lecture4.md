@@ -17,12 +17,18 @@ class: left, top
 
 # Lecture 4
 
+### Previous class check-up
+- We are familiar with git/github
+- We understand the importance of reproducible scripts
+
+### Learning objectives
+
 At the end of today's session, you
 - will be able to explain the next-generation sequencing pipeline and post-processing bioinformatics steps
 - will examine the advantages of targeted sequencing of ultra-conserved elements (UCEs) in phylogenomics
 - will learn to use [phyluce](https://phyluce.readthedocs.io/en/latest/index.html): a software for UCE phylogenomics
 
-## Pre-class work
+### Pre-class work
 
 - Watch these 5-minute youtube videos on next-generation sequencing: [video1](https://www.youtube.com/watch?v=CZeN-IgjYCo) and [video2](https://www.youtube.com/watch?v=fCd6B5HRaZ8)
 - Read [Zhang et al, 2019](https://academic.oup.com/isd/article/3/5/3/5573097)
@@ -255,6 +261,7 @@ Quality values:
 
 - The quality score of a base (known as [Phred](https://en.wikipedia.org/wiki/Phred_quality_score) or Q score) is an integer value representing the estimated probability of error
 - Let `P` be the error probability $P=10^{-Q/10}$. Then, $Q=-10log_{10}(P)$
+- Original phred score [paper](https://genome.cshlp.org/content/8/3/186.long)
 
 ---
 class: left, top
@@ -397,6 +404,11 @@ class: left, top
 and create our own reproducible script.
 
 **Disclaimer:** I have not done the steps ahead of time to make sure that everything runs smoothly. My idea is to troubleshoot this pipeline together, but maybe this will backfire.
+
+#### Options for you
+
+1. "I think that I can follow the pipeline by myself or with a small group of peers": you can join the Congregate room
+2. "I need to see step by step": you can stay here in the zoom room
 
 ---
 class: left, top
