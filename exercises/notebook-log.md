@@ -1,6 +1,229 @@
 # Notebook reproducible script for Botany 563 (Spring 2021)
 Written by CSL
 
+## To do
+- look for assembly alternatives to trinity for Mac
+
+## phyluce
+
+### Installation
+
+We are following the steps on the [Installation](https://phyluce.readthedocs.io/en/latest/installation.html).
+
+1. Install Miniconda for pytho 2.7 by choosing the `Miniconda2 MacOSX 64-bit pkg` file from the list here: https://docs.conda.io/en/latest/miniconda.html
+
+2. We double-clicked on the file and followed the installation steps
+
+3. The folder `miniconda2` was saved in `~/opt/miniconda2`
+
+4. We get into the `~/.bash_profile` file and added one line to the PATH
+
+5. Check up at this point:
+```shell
+$ which conda
+/Users/Clauberry/opt/miniconda2/condabin/conda
+$ python -V
+Python 2.7.10
+$ echo $PYTHONPATH
+
+```
+
+6. We created the `~/.condarc` with the content below:
+```
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+```
+
+7. We install phyluce in it’s own conda environment
+```shell
+conda create --name phyluce phyluce
+```
+This takes a little while.
+
+8. To use this phyluce environment, you must run:
+```shell
+conda activate phyluce
+```
+
+Note that in the tutorial it says `source activate phyluce` but we get an error:
+```shell
+$ source activate phyluce
+-bash: activate: No such file or directory
+```
+To deactivate an active environment, use `conda deactivate`:
+```shell
+$ conda deactivate
+-bash: [: /Library/Internet\: binary operator expected
+```
+
+### Tutorial I: UCE Phylogenomics
+
+We are following the steps in this [link](https://phyluce.readthedocs.io/en/latest/tutorial-one.html).
+
+We will work on the class repository. This is the location in my computer:
+```shell
+cd Dropbox/Documents/teaching/phylogenetics-class/BOT563/exercises
+```
+
+0. Create a phyluce folder: `mkdir phyluce`.
+
+1. Download the data
+
+```shell
+# create a project directory
+mkdir uce-tutorial
+
+# change to that directory
+cd uce-tutorial
+
+# download the data into a file names fastq.zip
+wget -O fastq.zip https://ndownloader.figshare.com/articles/1284521/versions/1
+
+# make a directory to hold the data
+mkdir raw-fastq
+
+# move the zip file into that directory
+mv fastq.zip raw-fastq
+
+# move into the directory we just created
+cd raw-fastq
+
+# unzip the fastq data
+unzip fastq.zip
+
+# delete the zip file
+rm fastq.zip
+
+# you should see 6 files in this directory now
+$ ls
+Alligator_mississippiensis_GGAGCTATGG_L001_R1_001.fastq.gz
+Alligator_mississippiensis_GGAGCTATGG_L001_R2_001.fastq.gz
+Anolis_carolinensis_GGCGAAGGTT_L001_R1_001.fastq.gz
+Anolis_carolinensis_GGCGAAGGTT_L001_R2_001.fastq.gz
+Gallus_gallus_TTCTCCTTCA_L001_R1_001.fastq.gz
+Gallus_gallus_TTCTCCTTCA_L001_R2_001.fastq.gz
+Mus_musculus_CTACAACGGC_L001_R1_001.fastq.gz
+Mus_musculus_CTACAACGGC_L001_R2_001.fastq.gz
+```
+
+2. Count the read data: The next line of code will count the lines in each R1 file (which should be equal to the reads in the R2 file) and divide that number by 4 to get the number of sequence reads
+```shell
+for i in *_R1_*.fastq.gz; do echo $i; gunzip -c $i | wc -l | awk '{print $1/4}'; done
+
+Alligator_mississippiensis_GGAGCTATGG_L001_R1_001.fastq.gz
+1750000
+Anolis_carolinensis_GGCGAAGGTT_L001_R1_001.fastq.gz
+1874362
+Gallus_gallus_TTCTCCTTCA_L001_R1_001.fastq.gz
+376559
+Mus_musculus_CTACAACGGC_L001_R1_001.fastq.gz
+1298196
+```
+
+3. Clean the read data: 
+- The raw reads contain adapter contamination and low quality bases
+- The data we are trimming, here, are from TruSeq v3 libraries, but the indexes are 10 nucleotides long
+
+- We need to create the configuration file `illumiprocessor.conf` outside the `raw-fastq` folder:
+```shell
+$ ls
+illumiprocessor.conf raw-fastq
+```
+
+- Make sure to have activated `phyluce`: `conda activate phyluce`.
+
+- Now, in the folder where the config file is, we need to run:
+```shell
+illumiprocessor \
+    --input raw-fastq/ \
+    --output clean-fastq \
+    --config illumiprocessor.conf \
+    --cores 4
+
+2021-02-09 20:23:18,033 - illumiprocessor - INFO - ==================== Starting illumiprocessor ===================
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Version: 2.0.9
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --config: illumiprocessor.conf
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --cores: 4
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --input: /Users/Clauberry/Dropbox/Documents/teaching/phylogenetics-class/BOT563/exercises/phyluce/uce-tutorial/raw-fastq
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --log_path: None
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --min_len: 40
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --no_merge: False
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --output: /Users/Clauberry/Dropbox/Documents/teaching/phylogenetics-class/BOT563/exercises/phyluce/uce-tutorial/clean-fastq
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --phred: phred33
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --r1_pattern: None
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --r2_pattern: None
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --se: False
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --trimmomatic: /Users/Clauberry/opt/miniconda2/envs/phyluce/bin/trimmomatic
+2021-02-09 20:23:18,034 - illumiprocessor - INFO - Argument --verbosity: INFO
+2021-02-09 20:23:18,071 - illumiprocessor - INFO - Trimming samples with Trimmomatic
+Running....
+2021-02-09 20:25:20,348 - illumiprocessor - INFO - =================== Completed illumiprocessor ===================
+```
+The really important information is in the split-adapter-quality-trimmed directory - which now holds our reads that have had adapter-contamination and low-quality bases removed.
+
+4. Quality control
+```shell
+# move to the directory holding our cleaned reads
+cd clean-fastq/
+
+# run this script against all directories of reads
+
+for i in *;
+do
+    phyluce_assembly_get_fastq_lengths --input $i/split-adapter-quality-trimmed/ --csv;
+done
+
+All files in dir with alligator_mississippiensis-READ2.fastq.gz,3279362,294890805,89.9232243955,0.0100399681299,40,100,100.0
+All files in dir with anolis_carolinensis-READ-singleton.fastq.gz,3456457,314839345,91.0873026917,0.00799863728967,40,100,100.0
+All files in dir with gallus_gallus-READ2.fastq.gz,749026,159690692,213.197795537,0.0588973605565,40,251,250.0
+All files in dir with mus_musculus-READ-singleton.fastq.gz,2332785,211828511,90.8049867433,0.0102813002698,40,100,100.0
+```
+The order of the output is: sample,reads,total bp,mean length, 95 CI length,min,max,median
+
+5. Assemble the data: we are going to use [trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
+- we need to create a another configuration file `assembly.conf` outside the `clean-fastq` folder. We need to put the absolute path to our clean raw reads and the structure of the subfolders need to match what was produced by `illumiprocessor`:
+```
+├── clean-fastq
+    ├── alligator_mississippiensis
+    │    └── split-adapter-quality-trimmed
+    │       ├── alligator_mississippiensis-READ1.fastq.gz
+    │       ├── alligator_mississippiensis-READ2.fastq.gz
+    │       └── alligator_mississippiensis-READ-singleton.fastq.gz
+    └── anolis_carolinensis
+        └── split-adapter-quality-trimmed
+            ├── anolis_carolinensis-READ1.fastq.gz
+            ├── anolis_carolinensis-READ2.fastq.gz
+            └── anolis_carolinensis-READ-singleton.fastq.gz
+```
+
+Now we run the assembly:
+```shell
+# run the assembly
+phyluce_assembly_assemblo_trinity \
+    --conf assembly.conf \
+    --output trinity-assemblies \
+    --clean \
+    --cores 10
+
+NOTE: assemblo_trinity and Trinity are no longer supported on Mac OS.
+Trinity has been consistently hard to build on Mac OS and we will no
+longer be supporting it (unless it becomes easier to build).  We
+suggest you use Trinity on Linux _OR_ ABYSS, itero, or spades on Mac
+OS.
+```
+
+Because I have a mac, I cannot continue with the pipeline. I will search for alternatives for the assembly.
+
+Sections still missing:
+- Assembly QC
+- Finding the UCE loci
+- Extracting the UCE loci.
+
+We will not go over alignment at this stage as we will cover this in the next class.
+
+
 ## Alignment methods
 
 ### ClustalW
