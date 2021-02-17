@@ -54,11 +54,67 @@ By the end of the semester, we will change the format of the class into active l
 Out-of-class communication will be done via Slack where students will be able to ask and answer questions regarding the lectures and exercises.
 
 ## Grading and key dates
-- Draft of final report for peer-evaluation (due April 9): 5%
-- Peer evaluation of another student's report (due April 16): 5%
-- Final research report (due April 30): 30%
-- Reproducible script (due April 30): 30% 
-- Final presentation (05/04 or 05/06): 30%
+- Draft of final report for peer-evaluation (due April 9)
+- Peer evaluation of another student's report (due April 16)
+- Final research report (due April 30)
+- Reproducible script (due April 30)
+- Final presentation (05/04 or 05/06)
+
+### Final project content
+1. Abstract: 200 words or less
+2. Introduction: convey the background, objective and significance of your analysis
+3. Materials and Methods: describe in details the different methods, software, assumptions or any methodological choices that you did; appropriately cite other papers or software used
+4. Results: clearly and effectively describe the results of your analysis
+5. Discussion: summarize the conclusion of your findings and highlight any weaknesses or limitations of your approach
+6. References
+7. Reproducible script: step-by-step description of the methodology that can be easily followed by others. This can be the link to a github repository or an actual file
+
+Some notes:
+- There is no page limit to the project report, but concise and clear is always better than long
+- There is not a specific file format required, but the chosen format should allow for an easy way to evaluate and offer feedback (for both peer evaluation and instructor evaluation). In particular,
+    - markdown/Rmarkdown/latex files could be pushed to github for an easy evaluation via github comments or pull requests
+    - google documents would make it easy to share a living document and receive feedback from peers and instructor
+    - word documents are the least sharable, but could be used if they are the student's preferred format
+
+### Draft for peer evaluation
+The draft due on April 9 should be a skelethon version of ideas, not a complete written product. The goal of the peer evaluation is to provide feedback on the analysis steps, not on grammar/wording. The peer evaluation should also address how reproducible the current state of the scripts are.
+
+Questions the peer reviewer should consider:
+- Does the phylogenetic analysis have a clear goal and a clear guideline of steps to follow?
+- Are the methods chosen justified for the data at hand?
+- Are the specific assumptions and limitations of each method acknowledged?
+- Does the analysis have a reproducible script?
+- Is the reproducible script easy to follow and understand?
+
+### Final presentation
+
+During finals week, each student will present the main results of their analysis to the class in a short presentation (length of the presentation still to be determined but likely either 10 or 15 minutes long). Emphasis should be placed on science communication: 
+- clear and concise presentation of goal, data, methods, results and conclusions
+- good quality figures
+
+### Final project guidelines
+
+Note: this is not a grading rubric. This table is meant to give you an idea of what is adequate (or excellent) vs inadequate in your final project, but the categories (inadequate, adequate, good, excellent) do not correspond to grades. For a specific grading rubric, see below.
+
+|  | inadequate | adequate | good | excellent |
+| :---:   | :---: | :---: | :---:  | :---: |
+| Title | Point of analysis cannot be determined by title | Title is not concise, point of analysis is difficult to determine by title, most key information is missing | Title conveys main point of analysis but could be more concise | Title is concise, conveys main point of analysis, and includes these key components: study system, variables, result & direction |
+| Abstract | Abstract is missing or, if present, provides no relevant information | Many key components of the analysis are missing; those stated are unclear and/or are not stated concisely | Covers most key components but could be done more clearly and/or concisely | Concisely & clearly covers all key components in 200 words or less: biological rationale, hypothesis, approach, result direction & conclusions |
+| Introduction | Most key components are very weak or missing; those stated are unclear and/or not stated concisely.  Weak/missing components make it difficult to follow the rest of the paper. Often results in hypothesis that “comes out of nowhere” | Covers most key components but could be done much more logically, clearly, and/or concisely | Covers all key components but could be done much more logically, clearly, and/or concisely | Clearly, concisely, & logically presents all key components: relevant & correctly cited background information, question, biological rationale (including biological assumptions), hypothesis (if any), approach |
+| Materials and Methods | So little information is presented that reader could not possibly replicate experiment | Procedure is presented such that a reader could replicate experiment only after learning several more key details | Concisely, clearly & chronologically describes procedure used so that reader could replicate most of analysis with the exception of a few relatively minor details | Concisely, clearly, & chronologically describes procedure used so that knowledgeable reader could replicate experiment and understand the results.  Methods used are appropriate for study. Briefly describes mathematical manipulations or statistical analyses |
+| Results | Major problems that leave reader uninformed; narrative text is lacking entirely, tables & figures contain unclear and/or irrelevant information | Has 3-5 problems comparable to the following: narrative text and & tables/figures are minimal and mostly uninformative, some relevant data are present but are mixed in with much unnecessary information, tables & figures lack legends | Has presented both a concise, narrative text & informative tables/figures without biological interpretation, but has made 1-2 minor omissions or has other relatively small problems | With a few minor exceptions, contains a concise, well-organized narrative text & tables/figures that highlight key trends/patterns/output.  Tables & figures have appropriate legends/ labels & can stand on their own |
+| Discussion | Many key components are missing or very weakly done e.g., illogical conclusions made based on data, no ties to biological rationale are made, no literature cited, little to no evaluation of methods/data | Covers most key components but could be more more logically, clearly, and/or concisely. e.g. literature is minimally cited, presents unranked laundry list of problems instead of logical evaluation of methods and data, suggests flashy new experiments/analyses that would not clearly shed light on current question | Covers all key components but could be done much more logically, clearly, and/or concisely e.g. clearly develops a good argument that refers to biological rationale, but fails to logically and objectively evaluate assumptions, methods and data reliability.  Remaining components are done reasonably well, though there is still room for improvement  | With a few minor exceptions, clearly, concisely, & logically presents all key components: interprets/integrates data; formulates argument for conclusions referring back to biological rationale & by comparing with relevant findings in literature, introduces new literature to discuss or support findings, evaluates methods, evaluates reliability of data, states knowledge generated & implications of results, suggests next investigation steps, includes unique observations, and ends paper with final conclusions |
+| Literature Cited | Background information is presented but is consistently not cited; final citation list is missing | Very few references are cited in text of paper; final citation list is largely incomplete and/or is not formatted appropriately | References within body of paper are cited appropriately; references in final citation list are formatted appropriately but there are some exceptions | References within body of paper are cited appropriately; references in final citation list are formatted appropriately |
+| Reproducible script | | |  | | |
+| Overall grammar, organization, wording | All poorly organized, interrupted flow to ideas leading to lack of clarity, cannot follow thought progression, many grammatical errors | Problematic organization of some section resulting in loss of clarity; awkward wording at times; some grammatical errors | Organization was good with few to no problems, wording awkward in a few places, few grammatical errors | Excellent organization and paper flow, appropriate word choice, few to no grammatical errors |
+
+### Grading rubric
+
+| Grade | Criteria | 
+| :---: | :---: | 
+| B | The student turned in the final project with reproducible script, performed a peer evaluation for another student's project and presented their analysis to the class |
+| AB | The student turned in the final project, performed a peer evaluation for another student's project and presented their analysis to the class AND the performance was "good" in all four items (project, script, peer review, presentation) OR "excellent" in one item |
+| A | The student turned in the final project, performed a peer evaluation for another student's project and presented their analysis to the class AND the performance was "good" in all four items (project, script, peer review, presentation) AND "excellent" at least two items |
 
 ## Topics
 
