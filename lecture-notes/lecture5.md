@@ -682,7 +682,7 @@ class: left, top
 **Instructions:**
 
 - Choose the alignment method that you like the best (or try different options) on your class dataset
-- Make sure to keep notes in your reproducible script and keep the most updated version on github
+- Make sure to keep notes in your reproducible script and keep the most updated version on github (it is important to push your work to github since this allows me to check what you are doing and offer suggestions)
 
 ---
 class: left, top
