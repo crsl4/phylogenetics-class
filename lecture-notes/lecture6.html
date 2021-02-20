@@ -51,8 +51,8 @@ class: left, top
   - homoelogs: hybridization
   - xenologs: lateral gene transfer
 - We mostly focus on orthologs due to their importance in phylogenomics
-- Orthology can be a one-to-one relationship, or a one-to-many or many-to-one relationship
-- Orthology and paralogy relationships are not transitive
+- Orthology can be a one-to-one relationship, a one-to-many, or many-to-one relationship
+- Orthology and paralogy relationships are not transitive (see next figure)
 
 
 ---
@@ -68,13 +68,66 @@ _Figure 1 in HAL 2.4_
 ---
 class: left, top
 
-# Orthologous groups
-- Orthology can be not only a one-to-one relationship, but also a one-to-many, many-to-one or many-to-many relationship: Consider e.g. a mammal gene retained in the human lineage and duplicated in the rodent lineage. Consider furthermore that one mouse copy has remained in its ancestral locus and the other one has moved elsewhere in the genome. Both rodent paralogous copies are orthologous to the human gene
-- Orthology and paralogy relationships are not transitive: For instance, mouse has two insulin genes Ins1 and Ins2, which duplicated within the rodent lineage. Human has one copy, INS. Therefore, Ins1 is orthologous to INS, INS is orthologous to Ins2, but Ins1 is not orthologous but paralogous to Ins2
+# Orthologous groups: Figure summary
+
+- Orthology can be a one-to-one, a one-to-many, a many-to-one, or many-to-many relationship
+  - Example: a mammal gene in the human lineage and duplicated in the rodent lineage. Both rodent paralogous copies are orthologous to the human gene
+- Orthology and paralogy relationships are not transitive
+  - Example: mouse has two insulin genes Ins1 and Ins2, which duplicated within the rodent lineage. Human has one copy, INS. Therefore, Ins1 is orthologous to INS, INS is orthologous to Ins2, but Ins1 is not orthologous but paralogous to Ins2
 - There are different types of orthologous groups: strict ortholog groups (transitive) and hierarchical orthologs groups
-- "reconciled gene trees": internal nodes labelled as speciation or duplication (HAL 3.2)
-- hierarchical orthogroups are obtained by the speciation nodes on the reconciled gene trees
-- Here, we will not worry on the reconciliation step and will focus on identifying orthologs (and removing others)
+- Hierarchical orthogroups are obtained by the speciation nodes on the reconciled gene trees
+  - "Reconciled gene trees": internal nodes labelled as speciation or duplication (HAL 3.2)
+- Here, we will not worry on the reconciliation step and will focus on identifying and using orthologs
+
+---
+class: left, top
+
+# Orthology inference methods
+
+- Bidirectional Best Hit (BBH)
+- Reciprocal Smallest Distance (RSD)
+- Tree-based methods
+- Graph-based methods
+
+**Important reading:** From journal club, _The Impact of Gene Duplication, Insertion, Deletion, Lateral Gene Transfer and Sequencing Error on Orthology Inference: A Simulation Study_ [Dalquen et al 2013](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0056925)
+
+---
+class: left, top
+
+# Orthology inference methods
+
+### Bidirectional Best Hit (BBH)
+- Also found as "reciprocal best hit"
+- Call as orthologs all pairs of genes between two species that are more similar (i.e., with highest alignment score) to one another than to any other gene in the other species
+- In BLAST: gene _i_ in genome _I_ is BBH of gene _j_ in genome _J_ if query of genome _I_ with gene _j_ hits gene _i_ and viceversa
+- Original paper: [Overbeek et al 1999](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC15866/)
+- Bidirectional Best Hits miss many orthologs in duplication-rich clades such as plants and animals [Dalquen &amp; Dessimoz, 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3814191/)
+
+
+---
+class: left, top
+
+# Orthology inference methods
+
+### Reciprocal Smallest Distance (RSD)
+
+- It relies on global sequence alignment and maximum likelihood estimation of evolutionary distances to detect orthologs between two genomes
+- Original paper [Wall et al, 2003](https://academic.oup.com/bioinformatics/article/19/13/1710/224944)
+- Steps:
+  1. You have gene _i_ from genome _I_ and target genome _J_
+  2. With BLAST, identify a set of hits _H_ above a predefined significance threshold
+  3. Use ClustalW to pairwise align every sequence in _H_ with gene _i_
+  4. If the alignment score is greater than a threshold, the sequence _h_ is kept (call this set of hits _H2_)
+  5. Using PAML, you calculate the maximum likelihood evolutionary distance between every sequence in _H2_ and gene _i_ based on a given model of evolution
+  6. The sequence with the minimim evolutionary distance to gene _i_ is identified as the ortholog
+  
+  
+- Weaknesses of BBH and RSD:
+  - BBH and RSD do not deal well with many-to-many orthology relationships,
+resulting in missing pairs
+  - BBH and RSD can fail in case of differential gene loss: a situation where
+the corresponding ortholog is simply missing in both species, resulting in paralogs being wrongly identified as orthologs
+  - BBH and RSD do not obviously generalise to groupwise orthology (COGs: clusters of orthologous groups)
 
 ---
 class: left, top
@@ -86,7 +139,7 @@ class: left, top
 reconstruct a gene tree for a group of homologous sequences to then infer the type of
 evolutionary event represented by each internal node of the tree
 - To label the trees, there are two options:
-  - gene tree/species tree reconciliation (chapter 3.2)
+  - gene tree/species tree reconciliation (HAL 3.2)
   - species overlap: duplication nodes have the same species represented in child subtrees
 - Software: 
   - PANTHER, GIGA, EmsembleCompara use reconciliation approach
@@ -99,41 +152,30 @@ class: left, top
 
 ### Graph-based methods
 - Avoid inferring trees and instead
-compare sequences in a pairwise fashion, and build a graph with genes as vertices and some
+compare sequences in a pairwise fashion, and build a graph with genes as nodes and some
 measure of sequence similarity as edges
-- based on comparisons between pairs of genes within and between
-species
-- orthologs tend to be the pairs of sequences that have diverged the least
-- large-scale orthology prediction approaches:
-  - the basic
-"bidirectional best hit" (BBH) approach: which considers the pairs with
-mutually highest alignment scores
-  - "reciprocal shortest distance" (RSD) approach: phylogenetic distance-based
-- Weaknesses:
-  - BBH and RSD do not deal well with many-to-many orthology relationships,
-resulting in missing pairs
-  - BBH and RSD can fail in case of differential gene loss: a situation where
-the corresponding ortholog is simply missing in both species, resulting in paralogs being wrongly identified as orthologs
-    - solution: "witnesses of non-orthology" third party species that retained both copies (OMA algorithm)
-  - BBH and RSD do not obviously generalise to groupwise orthology (COGs: clusters of orthologous groups)
+- Assumption: orthologs tend to be the pairs of sequences that have diverged the least
+- Rely on computational approaches to identify clusters in the graph to be considered the orthologous groups
+- Software: Inparanoid, OMA, OrthoMCL, OrthoFinder, OrthoInspector, QuartetS
 
 ---
 class: left, top
 
 # Impact on phylogenomics inference
 
-- Initially, the experimental design in molecular phylogenetics included the identification
+- Initially, there was no need to search for orthologs
+  - The experimental design in molecular phylogenetics included the identification
 of highly conserved regions in the organismal lineage of interest, that were amplified with
 specific probes by means of a polymerase chain reaction (PCR). As the same marker gene
-–i.e. the orthologous gene–was specifically sequenced from each of the species of interest,
+ (i.e. the orthologous gene) was specifically sequenced from each of the species of interest,
 there was no need to search for orthologs
 
 - High-throughput sequencing and the availability of complete (or nearly complete)
-genomes and transcriptomes, one can in principle choose among virtually any marker gene.
+genomes and transcriptomes allow us in principle to choose among virtually any marker gene.
 In these cases, there is a need of inferring orthologous genes from the source genomic datasets
 
 - Few studies have compared how sets of orthologs inferred through different methods vary and how it
-affects species tree reconstruction
+affects species tree reconstruction (but see [Dalquen et al 2013](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0056925))
 
 
 ---
@@ -242,8 +284,10 @@ class: left, top
 - Read again the [OrthoFinder paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0721-2) and read also the [extension](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)
 - Check out more on the [OrthoFinder github repo](https://github.com/davidemms/OrthoFinder)
 - Learn more about the [Quest for Orthologs](https://questfororthologs.org/) meeting
-- Read [Tekaia2016](https://journals.sagepub.com/doi/10.4137/GEI.S37925)
-- Read [Haberman2016](https://link.springer.com/chapter/10.1007%2F978-3-319-41324-2_22)
+- Read about BBH in the original paper [Overbeek et al 1999](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC15866/) and its limitations [Dalquen &amp; Dessimoz, 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3814191/)
+- Read a review paper on new tools in orthology analysis: [Nichio et al 2017](https://www.frontiersin.org/articles/10.3389/fgene.2017.00165/full)
+- Read Inferring Orthologs: Open Questions and Perspectives in [Tekaia2016](https://journals.sagepub.com/doi/10.4137/GEI.S37925)
+- Read Finding Orthologs in the Twilight and Midnight Zones of Sequence Similarity in [Haberman2016](https://link.springer.com/chapter/10.1007%2F978-3-319-41324-2_22)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
