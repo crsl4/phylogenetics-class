@@ -1262,3 +1262,94 @@ primatesAA 22 seqs, max length 551, avg  length 504
 00:00:00     10 MB(0%)  Iter  19  100.00%  Refine biparts
 00:00:00     10 MB(0%)  Iter  20  100.00%  Refine biparts
 ```
+
+# Distance-based methods
+
+We are following this [great tutorial](https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf).
+
+The following commands are run inside R.
+
+1. Installing necessary packages:
+```r
+install.packages("adegenet", dep=TRUE)
+install.packages("phangorn", dep=TRUE)
+```
+
+2. Loading
+```r
+library(ape)
+library(adegenet)
+library(phangorn)
+```
+
+3. Loading the sample data
+```r
+dna <- fasta2DNAbin(file="http://adegenet.r-forge.r-project.org/files/usflu.fasta")
+```
+
+4. Computing the genetic distances. They choose a Tamura
+and Nei 1993 model which allows for different rates of transitions and transversions, heterogeneous base frequencies, and between-site variation of the substitution rate.
+```r
+D <- dist.dna(dna, model="TN93")
+```
+
+5. Get the NJ tree
+```r
+tre <- nj(D)
+```
+
+6. Before plotting, we can use the [`ladderize` function](https://rdrr.io/cran/ape/man/ladderize.html) which reorganizes the internal structure of the tree to get the ladderized effect when plotted
+```r
+tre <- ladderize(tre)
+```
+
+7. We can plot the tree
+```r
+plot(tre, cex=.6)
+title("A simple NJ tree")
+```
+
+# Parsimony method
+
+We are following this [great tutorial](https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf).
+
+The following commands are run inside R.
+
+1. Installing necessary packages (if you have not installed them for the distance section above)
+```r
+install.packages("adegenet", dep=TRUE)
+install.packages("phangorn", dep=TRUE)
+```
+
+2. Loading
+```r
+library(ape)
+library(adegenet)
+library(phangorn)
+```
+
+3. Loading the sample data
+```r
+dna <- fasta2DNAbin(file="http://adegenet.r-forge.r-project.org/files/usflu.fasta")
+
+## read as phangorn object:
+dna2 <- as.phyDat(dna)
+```
+
+4. We need a starting tree for the search on tree space and compute the parsimony of this tree
+```r
+tre.ini <- nj(dist.dna(dna,model="raw"))
+parsimony(tre.ini, dna2)
+## 422
+```
+
+5. Search for the tree with maximum parsimony:
+```r
+tre.pars <- optim.parsimony(tre.ini, dna2)
+## Final p-score 420 after  2 nni operations
+```
+
+6. Plot tree:
+```r
+plot(tre.pars, cex=0.6)
+```
