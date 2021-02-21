@@ -15,7 +15,7 @@ output:
 ---
 class: left, top
 
-# Lecture 8 (draft)
+# Lecture 8
 
 ### Previous class check-up
 - We studied the overview of phylogenetic inference and the main challenges
