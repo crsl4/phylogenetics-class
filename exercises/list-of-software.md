@@ -21,7 +21,7 @@ Please include here any issue (and solution) that you encountered if you decide 
 ### ClustalW
 
 Mac users with newest OS can run into problems when installing ClustalW.
-From a student: I also had a similar problem, where I was getting the error:
+From Beth: I also had a similar problem, where I was getting the error:
 ```
 Bad CPU type in executable
 ```
@@ -29,3 +29,18 @@ which meant that the OS version was too advanced. But I ended up able to install
 ```
 conda create -n clustalw2 -c biobuilds -y clustalw
 ```
+
+### OrthoFinder
+
+In Mac, you can install with (thanks Grant!):
+```shell
+conda install -c bioconda orthofinder
+```
+
+Note that in Mac, orthofinder can be found in the following path: `~/opt/miniconda2/pkgs/orthofinder-2.2.7-0` .
+
+But note that the python script was not installed with the conda command, so we need to get it from the github repo directly: `git clone https://github.com/davidemms/OrthoFinder.git`:
+```shell
+for f in *fa ; do python PATH/OrthoFinder/tools/primary_transcript.py $f ; done
+```
+where PATH is the path where you cloned the repo.

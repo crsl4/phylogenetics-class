@@ -1353,3 +1353,96 @@ tre.pars <- optim.parsimony(tre.ini, dna2)
 ```r
 plot(tre.pars, cex=0.6)
 ```
+
+## OrthoFinder
+
+Following the steps in the [tutorial](https://davidemms.github.io/orthofinder_tutorials/downloading-and-running-orthofinder.html).
+
+1. In a Mac machine, I will install with:
+```shell
+conda install -c bioconda orthofinder
+```
+This steps takes some minutes.
+
+2. To check it was installed correctly:
+```shell
+orthofinder -h
+```
+
+Note that `orthofinder` is installed in `~/opt/miniconda2/pkgs/orthofinder-2.2.7-0`.
+
+3. To download data, we go to the https://useast.ensembl.org/index.html website
+    - Click on "Human"
+    - Click on "Download FASTA"
+    - Click on "pep"
+    - Click on `Homo_sapiens.GRCh38.pep.all.fa.gz`
+    - We want to repeat the steps for 
+        - Mouse: `Mus_musculus.GRCm39.pep.all.fa.gz `
+        - Zebrafish: `Danio_rerio.GRCz11.pep.all.fa.gz`
+
+4. Move data files to our data folder and untar:
+```shell
+cd Dropbox/Documents/teaching/phylogenetics-class/BOT563/data
+gunzip *.gz
+```
+
+5. We’ll use a script provided with OrthoFinder to extract just the longest transcript variant per gene and run OrthoFinder on these files. 
+Also, note that the python script is not installed when running the conda installation, so we will need to get the python scripts from the github repo:
+```shell
+cd software
+git clone https://github.com/davidemms/OrthoFinder.git
+```
+
+Note that I had to change the path to the python script:
+```shell
+for f in *fa ; do python ~/software/OrthoFinder/tools/primary_transcript.py $f ; done
+
+
+Looking for "gene=" of "gene:" to identify isoforms of same gene
+Found 52089 accessions, 30313 genes, 0 unidentified transcripts
+Wrote 30313 genes
+/Users/Clauberry/Dropbox/Documents/teaching/phylogenetics-class/BOT563/data/primary_transcripts/Danio_rerio.GRCz11.pep.all.fa
+
+Looking for "gene=" of "gene:" to identify isoforms of same gene
+Found 115262 accessions, 23472 genes, 0 unidentified transcripts
+Wrote 23472 genes
+/Users/Clauberry/Dropbox/Documents/teaching/phylogenetics-class/BOT563/data/primary_transcripts/Homo_sapiens.GRCh38.pep.all.fa
+
+Looking for "gene=" of "gene:" to identify isoforms of same gene
+Found 67174 accessions, 22481 genes, 0 unidentified transcripts
+Wrote 22481 genes
+/Users/Clauberry/Dropbox/Documents/teaching/phylogenetics-class/BOT563/data/primary_transcripts/Mus_musculus.GRCm39.pep.all.fa
+```
+The folder `primary_transcripts` is created.
+
+6. Run OrthoFinder:
+```shell
+orthofinder -f primary_transcripts/
+
+
+OrthoFinder version 2.2.7 Copyright (C) 2014 David Emms
+
+2021-02-23 14:38:07 : Starting OrthoFinder
+16 thread(s) for highly parallel tasks (BLAST searches etc.)
+1 thread(s) for OrthoFinder algorithm
+
+Checking required programs are installed
+----------------------------------------
+Test can run "makeblastdb -help" - ok
+Test can run "blastp -help" - ok
+Test can run "mcl -h" - ok
+Test can run "fastme -i /Users/Clauberry/Dropbox/Documents/teaching/phylogenetics-class/BOT563/data/primary_transcripts/SimpleTest.phy -o /Users/Clauberry/Dropbox/Documents/teaching/phylogenetics-class/BOT563/data/primary_transcripts/SimpleTest.tre" - ok
+
+Dividing up work for BLAST for parallel processing
+--------------------------------------------------
+2021-02-23 14:38:09 : Creating Blast database 1 of 3
+2021-02-23 14:38:10 : Creating Blast database 2 of 3
+2021-02-23 14:38:11 : Creating Blast database 3 of 3
+
+Running BLAST all-versus-all
+----------------------------
+Using 16 thread(s)
+2021-02-23 14:38:11 : This may take some time....
+```
+Killed at 15:38 (1 hour) because it has not finished.
+
