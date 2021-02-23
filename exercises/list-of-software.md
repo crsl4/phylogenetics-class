@@ -17,3 +17,15 @@ This is not a complete list for the whole semester.
 ## Trouble-shooting
 
 Please include here any issue (and solution) that you encountered if you decide to install these software by yourself.
+
+### ClustalW
+
+Mac users with newest OS can run into problems when installing ClustalW.
+From a student: I also had a similar problem, where I was getting the error:
+```
+Bad CPU type in executable
+```
+which meant that the OS version was too advanced. But I ended up able to install clustalw using conda:
+```
+conda create -n clustalw2 -c biobuilds -y clustalw
+```
