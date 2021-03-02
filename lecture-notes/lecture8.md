@@ -137,6 +137,7 @@ class: left, top
 Input: Matrix of pairwise distances
 
 1) Group together the two taxa with smallest distance (say A, B)
+
 2) Compute the distance from AB to every other taxa
 
 WPGMA: $d_{(AB)k} = \frac{d_{A,k}+d_{B,k}}{2}$ (simple average)

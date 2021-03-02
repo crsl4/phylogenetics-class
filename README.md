@@ -42,9 +42,9 @@ By the end of the course, you will be able to
 | 02/23 | Orthology detection  | HAL 2.4 and the [OrthoFinder paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0721-2) | You will know about the different orthology inference methods and will be able to explain the OrthoFinder algorithm | [lecture6.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture6.md) |
 | 02/25 | Overview of phylogenetic inference | | You will be able to explain the overall methodology of phylogenetic inference as well as the main weaknesses | [lecture7.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture7.pdf) |
 | 03/02 | Distance and parsimony methods  | [Install R](https://cloud.r-project.org/) and optional readings: HB Ch 5-6, Baum Ch 7-8 | You will be able to explain both algorithms to reconstruct trees: 1) based on distances and 2) based on parsimony | [lecture8.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture8.md) |
-| 03/04 | Models of evolution  | HAL 1.1 | You will be able to explain the main characteristics and assumptions of the substitution models | [lecture9.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture9.pdf) |
-| 03/09 | Maximum likelihood  | | | |
-| 03/11 
+| 03/04 | Continue with distance and parsimony methods | | | |
+| 03/09 | Models of evolution  | HAL 1.1 | You will be able to explain the main characteristics and assumptions of the substitution models | [lecture9.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture9.pdf) | 
+| 03/11 | Maximum likelihood  | | | |
 | 03/16 
 | 03/18 | Bayesian inference  | | | |
 | 03/23 
