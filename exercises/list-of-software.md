@@ -11,6 +11,9 @@ This is not a complete list for the whole semester.
 - [ClustalW](http://www.clustal.org/clustal2/)
 - [T-Coffee](http://www.tcoffee.org/Projects/tcoffee/index.html#DOWNLOAD)
 - [MUSCLE](https://www.drive5.com/muscle/downloads.htm)
+- R packages ape and phangorn for distance and parsimony: [tutorial](https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf)
+- [raxml-ng](https://github.com/amkozlov/raxml-ng)
+- [iq-tree](http://www.iqtree.org/workshop/molevol2019)
 
 
 
@@ -44,3 +47,7 @@ But note that the python script was not installed with the conda command, so we 
 for f in *fa ; do python PATH/OrthoFinder/tools/primary_transcript.py $f ; done
 ```
 where PATH is the path where you cloned the repo.
+
+### T-Coffee
+
+Problems for linux users that have to download and install `famsa` separately and put in on their path.
