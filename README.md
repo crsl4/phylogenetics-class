@@ -45,7 +45,7 @@ By the end of the course, you will be able to
 | 03/04 | Continue with distance and parsimony methods | | | |
 | 03/09 | Models of evolution  | HAL 1.1 | You will be able to explain the main characteristics and assumptions of the substitution models | [lecture9.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture9.pdf) | 
 | 03/11 | Maximum likelihood  | | | |
-| 03/16 
+| 03/16 | Comparison of distances, parsimony and likelihood | Investigate the pros/cons of the method of your team | You will be able to assess the strenghts and weaknesses of distances, parsimony and likelihood methods in phylogenetic inference | [lecture11.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture11.md) |
 | 03/18 | Bayesian inference  | | | |
 | 03/23 
 | 03/25 | Model selection  | | | |
