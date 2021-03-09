@@ -44,10 +44,10 @@ By the end of the course, you will be able to
 | 03/02 | Distance and parsimony methods  | [Install R](https://cloud.r-project.org/) and optional readings: HB Ch 5-6, Baum Ch 7-8 | You will be able to explain both algorithms to reconstruct trees: 1) based on distances and 2) based on parsimony | [lecture8.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture8.md) |
 | 03/04 | Continue with distance and parsimony methods | | | |
 | 03/09 | Models of evolution  | HAL 1.1 | You will be able to explain the main characteristics and assumptions of the substitution models | [lecture9.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture9.pdf) | 
-| 03/11 | Maximum likelihood  | HAL 1.2 and optional: install RAxML-NG (HAL 1.3) or [IQ-Tree](http://www.iqtree.org/workshop/molevol2019) | You will be able to explain the main steps in maximum likelihood inference and the strength/weaknesses of the approach | [lecture10.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture10.pdf) |
-| 03/16 | Comparison of distances, parsimony and likelihood | Investigate the pros/cons of the method of your team | You will be able to assess the strenghts and weaknesses of distances, parsimony and likelihood methods in phylogenetic inference | [lecture11.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture11.md) |
-| 03/18 | Bayesian inference  | | | |
-| 03/23 
+| 03/11 | Continue with models of evolution | | | |
+| 03/16 | Maximum likelihood  | HAL 1.2 and optional: install RAxML-NG (HAL 1.3) or [IQ-Tree](http://www.iqtree.org/workshop/molevol2019) | You will be able to explain the main steps in maximum likelihood inference and the strength/weaknesses of the approach | [lecture10.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture10.pdf) |
+| 03/18 | Comparison of distances, parsimony and likelihood | Investigate the pros/cons of the method of your team | You will be able to assess the strenghts and weaknesses of distances, parsimony and likelihood methods in phylogenetic inference | [lecture11.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture11.md) |
+| 03/23 | Bayesian inference  | | | |
 | 03/25 | Model selection  | | | |
 | 03/30 
 | 04/01 | The coalescent  | | | |
