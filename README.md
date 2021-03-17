@@ -51,7 +51,7 @@ By the end of the course, you will be able to
 | 03/25 | Model selection  | | | |
 | 03/30 
 | 04/01 | The coalescent  | | | |
-| 04/06 | (1-min presentation of students' project data/goal) | Create a slide describing your data [here](https://docs.google.com/presentation/d/1-DRevm_ntBOD6F5PMnQkzbMuhSiJMjjaBiD8FvUhfY4/edit?usp=sharing) | | |
+| 04/06 | Continue with the coalescent (1-min presentation of students' project data/goal) | Create a slide describing your data [here](https://docs.google.com/presentation/d/1-DRevm_ntBOD6F5PMnQkzbMuhSiJMjjaBiD8FvUhfY4/edit?usp=sharing) | | |
 | 04/08 | 
 | **04/09** | Deadline: Draft of final report  | | | |
 | 04/13 | Co-estimation methods  | | | |
