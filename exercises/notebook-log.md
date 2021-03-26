@@ -2183,3 +2183,20 @@ Analysis results written to:
 Date and Time: Sun Mar  7 07:48:33 2021
 ```
 
+## MrBayes
+
+1. Download MrBayes from [here](http://nbisweden.github.io/MrBayes/). In mac:
+```shell
+brew tap brewsci/bio
+brew install mrbayes --with-open-mpi
+
+$ which mb
+/usr/local/bin/mb
+```
+
+Had to troubleshoot a lot!
+```shell
+brew reinstall mrbayes
+sudo chown -R $(whoami) /usr/local/Cellar/open-mpi/4.1.0
+brew reinstall mrbayes
+```
