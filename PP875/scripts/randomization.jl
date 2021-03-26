@@ -9,6 +9,10 @@ s = 0130140
 people = ["austin","ben","charlotte","dana", "grant", "jose", "kymi", "lauren","lillian", "max", "melody", "yurin"]
 s = 02262021954
 
+## April 9, 16, 23, 30
+people = ["austin","ben","charlotte","dana", "grant", "jose", "kymi", "lauren","lillian", "max", "melody", "yurin"]
+s = 032620211225
+
 using Random
 n = length(people)
 Random.seed!(s);

@@ -106,7 +106,7 @@ class: left, top
   - They noticed that the genetic distance of two sequences coding for the same protein on different species seems to increase linearly with divergence time
   - This seems to imply that the rate of evolution for any given protein is constant: existence of a molecular clock
   - This assumption is used for dating the divergences in the tree
-  - The molecular clock assumption aligns with the neutral theory of evolution (vs positive selection theory) and implies that deviations from clock-like behavior may reveal adaptive evolution, relazing functional constraints or changes in effective population size
+  - The molecular clock assumption aligns with the neutral theory of evolution (vs positive selection theory) and implies that deviations from clock-like behavior may reveal adaptive evolution, relaxing functional constraints or changes in effective population size
   - How to test the clock hypothesis? HB 11
 
 ---
