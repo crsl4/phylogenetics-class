@@ -50,7 +50,7 @@ By the end of the course, you will be able to
 | 03/23 | Bayesian inference  | HAL 1.4 and [Nascimento et al, 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5624502/) | You will be able to explain the main components of Bayesian inference and their effect on the inference performance | [lecture12.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture12.pdf) |
 | 03/25 | Model selection: Guest lecture by [Rob Lanfear](http://www.robertlanfear.com/)  | | | |
 | 03/30 | Continuing with Bayesian inference | | | |
-| 04/01 | The coalescent  | | | |
+| 04/01 | The coalescent  | HAL 3.1, 3.3 | You will be able to explain the coalescent model for species trees and networks | [lecture14.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture14.pdf) |
 | 04/06 | Continue with the coalescent (and 1-min presentation of students' project data/goal) | Create a slide describing your data [here](https://docs.google.com/presentation/d/1-DRevm_ntBOD6F5PMnQkzbMuhSiJMjjaBiD8FvUhfY4/edit?usp=sharing) | | |
 | 04/08 | Co-estimation methods  | | | |
 | **04/09** | Deadline: Draft of final report  | | | |
