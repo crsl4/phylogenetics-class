@@ -54,7 +54,7 @@ By the end of the course, you will be able to
 | 04/06 | Continue with the coalescent (and 1-min presentation of students' project data/goal) | Create a slide describing your data [here](https://docs.google.com/presentation/d/1-DRevm_ntBOD6F5PMnQkzbMuhSiJMjjaBiD8FvUhfY4/edit?usp=sharing) | | |
 | 04/08 | Continue with the coalescent  | | | |
 | **04/09** | Deadline: Draft of final report  | | | |
-| 04/13 | Co-estimation methods  | | | |
+| 04/13 | Co-estimation methods  | Optional reading: HB 18 | You will be able to explain the main components of co-estimation methods and follow the BEAST tutorial | [lecture15.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture15.md) |
 | 04/15 | Discussion: Measures of support  | One per group: 1) [Stenz2015](https://pubmed.ncbi.nlm.nih.gov/26117705/), 2) [Lemoine2018](https://www.nature.com/articles/s41586-018-0043-0), 3) [Anisimova2006](https://academic.oup.com/sysbio/article/55/4/539/1675125), 4) [Sayyari2016](https://academic.oup.com/mbe/article/33/7/1654/2579300) | You will be able to compare and contrast the different ways in which we can measure confidence in our phylogenetic estimates | [Slides](https://docs.google.com/presentation/d/1yXLxhtNP3m0uVIRGR5du3nrhfxnY4FRvGUvgMTSZ3Y8/edit?usp=sharing) |
 | **04/16** | Deadline: Peer evaluation of another student's report  | | | |
 | 04/20 | Project check-up | | | |

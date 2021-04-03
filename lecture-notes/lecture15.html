@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 15</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Botany 563" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lecture 15
+## Co-estimation methods
+### Botany 563
+
+---
+
+class: left, top
+
+# Lecture 15
+
+### Previous class check-up
+- We studied the theory of coalescent models on trees and on networks
+- We studied the PhyloNetworks pipeline from sequences to species tree/network
+
+### Learning objectives
+
+At the end of today's session, you will be able to
+- identify the main parts of co-estimation methods
+- follow the BEAST tutorial
+
+### Pre-class work
+
+- Optional reading HB 18
+
+---
+class: left, top
+
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/lecture15.png" width="750"/&gt;&lt;/div&gt;
+
+---
+class: left, top
+
+# Taming the BEAST 
+
+[GitHub repo](https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures)
+
+- [BEAST intro](https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures/blob/master/2019-08-12_Beast2Intro.pdf)
+- [Setting priors](https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures/blob/master/2019-08-12_SettingPriors.pdf)
+- [Troubleshooting](https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures/blob/master/2019-08-13_Troubleshooting.pdf)
+
+
+---
+class: left, top
+
+# In-class dynamic: Taming the BEAST tutorial
+
+Time: 15 minutes
+
+Instructions: Choose a tutorial from the whole list of [BEAST tutorials](https://taming-the-beast.org/tutorials/). Two that stand out: 
+
+- [Intro to BEAST](https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/)
+- [Multispecies coalescent on *BEAST](https://taming-the-beast.org/tutorials/StarBeast-Tutorial/)
+
+Create our own reproducible script.
+
+Options for you:
+1. "I think that I can follow the pipeline by myself or with a small group of peers": you should join the Congregate room
+2. "I think I need more one-on-one help to run the commands": you can stay here in the zoom room
+
+---
+class: left, top
+
+# Further learning
+
+- Checkout all the resources in the Taming the BEAST [github repo](https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures)
+- Checkout all the [BEAST tutorials](https://taming-the-beast.org/tutorials/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
