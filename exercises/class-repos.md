@@ -13,3 +13,4 @@ Yu Sun: https://github.com/YuSunwisc/Phylo563_FinalProject
 Soyoung Jung: https://github.com/soyoungjung1/Bot563
 Emma McKeel: https://github.com/emckeel/Phylo-class-project.git
 Roberto Carrera-Martinez: https://github.com/rcarrmart/myProject.git
+Emma Howell: https://github.com/ekhowell/phylo_class
