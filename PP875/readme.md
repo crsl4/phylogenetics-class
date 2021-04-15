@@ -57,8 +57,6 @@ We will read papers:
 | 04/09   | Plant phylogenomics, [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5895195/) | [slides](https://docs.google.com/presentation/d/1k69NgMkRtUQk-ZioKs_W3k-nH-0LJwt9OMFKtPfpmRM/edit?usp=sharing) |
 | 04/16   | Inferring Ancient Relationships, [link](https://academic.oup.com/icb/article/58/4/623/5049468) | [slides](https://docs.google.com/presentation/d/1CfGru3h2AYQ0QtUwoocla4GZPEA6MBAL6ZoOEJHWMgk/edit?usp=sharing) |
 | 04/23   | A Critical Review on the Use of Support Values, [link](https://academic.oup.com/mbe/article/34/6/1535/3077051) | [slides](https://docs.google.com/presentation/d/1Jtyio57XKh0jBL1fGyzJQlgj57P3Uptg7ohhFFflA3M/edit?usp=sharing) |
-| 04/30   | Genome-wide interrogation advances, [link](https://www.nature.com/articles/s41559-016-0020) | [slides](https://docs.google.com/presentation/d/1LxIUbg5i_PPBe5nlQCxtUnpiv7si3ZhF8Cg3ZT4fVz8/edit?usp=sharing) |
-|         | Constrained gene tree inference, [link](https://www.nature.com/articles/s41559-016-0056) | |
-| 05/07   | A new phylogenetic protocol, [link](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) | [slides](https://docs.google.com/presentation/d/1ieYN8a-UIMIMCoUwQM0_jAFgbb4sgIqWNeAwqk4fR48/edit?usp=sharing) |
+| 04/30   | A new phylogenetic protocol, [link](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) | [slides](https://docs.google.com/presentation/d/1ieYN8a-UIMIMCoUwQM0_jAFgbb4sgIqWNeAwqk4fR48/edit?usp=sharing) |
 
 
