@@ -51,3 +51,15 @@ Read the software paper of the software you are citing and create a cheatsheet f
 - Weaknesses: not scalable for large datasets and potential model misspecification error
 - Assumptions: the substitution model and other model choices are correct and the optimization algorithm has converged to the maximum
 - User choices: User needs to specify the substitution model and other model characteristics (e.g. rate variation); user can select starting tree but if it is not selected by the user, RAxML choose 5 starting trees based on parsimony
+
+
+---
+class: left, top
+
+## Class dynamic: Project Q&A
+
+Options:
+- Stay in the class for questions
+- Log off and use the time to work on your project
+
+Before leaving, please fill out a checkup poll!
