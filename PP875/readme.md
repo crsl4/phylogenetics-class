@@ -1,6 +1,6 @@
 # Plant Path 875: Readings in Phylogenomics (UW-Madison)
 
-Spring 2021: Friday 8:55-9:45am (online via Zoom)
+Spring 2022: Wednesday 4:30-5:20pm (Russell A228)
 
 **Instructor:** 
 
@@ -35,12 +35,12 @@ We will read papers:
     - Group 1 will read the Introduction and Results of the paper
     - Group 2 will read the Methods and Discussion/Conclusions of the paper
 - The class format will be:
-    - 8:55-9:15 (20min): Each group will be in a breakout room where they will discuss the sections of the paper and prepare a 10-min presentation for the whole class
-    - 9:15-9:25 (10min): 10-minute presentation of group 1
-    - 9:25-9:35 (10min): 10-minute presentation of group 2 
-    - 9:35-9:45 (10min): Class discussion and questions
+    - 20min: Each group will be in a breakout room where they will discuss the sections of the paper and prepare a 10-min presentation for the whole class
+    - 10min: 10-minute presentation of group 1
+    - 10min: 10-minute presentation of group 2 
+    - 10min: Class discussion and questions
 
-## Schedule
+## Schedule 2021
 
 | Session | Reading | Notes |
 | :---:   | :---   | :---:                     |
