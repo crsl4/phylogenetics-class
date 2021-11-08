@@ -2,11 +2,11 @@
 
 A course in the theory and practice of phylogenetic inference from DNA sequence data. Students will learn all the necessary components of state-of-the-art phylogenomic analyses and apply the knowledge to the data analyses of their own organisms.
 
-- Spring 2021: Tuesday and Thursday 1:00-2:15pm (online via Zoom)
+- Spring 2022: Wednesday and Friday 2:30-3:45pm (Russell A228)
 - Instructor: Claudia Solis-Lemus, PhD 
     - Email: solislemus@wisc.edu
     - website: https://solislemuslab.github.io/
-- Office hours: Tuesday 2:30-3:30pm, or by appointment
+- Office hours: Wednesday 3:45-4:30pm, or by appointment
 
 
 ## Learning outcomes
@@ -27,7 +27,7 @@ By the end of the course, you will be able to
 - _The Phylogenetic Handbook_ by Philippe Lemey, Marco Salemi and Anne-Mieke Vandamme (optional: denoted HB in the schedule)
 
 
-## Schedule
+## Schedule 2021
 
 | Session | Topic | Reading before class | At the end of the session | Notes |
 | :---:   | :---: | :---:       | :---:                     | :---: |
