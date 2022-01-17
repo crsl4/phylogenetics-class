@@ -1,6 +1,6 @@
 # Plant Path 875: Readings in Phylogenomics (UW-Madison)
 
-Spring 2021: Friday 8:55-9:45am (online via Zoom)
+Spring 2022: Wednesdays 4:30-5:20pm (Russell A228)
 
 **Instructor:** 
 
@@ -33,30 +33,31 @@ We will read papers:
 - The class will follow the structure of a jigsaw dynamic:  
     - There will be two groups in class: group 1 and group 2
     - Group 1 will read the Introduction and Results of the paper
-    - Group 2 will read the Methods and Discussion/Conclusions of the paper
+    - Group 2 will read the Methods and Conclusions of the paper
 - The class format will be:
-    - 8:55-9:15 (20min): Each group will be in a breakout room where they will discuss the sections of the paper and prepare a 10-min presentation for the whole class
-    - 9:15-9:25 (10min): 10-minute presentation of group 1
-    - 9:25-9:35 (10min): 10-minute presentation of group 2 
-    - 9:35-9:45 (10min): Class discussion and questions
+    - 4:30-4:50 (20min): Each group will be in a breakout room where they will discuss the sections of the  paper and prepare a 10-min presentation for the whole class
+    - 4:50-5:00 (10min): 10-minute presentation of group 1
+    - 5:00-5:10 (10min): 10-minute presentation of group 2
+    - 5:10-5:20 (10min): Conclusions and questions
 
 ## Schedule
 
 | Session | Reading | Notes |
 | :---:   | :---   | :---:                     |
-| 01/29   |  Introduction |  |
-| 02/05   |  Alignathon, [link](https://genome.cshlp.org/content/24/12/2077) | [slides](https://docs.google.com/presentation/d/1agzopLF6CNrYyQBiyMhkL3ELgBo-3iBZth1-fioZzDM/edit?usp=sharing) |
-| 02/12   | Do Alignment and Trimming Methods Matter, [link](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syaa064/5892776) | [slides](https://docs.google.com/presentation/d/1cOLDFZALCggFCUunLn_OqscF9TKG1M1ubPbSSZkeSsk/edit?usp=sharing) |
-| 02/19   | Orthology inference: a simulation study, [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0056925) | [slides](https://docs.google.com/presentation/d/1r0mx4WA-AOr281h3Zx823LwgjFV8J3nflkxZeSiUOGs/edit?usp=sharing) |
-| 02/26   | How Well Does Your Phylogenetic Model Fit Your Data?, [link](https://academic.oup.com/sysbio/article/68/1/157/5133546) | [slides](https://docs.google.com/presentation/d/1xjY1Wa7T2g80Q5kBEjPYUTYhBllj2kanRxaJxXzEQCo/edit?usp=sharing) |
-| 03/05   | Presence of Paralogs, [link](https://www.sciencedirect.com/science/article/pii/S0168952520302122?via%3Dihub) | [slides](https://docs.google.com/presentation/d/1vqIe0LNpU0msTzVUQSnO2solvZDmTOa_jMb64yN4sUM/edit?usp=sharing) |
-| 03/12   | Methods to Calculate Concordance Factors, [link](https://academic.oup.com/mbe/article/37/9/2727/5828940) | [slides](https://docs.google.com/presentation/d/1YVKsRL76ZcdoziChZUvSyneFFYnk_1-7qQsDOs5r7XI/edit?usp=sharing) |
-| 03/19   | When species trees disagree, [link](https://www.biorxiv.org/content/10.1101/2020.03.27.012237v1) | [slides](https://docs.google.com/presentation/d/1v9UkTA0qObrQa1oUOUSRluzmUZ8eg75Zkd5sbCDsufI/edit?usp=sharing) |
-| 03/26   | ILS in mammals [link](https://academic.oup.com/sysbio/article/66/1/112/2449707) | [slides](https://docs.google.com/presentation/d/1IpRZTz_lv3mN2BxhTuBfclxUFzS3M9mBHF1EK00g_Gk/edit?usp=sharing) |
-| 04/02   | Spring break | |
-| 04/09   | Plant phylogenomics, [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5895195/) | [slides](https://docs.google.com/presentation/d/1k69NgMkRtUQk-ZioKs_W3k-nH-0LJwt9OMFKtPfpmRM/edit?usp=sharing) |
-| 04/16   | Inferring Ancient Relationships, [link](https://academic.oup.com/icb/article/58/4/623/5049468) | [slides](https://docs.google.com/presentation/d/1CfGru3h2AYQ0QtUwoocla4GZPEA6MBAL6ZoOEJHWMgk/edit?usp=sharing) |
-| 04/23   | A Critical Review on the Use of Support Values, [link](https://academic.oup.com/mbe/article/34/6/1535/3077051) | [slides](https://docs.google.com/presentation/d/1Jtyio57XKh0jBL1fGyzJQlgj57P3Uptg7ohhFFflA3M/edit?usp=sharing) |
-| 04/30   | A new phylogenetic protocol, [link](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) | [slides](https://docs.google.com/presentation/d/1LxIUbg5i_PPBe5nlQCxtUnpiv7si3ZhF8Cg3ZT4fVz8/edit?usp=sharing) |
+| 01/26   |  Introduction |  |
+| 02/02   |  Comparison of multiple sequence alignment methods, [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0018093) | [slides](https://docs.google.com/presentation/d/1r_NOYvCrJqArUanLrmzkxA_7JBP2BtJxeecku4XaFGE/edit?usp=sharing) |
+| 02/09   | Evaluating the usefulness of alignment filtering, [link](https://bmcevolbiol.biomedcentral.com/articles/10.1186/s12862-019-1350-2) | [slides](https://docs.google.com/presentation/d/1-_NDWVzQoW8AnFO1ThLqOAT2GDBrlwtIYiqzzp_ilSk/edit?usp=sharing) |
+| 02/16   | A New Orthology Assessment Method, [link](https://academic.oup.com/mbe/article/33/8/2117/2578877) | [slides](https://docs.google.com/presentation/d/11JPLZT68q8JrftM2sL-CXjNytWKu_3EsMfbSFbzyyx0/edit?usp=sharing) |
+| 02/23   | Bayesian selection of misspecified models, [link](https://www.pnas.org/content/115/8/1854) | [slides](https://docs.google.com/presentation/d/15r1vIixPnmhAzUW298sEDGMmkFVvmvwl5A4Te30h0tE/edit?usp=sharing) |
+| 03/02   | Molecular Clocks, [link](https://www.sciencedirect.com/science/article/pii/S0168952520301311?via%3Dihub) | [slides](https://docs.google.com/presentation/d/1FR9MxKmfpHzAnbsCZJOFbhFuzcy6p5np5Mmkt0HwY6U/edit?usp=sharing) |
+| 03/09   | Novel information theory-based measures, [link](https://academic.oup.com/mbe/article/31/5/1261/994356) | [slides](https://docs.google.com/presentation/d/1RqcYnnc5YDOS82dkLAqX81QEGD4lToXt0BJggZbrJ9M/edit?usp=sharing) |
+| 03/16   | Spring break | |
+| 03/23   | Assessing Confidence in Root Placement, [link](https://www.biorxiv.org/content/10.1101/2020.07.31.230144v2) | [slides](https://docs.google.com/presentation/d/1XGcc9uP8DrIDgYVZjhdhdkqB8ZsPgoYQ2TAgj3K-IUI/edit?usp=sharing) |
+| 03/30   | Long branch effects distort maximum likelihood, [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0036593) | [slides](https://docs.google.com/presentation/d/1daZyM2Ld6k75Ok1j49KdTMoYCM-afIYeTH7lUAYJEwA/edit?usp=sharing) |
+| 04/06   | Sources of error inherent in species-tree estimation, [link](https://academic.oup.com/sysbio/article/59/5/573/1647664) | [slides](https://docs.google.com/presentation/d/1eioU13L-gpqA_cbwO2Ifml7JcEwtBo94Wt0F1UOLv2w/edit?usp=sharing) |
+| 04/13   | Why Do Phylogenomic Data Sets Yield Conflicting Trees?, [link](https://academic.oup.com/sysbio/article/66/5/857/3091102) | [slides](https://docs.google.com/presentation/d/1m2V7VntpTFKEKoGJyXcukP1uHJho-w83TLCWg0T1iss/edit?usp=sharing) |
+| 04/20   | Is recombination a problem?, [link](https://academic.oup.com/sysbio/article/61/4/691/1637909) | [slides](https://docs.google.com/presentation/d/1vRTptF3cEX3_3tMGNzh6R2_flAEyWC9eQ97-W5VUrnY/edit?usp=sharing) |
+| 04/27   | Evaluating Fast Maximum Likelihood, [link](https://academic.oup.com/mbe/article/35/2/486/4644721) | [slides](https://docs.google.com/presentation/d/1yMJ-zY-Q-KeKA-neAgyP4eVdhVDg2pMyEUfH0pyUEgA/edit?usp=sharing) |
+| 05/04   | The effect of alignment uncertainty, [link](https://bmcevolbiol.biomedcentral.com/articles/10.1186/s12862-019-1534-9) | [slides](https://docs.google.com/presentation/d/1zRnwDo9MsX-oZxzgSF3nDDbh6ffsVmZOne1wT--PpiA/edit?usp=sharing) |
 
 
