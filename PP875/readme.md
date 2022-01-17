@@ -40,7 +40,7 @@ We will read papers:
     - 5:00-5:10 (10min): 10-minute presentation of group 2
     - 5:10-5:20 (10min): Conclusions and questions
 
-## Schedule
+## Schedule 2021
 
 | Session | Reading | Notes |
 | :---:   | :---   | :---:                     |
