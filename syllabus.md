@@ -1,13 +1,13 @@
 # Botany 563 Phylogenetic Analysis of Molecular Data (UW-Madison)
 
-Spring 2021: Tuesday and Thursday 1:00-2:15pm (online via Zoom)
+Spring 2022: Wednesday and Friday 2:30-3:45pm (Russell A228)
 
 **Instructor:** 
 
 - Claudia Solis-Lemus, PhD
 - email: solislemus@wisc.edu
 - website: https://solislemuslab.github.io/
-- office hours: Tuesday 2:30-3:30pm, or by appointment
+- office hours: Wednesday 3:45-4:30pm, or by appointment using Calendly (info in CANVAS)
 
 **Class description:** 
 A course in the theory and practice of phylogenetic inference from DNA sequence data. Students will learn all the necessary components of state-of-the-art phylogenomic analyses and apply the knowledge to the data analyses of their own organisms.
@@ -54,11 +54,32 @@ By the end of the semester, we will change the format of the class into active l
 Out-of-class communication will be done via Slack where students will be able to ask and answer questions regarding the lectures and exercises.
 
 ## Grading and key dates
-- Draft of final report for peer-evaluation (due April 9)
-- Peer evaluation of another student's report (due April 16)
-- Final research report (due April 30)
-- Reproducible script (due April 30)
-- Final presentation (05/04 or 05/06)
+- Formal assessments (10%). These regular assessments are not graded. Each assessment/quiz is worth 10 points for turning it in on time and 5 points if turned in late (one week after deadline). Maximum possible points from these assessments is 120, but only 100 count towards grade (that is, 2 full quizzes can be missed without penalty).
+    - 1/28 HAL 2.1 quiz
+    - 2/4 Reproducibility quiz
+    - 2/9 Sequencing quiz
+    - 2/16 Alignment HW
+    - 2/18 HAL 2.4 quiz
+    - 3/4 HAL 1.1 quiz
+    - 3/11 HAL 1.2 quiz
+    - 3/25 HAL 1.4 quiz
+    - 3/30 Nascimento2017 quiz
+    - 4/8 HAL 3.1 quiz
+    - 4/8 HAL 3.3 quiz
+    - 4/15 SNaQ quiz
+- GitHub commits (10%). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see below). Each commit is worth 20 points (10 if late within one week of deadline). Maximum possible points from these assessments is 120, but only 100 count towards grade (that is, 1 commit can be missed without penalty). 
+    - 3/2: Alignment method (from lecture 2/16)
+    - 3/9: Orthology method (from lecture 2/18)
+    - 3/23: Distance and parsimony methods (from lecture 3/2)
+    - 4/6: Maximum Likelihood method (from lecture 3/23)
+    - 4/15: Bayesian method (from lecture 4/1)
+    - 4/27: Coalescent method (from lecture 4/13)
+- Peer evaluation of GitHub commits (10%). Each student will provide feedback to the git commits of another student for 10% of their grade (the reviewer's grade).
+- Final research report (due May 9) 50%
+- Reproducible script (due May 9) 20%
+- Final presentation (05/11 or 05/13) 10%
+
+Late submissions
 
 ### Final project content
 
@@ -80,15 +101,6 @@ Some notes:
     - google documents would make it easy to share a living document and receive feedback from peers and instructor
     - word documents are the least sharable, but could be used if they are the student's preferred format
 
-### Draft for peer evaluation
-The draft due on April 9 should be a skelethon version of ideas, not a complete written product. The goal of the peer evaluation is to provide feedback on the analysis steps, not on grammar/wording. The peer evaluation should also address how reproducible the current state of the scripts are.
-
-Questions the peer reviewer should consider:
-- Does the phylogenetic analysis have a clear goal and a clear guideline of steps to follow?
-- Are the methods chosen justified for the data at hand?
-- Are the specific assumptions and limitations of each method acknowledged?
-- Does the analysis have a reproducible script?
-- Is the reproducible script easy to follow and understand?
 
 ### Final presentation
 
