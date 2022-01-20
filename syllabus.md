@@ -54,7 +54,7 @@ By the end of the semester, we will change the format of the class into active l
 Out-of-class communication will be done via Slack where students will be able to ask and answer questions regarding the lectures and exercises.
 
 ## Grading and key dates
-- Formal assessments (10%). These regular assessments are not graded. Each assessment/quiz is worth 10 points for turning it in on time and 5 points if turned in late (one week after deadline). Maximum possible points from these assessments is 120, but only 100 count towards grade (that is, 2 full quizzes can be missed without penalty).
+- Formal assessments (20 points). These regular assessments are not graded. Each assessment/quiz is worth 2 points for turning it in on time and 1 points if turned in late (one week after deadline). Maximum possible points from these assessments is 24, but only 20 count towards grade (that is, 2 full quizzes can be missed without penalty).
     - 1/28 HAL 2.1 quiz
     - 2/4 Reproducibility quiz
     - 2/9 Sequencing quiz
@@ -67,19 +67,18 @@ Out-of-class communication will be done via Slack where students will be able to
     - 4/8 HAL 3.1 quiz
     - 4/8 HAL 3.3 quiz
     - 4/15 SNaQ quiz
-- GitHub commits (10%). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see below). Each commit is worth 20 points (10 if late within one week of deadline). Maximum possible points from these assessments is 120, but only 100 count towards grade (that is, 1 commit can be missed without penalty). 
+- GitHub commits (10 points). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see below). Each commit is worth 2 points (1 if late within one week of deadline). Maximum possible points from these assessments is 12, but only 10 count towards grade (that is, 1 commit can be missed without penalty). 
     - 3/2: Alignment method (from lecture 2/16)
     - 3/9: Orthology method (from lecture 2/18)
     - 3/23: Distance and parsimony methods (from lecture 3/2)
     - 4/6: Maximum Likelihood method (from lecture 3/23)
     - 4/15: Bayesian method (from lecture 4/1)
     - 4/27: Coalescent method (from lecture 4/13)
-- Peer evaluation of GitHub commits (10%). Each student will provide feedback to the git commits of another student for 10% of their grade (the reviewer's grade).
-- Final research report (due May 9) 50%
-- Reproducible script (due May 9) 20%
-- Final presentation (05/11 or 05/13) 10%
+- Final research report (50 points, due May 9)
+- Reproducible script (10 points, due May 9)
+- Final presentation (10 points, 05/11 or 05/13). The presentation is not graded. All students get 10 points for presenting their work on the assigned day. There are no exceptions on the day and students unable to attend class on those days can record their presentation and turn it in ahead of time.
 
-Late submissions
+Late submissions in research report and reproducible script lose 20% of available point per week late. That is, final research report is worth 50 points if turned in on time, but only 40 points if turned in one week late.
 
 ### Final project content
 
@@ -93,7 +92,7 @@ Late submissions
 
 Some notes:
 - You do not need to run all the steps in the phylogenomics pipeline on your data, but your results should at least contain one phylogeny
-- There is no page limit to the project report, but concise and clear is always better than long
+- There are no page restrictions on the project report
 - In the Methods section, it is not enough to write "we used X, Y, and Z". For every software, you should write (not with this wording necessarily) "We used X (reference) which [short description of the methodology]. We chose X because [short description of strengths]. We know that X has the following limitations [short description of weaknesses] and that it has the main following assumptions [short description of the assumptions]. The software X requires the user to input the following parameters: [parameter/user choices selected]"
     - Advice: read the software paper of the software you are citing and create a cheatsheet for yourself with the above items: description, strengths, weaknesses, assumptions, user choices
 - There is not a specific file format required, but the chosen format should allow for an easy way to evaluate and offer feedback (for both peer evaluation and instructor evaluation). In particular,
@@ -125,11 +124,12 @@ Note: this is not a grading rubric. This table is meant to give you an idea of w
 
 ### Grading rubric
 
-| Grade | Criteria | 
+| Grade | Threshold | 
 | :---: | :---: | 
-| B | The student turned in the final project with reproducible script, performed a peer evaluation for another student's project and presented their analysis to the class |
-| AB | The student turned in the final project, performed a peer evaluation for another student's project and presented their analysis to the class **AND** the performance was "good" in all four items (project, script, peer review, presentation) **OR** "excellent" in one item |
-| A | The student turned in the final project, performed a peer evaluation for another student's project and presented their analysis to the class **AND** the performance was "good" in all four items (project, script, peer review, presentation) **AND** "excellent" in at least two items |
+| B | 70 points |
+| AB | 80 points |
+| A | 95 points |
+
 
 ## Topics
 
