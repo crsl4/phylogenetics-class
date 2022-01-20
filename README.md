@@ -27,7 +27,7 @@ By the end of the course, you will be able to
 - _The Phylogenetic Handbook_ by Philippe Lemey, Marco Salemi and Anne-Mieke Vandamme (optional: denoted HB in the schedule)
 
 
-## Schedule 2021
+## Schedule 2022
 
 | Session | Topic | Pre-class work | At the end of the session | Lecture notes | Homework |
 | :---:   | :---: | :---:       | :---:                     | :---: | :---: |
