@@ -53,7 +53,7 @@ By the end of the semester, we will change the format of the class into active l
 
 Out-of-class communication will be done via Slack where students will be able to ask and answer questions regarding the lectures and exercises.
 
-## Grading and key dates
+## Class assessments and key dates
 - Formal assessments (20 points). These regular assessments are not graded. Each assessment/quiz is worth 2 points for turning it in on time and 1 points if turned in late (one week after deadline). Maximum possible points from these assessments is 24, but only 20 count towards grade (that is, 2 full quizzes can be missed without penalty).
     - 1/28 HAL 2.1 quiz
     - 2/4 Reproducibility quiz
