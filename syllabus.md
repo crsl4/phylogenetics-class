@@ -122,13 +122,6 @@ Note: this is not a grading rubric. This table is meant to give you an idea of w
 | Literature Cited |  | Background information is presented but is consistently not cited; final citation list is missing | Very few references are cited in text of paper; final citation list is largely incomplete and/or is not formatted appropriately | References within body of paper are cited appropriately; references in final citation list are formatted appropriately but there are some exceptions | References within body of paper are cited appropriately; references in final citation list are formatted appropriately |
 | Reproducible script | all steps from raw data to end product clearly explained (not just a list of commands) | No reproducible script or just a copy-paste of commands without any explanations| Sequence of commands interleaved with comments, but important details are missing that makes it impossible for anyone to follow the steps, e.g. information on software installed, information on format of input data, missing key steps in the sequence | Complete sequence of commands interleaved with comments, but comments could be improved to provide more guidance | Fully explained sequence of commands interleaved with comments which make the whole analysis easy to follow and reproduce; details on software installed and versions installed as well as necessary format for the data input files (or links to input data files if data is publicly available) |
 
-### Grading rubric
-
-| Grade | Threshold | 
-| :---: | :---: | 
-| B | 70 points |
-| AB | 80 points |
-| A | 95 points |
 
 
 ## Topics
