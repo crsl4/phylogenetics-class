@@ -19,10 +19,8 @@ class: left, top
 
 Welcome to Botany 563: Phylogenetic Analysis of Molecular Data!
 
-First things first, let's go over the class [syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md) and the [class repository](https://github.com/crsl4/phylogenetics-class).
-
 #### Introductions
-Let's start with short introductions: name, year, program and one word that describes how you feel at the beginning of 2021.
+Let's start with short introductions: name, year, program and one word that describes how you feel at the beginning of 2022.
 
 ---
 class: left, top
@@ -30,19 +28,35 @@ class: left, top
 ## Class format
 
 **What this class is...**
-This class is meant to prepare students to perform state-of-the-art phylogenetic analyses. This class is very hands-on and students are expected to actively participate in class exercises and work at home.
+This class is meant to prepare students to perform state-of-the-art phylogenetic analyses. This class is very hands-on and students are expected to actively participate in class exercises and work at home. The ideal outcome of this class is a phylogenetics pipeline that can be used in the student's research.
 
 **What this class is not...**
-This class will not expect students to memorize formulas. There are no exams or homeworks to assess the specific learning of concepts. The class will be graded via a final project where all topics will be applied on a real data analysis of the student's interest.
+This class will not expect students to memorize formulas. There are no exams to assess the specific learning of concepts. The class will be graded via a final project where all topics will be applied on a real data analysis of the student's interest.
+
 
 #### Structure
-- Lectures at the beginning of the class
-- In-class exercises (individual or in breakout rooms)
-- Homework exercises
+- Pre-class work: usually reading a chapter and complete an quiz (ungraded)
+- Lectures and in-class exercises (computational/paper discussions)
+- Homework exercises: usually apply material in your own data
 - Resources to learn more
 
-Lectures will be recorded and an edited version will be posted in [canvas](https://canvas.wisc.edu/courses/228706)
+---
+class: left, top
 
+### Iceberg: passive vs active learning
+
+<div style="text-align:center"><img src="../assets/pics/iceberg.png" width="700"/></div>
+
+---
+class: left, top
+
+### Iceberg: passive vs active learning
+
+- Bad news: This can be a time-consuming class
+- Good news: This is a graduate level class, no one cares about grades
+  - The measure of success is how much you learned
+  - How much you learn is entirely up to you: more time dedicated at home, more learning
+- Goos news: Time spent learning phylogenetics today will save you time when doing your own research
 
 ---
 class: left, top
@@ -50,66 +64,56 @@ class: left, top
 ## How do I take full advantage of the class?
 
 1. Bring your own data to play with
-2. Be reproducible from day 1 (more on reproducibility below)
-3. Read the material in preparation for the lectures
+2. Be reproducible from day 1 (more on reproducibility in lecture 3 and 4)
+3. Read the material in preparation for the lectures (ungraded quizzes aim to help you keep up with readings)
 4. Attend and actively participate in lecture and in-class activities
-5. Join the slack workspace (more on slack below)
-6. Join the journal club [PP 857 Readings in phylogenetics](https://github.com/crsl4/phylogenetics-class/tree/master/PP875) Fridays 8:55 am
-
-
-## Class communication: Slack
-
-Everyone will receive an invitation to the class slack workspace. Let's use this time to go over the workspace for those not familiar with slack.
-
-Slack rules:
-
-- Everyone can post in any channel, but be careful to post things on the right channel (i.e. do not post announcements in the questions channel)
-- Feel free to reply to other people's questions (in fact, this is the main purpose of having slack for the class)
-- Feel free to post any resources that you find helpful for your fellow students
-- Do not expect me to answer questions 24/7
-- Use the thumbs-up option to vote for a question that I should go over in class or during office hours
+5. Join the slack workspace and actively engage in questions and answers (more on slack below)
+6. Join the journal club [PP 857 Readings in phylogenetics](https://github.com/crsl4/phylogenetics-class/tree/master/PP875) Wednesdays 4:30 pm (right after class, same place!)
 
 ---
 class: left, top
 
-## Reproducibility and good computing practices quiz
+## Class communication: Slack
 
-Let's see the level of the class on reproducibility and best computing practices with [this short poll](https://pollev.com/claudiasolis197). Note to self: the poll needs to be activated for students to be able to fill it out.
+Slack join link in canvas (expires February 16th). Let's use this time to go over the workspace for those not familiar with slack.
 
-We will learn more about reproducibility in the next class, but here are some resources to get started:
+Slack rules:
 
-- Read [Jenny Bryan's notes](https://speakerdeck.com/jennybc/how-to-name-files) if you did not even know there was a right way to name files
-- Read [Cecile Ane's class notes](http://cecileane.github.io/computingtools/pages/notes0922-markdown.html) if you have never used markdown/Rmarkdown
-- Read [these notes](http://swcarpentry.github.io/shell-novice/) if you have no idea what the shell is
-- Read [Cecile Ane's class notes](http://kbroman.org/Tools4RR/pages/schedule.html) (topics 1,2,3,5) if you are already familiar with the shell, but want to explore all of its potential
-- Read [these software carpentry notes](https://uw-madison-datascience.github.io/git-novice-custom/) if you have never used git/github
-- Read [Jenny Bryan's book](https://happygitwithr.com/) if you want to learn more about git and github for R users
-- Read [these notes](http://sethrobertson.github.io/GitFixUm/fixup.html) if you have tried to use git, but made a mistake and don't know how to fix it
-- Read [Karl Broman's class notes](http://kbroman.org/Tools4RR/pages/schedule.html) if you are already a bit reproducible, but want to take your reproducibility skills to the next level
+- Everyone can post in any channel, but try to post things on the right channel
+- Feel free to reply to other people's questions (in fact, this is the main purpose of having slack for the class)
+- Feel free to post any resources that you find helpful for your fellow students
+- Do not expect me to answer questions 24/7, but I am much more responsive than by email
+
+### First HW (very very important!):
+- Join to slack (we can give some minutes today for people to do it)
+- Post something in #random: cute photos, question to engaged the community, short intro, favorite restaurant in Madison, favorite winter activity
+- **Deadline:** Friday January 28th, before class.
 
 ---
 class: left, top
 
 ## Phylogenetics background
 
-Let's see the level of the class on phylogenetics knowledge with [this short poll](https://pollev.com/claudiasolis197).
+Let's see the level of the class on phylogenetics knowledge with [this short poll](https://pollev.com/claudiasolis197). Note to self: poll needs to the active.
+
+---
+class: left, top
+
+## Ready for class checklist
+
+- Join slack with the link in canvas
+  - Post something by next class
+- Access to class google shared drive (link in canvas). You should have received an email invitation
+- Read the [syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md) 
+- Check out the [class repository](https://github.com/crsl4/phylogenetics-class)
+
 
 ---
 class: left, top
 
 ## Learning values
 
-To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1uBI-k4m0QDKSib70yAzawDMtbqxB4IC0EopSiYn_I2g/edit?usp=sharing).
-
-<div style="text-align:center"><img src="../assets/pics/blackhistorymonth.png" width="350"/></div>
-
----
-class: left, top
-
-## Final housekeeping
-
-Those auditing (not in the official mailing list), please use [this google form](https://docs.google.com/forms/d/e/1FAIpQLSfm7PH03QbfbutanI_567xO3VRecWvMYEVxbzUAgQooBEz77w/viewform?usp=sf_link) with your wiscmail. I will use this list to give you access to the Google Shared Drive with necessary files for in-class exercises.
-
+To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1XITO1f8fuObnqJ--DGNSYkyJOOYiXzj39Tco7H7QzQI/edit?usp=sharing).
 
 
 ---
