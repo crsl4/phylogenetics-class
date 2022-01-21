@@ -31,7 +31,7 @@ By the end of the course, you will be able to
 
 | Session | Topic | Pre-class work | At the end of the session | Lecture notes | Homework |
 | :---:   | :---: | :---:       | :---:                     | :---: | :---: |
-| 01/26 | Introduction | Read the [syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md) | You will know what will be the structure of the class, the learning outcomes and the grading | [lecture1.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture1.md) | Go over ready-for-class checklist | 
+| 01/26 | Introduction |  | You will know what will be the structure of the class, the learning outcomes and the grading | [lecture1.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture1.md) | Go over ready-for-class checklist | 
 | 01/28 | Motivation: why learning phylogenomics? | HAL 2.1 [Quiz]() | You will identify the different components in phylogenomic analyses | [lecture2.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture2.md) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) | 
 | 02/02 | Reproducibility crash course | Read the [Notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md) | You will prioritize reproducibility and good computing practices throughout the semester (and beyond) | [lecture3.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture3.md) | | 
 | 02/04 | Continue with reproducibility | Have [git](https://happygitwithr.com/install-git.html) installed | | | | 
