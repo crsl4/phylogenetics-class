@@ -25,7 +25,7 @@ By the end of the course, you will be able to
 - _Phylogenetics in the Genomic Era_ ([open access book](https://hal.inria.fr/PGE/page/table-of-contents)) by Celine Scornavacca, Frederic Delsuc and Nicolas Galtier (denoted HAL in the schedule)
 - _Tree thinking: an introduction to phylogenetic biology_ by David Baum and Stacey Smith (optional: denoted Baum in the schedule)
 - _The Phylogenetic Handbook_ by Philippe Lemey, Marco Salemi and Anne-Mieke Vandamme (optional: denoted HB in the schedule)
-- The full list of papers used in this class can be found in [this link](https://paperpile.com/shared/O1oEkp)
+- The full list of papers used in this class can be found in [this link](https://paperpile.com/shared/xs8tDo)
 
 
 
