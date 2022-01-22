@@ -19,11 +19,10 @@ class: center, middle, inverse, title-slide
 
 class: left, top
 
-# Lecture 2
 
 ## Last class check-up:
 - Everybody knows where the class materials are
-- Everybody is included in slack and is able to send/receive messages (we will do a test after class)
+- Everybody is included in slack and is able to send/receive messages
 
 ## Learning objectives for today
 
@@ -31,7 +30,10 @@ At the end of today's session, you will identify the different components in phy
 
 ## Pre-class reading
 
-[HAL book chapter 2.1](https://www.youtube.com/watch?v=Jnk_4Maf5Fk)
+[HAL book chapter 2.1](https://hal.inria.fr/PGE/page/table-of-contents)
+
+- Don't forget the canvas quiz!
+- Usually canvas quiz will be due before class, but because of the short turnaround time for this first quiz, the deadline is later today
 
 ---
 class: left, top
@@ -43,11 +45,14 @@ class: left, top
   &lt;img src="https://www.pnas.org/content/pnas/117/17/9241/F1.large.jpg" width="500" /&gt; 
 &lt;/p&gt;
 
+[Foster et al, 2020](http://dx.doi.org/10.1073/pnas.2004999117)
+
 ---
 class: left, top
 
 ![](../assets/pics/sanchez-pacheco.png)
 
+- [Sanchez-Pacheco et al, 2020](https://www.pnas.org/content/117/23/12518)
 - Median-joining network (MJN) is not a phylogenetic network
 - MJN are constructed with a distance-basec criteria: not suitable for modeling the mutational process in viruses
 
@@ -56,6 +61,7 @@ class: left, top
 
 ![](../assets/pics/Mavian.png)
 
+- [Mavian et al, 2020](http://dx.doi.org/10.1073/pnas.2007295117)
 - Distant outgroup (sequence identity between SARS-CoV-2 and the bat virus is only 96.2%)
 
 
@@ -64,13 +70,15 @@ class: left, top
 
 ![](../assets/pics/forster2.png)
 
-
+- [Foster et al, 2020](https://www.pnas.org/content/117/23/12524)
 ---
 class: left, top
 
 ## To sum up...
 
 ![](../assets/pics/morel.png)
+
+- [Morel et al, 2020](https://pubmed.ncbi.nlm.nih.gov/33316067/)
 
 ---
 class: left, top
@@ -83,18 +91,76 @@ class: left, top
 ---
 class: left, top
 
-## Main figures in chapter
+## Evolution is complex (Figure 1, Simion et al 2020)
 
-&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/hal2.1-fig1.png" width="650"/&gt;&lt;/div&gt;
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/hal2.1-fig1.png" width="550"/&gt;&lt;/div&gt;
+
+**Ideal evolutionary model:** theoretical model that accounts for all processes in a holistic manner. It is unrealistic and computationally prohibited, so we need divide-and-conquer and approximation approaches.
 
 
 ---
 class: left, top
 
-## Main figures in chapter
+## Phylogenomic approach: divide-and-conquer (Figure 2, Simion et al 2020)
 
 &lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/hal2.1-fig2.png" width="650"/&gt;&lt;/div&gt;
 
+---
+class: left, top
+
+## Phylogenomic approach: divide-and-conquer (Figure 2, Simion et al 2020)
+
+1. genome annotation, 
+2. searching for homologous genes, 
+3. defining orthologs, 
+4. aligning homologous positions,
+5. inferring species phylogeny (supermatrix or gene tree approaches), and 
+6. reconciling single gene trees and the species phylogeny.
+
+### 3. Inferring Orthologs
+- Homology is similarity due to shared ancestry between a pair of structures or genes in different taxa.)
+- The criteria for homology prediction is pairwise sequence similarity estimated using BLAST
+- Orthology prediction often relies on 
+    - homology inference (i.e. similarity searches), 
+    - pairwise species comparisons or species-overlap concepts, 
+    - sequence alignment,
+    - gene genealogy inference, and 
+    - even species tree inference or a priori knowledge of the species tree. 
+- More on orthology prediction in HAL 2.4 and Lecture 6.
+
+---
+class: left, top
+
+## Phylogenomic approach: divide-and-conquer (Figure 2, Simion et al 2020)
+
+
+### 4. Producing alignments
+Multiple homologous or orthologous sequences are then jointly aligned using one of the
+many available sequence alignment software packages. More in HAL 2.2 and Lectures 4 and 5.
+
+---
+class: left, top
+
+## Phylogenomic approach: divide-and-conquer (Figure 2, Simion et al 2020)
+
+#### 5&amp;6. Phylogenomic analyses
+Two paths:
+
+- reconciliation methods are used to jointly estimate gene trees and species trees by modeling
+gene duplication-transfer-loss (DTL) events for the MSA of homologous sequences (HAL 3.2, not covered in class)
+- species tree estimations from MSA of orthologous sequences accounting for incomplete lineage sorting
+(ILS), introgression or lateral gene transfer
+
+Concatenation debate (HAL 3.4 and class discussion session in late April):
+
+- ILS is ignored in concatenation
+- single-gene tree reconstruction: no signal for difficult nodes due to stochastic error (short internal branches)
+- only considering the species tree is not appropriate for the study of trait evolution. [Hahn and Nakhleh (2015)](https://onlinelibrary.wiley.com/doi/full/10.1111/evo.12832) argue that we need to take into account the gene tre variability
+
+**Chapter Conclusion:** We believe that concatenation seems therefore more adequate to resolve ancient phylogenetic
+relationships or when the sampling is devoid of ultra-close speciation events, whereas the
+use of single gene trees is more appropriate for more recent speciation events, even when
+closely-spaced in time.
 
 ---
 class: left, top
@@ -131,6 +197,59 @@ class: left, top
 ---
 class: left, top
 
+
+## Types of error
+
+### Observational errors during data acquisition and production
+- data that are not what the user believes they are
+- contamination from organisms other than the target
+- cross-contamination between samples during sequencing data production
+- sequencing and assembly errors
+- fragmented transcriptomic contigs thought to be entire transcripts
+- gene exons thought to correspond to entire genes
+- gene introns thought to correspond to exons
+- amino acid sequences translated out of frame (i.e. frameshifts)
+- Evaluating phylogenomic datasets: 
+    - Looking beyond summary statistics (numbers of genes and
+species) in these phylogenomic datasets can reveal various levels of data quality (e.g. measured with the Robinson-Foulds distance between gene trees and species trees), with orders of magnitude difference in data quantity
+    - Data quality governs the crucial phylogenetic signal-to-noise ratio upon which
+the accuracy of the inferred species tree strongly depends
+
+---
+class: left, top
+
+## Types of error
+
+### Orthology errors
+- Pairs of homologous sequences have different potential relationships:
+they can be orthologous (i.e. stemming from speciation), paralogous (i.e. stemming from duplication)
+or xenologous (i.e. stemming from horizontal transfer)
+- Incomplete taxonomic sampling complicates the detection of xenologs
+- Inaccurate gene tree inference can hamper the classification of two sequences
+as orthologous (e.g. if only one of them evolved rapidly)
+
+---
+class: left, top
+
+## Types of error
+
+### Phylogenetic inference simplifying assumptions
+- All sites evolved at the same rate? No -&gt; Gamma component in models
+- All sites evolve under the same substitution process? No -&gt; Site-heterogeneous CAT models
+- Variations in lineage-specific evolutionary rates over time (heterotachy)? Yes -&gt; GHOST models implemented in IQ-TREE in order to model 
+- Ever-evolving models: 
+    - CAT models to phenomenologically account for protein structure and function
+    - Compositional breakpoints (BP) to account for heterogeneity in the substitution process across lineages
+    - Site-heterogeneous codon models (SelAC) to model stabilising selection
+
+- **Further reading:** [Wang et al, 2019](https://academic.oup.com/sysbio/article/68/6/1003/5477411) assessed the impact of modelling site-heterogeneity (heterogeneity in substitution patterns amongst the sites, genes and lineages: mixture models) versus partition-wide heterotachy
+and convincingly concluded that modelling site-heterogeneity was more important
+than modelling partition-wide heterotachy
+
+
+---
+class: left, top
+
 ## Robustness to errors
 
 - Large data
@@ -149,27 +268,54 @@ class: left, top
 
 ## Conclusions
 - Importance of data quality and model/software choices
-- Methods people: we need better models (joint if possible)
+    - Data quality usually slipped under the rug
+- Methods people: ever-evolving landscape of new models
+    - Questions for us: What are the assumptions and limitations? (More on Lecture 9)
 - Don't disregard potential software error
 - Interesting notion of computational footprint
 
-Further reading: [HAL 2.1 chapter notes](https://github.com/crsl4/phylogenetics-class/blob/master/lecture-notes/lecture2-chapter-notes.md)
+### Three questions moving forward in phylogenomics
+- How good is my data?
+- What are the assumptions and limitations of this method?
+- How do I evaluate the outcome?
 
 ---
 class: left, top
 
-# In-class exercise: Case studies in HAL 2.1
+# Wrapping-up class
 
-**Time:** 20 minutes in breakout rooms and 10 minutes for presentations (5 minutes per group)
+## Post-class work
 
-**Instructions:** In breakout rooms, review the case study assign to your group and design a 5-minute presentation for the whole class where you answer the question: Which specific cost of over-simplification is illustrated in this case study and what tools were used to address it? Connect your answer to the concepts in the [Concept Flowchart](#concept-flowchart).
+- Re-read HAL 2.1
+    - Canvas quiz due today (5pm)
+    - In the future, chapter quizzes due before class (to motivate pre-class reading)
+- Read the new phylogenetic protocol [Jermiin et al 2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483)
+    - Goal is not to fully understand it
+    - Read with relaxed state of mind: what is the main idea?
+    - We will re-read and discuss this paper by the end of the semester
+- Check out pre-class work for next class
 
-**Case studies** in [HAL 2.1](https://hal.inria.fr/PGE/hal-02535366) Section 4:
+## Important notes
 
-- Group 1 will go over Case Study in 4.1
-- Group 2 will go over Case Study in 4.2
+- We will not go HAL chapters (like today) during future classes
+- Today, we went over the chapter to get us all started on the same foot
+- Future lectures will not focus on the HAL chapter and chapters should be used in preparation for the class to get the gist of the topic at hand and originate questions
 
-**Presentation slides:** Use [these google slides](https://docs.google.com/presentation/d/1kiFcuAt9MpmynXc-PFocqX4RTFmb3VtMMr_S0XZJ_R0/edit?usp=sharing) to plan your presentations. Select a note-taker from each group to write on the slides (suggestion: choose the person whose first name would be the first on an alphabetically sorted list).
+---
+class: left, top
+
+## Coming up: Reproducibility and computational tools (terminal, git)
+
+  
+## Cited papers in this lecture
+- [Foster et al, 2020](http://dx.doi.org/10.1073/pnas.2004999117)
+- [Sanchez-Pacheco et al, 2020](https://www.pnas.org/content/117/23/12518)
+- [Mavian et al, 2020](http://dx.doi.org/10.1073/pnas.2007295117)
+- [Foster et al, 2020](https://www.pnas.org/content/117/23/12524)
+- [Morel et al, 2020](https://pubmed.ncbi.nlm.nih.gov/33316067/)
+- [Hahn and Nakhleh (2015)](https://onlinelibrary.wiley.com/doi/full/10.1111/evo.12832)
+- [Wang et al, 2019](https://academic.oup.com/sysbio/article/68/6/1003/5477411)
+- [Jermiin et al 2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

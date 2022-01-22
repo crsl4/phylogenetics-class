@@ -20,11 +20,13 @@ By the end of the course, you will be able to
 5. Orally present the results of your own phylogenomic data analyses based on the best scientific and reproducibility practices
 
 
-## Textbooks
+## Textbooks and references
 
 - _Phylogenetics in the Genomic Era_ ([open access book](https://hal.inria.fr/PGE/page/table-of-contents)) by Celine Scornavacca, Frederic Delsuc and Nicolas Galtier (denoted HAL in the schedule)
 - _Tree thinking: an introduction to phylogenetic biology_ by David Baum and Stacey Smith (optional: denoted Baum in the schedule)
 - _The Phylogenetic Handbook_ by Philippe Lemey, Marco Salemi and Anne-Mieke Vandamme (optional: denoted HB in the schedule)
+- The full list of papers used in this class can be found in [this link](https://paperpile.com/shared/O1oEkp)
+
 
 
 ## Schedule 2022
@@ -32,7 +34,7 @@ By the end of the course, you will be able to
 | Session | Topic | Pre-class work | At the end of the session | Lecture notes | Homework |
 | :---:   | :---: | :---:       | :---:                     | :---: | :---: |
 | 01/26 | Introduction |  | You will know what will be the structure of the class, the learning outcomes and the grading | [lecture1.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture1.md) | Go over ready-for-class checklist | 
-| 01/28 | Motivation: why learning phylogenomics? | HAL 2.1 [Quiz]() | You will identify the different components in phylogenomic analyses | [lecture2.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture2.md) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) | 
+| 01/28 | Motivation: why learning phylogenomics? | Read HAL 2.1 | You will identify the different components in phylogenomic analyses | [lecture2.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture2.md) | HAL 2.1 [Quiz]() (due 1/28 5pm) and read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) | 
 | 02/02 | Reproducibility crash course | Read the [Notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md) | You will prioritize reproducibility and good computing practices throughout the semester (and beyond) | [lecture3.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture3.md) | | 
 | 02/04 | Continue with reproducibility | Have [git](https://happygitwithr.com/install-git.html) installed | | | | 
 | 02/09 | Introduction to sequences | Watch [video1](https://www.youtube.com/watch?v=CZeN-IgjYCo), [video2](https://www.youtube.com/watch?v=fCd6B5HRaZ8), and do [quiz]() | You will be able to describe the next-generation sequencing pipeline (and UCE pipeline) as well as the post-processing bioinformatics steps for quality control | [lecture4.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4.md) | Read [Zhang et al, 2019](https://academic.oup.com/isd/article/3/5/3/5573097) and go over [phyluce tutorial](). Start thinking of your data for project. | 

@@ -35,7 +35,8 @@ See Figure 2:
 6. reconciling single gene trees and the species phylogeny.
 
 #### 3. Inferring Orthologs
-- Homology: the criteria for homology prediction is pairwise sequence similarity estimated using BLAST
+- Homology is similarity due to shared ancestry between a pair of structures or genes in different taxa.)
+- The criteria for homology prediction is pairwise sequence similarity estimated using BLAST
 - Orthology prediction often relies on 
     - homology inference (i.e. similarity searches), 
     - pairwise species comparisons or species-overlap concepts, 
