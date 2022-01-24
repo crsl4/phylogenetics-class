@@ -19,12 +19,11 @@ class: center, middle, inverse, title-slide
 
 class: left, top
 
-# Lecture 3
-
 ## Previous class check up
-- Importance of data quality and model/software choices
-- Methods people: we need better models (joint if possible)
-- Don't disregard potential software error
+- Important questions in phylogenomics:
+  - How good is my data?
+  - What are the assumptions and limitations of this method?
+  - How do I evaluate the outcome?
 
 ## Learning objectives for today
 At the end of today's session, you
@@ -33,8 +32,8 @@ At the end of today's session, you
 - will lose fear of git/GitHub conflicts
 - will prioritize reproducibility and good computing practices throughout the semester (and beyond)
 
-**Pre-class reading:**
-[My notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md)
+**Pre-class work:**
+Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/shell-resources.md) and do canvas quiz
 
 ---
 class: left, top
@@ -85,7 +84,7 @@ class: left, top
 When you will publish your work, you want to make your reproducible script available to others.
 This is the time to worry about grammar and beautiful writing
 
-- Improve the writing and the presentation by identifying the key sections of the your work and create a workflow around those key sections (see my `epi4k/2check-family-completeness.md` script)
+- Improve the writing and the presentation by identifying the key sections of the your work and create a workflow around those key sections 
 - Remove trials and errors from the main workflow and present them as a separate file
 - Start the script with dependencies and installation: what do people need to have installed and which versions to run your script?
 - Be clear about the datafiles that are used in the script
@@ -407,7 +406,7 @@ class: left, top
 Individually,
 1. Fork the [phylo-class-social](https://github.com/crsl4/phylo-class-social) repository
 2. Git clone the forked repository in your local machine
-3. Add the best book you read in 2020 to the `best-books.md` file. Use your preferred text editor
+3. Add the best book you read in 2021 to the `best-books.md` file. Use your preferred text editor
 4. Git add, git commit and git push to your fork
 5. Do a pull request to merge your additions to the original repository
 
@@ -417,48 +416,38 @@ which will change as people merge their additions via pull requests. You will ne
 ---
 class: left, top
 
-
-
 ## Homework
 
-**Objective:** Create your project folder for this class where you will host your reproducible script and all necessary resources for your final project and data analysis
+Find description of git homework in [here](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/git-hw.md).
 
-**Instructions:** 
-
-1. Follow the steps above to create a github repository and to git clone it locally
-2. Make sure that your folder has the right structure
-3. Create a `notebook-log.md` and a `.gitignore` file. Hint: Checkout the `.gitignore` file of the `phylo-class-social` repository
-4. Add the link to your repository via a pull request to the [class-repos.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/class-repos.md) file
 
 ---
 class: left, top
 
-## Supplementary learning resources at home
+### Learn more about reproducible practices!
 
-### If you want to practice more with git/github
+#### The shell
+- If you have no idea what the shell is, read [these notes](http://swcarpentry.github.io/shell-novice/) 
+- If you are already familiar with the shell, but want to explore all of its potential, read [Cecile Ane's class notes](http://cecileane.github.io/computingtools/pages/topics.html) (Topics 1,2,3,5)
 
-#### Exercise 1
-Do you think you are prepared to tackle any branch problem? Try [this example](https://uw-madison-datascience.github.io/git-novice-custom/08-conflict/)
+#### Naming files
+- If you did not even know there was a right way to name files, read [Jenny Bryan's notes](https://speakerdeck.com/jennybc/how-to-name-files)
 
-#### Exercise 2
-Try out the exercises in Jenny Bryan's website:
-- [Bingo](https://happygitwithr.com/bingo.html)
-- [Burn](https://happygitwithr.com/burn.html)
-- [Reset](https://happygitwithr.com/reset.html)
+#### Markdown
+- If you have never used markdown/Rmarkdown, read [Cecile Ane's class notes](http://cecileane.github.io/computingtools/pages/notes0922-markdown.html)
+
+#### Git/GitHub
+- If you have never used git/github, read [these software carpentry notes](https://uw-madison-datascience.github.io/git-novice-custom/)
+- If you want to learn more about git and github for R users, read [Jenny Bryan's book](https://happygitwithr.com/)
+- If you have tried to use git, but made a mistake and don't know how to fix it, read [these notes](http://sethrobertson.github.io/GitFixUm/fixup.html)
 
 ---
 class: left, top
 
-### If you want to read more about reproducible practices
+### Learn more about reproducible practices!
 
-- Read [Jenny Bryan's notes](https://speakerdeck.com/jennybc/how-to-name-files) if you did not even know there was a right way to name files
-- Read [Cecile Ane's class notes](http://cecileane.github.io/computingtools/pages/notes0922-markdown.html) if you have never used markdown/Rmarkdown
-- Read [these notes](http://swcarpentry.github.io/shell-novice/) if you have no idea what the shell is
-- Read [Cecile Ane's class notes](http://kbroman.org/Tools4RR/pages/schedule.html) (topics 1,2,3,5) if you are already familiar with the shell, but want to explore all of its potential
-- Read [these software carpentry notes](https://uw-madison-datascience.github.io/git-novice-custom/) if you have never used git/github
-- Read [Jenny Bryan's book](https://happygitwithr.com/) if you want to learn more about git and github for R users
-- Read [these notes](http://sethrobertson.github.io/GitFixUm/fixup.html) if you have tried to use git, but made a mistake and don't know how to fix it
-- Read [Karl Broman's class notes](http://kbroman.org/Tools4RR/pages/schedule.html) if you are already a bit reproducible, but want to take your reproducibility skills to the next level
+#### Reproducibility
+- If you are already a bit reproducible, but want to take your reproducibility skills to the next level, read [Karl Broman's class notes](http://kbroman.org/Tools4RR/pages/schedule.html) and watch [his YouTube video](https://www.youtube.com/watch?v=rNQ-RlG3JnQ)
 - Read [Simona Picardi's class notes](https://ecorepsci.github.io/reproducible-science/) for a complete overview of computational tools for reproducible science
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
