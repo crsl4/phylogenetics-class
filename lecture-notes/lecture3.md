@@ -229,6 +229,13 @@ Your files should follow the good naming practices. Read [Jenny Bryan's notes](h
 - Meaningful names
 - Easy to sort
 
+---
+class: left, top
+
+# A cautionary tale
+
+<div style="text-align:center"><img src="../assets/pics/add-files.png" width="650"/></div>
+
 
 ---
 class: left, top
