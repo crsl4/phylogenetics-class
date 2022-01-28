@@ -56,7 +56,7 @@ class: left, top
 - Good news: This is a graduate level class, no one cares about grades
   - The measure of success is how much you learned
   - How much you learn is entirely up to you: more time dedicated at home, more learning
-- Goos news: Time spent learning phylogenetics today will save you time when doing your own research
+- Good news: Time spent learning phylogenetics today will save you time when doing your own research
 
 ---
 class: left, top
