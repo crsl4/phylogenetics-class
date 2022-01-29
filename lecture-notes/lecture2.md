@@ -12,25 +12,6 @@ output:
       countIncrementalSlides: no
   html_document:
     df_print: paged
----
-class: left, top
-
-## COVID safety
-
-- Masks indoors
-  - Cloth masks are not as effective against omicron
-  - I will bring some surgical/KN95 masks to distribute (optional)
-- Inside classroom
-  - Space between people
-  - Air circulation (!?)
-- Frequent testing (even in vaccinated/boosted)
-  - If positive (even if asymptomatic), stay home 5 days (7 days)
-- Symptoms?
-  - Stay home for 5 days from onset of symptoms AND over 24 hours without fever
-- Be kind to yourself and others
-  - Happy to acommodate to those that have to stay home due to positive COVID:
-    - Videos of lectures
-    - Zoom office hours to catch up with class
 
 ---
 class: left, top

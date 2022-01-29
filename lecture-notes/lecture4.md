@@ -71,7 +71,8 @@ class: left, top
 3. Read trimming
 4. Alignment/mapping or de novo assembly
 
-- NGS most commonly used nowadays. Further reading:
+- NGS most commonly used nowadays
+- Further reading:
     - [When to use NGS vs Sanger sequencing?](https://www.illumina.com/science/technology/next-generation-sequencing/ngs-vs-sanger-sequencing.html)
     - [Illumina Intro to NGS](https://www.illumina.com/content/dam/illumina-marketing/documents/products/illumina_sequencing_introduction.pdf)
 
@@ -119,7 +120,7 @@ class: left, top
 
 _Class participation_: Can someone explain what happens in cluster amplification?
 
-<div style="text-align:center"><img src="../assets/pics/clustering.png" width="750"/></div>
+<div style="text-align:center"><img src="../assets/pics/clustering.png" width="650"/></div>
 
 (_Images by Henrik's lab_)
 
@@ -163,12 +164,7 @@ class: left, top
 - You need to demultiplex prior to analysis
 - The phenomenon of index misassignment between multiplexed libraries is a known issue
 
----
-class: left, top
-
-Multiplexing: (_Illumina intro pdf_)
-
-![](../assets/pics/multiplex.png)
+<div style="text-align:center"><img src="../assets/pics/multiplex.png" width="550"/></div>
 
 ---
 class: left, top
@@ -201,7 +197,7 @@ Quality values:
 ---
 class: left, top
 
-##### Illumina sequence identifiers
+### Illumina sequence identifiers
 
 Example:
 ```
@@ -258,7 +254,7 @@ class: left, top
 - [De novo sequence assemblers](https://en.wikipedia.org/wiki/De_novo_sequence_assemblers) are a type of program that assembles short nucleotide sequences into longer ones without the use of a reference genome
 - Typically, you need a combination of short and long read to assemble
 
-<div style="text-align:center"><img src="../assets/pics/de-novo.png" width="350"/></div>
+<div style="text-align:center"><img src="../assets/pics/de-novo.png" width="450"/></div>
 
 _Illumina intro pdf_
 
