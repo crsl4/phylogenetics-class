@@ -20,6 +20,7 @@ class: left, top
 ### Previous class check-up
 - We are familiar with git/github
 - We understand the importance of reproducible scripts
+    - **Reproducibility Resolution 2022**: let's all make a commitment today to do one reproducible thing in our research ([google slides](https://docs.google.com/presentation/d/13bqKroBmXnIV4HI6UD_pYz9GE71jcuW989yaTwCvWSM/edit?usp=sharing))
 
 ### Learning objectives
 
@@ -31,7 +32,7 @@ At the end of today's session, you
 ### Pre-class work
 
 - Watch these 5-minute youtube videos on next-generation sequencing: [video1](https://www.youtube.com/watch?v=CZeN-IgjYCo) and [video2](https://www.youtube.com/watch?v=fCd6B5HRaZ8)
-- Read [Zhang et al, 2019](https://academic.oup.com/isd/article/3/5/3/5573097)
+
 
 ---
 class: left, top
@@ -62,27 +63,23 @@ class: left, top
 ## Pipeline
 
 1. Sequencing (NGS)
-    - Library preparation
-    - Cluster amplification
-    - Sequencing
+    - A. Library preparation
+    - B. Cluster amplification
+    - C. Sequencing
     - (Demultiplex)
 2. Quality Control
 3. Read trimming
 4. Alignment/mapping or de novo assembly
 
----
-class: left, top
+- NGS most commonly used nowadays. Further reading:
+    - [When to use NGS vs Sanger sequencing?](https://www.illumina.com/science/technology/next-generation-sequencing/ngs-vs-sanger-sequencing.html)
+    - [Illumina Intro to NGS](https://www.illumina.com/content/dam/illumina-marketing/documents/products/illumina_sequencing_introduction.pdf)
 
-### 1. Sequencing
-
-- NGS most commonly used nowadays
-- [When to use NGS vs Sanger sequencing?](https://www.illumina.com/science/technology/next-generation-sequencing/ngs-vs-sanger-sequencing.html)
-- [Illumina Intro to NGS](https://www.illumina.com/content/dam/illumina-marketing/documents/products/illumina_sequencing_introduction.pdf)
 
 ---
 class: left, top
 
-### 1. Sequencing
+### 1. Sequencing overview
 
 <div style="text-align:center"><img src="../assets/pics/illumina-pipeline.png" width="550"/></div>
 
@@ -91,9 +88,11 @@ _Illumina intro pdf_
 ---
 class: left, top
 
-#### 1.1 Library preparation
+#### A. Library preparation
 
-<div style="text-align:center"><img src="../assets/pics/library-prep.png" width="850"/></div>
+_Class participation_: Can someone explain what happens in library preparation?
+
+<div style="text-align:center"><img src="../assets/pics/library-prep.png" width="750"/></div>
 
 _Illumina intro pdf_
 
@@ -101,92 +100,50 @@ _Illumina intro pdf_
 ---
 class: left, top
 
-#### 1.1 Library preparation
+#### A. Library preparation
 
-- The sequencing library is prepared by random fragmentation of the DNA or cDNA sample followed by 5′and 3′adapter ligation: "adapter-ligated fragments"
-- Ingredients:
-    - Read 1 and Read 2 Sequencing Primers: paired end sequencing
-    - Libraries must have unique index or barcodes: dual indexing scheme
-    - P5 and P7 adapter (binding regions)
+_Answer:_ 
 
+The sequencing library is prepared by random fragmentation of the DNA (or cDNA) sample followed by 5′and 3′adapter ligation: "adapter-ligated fragments"
 
----
-class: left, top
-
-#### 1.2 Cluster amplification
-
-Fragments capture by oligonucleotides (_Image by Henrik's lab_)
-
-![](../assets/pics/cluster1.png)
+Ingredients:
+- Read 1 and Read 2 Sequencing Primers (Rd1 SP/Rd2 SP): paired end sequencing
+- Libraries must have unique index or barcodes: dual indexing scheme
+- P5 and P7 adapter (binding regions) needed for clustering
 
 
 ---
 class: left, top
 
-DNA polymerase binds to primers and synthetize a complementary sequence
+#### B. Cluster amplification
 
-![](../assets/pics/cluster2.png)
+_Class participation_: Can someone explain what happens in cluster amplification?
 
-_Image by Henrik's lab_
+<div style="text-align:center"><img src="../assets/pics/clustering.png" width="750"/></div>
 
----
-class: left, top
-
-Denatured and washing
-
-![](../assets/pics/cluster3.png)
-
-_Image by Henrik's lab_
-
----
-class: left, top
-
-Bridge building
-
-![](../assets/pics/clsuter4.png)
-
-_Image by Henrik's lab_
-
----
-class: left, top
-
-Polymerase synthesizing again
-
-![](../assets/pics/cluster5.png)
-
-_Image by Henrik's lab_
-
----
-class: left, top
-
-Bridge amplification
-
-![](../assets/pics/cluster6.png)
-
-_Image by Henrik's lab_
+(_Images by Henrik's lab_)
 
 ---
 class: left, top
 
 Forward strands are kept
 
-![](../assets/pics/cluster7.png)
+<div style="text-align:center"><img src="../assets/pics/cluster7.png" width="450"/></div>
 
-_Image by Henrik's lab_
+(_Image by Henrik's lab_)
 
----
-class: left, top
+_Answer:_
 
-##### Summary
 - For cluster generation, the library is loaded into a flow cell where fragments are captured on a lawn of surface-bound oligos complementary to the library adapters
 - Each fragment is then amplified into distinct, clonal clusters
 through bridge amplification
 - When cluster generation is complete, the templates are ready for sequencing.
 
+
 ---
 class: left, top
 
-#### 1.3 Sequencing
+#### C. Sequencing
 
 Primer attached and fluorescently labeled nucleotide added by polymerase. Flurescent signal is obtained by laser.
 
@@ -194,37 +151,15 @@ Primer attached and fluorescently labeled nucleotide added by polymerase. Flures
 
 _Image by Medical Science Animations_
 
----
-class: left, top
-
-##### Summary
-
-_Illumina SBS technology uses a proprietary reversible terminator–based method that detects single bases
-as they are incorporated into DNA template strands. As all four reversible terminator–bound dNTPs are
-present during each sequencing cycle, natural competition minimizes incorporation bias and greatly reduces raw error
-rates compared to other technologies. The result is highly accurate base-by-base sequencing that virtually eliminates
-sequence context–specific errors, even within repetitive sequence regions and homopolymers._
-
 [Illumina Intro to NGS](https://www.illumina.com/content/dam/illumina-marketing/documents/products/illumina_sequencing_introduction.pdf)
 
----
-class: left, top
-
-##### Advances in sequencing technology
-
-Paired-end sequencing: (_Illumina intro pdf_)
-
-![](../assets/pics/paired-end.png)
-
-Learn more in this [video1](https://www.youtube.com/watch?v=f5DdKUGAuZE) and [video2](https://www.youtube.com/watch?v=WneZp3fSJIk)
 
 ---
 class: left, top
 
-Multiplexing
+### Advances in sequencing technology: Multiplexing
 
-- Multiplexing
-allows large numbers of libraries to be pooled and sequenced simultaneously during a single sequencing run
+- Multiplexing allows large numbers of libraries to be pooled and sequenced simultaneously during a single sequencing run
 - You need to demultiplex prior to analysis
 - The phenomenon of index misassignment between multiplexed libraries is a known issue
 
@@ -238,7 +173,7 @@ Multiplexing: (_Illumina intro pdf_)
 ---
 class: left, top
 
-##### Output of sequencing
+## Output of sequencing
 
 - Raw reads are stored in a [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format#) file
     - Line 1: sequence identifier beginning with `@`
@@ -261,7 +196,7 @@ Quality values:
 
 - The quality score of a base (known as [Phred](https://en.wikipedia.org/wiki/Phred_quality_score) or Q score) is an integer value representing the estimated probability of error
 - Let `P` be the error probability $P=10^{-Q/10}$. Then, $Q=-10log_{10}(P)$
-- Original phred score [paper](https://genome.cshlp.org/content/8/3/186.long)
+- Original phred score [paper I](https://genome.cshlp.org/content/8/3/175.long) and [paper II](https://genome.cshlp.org/content/8/3/186.long)
 
 ---
 class: left, top
@@ -290,8 +225,11 @@ class: left, top
 
 - We want to assess whether samples have good quality and can be used in further analysis
 - [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) is a software that reads the raw sequence (fastq file) as input and returns a html output file with key summary statistics about the quality
+    - [Interpreting FastQC plots](https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/)
 - [MultiQC](https://multiqc.info/) is a software that aggregates the multiple html reports from FastQC
-- Sadly, there is not a consensus threshold on the FastQC metrics to classify samples as good or bad quality
+- Conclusions:
+    - Sadly, there is not a consensus threshold on the FastQC metrics to classify samples as good or bad quality
+    - Simply look for things that stand out
 - [From this bioinformatics blog](https://www.kolabtree.com/blog/a-step-by-step-guide-to-dna-sequencing-data-analysis/): _I expect all samples that have gone through the same procedure (e.g. DNA extraction, library preparation) to have similar quality statistics and a majority of “pass” flags_
 
 ---
@@ -315,21 +253,19 @@ class: left, top
 - While the number of species with a high-quality reference sequence is increasing, there are still under-studied organisms
 - For these cases, we align/map the reads to an evolutionary close species
 
----
-class: left, top
 
 #### De novo assembly
 - [De novo sequence assemblers](https://en.wikipedia.org/wiki/De_novo_sequence_assemblers) are a type of program that assembles short nucleotide sequences into longer ones without the use of a reference genome
 - Typically, you need a combination of short and long read to assemble
 
-![](../assets/pics/de-novo.png)
+<div style="text-align:center"><img src="../assets/pics/de-novo.png" width="350"/></div>
 
 _Illumina intro pdf_
 
 ---
 class: left, top
 
-##### Assemblathon 2
+#### Assemblathon 2
 - [Bradnam et al, 2013: Assemblathon 2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3844414/)
 - They used genomes of multiples vertebrates: a bird (_Melopsittacus undulatus_), a fish (_Maylandia zebra_), and a snake (_Boa constrictor constrictor_) with genomes of length 1.2, 1.0, and 1.6Gbp respectively
 - They used over 100 metrics to assess the quality of standard de novo assemblers
@@ -337,7 +273,7 @@ class: left, top
 - Their recommendations:
     1. use more than one assembler,
     2. use more than one metric for evaluation,
-    3. select an assembler that excels in metrics of more interest (e.g., N50, coverage)
+    3. select an assembler that excels in metrics of more interest (e.g., [N50](https://www.molecularecologist.com/2017/03/29/whats-n50/), coverage)
     4. low N50s or assembly sizes may not be concerning, depending on user needs, and 
     5. assess the levels of heterozygosity in the genome of interest
 
@@ -346,34 +282,13 @@ class: left, top
 
 # Targeted enrichment of ultraconserved elements (UCEs)
 
-## Targeted sequencing
-
 - Approaches like ‘genome reduction’ or ‘reduced representation’ can generate datasets with thousands of loci at relatively low cost for model and non-model taxa
 - We will focus on Targeted enrichment of ultraconserved elements (UCEs) from the [Zhang et al 2019](https://academic.oup.com/isd/article/3/5/3/5573097) paper
 - Ultraconserved Elements are highly conserved regions within the genome that are shared among evolutionarily distant taxa
 - The DNA adjacent to each ‘core’ UCE region, known as flanking DNA, increases in variability with distance from the region
 - The UCE approach belongs to the broad category of ‘target enrichment’ phylogenomic techniques: anchored hybrid enrichment (AHE) or target capture of Ultraconserved Elements (UCEs)
-- The advantage of the UCE approach is that it is fully open source, see [phyluce](https://phyluce.readthedocs.io/en/latest/index.html)
-
----
-class: left, top
-
-## Targeted sequencing
-
-<div style="text-align:center"><img src="../assets/pics/target-sequencing.png" width="450"/></div>
-
-_Illumina intro pdf_
-
-
----
-class: left, top
-
-## UCE flowchart 
-_Fig.2 Zhang et al 2019_
-
-<div style="text-align:center"><img src="../assets/pics/uce-flowchart.png" width="500"/></div>
-
-
+    - Read more about target enrichment in the [Illumina Intro to NGS](https://www.illumina.com/content/dam/illumina-marketing/documents/products/illumina_sequencing_introduction.pdf)
+- One advantage of the UCE approach is that it is fully open source, see [phyluce](https://phyluce.readthedocs.io/en/latest/index.html)
 
 ---
 class: left, top
@@ -390,38 +305,32 @@ class: left, top
 ---
 class: left, top
 
-# In-class group activity
+# In-class activity
 
-**Objective:** Install and learn how to use [phyluce](https://phyluce.readthedocs.io/en/latest/index.html) for UCE phylogenomics
+**Objective:** Install and learn how to use [phyluce](https://phyluce.readthedocs.io/en/latest/index.html) for UCE phylogenomics and/or [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
 **Time:** 20-25 minutes (?)
 
 **Instructions:** We will go over together the next two sections:
 
-- [Installation](https://phyluce.readthedocs.io/en/latest/installation.html)
-- [Tutorial I](https://phyluce.readthedocs.io/en/latest/tutorial-one.html)
+- [Installation of phyluce](https://phyluce.readthedocs.io/en/latest/installation.html)
+    - Only available for Mac or Linux
+- [Installation of FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
 
-and create our own reproducible script.
+Each of you will follow the installation steps and create your own reproducible script for your repository. See [notebook-log.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/notebook-log.md) for an example.
 
-**Disclaimer:** I have not done the steps ahead of time to make sure that everything runs smoothly. My idea is to troubleshoot this pipeline together, but maybe this will backfire.
 
 #### Options for you
 
-1. "I think that I can follow the pipeline by myself or with a small group of peers": you can join the Congregate room
-2. "I need to see step by step": you can stay here in the zoom room
+1. "I think that I can follow the pipeline by myself or with a small group of peers": you can go home or work independently here
+2. "I need to see step by step": you can follow along the steps with me
 
 ---
 class: left, top
 
 # Homework
 
-1. Identify which dataset you will use for the rest of the semester: This data can be related to your research or it can be a public dataset
-2. Create your reproducible notebook (preferably md format) and push to your github repository
-3. Add a short description of your dataset to your notebook and add one slide describing your dataset to share with the class in the [class google slides](https://docs.google.com/presentation/d/1-DRevm_ntBOD6F5PMnQkzbMuhSiJMjjaBiD8FvUhfY4/edit?usp=sharing)
-4. Identify the stage of your dataset
-    - Do you have raw reads? Perform the quality control steps that we described
-    - Do you have UCEs? Use `phyluce` for quality control, assembly and mapping
-5. Make sure to record all steps taken with the data in your reproducible notebook and push the most updated version to github
+[Sequencing HW](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/seq-hw.md)
 
 ---
 class: left, top
@@ -432,6 +341,8 @@ class: left, top
 - To learn more about Sanger sequencing technology, watch these two YouTube videos (less than 5 minutes each): [video1](https://www.youtube.com/watch?v=ONGdehkB8jU) and [video2](https://www.youtube.com/watch?v=Jnk_4Maf5Fk)
 - To learn a lot more details about NGS technology, read [this pdf](https://www.illumina.com/content/dam/illumina-marketing/documents/products/illumina_sequencing_introduction.pdf). Watch this 50-minute youtube [video](https://www.youtube.com/watch?v=6jf_6STEnI4) and this shorter 5-minute youtube [video](https://www.youtube.com/watch?v=shoje_9IYWc)
 
-## Papers to read
+## Some relevant papers
 - Shendure et al, 2017 [DNA sequencing at 40: past, present and future](https://www.nature.com/articles/nature24286)
 - Shendure and Ji, 2008 [Next-generation DNA sequencing](https://www.nature.com/articles/nbt1486)
+- [Bradnam et al, 2013: Assemblathon 2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3844414/)
+- [Phred I](https://genome.cshlp.org/content/8/3/175.long) and [Phred II](https://genome.cshlp.org/content/8/3/186.long)

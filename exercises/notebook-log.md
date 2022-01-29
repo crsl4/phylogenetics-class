@@ -1,16 +1,18 @@
-# Notebook reproducible script for Botany 563 (Spring 2021)
-Written by CSL
+# Notebook reproducible script for Botany 563
+Written by CSL in Spring 2021
+Updated by CSL in Spring 2022
 
-## To do
-- look for assembly alternatives to trinity for Mac
 
 ## phyluce
+
+### To do
+- look for assembly alternatives to trinity for Mac
 
 ### Installation
 
 We are following the steps on the [Installation](https://phyluce.readthedocs.io/en/latest/installation.html).
 
-1. Install Miniconda for pytho 2.7 by choosing the `Miniconda2 MacOSX 64-bit pkg` file from the list here: https://docs.conda.io/en/latest/miniconda.html
+1. Install Miniconda for python 2.7 by choosing the `Miniconda2 MacOSX 64-bit pkg` file from the list here: https://docs.conda.io/en/latest/miniconda.html
 
 2. We double-clicked on the file and followed the installation steps
 
@@ -25,7 +27,6 @@ $ which conda
 $ python -V
 Python 2.7.10
 $ echo $PYTHONPATH
-
 ```
 
 6. We created the `~/.condarc` with the content below:
