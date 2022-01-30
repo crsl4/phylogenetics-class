@@ -197,6 +197,17 @@ Quality values:
 - The quality score of a base (known as [Phred](https://en.wikipedia.org/wiki/Phred_quality_score) or Q score) is an integer value representing the estimated probability of error
 - Let `P` be the error probability `\(P=10^{-Q/10}\)`. Then, `\(Q=-10log_{10}(P)\)`
 - Original phred score [paper I](https://genome.cshlp.org/content/8/3/175.long) and [paper II](https://genome.cshlp.org/content/8/3/186.long)
+  - "To determine quality scores, Phred first calculates several parameters related to peak shape and peak resolution at each base. Phred then uses these parameters to look up a corresponding quality score in huge lookup tables."
+
+---
+class: left, top
+
+## Phred scoring
+
+From Wikipedia:
+
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/Phred_Figure_1.jpg" width="450"/&gt;&lt;/div&gt;
+  
 
 ---
 class: left, top
