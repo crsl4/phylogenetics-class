@@ -85,7 +85,7 @@ class: left, top
 
 **Instructions:**
 
-1. Separate groups discussions (20 minutes): Students will discuss with their respective groups and prepare a 10-minute presentation for the whole class. Use these google slides:
+1. Separate group discussions (20 minutes): Students will discuss with their respective groups and prepare a 10-minute presentation for the whole class. Use these google slides:
   - [ClustalW](https://docs.google.com/presentation/d/1vtegUr8V5Q3Cf-L9Q_RQKyeml1AVPejaHnNhIi5cNOA/edit?usp=sharing)
   - [MUSCLE](https://docs.google.com/presentation/d/1u9JyRZ-xwta4iCY0Dk4ZiyYzjOU02xMHqoON7HYP4Lg/edit?usp=sharing)
   - [T-Coffee](https://docs.google.com/presentation/d/1tFc-VL_lH3FEBXHdR8RQ7OB5imfiWIx-oyBWPS4Aaf0/edit?usp=sharing)
@@ -111,7 +111,6 @@ class: left, top
 
 ### Progressive alignment: [Thompson, 1994, ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/)
 
-- input sequences -> progressive alignment
 - pairwise alignment to create distance matrix and then tree based on NJ
 - sequences are down-weighted compared to how closely related they are to other sequences (to avoid a group of similar sequences to dominate the alignment)
 - different weight matrices are used: 1) for closely related sequences where high scores are given to identities and low scores ow; 2) for distantly related sequences where high scores are given to conservative amino acid matches and low score to identities (BLOSUM, PAM matrices)
@@ -119,11 +118,9 @@ class: left, top
 - most widely used option, but several methods have been shown more accurate and fast
 - Downsides
   - The guide tree has a big impact on alignments (and we usually estimate an inaccurate tree). Some ways to overcome this issue are
-    - better ways to estimate the tree (maximum likelihood); not very scalable
-    - iteration between tree and alignment; not very scalable
-  - Errors made early in the process persist since subsequent mergers never change the alignments they are merging together. Some ways to overcome this issue are 
-    - "polishing": breaks a set of sequences into subsets and re-aligns the induced sub-alignments
-    - consistency
+      - better ways to estimate the tree (maximum likelihood); not very scalable
+      - iteration between tree and alignment; not very scalable
+  - Errors made early in the process persist since subsequent mergers never change the alignments they are merging together
 
 
 ---
@@ -141,7 +138,7 @@ class: left, top
 - Sum-of-pairs alignment
   - the cost of a given multiple sequence alignment is defined by summing the costs of its site of induced pairwise alignments
   - given input set S of sequences and the function for computing the cost of any pairwise alignment, find an alignment A on S such that the sum of the induced pairwise alignments is minimized
-- uses intermediate sequences to improve the quality of the pairwise alignment. For example, we are aligning sequences A and C and get a pairwise alignment A-C. We need incorportate an intermediate sequence B, and pairwise A-B and B-C to then obtain the pairwise alignment (A-C)^*
+- uses intermediate sequences to improve the quality of the pairwise alignment. For example, we are aligning sequences A and C and get a pairwise alignment A-C. We need incorportate an intermediate sequence B, and pairwise A-B and B-C to then obtain the pairwise alignment (A-C)
 - generally more accurate than Clustalw; but not scalable to large alignments
 
 ---
@@ -161,7 +158,10 @@ class: left, top
 ### Simultaneous estimation tree/alignment
 - [sate](https://phylo.bio.ku.edu/software/sate/sate.html)
 
-## Other considerations
+---
+class: left, top
+
+### Other considerations
 
 - Nucleotide vs amino acid sequence
   - when there is choice (protein-coding genes), amino acid alignments are easier to carry out and less ambiguous; also nucleotide alignments do not recognize codon as a unit and can break up the reading frame; typically, you align the amino acids and then generate the corresponding nucleotide sequence alignment
@@ -171,15 +171,15 @@ class: left, top
   - but many times it is necessary because automatic alignment methods are not as accurate as they should be
 
 
----
-class: left, top
-
-## Which program to choose?
+### Which program to choose?
 - not a clear answer
 - scalability vs accuracy
 - HW reading: [Alignathon](https://genome.cshlp.org/content/24/12/2077)
-- filtering is more important than the specific program used (more on filtering later)
-- running multiple software with different parameter choices seems to be a good strategy
+- **Strategy:**
+  - Run multiple programs and parameter choices
+  - Filtering is more important than the specific program used (more on filtering later)
+  - Read program papers and documentation carefully!
+  - Take good note of choices and keep track of all comparisons to justify final choice
 
 
 ---
@@ -323,20 +323,23 @@ class: left, top
 ---
 class: left, top
 
-# In-class exercise (or homework)
+### In-class exercise (or homework)
 
 **Instructions:** Run and compare the results of all three MSA software on a toy dataset of primates. You can use my reproducible script as guideline: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md).
 
-### ClustalW
+**ClustalW**
+
 1. Download [ClustalW](http://www.clustal.org/clustal2/)
 2. Download the `primatesAA.fasta` file from the Phylogenetic Handbook [website](https://www.kuleuven.be/aidslab/phylogenybook/Data_sets.html) (22 primate aminoacid sequences)
 3. Run `ClustalW`, see [docs](http://www.clustal.org/download/clustalw_help.txt)
 
-### T-Coffee
+**T-Coffee**
+
 1. Download [T-Coffee](http://www.tcoffee.org/Projects/tcoffee/index.html#DOWNLOAD)
 2. Run `T-Coffee` on the same `primatesAA.fasta` data. See the [docs](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#quick-start-t-coffee)
 
-### MUSCLE
+**MUSCLE**
+
 1. Download [MUSCLE](https://www.drive5.com/muscle/downloads.htm)
 2. Run `MUSCLE` on the same `primatesAA.fasta` data. See the [docs](https://www.drive5.com/muscle/manual/basic_alignment.html)
 
