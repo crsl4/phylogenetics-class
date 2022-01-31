@@ -295,7 +295,7 @@ class: left, top
 
 # Homework: Needleman-Wunsch algorithm
 
-**Instructions:** Watch the class video on canvas with the rest of the steps of the Needleman-Wunsch algorithm and redo the same example with a cost of gap of 1 and a cost of substitions of 3 to compare the final alignment in both cases. 
+**Instructions:** Watch the class video on canvas with the rest of the steps of the Needleman-Wunsch algorithm and finish the alignment. Optional: redo the same example with a cost of gap of 1 and a cost of substitions of 3 to compare the final alignment in both cases. 
 
 
 **Important take-home message:** The final alignment depends on the costs of gaps and substitutions.
