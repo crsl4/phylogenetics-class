@@ -58,8 +58,8 @@ Out-of-class communication will be done via Slack where students will be able to
     - 1/28 HAL 2.1 quiz
     - 2/4 Reproducibility quiz
     - 2/9 Sequencing quiz
-    - 2/16 Alignment HW
     - 2/18 HAL 2.4 quiz
+    - 2/23 Alignment HW
     - 3/4 HAL 1.1 quiz
     - 3/11 HAL 1.2 quiz
     - 3/25 HAL 1.4 quiz
