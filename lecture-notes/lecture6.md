@@ -36,6 +36,104 @@ At the end of today's session, you will be able to
 ---
 class: left, top
 
+# Filtering alignments
+(HAL 2.2)
+
+- MSA is messy and error-prone, so many times we need to filter out poorly aligned regions
+- We need to make sure that we do not remove signal along with the noise
+- The balance depends on the planned downstream analysis: 
+  - Example: misaligned regions impacting a single seauence at one time will have little impact on the phylogeny inference apart from terminal branch length estimations, but they will induce many false positives when searching for loci under positive selection
+- We want automatic MSA cleaning methods, not manual for reproducibility reasons, but there are no options yet
+- Two types of filtering methods:
+    - (take it or leave it) TILI-filtering methods: remove whole sites or whole sequences
+    - masking residues: replace by gap or a symbol representing ambiguity ?,N,X
+
+---
+class: left, top
+
+### What are the problematic regions of an aligment?
+
+<div style="text-align:center"><img src="../assets/pics/fig8hal.png" width="400"/></div>
+
+---
+class: left, top
+
+### What are the problematic regions of an aligment?
+
+1. poorly informative
+  - patchy: too many gaps (Fig 8a HAL)
+  - regions in the vicinity of patchy regions (Fig 8b HAL)
+
+2. wrongly aligned
+  - misaligned regions (Fig 8c HAL)
+  - low complexity regions with repeated characteristics (Fig 8d HAL)
+
+---
+class: left, top
+
+### What causes problematic MSA regions?
+- Highly divergent or non-homologous sequence fragments
+    - Note that even when sequences are too divergent, or not even homologous, MSA software will still produce an alignment
+    - Somewhere along the gradient from highly similar sequences to highly divergent sequences,
+there is a critical point beyond which to align sequences is not possible, or biologically
+meaningful: too many substitutions or indels have occurred
+
+- High-throughput sequencing or annotation errors 
+    - Sequencing errors -> small indels in nucleotide alignments -> errors in translation
+    - Errors in homology annotation can lead to the inclusion of sequences that are not homologous
+    - This more tricky case occurs
+when all considered sequences are homologous but some are erroneously considered as being
+orthologous (derived from ancestral copy by speciation) while actually being paralogous
+(derived from ancestral copy by duplication)
+
+---
+class: left, top
+
+### Principles underlying filtering methods
+
+- Gaps indicate hard to align and possibly saturated regions 
+    - From a biological viewpoint, it is often assumed that in proteins insertions and deletions are less frequent than point substitutions
+
+- Few/similar residues are expected per site
+- Reliable regions are likely more robust to MSA method variations
+
+- Homologous (fragment of) sequences are expected to be similar (pre-filtering)
+    - For most pipelines, sequence similarity is an initial criterion used to identify homologous sequences
+
+- Orthologous sequences are supposed to be congruent over loci
+(post-filtering)
+
+---
+class: left, top
+
+### TILI-filtering methods vs masking residues methods
+
+![](../assets/pics/fig9hal.png)
+
+- they are fated to remove signals along with noise
+- TILI-filtering methods could still do a great job regarding phylogeny inference if they are able to correctly identify and remove sequences and sites containing more noise than signal
+- In general, masking residues methods are better
+
+---
+class: left, top
+
+## Comparison of filtering methods
+
+<div style="text-align:center"><img src="../assets/pics/fig12hal.png" width="700"/></div>
+
+---
+class: left, top
+
+## Comparison of filtering methods
+
+<div style="text-align:center"><img src="../assets/pics/table1hal.png" width="500"/></div>
+
+- [OMM_MACSE pipeline](https://github.com/ranwez/MACSE_V2_PIPELINES) and [HmmCleaner](https://metacpan.org/pod/distribution/Bio-MUST-Apps-HmmCleaner/bin/HmmCleaner.pl) among the best filtering methods, but careful since not simulated data
+
+
+---
+class: left, top
+
 # Homology subtypes
 
 - All life on earth shares a common origin

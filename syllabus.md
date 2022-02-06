@@ -58,8 +58,8 @@ Out-of-class communication will be done via Slack where students will be able to
     - 1/28 HAL 2.1 quiz
     - 2/4 Reproducibility quiz
     - 2/9 Sequencing quiz
-    - 2/16 Alignment HW
     - 2/18 HAL 2.4 quiz
+    - 2/23 Alignment HW
     - 3/4 HAL 1.1 quiz
     - 3/11 HAL 1.2 quiz
     - 3/25 HAL 1.4 quiz
@@ -67,7 +67,8 @@ Out-of-class communication will be done via Slack where students will be able to
     - 4/8 HAL 3.1 quiz
     - 4/8 HAL 3.3 quiz
     - 4/15 SNaQ quiz
-- GitHub commits (10 points). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see below). Each commit is worth 2 points (1 if late within one week of deadline). Maximum possible points from these assessments is 12, but only 10 count towards grade (that is, 1 commit can be missed without penalty). 
+- GitHub commits (10 points). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see below). Each commit is worth 2 points (1 if late within one week of deadline). Maximum possible points from these assessments is 14, but only 10 count towards grade (that is, 2 commits can be missed without penalty). 
+    - 2/18: Data and QC (from lecture 2/9)
     - 3/2: Alignment method (from lecture 2/16)
     - 3/9: Orthology method (from lecture 2/18)
     - 3/23: Distance and parsimony methods (from lecture 3/2)
