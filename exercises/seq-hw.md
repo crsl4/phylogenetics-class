@@ -29,4 +29,4 @@
 5. Make sure to record all steps taken with the data in your reproducible notebook and push the most updated version to github
 6. Submit the link to your commit in canvas
 
-**Deadline:** February 18th, 2022 5pm CT
+**Deadline:** February 18th, 2022 2:30pm CT
