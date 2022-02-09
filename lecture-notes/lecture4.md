@@ -15,10 +15,12 @@ output:
 ---
 class: left, top
 
-# Lecture 4
-
 ### Previous class check-up
 - We are familiar with git/github
+  - The class notes are in its own repo: 
+    - `git clone` to download
+    - `git pull` to update them, or 
+    - fork and `git pull upstream master`
 - We understand the importance of reproducible scripts
     - **Reproducibility Resolution 2022**: let's all make a commitment today to do one reproducible thing in our research ([google slides](https://docs.google.com/presentation/d/13bqKroBmXnIV4HI6UD_pYz9GE71jcuW989yaTwCvWSM/edit?usp=sharing))
 

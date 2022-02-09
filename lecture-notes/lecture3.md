@@ -352,7 +352,7 @@ And this is your local state:
 ```
 A -- B -- D (what you have)
 ```
-
+where `A`, `B`, `C`, `D` represent specific commits.
 
 The easiest thing is to do `git pull` and then work out the merging issues:
 ```
@@ -371,20 +371,16 @@ class: left, top
 When you open the `index.html` file, this is what you see:
 ```
 <<<<<<< HEAD:index.html
-<div id="footer">contact : email.support@github.com</div>
+contact : email.support@github.com
 =======
-<div id="footer">
- please contact us at support@github.com
-</div>
+please contact us at support@github.com
 >>>>>>> remote:index.html
 ```
 In this conflict, the lines between `<<<<<< HEAD:index.html` and `======` are the content from the branch you are currently on. The lines between `=======` and `>>>>>>> remote:index.html` are from the remote file version we are merging.
 
-To resolve the conflict, edit this section until it reflects the state you want in the merged result. Pick one version or the other or create a hybrid. Also remove the conflict markers `<<<<<<`, `======` and `>>>>>>`.
+To resolve the conflict, edit this section manually (i.e. open the file) until it reflects the state you want in the merged result. Pick one version or the other or create a hybrid. Also remove the conflict markers `<<<<<<`, `======` and `>>>>>>`.
 ```
-<div id="footer">
 please contact us at email.support@github.com
-</div>
 ```
 Now run `git add index.html` and `git commit` to finalize the merge. You do `git push` afterwards with a clean history:
 
@@ -415,6 +411,13 @@ Individually,
 
 **Challenge:** Your file needs to be compatible with the most updated version of `best-books.md`
 which will change as people merge their additions via pull requests. You will need to manage the conflicts to the file.
+
+---
+class: left, top
+
+## git/GitHub summary
+
+<div style="text-align:center"><img src="../assets/pics/lecture3-flowchart.png" width="700"/></div>
 
 ---
 class: left, top

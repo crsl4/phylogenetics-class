@@ -356,7 +356,7 @@ And this is your local state:
 ```
 A -- B -- D (what you have)
 ```
-
+where `A`, `B`, `C`, `D` represent specific commits.
 
 The easiest thing is to do `git pull` and then work out the merging issues:
 ```
@@ -375,20 +375,16 @@ class: left, top
 When you open the `index.html` file, this is what you see:
 ```
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html
-&lt;div id="footer"&gt;contact : email.support@github.com&lt;/div&gt;
+contact : email.support@github.com
 =======
-&lt;div id="footer"&gt;
- please contact us at support@github.com
-&lt;/div&gt;
+please contact us at support@github.com
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; remote:index.html
 ```
 In this conflict, the lines between `&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html` and `======` are the content from the branch you are currently on. The lines between `=======` and `&gt;&gt;&gt;&gt;&gt;&gt;&gt; remote:index.html` are from the remote file version we are merging.
 
-To resolve the conflict, edit this section until it reflects the state you want in the merged result. Pick one version or the other or create a hybrid. Also remove the conflict markers `&lt;&lt;&lt;&lt;&lt;&lt;`, `======` and `&gt;&gt;&gt;&gt;&gt;&gt;`.
+To resolve the conflict, edit this section manually (i.e. open the file) until it reflects the state you want in the merged result. Pick one version or the other or create a hybrid. Also remove the conflict markers `&lt;&lt;&lt;&lt;&lt;&lt;`, `======` and `&gt;&gt;&gt;&gt;&gt;&gt;`.
 ```
-&lt;div id="footer"&gt;
 please contact us at email.support@github.com
-&lt;/div&gt;
 ```
 Now run `git add index.html` and `git commit` to finalize the merge. You do `git push` afterwards with a clean history:
 
@@ -419,6 +415,13 @@ Individually,
 
 **Challenge:** Your file needs to be compatible with the most updated version of `best-books.md`
 which will change as people merge their additions via pull requests. You will need to manage the conflicts to the file.
+
+---
+class: left, top
+
+## git/GitHub summary
+
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/lecture3-flowchart.png" width="700"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
