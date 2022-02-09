@@ -8,3 +8,4 @@ Conor Bendett: https://github.com/cbendett/bot563.git
 Wes Hibbard: https://github.com/Whibbard23/phylogenetics2022.git
 Nicole Mitidieri: https://github.com/botanicole/Phylogenetics-563
 Yushin Wei : https://github.com/YushinWei/Bot563
+Arth Patel: https://github.com/arth15/MyProject.git
