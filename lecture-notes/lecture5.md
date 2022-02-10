@@ -20,7 +20,8 @@ class: left, top
 ### Previous class check-up
 - We understand sequencing technologies
 - We learned a bit about `phyluce` as a pipeline for phylogenomics on UCEs and about `FastQC` for QC of raw reads
-- We start thinking about data for the class project and start working on QC
+- We start thinking about data for the class project and start working on QC -> beginning of work from home in your data!
+  - Remember to add me as collaborator to your repo (instructions in slack)
 
 ### Learning objectives
 
@@ -29,9 +30,8 @@ At the end of today's session, you
 - will be able to assess the strengths and weaknesses of each type of algorithm
 - will learn to use different software options: ClustalW, T-Coffee and MUSCLE
 
-### Pre-class work
+### No pre-class work!
 
-- No pre-class work this time!
 
 ---
 class: left, top
