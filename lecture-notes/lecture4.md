@@ -15,10 +15,12 @@ output:
 ---
 class: left, top
 
-# Lecture 4
-
 ### Previous class check-up
 - We are familiar with git/github
+  - The class notes are in its own repo: 
+      - `git clone` to download
+      - `git pull` to update them, or 
+      - fork and `git pull upstream master`
 - We understand the importance of reproducible scripts
     - **Reproducibility Resolution 2022**: let's all make a commitment today to do one reproducible thing in our research ([google slides](https://docs.google.com/presentation/d/13bqKroBmXnIV4HI6UD_pYz9GE71jcuW989yaTwCvWSM/edit?usp=sharing))
 
@@ -190,6 +192,11 @@ Quality values:
 !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 ```
 
+---
+class: left, top
+
+## Output of sequencing
+
 - The quality score of a base (known as [Phred](https://en.wikipedia.org/wiki/Phred_quality_score) or Q score) is an integer value representing the estimated probability of error
 - Let `P` be the error probability $P=10^{-Q/10}$. Then, $Q=-10log_{10}(P)$
 - Original phred score [paper I](https://genome.cshlp.org/content/8/3/175.long) and [paper II](https://genome.cshlp.org/content/8/3/186.long)
@@ -338,6 +345,8 @@ class: left, top
 # Homework
 
 [Sequencing HW](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/seq-hw.md)
+
+**More practice with FastQC?** If you want to practice more with FastQC before starting on your project data, you can download read files from the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra)
 
 ---
 class: left, top

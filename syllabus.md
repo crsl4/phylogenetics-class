@@ -54,11 +54,12 @@ By the end of the semester, we will change the format of the class into active l
 Out-of-class communication will be done via Slack where students will be able to ask and answer questions regarding the lectures and exercises.
 
 ## Class assessments and key dates
-- Formal assessments (20 points). Each assessment/quiz is worth 2 points for turning it in on time and 1 points if turned in late (one week after deadline). Maximum possible points from these assessments is 24, but only 20 count towards grade (that is, 2 full quizzes can be missed without penalty).
+- Formal assessments (20 points). Each assessment/quiz is worth 2 points for turning it in on time and 1 points if turned in late (one week after deadline). Maximum possible points from these assessments is 26, but only 20 count towards grade (that is, 3 full quizzes can be missed without penalty).
     - 1/28 HAL 2.1 quiz
-    - 2/4 Reproducibility quiz
+    - 2/2 Shell basics quiz
+    - 2/9 Reproducibility HW Part 1
+    - 2/9 Reproducibility HW Part 2
     - 2/9 Sequencing quiz
-    - 2/18 HAL 2.4 quiz
     - 2/23 Alignment HW
     - 3/4 HAL 1.1 quiz
     - 3/11 HAL 1.2 quiz
@@ -67,8 +68,9 @@ Out-of-class communication will be done via Slack where students will be able to
     - 4/8 HAL 3.1 quiz
     - 4/8 HAL 3.3 quiz
     - 4/15 SNaQ quiz
-- GitHub commits (10 points). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see below). Each commit is worth 2 points (1 if late within one week of deadline). Maximum possible points from these assessments is 14, but only 10 count towards grade (that is, 2 commits can be missed without penalty). 
-    - 2/18: Data and QC (from lecture 2/9)
+- GitHub commits (10 points). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see below). Each commit is worth 2 points (1 if late within one week of deadline). Maximum possible points from these assessments is 16, but only 10 count towards grade (that is, 3 commits can be missed without penalty). 
+    - 2/9: Create github repo for final project (from lecture 2/4)
+    - 2/18: Sequencing HW Data and QC (from lecture 2/9)
     - 3/2: Alignment method (from lecture 2/16)
     - 3/9: Orthology method (from lecture 2/18)
     - 3/23: Distance and parsimony methods (from lecture 3/2)
