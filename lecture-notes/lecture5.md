@@ -20,6 +20,7 @@ class: left, top
 ### Previous class check-up
 - We understand sequencing technologies
 - We learned a bit about `phyluce` as a pipeline for phylogenomics on UCEs and about `FastQC` for QC of raw reads
+- We start thinking about data for the class project and start working on QC
 
 ### Learning objectives
 
@@ -97,14 +98,14 @@ class: left, top
 
 ## In-class activity
 
-**Table 9.2** (Warnow). Without knowing the _true_ evolutionary events from `S` to `S'`, what would you think is a good alignment?
+**Table 9.2** (Warnow). Without knowing the _true_ evolutionary events from `S=ACATTA` to `S'=TACA`, what would you think is a good alignment?
 
 ---
 class: left, top
 
 ## In-class activity
 
-**Table 9.2** (Warnow). Without knowing the _true_ evolutionary events from `S` to `S'`, what would you think is a good alignment?
+**Table 9.2** (Warnow). Without knowing the _true_ evolutionary events from `S=ACATTA` to `S'=TACA`, what would you think is a good alignment?
 
 **Solution:** You probably choose an alignment where none (or few) of the _true_ homology relationships are correct.
 - The true alignment has 4 events: 2 deletions, 1 insersion, 1 substitution
