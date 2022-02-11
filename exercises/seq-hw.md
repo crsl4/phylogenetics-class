@@ -6,7 +6,7 @@
 
 **Instructions:**
 
-1. Read [Zhang et al, 2019](https://academic.oup.com/isd/article/3/5/3/5573097)
+1. Read [Zhang et al, 2019](https://academic.oup.com/isd/article/3/5/3/5573097) (optional due to paywall)
 2. Two options:
     - Continue with the [phyluce tutorial I](https://phyluce.readthedocs.io/en/latest/tutorial-one.html)
     - Continue learning how to use [FASTQC](https://raw.githubusercontent.com/s-andrews/FastQC/master/README.txt)
