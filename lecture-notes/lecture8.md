@@ -91,8 +91,8 @@ class: left, top
 - **Advantage of distance-based methods over parsimony or likelihood:** There are algorithms that produce the optimum tree without having to search the space of trees
   - Pros: You can get the tree in a scalable manner regardless of sample size
   - Cons: 
-    - Algorithmic methods tend to be approximations, so they would approximate the optimum tree, but rarely achieve it
-    - However, keep in mind that searching the space would not necessarily achieve the optimum either because many times the search is not exhaustive
+      - Algorithmic methods tend to be approximations, so they would approximate the optimum tree, but rarely achieve it
+      - However, keep in mind that searching the space would not necessarily achieve the optimum either because many times the search is not exhaustive
     
 
 ---
@@ -154,11 +154,11 @@ class: left, top
 
 ## Cluster analysis example
 
-**In-class dynamic:** Find the WPGMA tree for the distance matrix below.
+**In-class dynamic:** (_Box 5.1 in HB11_) Find the WPGMA tree for the distance matrix below.
 
 <div style="text-align:center"><img src="../assets/pics/box5.1hb.png" width="550"/></div>
 
-_Box 5.1 in HB11_
+Watch again in [YouTube video](https://youtu.be/jLQAwlODdCo).
 
 ---
 class: left, top
@@ -173,16 +173,18 @@ class: left, top
 - NJ tree is the same as the ME tree only if distances are additive to begin with, but it has been shown that the NJ tree can be very similar to the ME tree most of the times
 - NJ is better that UPGMA/WPGMA under unequal rates of evolution
 
+---
+class: left, top
 
-#### NJ Algorithm
+### NJ Algorithm
 
 Input: Matrix of pairwise distances
 
-1. Compute the net divergence $r$ for every end node
+1. Compute the net divergence $r$ (sum of distances) for every end node 
 2. Create a rate-corrected distance matrix: $M_{ij} = d_{ij} - \frac{r_i+r_j}{N-2}$
 3. Define the new node that groups taxa $i$ and $j$ for which $M_{ij}$ is minimal (say A,B)
-4. Compute the branch lengths from new node U to A and B
-5. Compute new distances from node U to every other end node
+4. Compute the branch lengths from new node U to A and B: $S_{AU} = \frac{d_{AB}}{2} + \frac{r_A - r_B}{2(N-2)}$
+5. Compute new distances from node U to every other end node: $d_{kU} = \frac{d_{Ak}+d_{Bk}-d_{AB}}{2}$
 6. Repeat the steps
 
 
@@ -191,15 +193,13 @@ class: left, top
 
 ## Minimum evolution example
 
-**In-class activity:** Find the NJ tree for the distance matrix below.
+**Homework:** Find the NJ tree for the distance matrix below.
 
 <div style="text-align:center"><img src="../assets/pics/box5.2hb.png" width="350"/></div>
 
-_Box 5.2 in HB11_
+_Box 5.2 in HB11:_ Note that there are many errors in the book.
 
-Note that there are many errors in the book.
-
-**Solution:** See this [youtube video](https://youtu.be/n1BEd05IpEk) with all the steps in the algorithm.
+**Solution:** See this [YouTube video](https://youtu.be/n1BEd05IpEk) with all the steps in the algorithm.
 
 
 ---
@@ -215,6 +215,7 @@ class: left, top
 - But unlike parsimony, they rely on an evolution model but the result will depend on which model is chosen (more on Lecture 9 and 12)
 - They do not have the model flexibility as likelihood-based models
 - Under standard conditions, NJ trees are meant to estimate accurate trees and they are very fast to be estimated
+- However, these methods assume the distances are accurate. Noisy distances can affect the estimated tree
 - Aside from the ME algorithm that aims to find the tree that minimizes the tree length, there are other ME algorithms that aim to find the tree that minimize the differences between the genetic distances and the tree distances (called OLS=ordinary least squares): $F = \sum_{i,j} (D_{ij}-d_{ij})^2$ where $D_{ij}$ are the tree distances and $d_{ij}$ are the observed genetic distances
 
 
@@ -235,12 +236,10 @@ class: left, top
 
 **Time:** 10 minutes
 
-**Instructions:** Follow the R commands to obtain a ME tree from the sample data (or your own data!). The commands are listed in the [PDF tutorial]((https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf)) that we are using as guideline or in our reproducible script [notebook-log.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/notebook-log.md) or on the following slides.
+**Instructions:** 
+1. Follow the R commands to obtain a ME tree from the sample data (or your own data!). The commands are listed in the [PDF tutorial]((https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf) that we are using as guideline, in our reproducible script [notebook-log.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/notebook-log.md) and on the following slides.
+2. After the allotted time, we will compare our work all together.
 
-**Options for you:**
-
-1. "I think that I can follow the pipeline by myself or with a small group of peers": you should join the Congregate room
-2. "I think I need more one-on-one help to run the commands": you can stay here in the zoom room
 
 ---
 class: left, top
@@ -255,7 +254,7 @@ install.packages("adegenet", dep=TRUE)
 install.packages("phangorn", dep=TRUE)
 ```
 
-2) Loading
+2) Loading the packages
 ```r
 library(ape)
 library(adegenet)
@@ -275,7 +274,7 @@ class: left, top
 ### Software: R package _ape_
 
 4) Computing the genetic distances. They choose a Tamura
-and Nei 1993 model which allows for different rates of transitions and transversions, heterogeneous base frequencies, and between-site variation of the substitution rate.
+and Nei 1993 model which allows for different rates of transitions and transversions, heterogeneous base frequencies, and between-site variation of the substitution rate (more on Lecture 9).
 ```r
 D <- dist.dna(dna, model="TN93")
 ```
@@ -319,15 +318,10 @@ Main distance functions:
 - `hclust` (`stats`): classical hierarchical clustering algorithms including single
 linkage, complete linkage, UPGMA, and others.
 
----
-class: left, top
 
-# Distance-based methods
+#### Further learning
 
-### Homework
-
-Continue the distance-based steps in the [PDF tutorial](https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf) on the same sample data or on your own data.
-Don't forget to write down the commands in your personal reproducible script.
+Continue the distance-based steps in the [PDF tutorial](https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf) on the same sample data.
 
 
 ---
@@ -341,7 +335,6 @@ class: left, top
 - Justification: 
   - Ockham's razor: when two hypothesis provide equally valid explanations for a phenomenon, the simpler one should always be preferred
   - More character-state changes imply a more complex hypothesis because homoplasy (sharing identical character states that cannot be explained by inheritance from a common ancestor) is an _ad hoc_ hypothesis
-- The link between parsimony and simplicity is weak: Tuffley and Steel demonstrated that parsimony and likelihood become equivalent under an extremely rich likelihood model that assigns a separate parameter for each character on every branch of the tree (so not necessarily a simple model), but we are not estimating any of the parameters
 - Parsimony represents a useful fall back method when model-based methods cannot be used due to computational limitations
 
 ---
@@ -375,7 +368,7 @@ Y:A
 Z:C
 ```
 
-- **Full solution:** see this [youtube video](https://youtu.be/lJaFPek3eAc)
+- **Full solution:** see this [YouTube video](https://youtu.be/lJaFPek3eAc)
 - Note that this is only one site! We need to repeat this process for every site and add up the lengths
 - More on Newick (parenthetical) format [here](https://en.wikipedia.org/wiki/Newick_format)
 
@@ -386,7 +379,7 @@ class: left, top
 
 ### Methodology
 
-Just as in MSA, we cannot do this by hand and there is a dynamic programming algorithm that helps us (what was dynamic programming?): 
+Just as in MSA, we cannot do this by hand and there are dynamic programming algorithms that help us (what was dynamic programming?): 
 - Fitch algorithm (HB Box 8.2) for equal costs
 - Sankoff algorithm (HB Box 8.1) for unequal costs
 
@@ -400,7 +393,7 @@ class: left, top
 #### Fitch algorithm
 1) Root the tree in a random place (parsimony score is not affected by the root)
 
-2) Calculate the state-set $X_i$ for each internal node $i$ corresponding the set of states that can be assigned to each node so that the minimum possible length of the subtree can be achieved. Let $L(i)$ and $R(i)$ be the left and rigth child descendant nodes of $i$ respectively.
+2) Calculate the state-set $X_i$ for each internal node $i$ corresponding the set of states that can be assigned to each node so that the minimum possible length of the subtree can be achieved. Let $L(i)$ and $R(i)$ be the left and right child descendant nodes of $i$ respectively.
 
   2.1) Form the intersection of the two child state sets: $X_{L(i)} \cap X_{R(i)}$
 
@@ -424,7 +417,7 @@ Z:C
 ```
 using the Fitch algorithm.
 
-- **Full solution:** see this [youtube video](https://youtu.be/bZdEkYyq2hQ)
+- **Full solution:** see this [YouTube video](https://youtu.be/bZdEkYyq2hQ)
 - **Homework:** Redo the algorithm with different root positions to verify that you get the same length
 
 
@@ -437,6 +430,11 @@ class: left, top
 ##### Step 1. Evaluate the parsimony score of a given tree (length) with Fitch algorithm
 
 ##### Step 2. Search the space of trees until you find the optimum
+
+##### Some downsides
+
+- Parsimony methods have been shown to produce inconsistent trees
+- Read more in [Felsenstein 1978](https://academic.oup.com/sysbio/article/27/4/401/1734959?login=true)
 
 ---
 class: left, top
@@ -455,12 +453,10 @@ class: left, top
 
 **Time:** 10 minutes
 
-**Instructions:** Follow the R commands to obtain a MP tree from the sample data (or your own data!). The commands are listed in the [PDF tutorial]((https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf)) that we are using as guideline or in our reproducible script [notebook-log.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/notebook-log.md) or on the following slides.
+**Instructions:** 
+1. Follow the R commands to obtain a MP tree from the sample data (or your own data!). The commands are listed in the [PDF tutorial]((https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf)) that we are using as guideline or in our reproducible script [notebook-log.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/notebook-log.md) or on the following slides.
+2. After the allotted time, we will compare our work all together.
 
-**Options for you:**
-
-1. "I think that I can follow the pipeline by myself or with a small group of peers": you should join the Congregate room
-2. "I think I need more one-on-one help to run the commands": you can stay here in the zoom room
 
 ---
 class: left, top
@@ -495,7 +491,7 @@ class: left, top
 
 ### Software: R package _phangorn_
 
-4) We need a starting tree for the search on tree space and compute the parsimony of this tree (422)
+4) We need a starting tree for the search on tree space and compute the parsimony score of this tree (422)
 ```r
 tre.ini <- nj(dist.dna(dna,model="raw"))
 parsimony(tre.ini, dna2)
@@ -512,13 +508,18 @@ Final p-score 420 after  2 nni operations
 plot(tre.pars, cex=0.6)
 ```
 
+**Further learning:** Continue the parsimony steps in the [PDF tutorial](https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf) on the same sample data.
+
 ---
 class: left, top
 
-# Parsimony-based methods
+# Homework
 
-### Homework
+**Instructions:**
 
-Continue the parsimony steps in the [PDF tutorial](https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf) on the same sample data or on your own data.
-Don't forget to write down the commands in your personal reproducible script.
+1. Estimate a distance-based tree and a parsimony-based tree for your data using the `ape` and `phangorn` R packages.
+  - Don't forget to include in your reproducible script a short description of the chosen algorithm, its assumptions and limitations (see the [software cheatsheet](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/software-cheatsheet.md))
+2. Make sure to keep notes in your reproducible script and keep the most updated version on github (it is important to push your work to github since this allows me to check what you are doing and offer suggestions)
+3. Submit the link to your github commit in canvas
 
+**Deadline:** March 23rd, 2022
