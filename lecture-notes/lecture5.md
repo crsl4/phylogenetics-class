@@ -470,7 +470,7 @@ class: left, top
 
 # Homework recap
 
-**Part 1:** Practice Needleman-Wunsch algorithm:
+Practice Needleman-Wunsch algorithm:
 
 1. Finish the F matrix for the Needleman-Wunsch algorithm to align two sequences
 2. Finish the cost matrix of substitutions for the alignment of alignments
@@ -478,10 +478,3 @@ class: left, top
 4. Complete the canvas quiz
 
 **Deadline:** February 23rd, 2022
-
-**Part 2:** Pre-class work for next class:
-
-- Students are divided in three groups: ClustalW, T-Coffee, MUSCLE
-- Read the corresponding paper for your group for class discussion next time
-
-**Deadline:** February 16th, 2022 2:30pm CT
