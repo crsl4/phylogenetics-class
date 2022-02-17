@@ -38,13 +38,38 @@ At the end of today's session, you will be able to
 ---
 class: left, top
 
+### Project checklist: heavy HW on your data starting now
+
+- Until now:
+  - Created your project github repo
+  - Added the link to the `class-repos.md` via pull request
+  - Added me as collaborator on your github repo (slack msg)
+  - Data chosen and added 1 slide about it to the [shared google slides](https://docs.google.com/presentation/d/1UW6P5wVKcDLwVLoshnJ2ilTbrsUEPFoH1MTXppQcpAc/edit#slide=id.g10fe071e574_0_0)
+      - Don't wait on your data: you can use public data because you will be creating scripts to use later on the "real" data
+  - Added a description about your data in your `notebook-log.md` (or similar reproducible script) in your github repo and pushed
+  - QC on your data: not perfect/complete, but at least a plan pushed to your github repo
+- Next item: 
+  - Alignment work pushed to your github repo by March 2nd, 2022
+
+### Expectations as we move forward to heavy HW on your data
+- You will be working on your data alone:
+  - Troubleshooting with different data formats
+  - Troubleshooting with software installation for your operating system
+- Actively ask questions!
+  - Slack
+  - Office hours
+
+
+---
+class: left, top
+
 # In-class discussion
 
 **Objective:** Understand the main algorithms, assumptions and limitations of three widely used MSA software.
 
 **Instructions:**
 
-1. Separate group discussions (20 minutes): Students will discuss with their respective groups and prepare a 10-minute presentation for the whole class. Use these google slides:
+1. Separate group discussions (15 minutes): Students will discuss with their respective groups and prepare a 10-minute presentation for the whole class. Use these google slides:
   - [ClustalW](https://docs.google.com/presentation/d/1vtegUr8V5Q3Cf-L9Q_RQKyeml1AVPejaHnNhIi5cNOA/edit?usp=sharing)
   - [MUSCLE](https://docs.google.com/presentation/d/1u9JyRZ-xwta4iCY0Dk4ZiyYzjOU02xMHqoON7HYP4Lg/edit?usp=sharing)
   - [T-Coffee](https://docs.google.com/presentation/d/1tFc-VL_lH3FEBXHdR8RQ7OB5imfiWIx-oyBWPS4Aaf0/edit?usp=sharing)
@@ -60,7 +85,7 @@ class: left, top
 - MSA is messy and error-prone, so many times we need to filter out poorly aligned regions
 - We need to make sure that we do not remove signal along with the noise
 - The balance depends on the planned downstream analysis: 
-  - Example: misaligned regions impacting a single seauence at one time will have little impact on the phylogeny inference apart from terminal branch length estimations, but they will induce many false positives when searching for loci under positive selection
+  - Example: misaligned regions impacting a single sequence at one time will have little impact on the phylogeny inference apart from terminal branch length estimations, but they will induce many false positives when searching for loci under positive selection
 - For reproducibility reasons, we want automatic MSA cleaning methods, not manual, but there are no options yet
 - Two types of filtering methods:
     - (take it or leave it) TILI-filtering methods: remove whole sites or whole sequences
