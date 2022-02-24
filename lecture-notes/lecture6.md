@@ -289,11 +289,9 @@ class: left, top
 
 **Instructions:**
 1. Read the review paper on new tools in orthology analysis: [Nichio et al 2017](https://www.frontiersin.org/articles/10.3389/fgene.2017.00165/full)
-2. Choose one orthology method that you like the best on your project dataset and read the paper for this method
-  - Don't forget to include in your reproducible script a short description of the chosen algorithm, its assumptions and limitations (see the [software cheatsheet](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/software-cheatsheet.md))
-  - Make sure to keep notes in your reproducible script and keep the most updated version on github (it is important to push your work to github since this allows me to check what you are doing and offer suggestions)
+2. Choose one orthology method that you like the best and read the paper for this method
 3. Add one slide describing the chosen method to share with the class in the [class google slides](https://docs.google.com/presentation/d/1iZVRWdLQ2wrdACiF06LhFKDVqe1H8WLMNwgsunofjy4/edit?usp=sharing)
-4. Submit the link to your github commit in canvas
+4. Submit the name of the selected software to canvas
 
 **Deadline:** March 9th, 2022
 
