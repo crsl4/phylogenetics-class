@@ -1894,7 +1894,10 @@ We are following the tutorial in [here](http://www.iqtree.org/workshop/molevol20
 
 1. Download for mac [here](http://www.iqtree.org/#download). Downloaded a zipped folder `iqtree-1.6.12-MacOSX` and placed in `software`.
 
-2. Check the installation worked, following steps [here](http://www.iqtree.org/doc/Quickstart)
+2. Check the installation worked, following steps [here](http://www.iqtree.org/doc/Quickstart).
+
+Read carefully the output file as it provides information on starting tree and parameters used. No information found on convergence criteria, but they do provide information on how long it took to converge.
+
 ```shell
 cd Dropbox/software/iqtree-1.6.12-MacOSX
 bin/iqtree -s example.phy

@@ -74,7 +74,7 @@ Out-of-class communication will be done via Slack where students will be able to
     - 2/18: Sequencing HW Data and QC (from lecture 2/9)
     - 3/2: Alignment method (from lecture 2/16)
     - 3/23: Distance and parsimony methods (from lecture 3/2)
-    - 4/6: Maximum Likelihood method (from lecture 3/23)
+    - 4/8: Maximum Likelihood method (from lecture 3/23)
     - 4/15: Bayesian method (from lecture 4/1)
     - 4/27: Coalescent method (from lecture 4/13)
 - Final research report (50 points, due May 9)
