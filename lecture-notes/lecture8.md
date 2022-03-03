@@ -156,7 +156,15 @@ class: left, top
 
 **In-class dynamic:** (_Box 5.1 in HB11_) Find the WPGMA tree for the distance matrix below.
 
-<div style="text-align:center"><img src="../assets/pics/box5.1hb.png" width="550"/></div>
+```
+   A  B  C  D  E  F 
+A
+B  2  
+C  4  4 
+D  6  6  6
+E  6  6  6  4
+F  8  8  8  8  8
+```
 
 Watch again in [YouTube video](https://youtu.be/jLQAwlODdCo).
 
@@ -169,7 +177,7 @@ class: left, top
 - It does not reconstruct ultrametric trees, but additive trees
 - An additive tree is a tree that satisfies the four-point metric condition: $d_{AB}+d_{CD} \leq max(d_{AC}+d_{BD},d_{AD}+d_{BC})$
 - Additive trees are always a better fit to distances under non-clock-like behavior
-- There is an algorithm to estimate the ME tree: neighbor-joining (NJ)
+- There is an algorithm to estimate the ME tree: neighbor-joining (NJ) [(Saitou and Nei, 1987)](https://pubmed.ncbi.nlm.nih.gov/3447015/)
 - NJ tree is the same as the ME tree only if distances are additive to begin with, but it has been shown that the NJ tree can be very similar to the ME tree most of the times
 - NJ is better that UPGMA/WPGMA under unequal rates of evolution
 
@@ -180,7 +188,7 @@ class: left, top
 
 Input: Matrix of pairwise distances
 
-1. Compute the net divergence $r$ (sum of distances) for every end node 
+1. Compute the net divergence $r$ (sum of distances) for every end node: $r_j = \sum_i d_{ij}$
 2. Create a rate-corrected distance matrix: $M_{ij} = d_{ij} - \frac{r_i+r_j}{N-2}$
 3. Define the new node that groups taxa $i$ and $j$ for which $M_{ij}$ is minimal (say A,B)
 4. Compute the branch lengths from new node U to A and B: $S_{AU} = \frac{d_{AB}}{2} + \frac{r_A - r_B}{2(N-2)}$
@@ -195,7 +203,15 @@ class: left, top
 
 **Homework:** Find the NJ tree for the distance matrix below.
 
-<div style="text-align:center"><img src="../assets/pics/box5.2hb.png" width="350"/></div>
+```
+   A  B   C  D  E  F 
+A
+B  5  
+C  4  7 
+D  7  10  7
+E  6  9   6  5
+F  8  11  8  9  8
+```
 
 _Box 5.2 in HB11:_ Note that there are many errors in the book.
 
