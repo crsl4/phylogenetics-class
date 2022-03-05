@@ -243,7 +243,7 @@ grep ">" primatesAA.fasta | wc -l ## 22
 4. We run the command
 
 ```shell
-$ ~/Dropbox/software/clustalw-2.1-macosx/clustalw2 -ALIGN -INFILE=primatesAA.fasta -OUTFILE=primatesAA-aligned.fasta -OUTPUT=PHYLIP
+$ ~/Dropbox/software/clustalw-2.1-macosx/clustalw2 -ALIGN -INFILE=primatesAA.fasta -OUTFILE=primatesAA-aligned.fasta -OUTPUT=FASTA
 
 CLUSTAL 2.1 Multiple Sequence Alignments
 
