@@ -33,20 +33,19 @@ class: left, top
 
 ## What do we know now?
 
-- Motivation: phylogenomics pipeline: 
+- Motivation: phylogenomics pipeline
     - Reading: HAL 2.1
 
-- Intro Illumina, quality control, assembly, alignment, filtering: 
-    - Reading: Zhang 2019 UCE
-    - Software: [phyluce](https://phyluce.readthedocs.io/en/latest/purpose.html)
+- Intro Illumina, quality control, assembly, alignment, filtering
+
 
 - Alignment
-    - Reading: HAL 2.2
-    - Software: T-coffee, Clustal, Muscle: HB ch 3
+    - Reading: HAL 2.2, ClustalW, MUSCLE, T-coffee papers
+    - Software: T-coffee, Clustal, Muscle
 
 - Orthology detection
-    - Reading: HAL 2.4, Tekaia 2016, Habermann 2016
-    - Software: [OrthoFinder](https://github.com/davidemms/OrthoFinder): HAL 2.4
+    - Reading: HAL 2.4, Nichio 2017
+    - Software: Many options in class google slides!
 
 - Overview of phylogenetic inference: criteria score, search in tree space
 
@@ -65,12 +64,12 @@ class: left, top
     3. Models of evolution
         - Reading: HAL 1.1
     4. Maximum likelihood
-        - Reading: HAL 1.2
-        - Software: RAxML (HAL 1.3) and [IQ-Tree](http://www.iqtree.org/workshop/molevol2019)
+        - Reading: HAL 1.2, RAxML and IQ-Tree papers
+        - Software: RAxML (HAL 1.3) and IQ-Tree
     5. Bayesian
-        - Reading: HAL 1.4
-        - Software: PhyloBayes HAL 1.5 and MrBayes HB Ch 7
-    6. Model selection (invited guest: Rob Lanfear)
+        - Reading: HAL 1.4, Mascimento 2017, MrBayes papers
+        - Software: MrBayes (HB Ch 7)
+    6. Model selection (invited guest: Rob Lanfear developer of IQ-Tree)
 
 
 ---
@@ -79,11 +78,12 @@ class: left, top
 ## What do we know now?
 
 - Species tree/network estimation: the coalescent model
-    - Reading: HAL 3.1, 3.3
+    - Reading: HAL 3.1, 3.3, ASTRAL and BUCKy papers
     - Software: PhyloNetworks wiki pipeline (MDL, RAxML, MrBayes, BUCKy, ASTRAL, SNaQ)
 
 - Co-estimation methods
-    - Taming the BEAST [slides](https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures)
+    - Reading: BEAST papers
+    - Taming the BEAST slides
 
 ---
 class: left, top
@@ -93,7 +93,7 @@ class: left, top
 
 - Discussion topics:
     1. Measures of support
-        - TICR
+        - TICR: Stenz 2015
         - TBE: Lemoine 2018
         - aLRT: Anisimova 2006
         - local PP: Sayyari 2016
@@ -126,7 +126,21 @@ class: left, top
   - No desperate quest for 100 bootstrap support values!
 - Importance of reproducibility
   - Every choice matters, so keep good track of the choices
+  
+## Good news
 
+- This was not the class to make you all experts in phylogenetics
+- Class notes are publicly available on github forever
+- Upcoming: lecture YouTube videos publicly available (Spring 2024)
+- You have now your own notes in your personal github repository
+- You can continue to have support from phylogenetics student community in slack (if you choose to remain in the workspace)
+
+---
+class: left, top
+
+## Jermiin et al 2020
+
+<div style="text-align:center"><img src="../assets/pics/jermiin.png" width="400"/></div>
 
 ---
 class: left, top
@@ -170,12 +184,12 @@ class: left, top
 
 ## Final housekeeping
 
-- Project deadline tomorrow: April 30
+- Project deadline: May 9th
   - Final project
   - Reproducible script
+
+- Presentations: May 11th and 13th
   
-- Class checkup poll
+- Class feedback form (share link in slack, less than 3 minutes to respond)
 
-- Class feedback form
-
-- Advice for future students: [slides](https://docs.google.com/presentation/d/1uBI-k4m0QDKSib70yAzawDMtbqxB4IC0EopSiYn_I2g/edit?usp=sharing)
+- Advice for future students: [slides](https://docs.google.com/presentation/d/1XITO1f8fuObnqJ--DGNSYkyJOOYiXzj39Tco7H7QzQI/edit?usp=sharing)
