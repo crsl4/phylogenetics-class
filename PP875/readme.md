@@ -52,7 +52,7 @@ We will read papers:
 | 03/02   | Molecular Clocks, [link](https://www.sciencedirect.com/science/article/pii/S0168952520301311?via%3Dihub) | [slides](https://docs.google.com/presentation/d/1FR9MxKmfpHzAnbsCZJOFbhFuzcy6p5np5Mmkt0HwY6U/edit?usp=sharing) |
 | 03/09   | Novel information theory-based measures, [link](https://academic.oup.com/mbe/article/31/5/1261/994356) | [slides](https://docs.google.com/presentation/d/1RqcYnnc5YDOS82dkLAqX81QEGD4lToXt0BJggZbrJ9M/edit?usp=sharing) |
 | 03/16   | Spring break | |
-| 03/23   | Sources of error inherent in species-tree estimation, [link](https://academic.oup.com/sysbio/article/59/5/573/1647664) | [slides](https://docs.google.com/presentation/d/1eioU13L-gpqA_cbwO2Ifml7JcEwtBo94Wt0F1UOLv2w/edit?usp=sharing) |
+| 03/23   | Sources of error inherent in species-tree estimation, [link](https://academic.oup.com/sysbio/article/59/5/573/1647664) | [slides](https://docs.google.com/presentation/d/1XGcc9uP8DrIDgYVZjhdhdkqB8ZsPgoYQ2TAgj3K-IUI/edit?usp=sharing) |
 | 03/30   | Long branch effects distort maximum likelihood, [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0036593) | [slides](https://docs.google.com/presentation/d/1daZyM2Ld6k75Ok1j49KdTMoYCM-afIYeTH7lUAYJEwA/edit?usp=sharing) |
 | 04/06   | Assessing Confidence in Root Placement, [link](https://www.biorxiv.org/content/10.1101/2020.07.31.230144v2) | [slides](https://docs.google.com/presentation/d/1XGcc9uP8DrIDgYVZjhdhdkqB8ZsPgoYQ2TAgj3K-IUI/edit?usp=sharing) |
 | 04/13   | Why Do Phylogenomic Data Sets Yield Conflicting Trees?, [link](https://academic.oup.com/sysbio/article/66/5/857/3091102) | [slides](https://docs.google.com/presentation/d/1m2V7VntpTFKEKoGJyXcukP1uHJho-w83TLCWg0T1iss/edit?usp=sharing) |
