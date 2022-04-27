@@ -58,7 +58,7 @@ We will read papers:
 | 04/13   | The effect of alignment uncertainty, [link](https://bmcevolbiol.biomedcentral.com/articles/10.1186/s12862-019-1534-9) | [slides](https://docs.google.com/presentation/d/1m2V7VntpTFKEKoGJyXcukP1uHJho-w83TLCWg0T1iss/edit?usp=sharing) |
 | 04/20   | Assessing Confidence in Root Placement, [link](https://www.biorxiv.org/content/10.1101/2020.07.31.230144v2) | [slides](https://docs.google.com/presentation/d/1vRTptF3cEX3_3tMGNzh6R2_flAEyWC9eQ97-W5VUrnY/edit?usp=sharing) |
 | 04/27   | Evaluating Fast Maximum Likelihood, [link](https://academic.oup.com/mbe/article/35/2/486/4644721) | [slides](https://docs.google.com/presentation/d/1yMJ-zY-Q-KeKA-neAgyP4eVdhVDg2pMyEUfH0pyUEgA/edit?usp=sharing) |
-| 05/04   | Long branch effects distort maximum likelihood, [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0036593) | [slides](https://docs.google.com/presentation/d/1zRnwDo9MsX-oZxzgSF3nDDbh6ffsVmZOne1wT--PpiA/edit?usp=sharing) |
+| 05/04   | Class summary | [slides](https://docs.google.com/presentation/d/1zRnwDo9MsX-oZxzgSF3nDDbh6ffsVmZOne1wT--PpiA/edit?usp=sharing) |
 
 
 
