@@ -189,7 +189,14 @@ class: left, top
   - Reproducible script
 
 - Presentations: May 11th and 13th
+  - 8-minute presentations (very strict!)
+  - Please send me your slides at 2pm (or earlier) on the day you are presenting
   
-- Class feedback form (share link in slack, less than 3 minutes to respond)
+- Official student evaluations
+  - Forward me the email by May 13th to receive HW credit
+  
+- Class [feedback form](https://forms.gle/xEBuk4s9GL31oD4dA)
+  - Highly appreciated
+  - Less than 3 minutes to respond
 
 - Advice for future students: [slides](https://docs.google.com/presentation/d/1XITO1f8fuObnqJ--DGNSYkyJOOYiXzj39Tco7H7QzQI/edit?usp=sharing)
