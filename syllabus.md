@@ -81,7 +81,7 @@ Out-of-class communication will be done via Slack where students will be able to
 - Reproducible script (10 points, due May 9)
 - Final presentation (10 points, 05/11 or 05/13). The presentation is not graded. All students get 10 points for presenting their work on the assigned day. There are no exceptions on the day and students unable to attend class on those days can record their presentation and turn it in ahead of time.
 
-Late submissions in research report and reproducible script lose 20% of available point per week late. That is, final research report is worth 50 points if turned in on time, but only 40 points if turned in one week late.
+Late submissions in research report and reproducible script lose 20% of available point per week late. That is, final research report is worth 50 points if turned in on time, but only 40 points if turned in one week late (deadline 5/16 12pm CT).
 
 ### Final project content
 
