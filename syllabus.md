@@ -112,7 +112,7 @@ During finals week, each student will present the main results of their analysis
 
 ### Final project guidelines
 
-Note: this is not a grading rubric. This table is meant to give you an idea of what is adequate (or excellent) vs inadequate in your final project, but the categories (inadequate, adequate, good, excellent) do not correspond to grades. For a specific grading rubric, see below.
+Note: this is not a grading rubric. This table is meant to give you an idea of what is adequate (or excellent) vs inadequate in your final project, but the categories (inadequate, adequate, good, excellent) do not correspond to grades. 
 
 |  | ideal content  | inadequate | adequate | good | excellent |
 | :---:   | :---: | :---: | :---: | :---:  | :---: |
