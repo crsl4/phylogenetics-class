@@ -15,6 +15,8 @@ output:
 ---
 class: left, top
 
+Introduction to sequences | Watch [video1](https://www.youtube.com/watch?v=CZeN-IgjYCo), [video2](https://www.youtube.com/watch?v=fCd6B5HRaZ8), and do canvas quiz | You will be able to describe the next-generation sequencing pipeline (and UCE pipeline) as well as the post-processing bioinformatics steps for quality control | [lecture4.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4.md) | [Sequencing HW](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/seq-hw.md) | 02/18 |
+
 ### Previous class check-up
 - We are familiar with git/github
   - The class notes are in its own repo: 

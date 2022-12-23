@@ -16,6 +16,8 @@ output:
 ---
 class: left, top
 
+Motivation: why learning phylogenomics? | Read HAL 2.1 | You will identify the different components in phylogenomic analyses | [lecture2.md]() | Read HAL 2.1 and do canvas quiz and read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) | 01/28 |
+
 
 ## Last class check-up:
 - Everybody knows where the class materials are
