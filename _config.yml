@@ -1,1 +1,7 @@
 remote_theme: just-the-docs/just-the-docs
+title: Bot/PP 563
+exclude:
+   - README.md
+   - PP875/
+   - assets/
+   - data/

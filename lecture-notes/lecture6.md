@@ -1,19 +1,7 @@
 ---
-title: "Lecture 6"
-author: "Botany 563"
-subtitle: "Filtering and Orthology inference"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+nav_exclude: true
 ---
-class: left, top
 
 | 02/23 | Filtering and Orthology detection  | Optional HAL 2.2, 2.4; Make sure to add info on your data in [the slides](https://docs.google.com/presentation/d/1UW6P5wVKcDLwVLoshnJ2ilTbrsUEPFoH1MTXppQcpAc/edit?usp=sharing) | You will know about the different filtering and orthology inference methods | [lecture6.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture6.md) | 1) Read [Nichio2017](https://www.frontiersin.org/articles/10.3389/fgene.2017.00165/full); 2) Choose one orthology detection method, read its paper and add one slide about it in the [class google slides](https://docs.google.com/presentation/d/1iZVRWdLQ2wrdACiF06LhFKDVqe1H8WLMNwgsunofjy4/edit?usp=sharing) | 03/09 |
 

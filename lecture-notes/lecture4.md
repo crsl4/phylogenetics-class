@@ -1,19 +1,7 @@
 ---
-title: "Lecture 4"
-author: "Botany 563"
-subtitle: "Introduction to sequencing"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+nav_exclude: true
 ---
-class: left, top
 
 Introduction to sequences | Watch [video1](https://www.youtube.com/watch?v=CZeN-IgjYCo), [video2](https://www.youtube.com/watch?v=fCd6B5HRaZ8), and do canvas quiz | You will be able to describe the next-generation sequencing pipeline (and UCE pipeline) as well as the post-processing bioinformatics steps for quality control | [lecture4.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4.md) | [Sequencing HW](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/seq-hw.md) | 02/18 |
 
