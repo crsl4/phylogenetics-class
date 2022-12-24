@@ -85,4 +85,4 @@ By the end of the course, you will be able to
 
 ### More details
 
-See list of topics, grading and academic policies in the [syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md)
+See list of topics, grading and academic policies in the [syllabus](https://crsl4.github.io/phylogenetics-class/syllabus.html)
