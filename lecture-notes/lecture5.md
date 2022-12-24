@@ -1,19 +1,8 @@
 ---
-title: "Lecture 5"
-author: "Botany 563"
-subtitle: "Multiple sequence alignment"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+title: Alignment I
+nav_order: 3
 ---
-class: left, top
 
 # Lecture 5
 

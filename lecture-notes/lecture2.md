@@ -1,20 +1,7 @@
 ---
-title: "Lecture 2"
-author: "Botany 563"
-subtitle: "Motivation: why phylogenomics?"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
-
+layout: default
+nav_exclude: true
 ---
-class: left, top
 
 Motivation: why learning phylogenomics? | Read HAL 2.1 | You will identify the different components in phylogenomic analyses | [lecture2.md]() | Read HAL 2.1 and do canvas quiz and read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) | 01/28 |
 

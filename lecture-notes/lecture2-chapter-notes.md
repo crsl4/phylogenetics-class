@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Lecture 2 Further reading
 
 ## Further reading: short chapter summary

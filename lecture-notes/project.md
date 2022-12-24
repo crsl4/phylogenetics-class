@@ -1,19 +1,7 @@
 ---
-title: "Final project"
-author: "Botany 563"
-subtitle: "Q&A session"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+nav_exclude: true
 ---
-class: left, top
 
 # Final Project
 

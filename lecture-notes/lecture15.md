@@ -1,19 +1,8 @@
 ---
-title: "Lecture 15"
-author: "Botany 563"
-subtitle: "Co-estimation methods"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+title: Co-estimation I
+nav_order: 20
 ---
-class: left, top
 
 # Lecture 15
 

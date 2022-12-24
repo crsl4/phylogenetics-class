@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Shell Assessment
 
 **Objective:** Learn the shell basics that are crucial skills for phylogenetic analyses.

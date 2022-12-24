@@ -1,20 +1,8 @@
 ---
-title: "Lecture 16"
-author: "Botany 563"
-subtitle: "Other topics in phylogenomics"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
-
+layout: default
+title: Other topics
+nav_order: 22
 ---
-class: left, top
 
 ### [HAL 2.1] To What Extent Current Limits of Phylogenomics Can Be Overcome?
 
@@ -184,11 +172,12 @@ class: left, top
 
 ## Final housekeeping
 
-- Project deadline: May 9th
+- Project deadline: May 5th
   - Final project
   - Reproducible script
+  - [Project guidelines](https://crsl4.github.io/phylogenetics-class/lecture-notes/project.html)
 
-- Presentations: May 11th and 13th
+- Presentations: May 2 and 4
   - 8-minute presentations (very strict!)
   - Please send me your slides at 2pm (or earlier) on the day you are presenting
   

@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Reproducibility HW
 
 ## Part 1: Class review

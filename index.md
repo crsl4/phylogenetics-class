@@ -46,7 +46,7 @@ By the end of the course, you will be able to
 | 01/31 | Reproducibility crash course (Part 2) | Have [git](https://happygitwithr.com/install-git.html) installed | | | [Reproducibility HW](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/git-hw.md) (due 02/07) |
 | 01/31 | HW due: Learn@Home Phylogenomics | | | | |
 | 02/02 | Alignment (Part 1) |  | You will be able to explain the most widely used algorithms for multiple sequence alignment | [lecture5.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture5.md) | [Learn@Home: Sequencing](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4.md) (due 02/09) |
-| 02/07 | Alignment (Part 2) | [lecture5-2.md](https://github.com/crsl4/phylogenetics-class/blob/master/lecture-notes/lecture5-2.md) | | | [Needleman-Wunsch HW](https://github.com/crsl4/phylogenetics-class/blob/master/lecture-notes/lecture5.md#homework-recap) and canvas quiz (due 02/14) |
+| 02/07 | Alignment (Part 2) | | | [lecture5-2.md](https://github.com/crsl4/phylogenetics-class/blob/master/lecture-notes/lecture5-2.md) | [Needleman-Wunsch HW](https://github.com/crsl4/phylogenetics-class/blob/master/lecture-notes/lecture5.md#homework-recap) and canvas quiz (due 02/14) |
 | 02/07 | HW due: Reproducibility | | | | |
 | 02/09 | Alignment (paper discussion) | One paper assigned per student: 1) [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/), 2) [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623), 3) [T-Coffee](https://www.sciencedirect.com/science/article/pii/S0022283600940427) | | [lecture5-3.md](https://github.com/crsl4/phylogenetics-class/blob/master/lecture-notes/lecture5-3.md) | |
 | 02/09 | HW due: Learn@Home Sequencing | | | | |

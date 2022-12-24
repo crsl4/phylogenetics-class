@@ -1,19 +1,8 @@
 ---
-title: "Lecture 8"
-author: "Botany 563"
-subtitle: "Distance/parsimony methods to estimate phylogenetic trees"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+title: Distance and Parsimony I
+nav_order: 8
 ---
-class: left, top
 
 # Lecture 8
 

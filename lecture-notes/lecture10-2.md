@@ -1,19 +1,8 @@
 ---
-title: "Lecture 10"
-author: "Botany 563"
-subtitle: "Maximum Likelihood"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+title: Maximum Likelihood II
+nav_order: 12
 ---
-class: left, top
 
 ### Previous class check-up
 - We studied the algorithms for maximum likelihood and focused on the main contributors to good or poor performance

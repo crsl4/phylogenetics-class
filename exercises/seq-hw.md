@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Sequencing HW
 
 ## Part 1: Wrap up class work

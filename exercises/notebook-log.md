@@ -1,3 +1,9 @@
+---
+layout: default
+nav_exclude: true
+---
+
+
 # Notebook reproducible script for Botany 563
 Written by CSL in Spring 2021
 Updated by CSL in Spring 2022

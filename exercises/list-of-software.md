@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Software for Botany 563
 
 I am creating this list after a student requested it, but **people do not have to install these software ahead of class**. 

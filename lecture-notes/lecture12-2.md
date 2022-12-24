@@ -1,19 +1,8 @@
 ---
-title: "Lecture 12"
-author: "Botany 563"
-subtitle: "Bayesian Inference"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+title: Bayesian Inference II
+nav_order: 15
 ---
-class: left, top
 
 ### Previous class check-up
 - We studied Bayesian inference and focused on the main contributors to good or poor performance: priors, convergence and burnin.

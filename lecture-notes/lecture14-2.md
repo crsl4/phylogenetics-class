@@ -1,19 +1,8 @@
 ---
-title: "Lecture 14"
-author: "Botany 563"
-subtitle: "The Coalescent Model"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+title: The coalescent II
+nav_order: 18
 ---
-class: left, top
 
 ### Previous class check-up
 - We studied the coalescent model on a species tree

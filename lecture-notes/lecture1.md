@@ -1,11 +1,11 @@
 ---
-title: "Lecture 1"
-author: "Botany/Plant Path 563"
-subtitle: Introduction
+layout: default
+title: Introduction
+nav_order: 2
 ---
 
 
-# Lecture 1
+# Lecture 1: Introduction
 
 Welcome to Botany/Plant Path 563: Phylogenetic Analysis of Molecular Data!
 

@@ -1,19 +1,8 @@
 ---
-title: "Lecture 3"
-author: "Botany 563"
-subtitle: "Reproducibility and computing practices"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
+layout: default
+title: Reproducibility
+nav_order: 3
 ---
-class: left, top
 
 ## Previous class check up
 - Important questions in phylogenomics:
