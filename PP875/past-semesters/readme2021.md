@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Plant Path 875: Readings in Phylogenomics (UW-Madison)
 
 Spring 2021: Friday 8:55-9:45am (online via Zoom)

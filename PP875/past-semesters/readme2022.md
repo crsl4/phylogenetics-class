@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Plant Path 875: Readings in Phylogenomics (UW-Madison)
 
 Spring 2022: Wednesdays 4:30-5:20pm (Russell A228)

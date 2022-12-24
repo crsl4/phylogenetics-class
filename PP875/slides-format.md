@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Slides
 
 1. **Tl;dr:** Capture the take home message from the paper in 1 or 2 sentences
