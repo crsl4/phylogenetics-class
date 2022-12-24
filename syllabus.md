@@ -1,4 +1,10 @@
-# Botany/Plant Path 563 Phylogenetic Analysis of Molecular Data (UW-Madison)
+---
+layout: default
+title: Syllabus
+nav_order: 2
+---
+
+## Botany/Plant Path 563 Phylogenetic Analysis of Molecular Data (UW-Madison)
 
 Spring 2023: Tuesdays and Thursdays 1:00-2:15pm
 

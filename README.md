@@ -1,4 +1,10 @@
-# Botany/PlantPath 563 Phylogenetic Analysis of Molecular Data (UW-Madison)
+---
+layout: default
+title: About
+nav_order: 1
+---
+
+## Botany/PlantPath 563 Phylogenetic Analysis of Molecular Data (UW-Madison)
 
 A course in the theory and practice of phylogenetic inference from DNA sequence data. Students will learn all the necessary components of state-of-the-art phylogenomic analyses and apply the knowledge to the data analyses of their own organisms.
 
