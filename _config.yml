@@ -4,3 +4,9 @@ exclude:
    - README.md
    - PP875/
    - data/
+
+aux_links:
+  "Materials on GitHub":
+    - "//github.com/crsl4/phylogenetics-class"
+
+footer_content: "Copyright &copy; 2022. Distributed by an <a href=\"https://github.com/crsl4/phylogenetics-class/tree/master/LICENSE\">MIT license.</a>
