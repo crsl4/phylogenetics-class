@@ -1,0 +1,37 @@
+project:
+  type: website
+  title: "Phylogenetic Analysis of Molecular Data"
+
+website:
+  title: "Botany/Plant Path 562"
+  subtitle: "Phylogenetic Analysis of Molecular Data"
+  site-url: https://crsl4.github.io/phylogenetics-class
+  repo-url: https://github.com/crsl4/phylogenetics-class
+  repo-actions: [issue]
+  navbar:
+    background: primary
+    left:
+      - href: README.qmd
+        text: Home
+    right:
+      - icon: github
+        href: https://github.com/crsl4/phylogenetics-class
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - README.md
+      - lecture-notes/lecture1.md
+  page-navigation: true
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+callout-appearance: simple
+
+date: today
+date-format: iso
