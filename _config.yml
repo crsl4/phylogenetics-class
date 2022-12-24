@@ -1,6 +1,5 @@
-project:
-  type: website
-  title: "Phylogenetic Analysis of Molecular Data"
+baseurl: ""
+url: "https://username.github.io"
 
 website:
   title: "Botany/Plant Path 562"
