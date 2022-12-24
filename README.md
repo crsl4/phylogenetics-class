@@ -33,7 +33,7 @@ By the end of the course, you will be able to
 
 | Session | Topic | Pre-class work | At the end of the session | Lecture notes | Homework | 
 | :---:   | :---: | :---:       | :---:                     | :---: | :---: | 
-| 01/24 | Introduction |  | You will know what will be the structure of the class, the learning outcomes and the grading | [lecture1.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture1.md) | Go over ready-for-class checklist |
+| 01/24 | Introduction |  | You will know what will be the structure of the class, the learning outcomes and the grading | [lecture1](https://github.com/crsl4/phylogenetics-class//lecture-notes/lecture1.html) | Go over ready-for-class checklist |
 | 01/26 | Reproducibility crash course (Part 1) | Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/shell-resources.md) and do canvas quiz | You will prioritize reproducibility and good computing practices throughout the semester (and beyond) | [lecture3.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture3.md) | [Learn@Home: Why learning phylogenomics?](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture2.md) (due 01/31) | 
 | 01/31 | Reproducibility crash course (Part 2) | Have [git](https://happygitwithr.com/install-git.html) installed | | | [Reproducibility HW](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/git-hw.md) (due 02/07) |
 | 01/31 | HW due: Learn@Home Phylogenomics | | | | |
