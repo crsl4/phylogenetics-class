@@ -1,13 +1,13 @@
-# Botany 563 Phylogenetic Analysis of Molecular Data (UW-Madison)
+# Botany/Plant Path 563 Phylogenetic Analysis of Molecular Data (UW-Madison)
 
-Spring 2022: Wednesday and Friday 2:30-3:45pm (Russell A228)
+Spring 2023: Tuesdays and Thursdays 1:00-2:15pm
 
 **Instructor:** 
 
 - Claudia Solis-Lemus, PhD
 - email: solislemus@wisc.edu
 - website: https://solislemuslab.github.io/
-- office hours: Wednesday 3:45-4:30pm, or by appointment using Calendly (info in CANVAS)
+- Office hours: Tuesday 2:15-3:15pm, or by appointment
 
 **Class description:** 
 A course in the theory and practice of phylogenetic inference from DNA sequence data. Students will learn all the necessary components of state-of-the-art phylogenomic analyses and apply the knowledge to the data analyses of their own organisms.
@@ -17,7 +17,7 @@ A course in the theory and practice of phylogenetic inference from DNA sequence 
 - Breadth: Biological Science
 - L&S Credit Type: Counts as LAS credit (L&S)
 - Course Options: 50% Graduate Coursework Requirement
-- This class meets for two, 75-minute class periods each week over the Spring semester and carries the expectation that students will work on course learning activities (reading, writing, problem sets, studying, etc) for about 3 hours out of the classroom for every class period. The syllabus includes more information about meeting times and expectations for student work
+- This class meets for two, 75-minute class periods each week over the Spring semester and carries the expectation that students will work on course learning activities (reading, writing, problem sets, studying, etc) for **about 3 hours out of the classroom for every class period**. The syllabus includes more information about meeting times and expectations for student work
 
 **Requisites:**
 None, but strongly encouraged:
@@ -49,39 +49,37 @@ By the end of the course, you will be able to
 
 The classes will be a combination of lectures and participative in-class exercises and discussions. Each student is expected to find a dataset that they would like to analyze and homework will involve students applying the material covered in lecture on their respective datasets. There will not be any graded homeworks.
 
-By the end of the semester, we will change the format of the class into active literature discussions where we will do a jigsaw activity: the class will be divided in groups and each group will read a paper ahead of class. During class, we will begin with 15 minutes in breakout rooms where each group will prepare a 10-minute presentation of their paper to present to the whole class.
-
 Out-of-class communication will be done via Slack where students will be able to ask and answer questions regarding the lectures and exercises.
 
 ## Class assessments and key dates
 - Formal assessments (20 points). Each assessment/quiz is worth 2 points for turning it in on time and 1 points if turned in late (one week after deadline). Maximum possible points from these assessments is 28, but only 20 count towards grade (that is, 4 full quizzes can be missed without penalty).
-    - 1/28 HAL 2.1 quiz
-    - 2/2 Shell basics quiz
-    - 2/9 Reproducibility HW Part 1
-    - 2/9 Reproducibility HW Part 2
-    - 2/9 Sequencing quiz
-    - 2/23 Alignment HW
-    - 3/4 HAL 1.1 quiz
-    - 3/9: Orthology method
-    - 3/11 HAL 1.2 quiz
-    - 3/25 HAL 1.4 quiz
-    - 3/30 Nascimento2017 quiz
-    - 4/8 HAL 3.1 quiz
-    - 4/8 HAL 3.3 quiz
-    - 4/15 SNaQ quiz
-- GitHub commits (10 points). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see below). Each commit is worth 2 points (1 if late within one week of deadline). Maximum possible points from these assessments is 14, but only 10 count towards grade (that is, 2 commits can be missed without penalty). 
-    - 2/9: Create github repo for final project (from lecture 2/4)
-    - 2/18: Sequencing HW Data and QC (from lecture 2/9)
-    - 3/2: Alignment method (from lecture 2/16)
-    - 3/23: Distance and parsimony methods (from lecture 3/2)
-    - 4/8: Maximum Likelihood method (from lecture 3/23)
-    - 4/15: Bayesian method (from lecture 4/1)
-    - 4/27: Coalescent method (from lecture 4/13)
-- Final research report (50 points, due May 9)
-- Reproducible script (10 points, due May 9)
-- Final presentation (10 points, 05/11 or 05/13). The presentation is not graded. All students get 10 points for presenting their work on the assigned day. There are no exceptions on the day and students unable to attend class on those days can record their presentation and turn it in ahead of time.
+    - HAL 2.1 quiz
+    - Shell basics quiz
+    - Reproducibility HW Part 1
+    - Reproducibility HW Part 2
+    - Sequencing quiz
+    - Alignment HW
+    - HAL 1.1 quiz
+    - Orthology method
+    - HAL 1.2 quiz
+    - HAL 1.4 quiz
+    - Nascimento2017 quiz
+    - HAL 3.1 quiz
+    - HAL 3.3 quiz
+    - SNaQ quiz
+- GitHub commits (10 points). It is expected that students will work on their final project throughout the semester. Specific github commits are expected at certain dates (see canvas). Each commit is worth 2 points (1 if late within one week of deadline). Maximum possible points from these assessments is 14, but only 10 count towards grade (that is, 2 commits can be missed without penalty). 
+    - Create github repo for final project
+    - Sequencing HW Data and QC
+    - Alignment method
+    - Distance and parsimony methods
+    - Maximum Likelihood method
+    - Bayesian method
+    - Coalescent method
+- Final research report (50 points)
+- Reproducible script (10 points)
+- Final presentation (10 points). The presentation is not graded. All students get 10 points for presenting their work on the assigned day. There are no exceptions on the day and students unable to attend class on those days can record their presentation and turn it in ahead of time.
 
-Late submissions in research report and reproducible script lose 20% of available point per week late. That is, final research report is worth 50 points if turned in on time, but only 40 points if turned in one week late (deadline 5/16 12pm CT).
+Research report and reproducible script can be submitted up to one week late to the original deadline, bit they lose 20% of available points. That is, final research report is worth 50 points if turned in on time, but only 40 points if turned in one week late.
 
 ### Final project content
 
@@ -94,9 +92,9 @@ Late submissions in research report and reproducible script lose 20% of availabl
 7. Reproducible script: step-by-step description of the methodology that can be easily followed by others. This can be the link to a github repository or an actual file
 
 Some notes:
-- You do not need to run all the steps in the phylogenomics pipeline on your data, but your results should at least contain a comparison of phylogenies from at least two different approaches as well as measures of support to the final estimated trees
+- You do not need to run all the steps in the phylogenomics pipeline on your data, but your results should at least contain a comparison of phylogenies from **at least two different inference methods** as well as measures of support to the final estimated trees
 - There are no page restrictions on the project report
-- In the Methods section, it is not enough to write "we used X, Y, and Z". For every software, you should write (not with this wording necessarily) "We used X (reference) which [short description of the methodology]. We chose X because [short description of strengths]. We know that X has the following limitations [short description of weaknesses] and that it has the main following assumptions [short description of the assumptions]. The software X requires the user to input the following parameters: [parameter/user choices selected]"
+- In the Methods section, it is not enough to write "we used X, Y, and Z". For every software/method, you should write (not with this wording necessarily) "We used X (reference) which [short description of the methodology]. We chose X because [short description of strengths]. We know that X has the following limitations [short description of weaknesses] and that it has the main following assumptions [short description of the assumptions]. The software X requires the user to input the following parameters: [parameter/user choices selected]"
     - Advice: read the software paper of the software you are citing and create a cheatsheet for yourself with the above items: description, strengths, weaknesses, assumptions, user choices
 - There is not a specific file format required, but the chosen format should allow for an easy way to evaluate and offer feedback (for both peer evaluation and instructor evaluation). In particular,
     - markdown/Rmarkdown/latex files could be pushed to github for an easy evaluation via github comments or pull requests
@@ -172,5 +170,3 @@ Note: this is not a grading rubric. This table is meant to give you an idea of w
 
 ### We highlight the COVID academic policies that everyone at UW-Madison is expected to follow
 - **Quarantine or Isolation due to COVID-19.** Students should continually monitor themselves for COVID-19 symptoms and get tested for the virus if they have symptoms or have been in close contact with someone with COVID-19. Students should reach out to instructors as soon as possible if they become ill or need to isolate or quarantine, in order to make alternate plans for how to proceed with the course. Students are strongly encouraged to communicate with their instructor concerning their illness and the anticipated extent of their absence from the course (either in-person or remote). The instructor will work with the student to provide alternative ways to complete the course work.
-- **UW-Madison face covering guidelines.** While on campus all employees and students are required to wear appropriate and properly fitting face coverings (i.e., covering both mouth and nose) while present in any campus building unless working alone in a laboratory or office space. If any student is unable to wear a face-covering, an accommodation may be provided due to disability, medical condition, or other legitimate reason. Students with disabilities or medical conditions who are unable to wear a face covering should contact the McBurney Disability Resource Center or their Access Consultant if they are already affiliated. Students requesting an accommodation unrelated to disability or medical condition should contact the Dean of Students Office.
-Students who choose not to wear a face covering may not attend in-person classes, unless they are approved for an accommodation or exemption. All other students not wearing a face covering will be asked to put one on or leave the classroom. Students who refuse to wear face coverings appropriately or adhere to other stated requirements will be reported to the Office of Student Conduct and Community Standards and will not be allowed to return to the classroom until they agree to comply with the face covering policy. An instructor may cancel or suspend a course in-person meeting if a person is in the classroom without an approved face covering in position over their nose and mouth and refuses to immediately comply.
