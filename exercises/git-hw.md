@@ -15,7 +15,6 @@ nav_exclude: true
 2. Watch a summary of today's class in [this 20-minute YouTube video](https://www.youtube.com/watch?v=7KCqpL0cde8)
 3. Complete the canvas quiz
 
-**Deadline:** February 9th, 2022 2:30pm CT
 
 ## Part 2: Steps toward reproducible research
 
@@ -26,7 +25,6 @@ nav_exclude: true
 1. Watch Karl Broman's [1-hour YouTube video](https://www.youtube.com/watch?v=rNQ-RlG3JnQ)
 2. Complete the canvas quiz
 
-**Deadline:** February 9th, 2022 2:30pm CT
 
 ## Part 3: Create your class GitHub repository
 
@@ -40,4 +38,3 @@ nav_exclude: true
 4. Add the link to your repository via a pull request to the [class-repos.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/class-repos.md) file. Note that you might need to resolve conflicts before your pull request is successfully merged
 5. Submit the link to your repo and to the pull request in canvas
 
-**Deadline:** February 9th, 2022 2:30pm CT

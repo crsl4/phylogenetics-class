@@ -4,12 +4,6 @@ title: Reproducibility
 nav_order: 3
 ---
 
-## Previous class check up
-- Important questions in phylogenomics:
-  - How good is my data?
-  - What are the assumptions and limitations of this method?
-  - How do I evaluate the outcome?
-
 ## Learning objectives for today
 At the end of today's session, you
 - will be comfortable with markdown/Rmarkdown or text reproducible scripts
@@ -20,8 +14,6 @@ At the end of today's session, you
 **Pre-class work:**
 Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/shell-resources.md) and do canvas quiz
 
----
-class: left, top
 
 ## Reproducibility
 
@@ -29,8 +21,6 @@ class: left, top
 
 **Are people really reproducible?** Yes! See [Ten year reproducibility challenge](https://github.com/ReScience/ten-years#:~:text=The%20ten%20years%20reproducibility%20challenge,more%20than%20ten%20years%20ago.)
 
----
-class: left, top
 
 ## How does a reproducible script even look like?
 
@@ -43,8 +33,6 @@ Let's start by looking at one of my reproducible scripts: the phylogeny of carro
 - It combines text with shell commands and points at specific scripts (stored in `scripts` folder)
 - It begins with a "To do" section: make things easy for yourself
 
----
-class: left, top
 
 ### Reproducible script for yourself
 
@@ -61,8 +49,6 @@ class: left, top
 - Simply copy a list of commands
 - Worry about grammar, punctuation, complex sentences
 
----
-class: left, top
 
 ### Reproducible script for others
 
@@ -77,10 +63,9 @@ This is the time to worry about grammar and beautiful writing
 See the [sarscov2phylo](https://github.com/roblanf/sarscov2phylo) github repository for an example.
 
 
+{: .note }
 **In this class,** we will focus on reproducible scripts for us only (not publication-ready scripts).
 
----
-class: left, top
 
 ## Ingredients of a successful reproducible practice
 1. Text editor: Text notes, [Visual Studio Code](https://code.visualstudio.com/), [Emacs](https://www.gnu.org/software/emacs/), [RStudio](https://rstudio.com/)
@@ -95,20 +80,13 @@ Borrowing Cecile Ane's [class notes](http://cecileane.github.io/computingtools/p
 
 We can see this format if we look at the local version of the md lecture files. Note that GitHub renders the md files as they would look in html format.
 
----
-class: left, top
 
-## 3. Version control via git/GitHub
+### 3. Version control via git/GitHub
 
-### 3.1 Why version control with git/github?
+#### 3.1 Why version control with git/github?
 
 <div style="text-align:center"><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" width="350"/></div>
 
-
----
-class: left, top
-
-### 3.1 Why version control with git/github?
 
 - Keep track of history of changes of files in your project
 - Time travel: access to files from the past
@@ -116,24 +94,22 @@ class: left, top
 
 *Using a Git commit is like using anchors and other protection when climbing. If you’re crossing a dangerous rock face you want to make sure you’ve used protection to catch you if you fall. Commits play a similar role: if you make a mistake, you can’t fall past the previous commit. Coding without commits is like free-climbing: you can travel much faster in the short-term, but in the long-term the chances of catastrophic failure are high! Like rock climbing protection, you want to be judicious in your use of commits. Committing too frequently will slow your progress; use more commits when you’re in uncertain or dangerous territory. Commits are also helpful to others, because they show your journey, not just the destination* -- Hadley Wickham
 
----
-class: left, top
 
-### 3.2 Setting everything up
+#### 3.2 Setting everything up
 - Register for github account [here](https://happygitwithr.com/github-acct.html); Think carefully about your username!
 - Install [git](https://happygitwithr.com/install-git.html)
 - Configuration of git [here](https://happygitwithr.com/hello-git.html)
 
-### Stop and check
+{: .note }
+Stop and check
 - Do you know how to open the terminal?
 - Do you get an actual path (folder location) when you type `which git` in the terminal?
 
-Note: If you are a windows user, you might need a bit more one-on-one help, so it is ok to chat more after class
+{: .note }
+If you are a windows user, you might need a bit more one-on-one help, so it is ok to chat more after class
 
----
-class: left, top
 
-### 3.3 Now, you want to start your project: git basics
+#### 3.3 Now, you want to start your project: git basics
 
 When you are starting your project, you basically need to create the local folder, and the github repository. The order of these steps can vary, but I have found that the more straight-forward order is the following:
 
@@ -147,9 +123,6 @@ When you are starting your project, you basically need to create the local folde
   - Choose the repository name: `myProject`
   - Choose to make the repository public
   - Choose "yes" to initialize this repository with a README file
-
----
-class: left, top
 
 ##### 2. Git clone in a local folder
 
@@ -172,12 +145,12 @@ git commit -m "updated readme"
 git push
 ```
 
-**Note:** If you use RStudio or Visual Studio Code (VSCode), you can do these commands in the text editor directly (not on the terminal).
+{: .note }
+If you use RStudio or Visual Studio Code (VSCode), you can do these commands in the text editor directly (not on the terminal).
 
----
-class: left, top
 
-### 3.4 Other useful git commands
+
+#### 3.4 Other useful git commands
 ```
 git status          ## check status of repo
 git log             ## log of commits
@@ -186,9 +159,6 @@ git diff            ## compare versions
 git pull            ## pull commits from remote (github)
 git pull --ff-only  ## pull commits avoiding merge issues
 ```
-
----
-class: left, top
 
 
 # Summary until this point
@@ -199,8 +169,7 @@ class: left, top
 - git can be used nicely via the terminal, but there are interfaces (e.g. within RStudio or VSCode) that can be more interactive than the terminal
 - we want to work off a text file (or md file), and use the git basics to have our github version updated at all moment
 
----
-class: left, top
+
 
 ## 4. Right folder format and filenames
 
@@ -218,34 +187,28 @@ Your files should follow the good naming practices. Read [Jenny Bryan's notes](h
 - Meaningful names
 - Easy to sort
 
----
-class: left, top
 
 # A cautionary tale
 
 <div style="text-align:center"><img src="../assets/pics/add-files.png" width="650"/></div>
 
 
----
-class: left, top
 
 # 3. More advanced git usage
 
-### 3.6 Forking other people's repository
+#### 3.6 Forking other people's repository
 
 _Images and example from Jenny Bryan's tutorial._
 
 Sometimes you identify a repository that does work that you are interested in, but perhaps you would like to do some modification.
 You can fork this repository, and work on the forked version as if it were your own repository (everything we've studied applies).
 
----
-class: left, top
+
 
 ![Image from Jenny Bryan](https://happygitwithr.com/img/fork-and-clone.png)
 
 _(Images and example from Jenny Bryan's tutorial)_
----
-class: left, top
+
 
 For this example, the original repository is `OWNER/REPO`, and after clicking `Fork` on github, you will have a `YOU/REPO`.
 
@@ -263,14 +226,12 @@ which allows you to push/pull to this forked repository.
 
 But you will most likely also like to pull changes from the original repository
 
----
-class: left, top
+
 
 ![Image from Jenny Bryan](https://happygitwithr.com/img/fork-triangle-happy.png)
 
 _(Images and example from Jenny Bryan's tutorial)_
----
-class: left, top
+
 
 So, you can add the original repo `OWNER/REPO` as a remote in your repo:
 ```
@@ -294,17 +255,15 @@ git pull upstream master
 
 After you've done work in your fork, and are ready to create a pull request in github, see [here](https://happygitwithr.com/pr-extend.html).
 
----
-class: left, top
 
-### 3.7 Troubleshooting
+
+#### 3.7 Troubleshooting
 
 <div style="text-align:center"><img src="https://imgs.xkcd.com/comics/git.png" width="350"/></div>
 
 _Reference: xkcd_
 
----
-class: left, top
+
 
 We all make mistakes with git and it will not be possible to go over the extensive list of things that could go wrong. If you made a mistake, don't panic!
 Read [these great notes](http://sethrobertson.github.io/GitFixUm/fixup.html) on git/github fixes.
@@ -312,7 +271,7 @@ Read [these great notes](http://sethrobertson.github.io/GitFixUm/fixup.html) on 
 We will go over one type of common issue that will be relevant for our in-class exercise.
 
 
-#### 3.7.1 Git push/pull issues
+##### 3.7.1 Git push/pull issues
 
 Imagine if two people are pushing changes to the same repository. You are working locally, but forget to do `git pull` before make any changes (or perhaps you and the other people are working at the exact same time and the other person pushes their changes before you). When you try to push your changes, you can't, because your code has diverged from the remote code:
 ```
@@ -327,8 +286,6 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
----
-class: left, top
 
 #### Merging issues?
 Do not panic! Breathe and keep in mind that your work is safe and secure by the power of git. 
@@ -354,8 +311,6 @@ Automatic merge failed; fix conflicts and then commit the result.
 The file `index.html` needs to be resolved. 
 We can then open the file to see what lines are in conflict.
 
----
-class: left, top
 
 When you open the `index.html` file, this is what you see:
 ```
@@ -380,10 +335,9 @@ Local after: A--B--D--(merge commit)
                 \_C_/
 ```
 
----
-class: left, top
 
-### In-class exercise with git
+
+# In-class exercise with git
 
 **Objective:** Lose the fear of git conflicts.
 
@@ -394,53 +348,45 @@ class: left, top
 Individually,
 1. Fork the [phylo-class-social](https://github.com/crsl4/phylo-class-social) repository
 2. Git clone the forked repository in your local machine
-3. Add the best book you read in 2021 to the `best-books.md` file. Use your preferred text editor
+3. Add the best book you read in 2022 to the `best-books.md` file. Use your preferred text editor
 4. Git add, git commit and git push to your fork
 5. Do a pull request to merge your additions to the original repository
 
 **Challenge:** Your file needs to be compatible with the most updated version of `best-books.md`
 which will change as people merge their additions via pull requests. You will need to manage the conflicts to the file.
 
----
-class: left, top
 
-## git/GitHub summary
+
+# git/GitHub summary
 
 <div style="text-align:center"><img src="../assets/pics/lecture3-flowchart.png" width="700"/></div>
 
----
-class: left, top
 
-## Homework
+
+# Homework
 
 Find description of the reproducibility homework in [here](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/git-hw.md).
 
 
----
-class: left, top
 
-### Learn more about reproducible practices!
+# Learn more about reproducible practices!
 
-#### The shell
+## The shell
 - If you have no idea what the shell is, read [these notes](http://swcarpentry.github.io/shell-novice/) 
 - If you are already familiar with the shell, but want to explore all of its potential, read [Cecile Ane's class notes](http://cecileane.github.io/computingtools/pages/topics.html) (Topics 1,2,3,5)
 
-#### Naming files
+## Naming files
 - If you did not even know there was a right way to name files, read [Jenny Bryan's notes](https://speakerdeck.com/jennybc/how-to-name-files)
 
-#### Markdown
+## Markdown
 - If you have never used markdown/Rmarkdown, read [Cecile Ane's class notes](http://cecileane.github.io/computingtools/pages/notes0922-markdown.html)
 
-#### Git/GitHub
+## Git/GitHub
 - If you have never used git/github, read [these software carpentry notes](https://uw-madison-datascience.github.io/git-novice-custom/)
 - If you want to learn more about git and github for R users, read [Jenny Bryan's book](https://happygitwithr.com/)
 - If you have tried to use git, but made a mistake and don't know how to fix it, read [these notes](http://sethrobertson.github.io/GitFixUm/fixup.html)
 
----
-class: left, top
 
-### Learn more about reproducible practices!
-
-#### Reproducibility
+## Reproducibility
 - If you are already a bit reproducible, but want to take your reproducibility skills to the next level, read [Karl Broman's class notes](http://kbroman.org/Tools4RR/pages/schedule.html) and watch [his YouTube video](https://www.youtube.com/watch?v=rNQ-RlG3JnQ)
 - Read [Simona Picardi's class notes](https://ecorepsci.github.io/reproducible-science/) for a complete overview of computational tools for reproducible science

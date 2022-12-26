@@ -5,6 +5,7 @@ exclude:
    - PP875/
    - data/
    - lecture-notes/lecture1.md
+   - lecture-notes/lecture2.md
 aux_links:
   "Materials on GitHub":
     - "//github.com/crsl4/phylogenetics-class"
