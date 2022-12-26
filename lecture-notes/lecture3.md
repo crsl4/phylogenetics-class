@@ -13,6 +13,7 @@ At the end of today's session, you
 - will lose fear of git/GitHub conflicts
 - will prioritize reproducibility and good computing practices throughout the semester (and beyond)
 
+{: .note }
 **Pre-class work:**
 Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/shell-resources.md) and do canvas quiz
 
@@ -69,23 +70,23 @@ See the [sarscov2phylo](https://github.com/roblanf/sarscov2phylo) github reposit
 **In this class,** we will focus on reproducible scripts for us only (not publication-ready scripts).
 
 
-## Ingredients of a successful reproducible practice
+# Ingredients of a successful reproducible practice
 1. Text editor: Text notes, [Visual Studio Code](https://code.visualstudio.com/), [Emacs](https://www.gnu.org/software/emacs/), [RStudio](https://rstudio.com/)
 2. Knowledge of markdown syntax (which is the same for Rmarkdown)
 3. Knowledge of version control via git/GitHub
 4. Right folder structure
 
 
-### 2. Markdown syntax
+## 2. Markdown syntax
 
 Borrowing Cecile Ane's [class notes](http://cecileane.github.io/computingtools/pages/notes0922-markdown.html).
 
 We can see this format if we look at the local version of the md lecture files. Note that GitHub renders the md files as they would look in html format.
 
 
-### 3. Version control via git/GitHub
+## 3. Version control via git/GitHub
 
-#### 3.1 Why version control with git/github?
+### 3.1 Why version control with git/github?
 
 <div style="text-align:center"><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" width="350"/></div>
 
@@ -97,21 +98,19 @@ We can see this format if we look at the local version of the md lecture files. 
 *Using a Git commit is like using anchors and other protection when climbing. If you’re crossing a dangerous rock face you want to make sure you’ve used protection to catch you if you fall. Commits play a similar role: if you make a mistake, you can’t fall past the previous commit. Coding without commits is like free-climbing: you can travel much faster in the short-term, but in the long-term the chances of catastrophic failure are high! Like rock climbing protection, you want to be judicious in your use of commits. Committing too frequently will slow your progress; use more commits when you’re in uncertain or dangerous territory. Commits are also helpful to others, because they show your journey, not just the destination* -- Hadley Wickham
 
 
-#### 3.2 Setting everything up
+### 3.2 Setting everything up
 - Register for github account [here](https://happygitwithr.com/github-acct.html); Think carefully about your username!
 - Install [git](https://happygitwithr.com/install-git.html)
 - Configuration of git [here](https://happygitwithr.com/hello-git.html)
 
-{: .note }
-Stop and check
-- Do you know how to open the terminal?
-- Do you get an actual path (folder location) when you type `which git` in the terminal?
+{: .highlight }
+Stop and check: Do you know how to open the terminal? Do you get an actual path (folder location) when you type `which git` in the terminal?
 
 {: .note }
 If you are a windows user, you might need a bit more one-on-one help, so it is ok to chat more after class
 
 
-#### 3.3 Now, you want to start your project: git basics
+### 3.3 Now, you want to start your project: git basics
 
 When you are starting your project, you basically need to create the local folder, and the github repository. The order of these steps can vary, but I have found that the more straight-forward order is the following:
 
@@ -120,13 +119,13 @@ When you are starting your project, you basically need to create the local folde
 3. Make local changes, git add, git commit, git push
 
 
-##### 1. Create a github repository
+#### 1. Create a github repository
   - Click the green "New" button.
   - Choose the repository name: `myProject`
   - Choose to make the repository public
   - Choose "yes" to initialize this repository with a README file
 
-##### 2. Git clone in a local folder
+#### 2. Git clone in a local folder
 
 In the terminal:
 ```
@@ -135,7 +134,7 @@ git clone https://github.com/YOU/myProject.git
 ```
 Here you substitute `YOU` with your github username.
 
-##### 3. Make local changes:
+#### 3. Make local changes:
 ```
 cd myProject
 open README.md
@@ -152,7 +151,7 @@ If you use RStudio or Visual Studio Code (VSCode), you can do these commands in 
 
 
 
-#### 3.4 Other useful git commands
+### 3.4 Other useful git commands
 ```
 git status          ## check status of repo
 git log             ## log of commits
@@ -162,14 +161,14 @@ git pull            ## pull commits from remote (github)
 git pull --ff-only  ## pull commits avoiding merge issues
 ```
 
-
-# Summary until this point
+{: .highlight }
+Summary until this point
 - git basics
   - git add
   - git commit
   - git push
 - git can be used nicely via the terminal, but there are interfaces (e.g. within RStudio or VSCode) that can be more interactive than the terminal
-- we want to work off a text file (or md file), and use the git basics to have our github version updated at all moment
+- We want to work off a text file (or md file), and use the git basics to have our github version updated at all moment
 
 
 
@@ -190,15 +189,15 @@ Your files should follow the good naming practices. Read [Jenny Bryan's notes](h
 - Easy to sort
 
 
-# A cautionary tale
+## A cautionary tale
 
 <div style="text-align:center"><img src="../assets/pics/add-files.png" width="650"/></div>
 
 
 
-# 3. More advanced git usage
+## 3. More advanced git usage
 
-#### 3.6 Forking other people's repository
+### 3.6 Forking other people's repository
 
 _Images and example from Jenny Bryan's tutorial._
 
@@ -259,7 +258,7 @@ After you've done work in your fork, and are ready to create a pull request in g
 
 
 
-#### 3.7 Troubleshooting
+### 3.7 Troubleshooting
 
 <div style="text-align:center"><img src="https://imgs.xkcd.com/comics/git.png" width="350"/></div>
 
@@ -273,7 +272,7 @@ Read [these great notes](http://sethrobertson.github.io/GitFixUm/fixup.html) on 
 We will go over one type of common issue that will be relevant for our in-class exercise.
 
 
-##### 3.7.1 Git push/pull issues
+#### 3.7.1 Git push/pull issues
 
 Imagine if two people are pushing changes to the same repository. You are working locally, but forget to do `git pull` before make any changes (or perhaps you and the other people are working at the exact same time and the other person pushes their changes before you). When you try to push your changes, you can't, because your code has diverged from the remote code:
 ```
@@ -354,9 +353,9 @@ Individually,
 4. Git add, git commit and git push to your fork
 5. Do a pull request to merge your additions to the original repository
 
+{: .warning }
 **Challenge:** Your file needs to be compatible with the most updated version of `best-books.md`
 which will change as people merge their additions via pull requests. You will need to manage the conflicts to the file.
-
 
 
 # git/GitHub summary
