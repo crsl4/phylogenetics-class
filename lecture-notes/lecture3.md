@@ -4,6 +4,8 @@ title: Reproducibility
 nav_order: 3
 ---
 
+# Reproducibility crash course
+
 ## Learning objectives for today
 At the end of today's session, you
 - will be comfortable with markdown/Rmarkdown or text reproducible scripts

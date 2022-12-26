@@ -10,3 +10,19 @@ aux_links:
   "Materials on GitHub":
     - "//github.com/crsl4/phylogenetics-class"
 footer_content: "Copyright &copy; 2022. Distributed by an <a href=\"https://github.com/crsl4/phylogenetics-class/tree/master/LICENSE\">MIT license.</a>"
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red

@@ -10,4 +10,4 @@ nav_exclude: true
 
 2. Watch the YouTube video with the lecture (time)
 
-3. If necessary, read the [lecture notes](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture2-learn-home.md)
+3. If necessary, read the [lecture notes](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture2.md)
