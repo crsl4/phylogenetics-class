@@ -1,16 +1,28 @@
 ---
-layout: default
-title: Introduction
-nav_order: 2
+title: "Lecture 1"
+author: "Botany/Plant Path 563"
+subtitle: "Introduction"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: yes
+      countIncrementalSlides: no
+  html_document:
+    df_print: paged
 ---
+class: left, top
 
 
-# Lecture 1: Introduction
+# Welcome to Botany/Plant Path 563: Phylogenetic Analysis of Molecular Data!
 
-Welcome to Botany/Plant Path 563: Phylogenetic Analysis of Molecular Data!
+### Introductions
+Let's start with short introductions: name, year, program and one word that describes how you feel at the beginning of 2023 (repetitions allowed).
 
-#### Introductions
-Let's start with short introductions: name, year, program and one word that describes how you feel at the beginning of 2023.
+---
+class: left, top
 
 
 ## Class format
@@ -28,17 +40,27 @@ This class will not expect students to memorize formulas. There are no exams to 
 - Homework exercises: usually apply material in your own data
 - Resources to learn more
 
+---
+class: left, top
+
 
 ### Iceberg: passive vs active learning
 
 <div style="text-align:center"><img src="../assets/pics/iceberg.png" width="700"/></div>
 
 
+---
+class: left, top
+
+### Iceberg: passive vs active learning
+
 - Bad news: This can be a time-consuming class
 - Good news: Time spent learning phylogenetics today will save you time when doing your own research
   - The measure of success is how much you learned
   - How much you learn is entirely up to you: more time dedicated at home, more learning
 
+---
+class: left, top
 
 ## How do I take full advantage of the class?
 
@@ -48,6 +70,8 @@ This class will not expect students to memorize formulas. There are no exams to 
 4. Attend and actively participate in lecture and in-class activities
 5. Join the slack workspace and actively engage in questions and answers (more on slack below)
 
+---
+class: left, top
 
 ## Class communication: Slack
 
@@ -65,6 +89,8 @@ Slack rules:
 - Post something in #botany563: cute photos, question to engaged the community, short intro, favorite restaurant in Madison, favorite winter activity
 - **Deadline:** Friday January 26th, before class.
 
+---
+class: left, top
 
 ## Grading
 
@@ -82,6 +108,11 @@ Slack rules:
 | 70+ | B |
 | 80+ | AB |
 | 90+ | A |
+
+---
+class: left, top
+
+## Grading
 
 Formal assessments (canvas):
 - Ungraded: complete/incomplete
@@ -101,11 +132,15 @@ Final presentation:
 - No changes in dates
 - If unable to attend on selected date, you can send a recording of your presentation
 
+---
+class: left, top
 
 ## Phylogenetics background
 
 Let's see the level of the class on phylogenetics knowledge with [this short poll](https://pollev.com/claudiasolis197). Note to self: poll needs to the active.
 
+---
+class: left, top
 
 ## Ready-for-class checklist
 
@@ -115,7 +150,8 @@ Let's see the level of the class on phylogenetics knowledge with [this short pol
 - Read the [syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md) carefully
 - Check out the [class repository](https://github.com/crsl4/phylogenetics-class)
 
-
+---
+class: left, top
 
 ## Learning values
 

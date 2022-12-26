@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Botany/Plant Path 563" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lecture 1
+## Introduction
+### Botany/Plant Path 563
+
+---
+
+class: left, top
+
+
+# Welcome to Botany/Plant Path 563: Phylogenetic Analysis of Molecular Data!
+
+### Introductions
+Let's start with short introductions: name, year, program and one word that describes how you feel at the beginning of 2023 (repetitions allowed).
+
+---
+class: left, top
+
+
+## Class format
+
+**What this class is...**
+This class is meant to prepare students to perform state-of-the-art phylogenetic analyses. This class is very hands-on and students are expected to actively participate in class exercises and work at home. The ideal outcome of this class is a phylogenetics pipeline that can be used in the student's research.
+
+**What this class is not...**
+This class will not expect students to memorize formulas. There are no exams to assess the specific learning of concepts. The class will be graded via a final project where all topics will be applied on a real data analysis of the student's interest.
+
+
+#### Structure
+- Pre-class work: usually reading a chapter and complete an quiz (ungraded, but needs to be completed for credit)
+- Lectures and in-class exercises (computational/paper discussions)
+- Homework exercises: usually apply material in your own data
+- Resources to learn more
+
+---
+class: left, top
+
+
+### Iceberg: passive vs active learning
+
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/iceberg.png" width="700"/&gt;&lt;/div&gt;
+
+
+---
+class: left, top
+
+### Iceberg: passive vs active learning
+
+- Bad news: This can be a time-consuming class
+- Good news: Time spent learning phylogenetics today will save you time when doing your own research
+  - The measure of success is how much you learned
+  - How much you learn is entirely up to you: more time dedicated at home, more learning
+
+---
+class: left, top
+
+## How do I take full advantage of the class?
+
+1. Bring your own data to play with
+2. Be reproducible from day 1 (more on reproducibility in lecture 2 and 3)
+3. Read the material in preparation for the lectures (ungraded quizzes aim to help you keep up with readings)
+4. Attend and actively participate in lecture and in-class activities
+5. Join the slack workspace and actively engage in questions and answers (more on slack below)
+
+---
+class: left, top
+
+## Class communication: Slack
+
+Slack join link in canvas (expires February 16th). Let's use this time to go over the workspace for those not familiar with slack.
+
+Slack rules:
+
+- Everyone can post in any channel, but try to post things on the right channel
+- Feel free to reply to other people's questions (in fact, this is the main purpose of having slack for the class)
+- Feel free to post any resources that you find helpful for your fellow students
+- I cannot answer questions 24/7, but I am much more responsive in slack than by email
+
+### First HW (very very important!):
+- Join to slack (we can give some minutes today for people to do it)
+- Post something in #botany563: cute photos, question to engaged the community, short intro, favorite restaurant in Madison, favorite winter activity
+- **Deadline:** Friday January 26th, before class.
+
+---
+class: left, top
+
+## Grading
+
+|  | Points |
+| :--: | :--: |
+| Formal assessments (quizzes/HWs) | 20 |
+| GitHub commits | 10 |
+| Final project | 50 |
+| Final reproducible script | 10 |
+| Final presentation | 10 |
+| Total | 100 |
+
+| Points | Grade |
+| :--: | :--: |
+| 70+ | B |
+| 80+ | AB |
+| 90+ | A |
+
+---
+class: left, top
+
+## Grading
+
+Formal assessments (canvas):
+- Ungraded: complete/incomplete
+- No late submission
+- You can miss 4 assessments without penalty
+
+Github commits (canvas):
+- To encourage work on your project since the beginning
+- Ungraded: complete/incomplete
+- No late submission
+- You can 2 assessments without penalty
+
+Final report and reproducible:
+- Up to one week late submission (for 20% point penalty)
+
+Final presentation:
+- No changes in dates
+- If unable to attend on selected date, you can send a recording of your presentation
+
+---
+class: left, top
+
+## Phylogenetics background
+
+Let's see the level of the class on phylogenetics knowledge with [this short poll](https://pollev.com/claudiasolis197). Note to self: poll needs to the active.
+
+---
+class: left, top
+
+## Ready-for-class checklist
+
+- Join slack with the link in canvas
+  - Post something by next class
+- Access to class google shared drive (link in canvas). You should have received an email invitation
+- Read the [syllabus](https://github.com/crsl4/phylogenetics-class/blob/master/syllabus.md) carefully
+- Check out the [class repository](https://github.com/crsl4/phylogenetics-class)
+
+---
+class: left, top
+
+## Learning values
+
+To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1qSx12EXpJAleLc30UCJPIN6c4i0h1iWVnITIrdjSNCM/edit?usp=sharing).
+
+
+## Questions?
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
