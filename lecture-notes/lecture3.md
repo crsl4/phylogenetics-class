@@ -199,14 +199,12 @@ Your files should follow the good naming practices. Read [Jenny Bryan's notes](h
 
 ### 3.6 Forking other people's repository
 
-_Images and example from Jenny Bryan's tutorial._
-
 Sometimes you identify a repository that does work that you are interested in, but perhaps you would like to do some modification.
 You can fork this repository, and work on the forked version as if it were your own repository (everything we've studied applies).
 
 
 
-![Image from Jenny Bryan](https://happygitwithr.com/img/fork-and-clone.png)
+![Image from Jenny Bryan](https://happygitwithr.com/img/fork-them.jpeg)
 
 _(Images and example from Jenny Bryan's tutorial)_
 
@@ -226,12 +224,6 @@ origin  https://github.com/YOU/REPO.git (push)
 which allows you to push/pull to this forked repository.
 
 But you will most likely also like to pull changes from the original repository
-
-
-
-![Image from Jenny Bryan](https://happygitwithr.com/img/fork-triangle-happy.png)
-
-_(Images and example from Jenny Bryan's tutorial)_
 
 
 So, you can add the original repo `OWNER/REPO` as a remote in your repo:
