@@ -7,6 +7,15 @@ nav_order: 3
 # Lecture 5
 
 ### Previous class check-up
+- We are familiar with git/github
+  - The class notes are in its own repo: 
+      - `git clone` to download
+      - `git pull` to update them, or 
+      - fork and `git pull upstream master`
+- We understand the importance of reproducible scripts
+    - **Reproducibility Resolution 2023**: let's all make a commitment today to do one reproducible thing in our research ([google slides](https://docs.google.com/presentation/d/13bqKroBmXnIV4HI6UD_pYz9GE71jcuW989yaTwCvWSM/edit?usp=sharing))
+
+### Previous class check-up (learn@home)
 - We understand sequencing technologies
 - We learned a bit about `phyluce` as a pipeline for phylogenomics on UCEs and about `FastQC` for QC of raw reads
 - We start thinking about data for the class project and start working on QC -> beginning of work from home in your data!
