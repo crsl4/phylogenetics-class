@@ -186,12 +186,11 @@ Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you wan
 
 How to know which of the three options to do? We choose the one with minimum cost!
 
-$F(i,j)=min {F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 }$.
+$F(i,j)=min \{F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 \}$.
 
 
 ### Needleman-Wunsch algorithm
 
-Steps:
 1. Compute $F(i,j)$ for every $i,j$ and put in a matrix (sometimes denoted dynamic programming (DP) matrix). First column/row correspond to gap and F(0,0)=0
 2. As you fill the matrix, keep track of which of the three entries gave you the minimum with an arrow
 3. Trace back the arrows to construct the alignment (diagonal arrow=nucleotide, vertical/horizontal arrow=gap replacing the nucleotide the arrow is pointing)
@@ -207,30 +206,25 @@ We want to align $S_1=ATCG$ and $S_2=TCA$ for a cost of substitution of 1 and co
 
 
 **How do we get the alignment after building the F matrix?** We trace back the arrows from the bottom right corner:
+
+
+<div style="text-align:center"><img src="../assets/pics/nw-ex.png" width="300"/></div>
+
 ```
 ATCG
 -TCA
 ```
 
-<div style="text-align:center"><img src="../assets/pics/nw-ex.png" width="300"/></div>
-
-
-
----
-class: left, top
 
 # Homework: Needleman-Wunsch algorithm
 
 **Instructions:** Watch the class video on canvas with the rest of the steps of the Needleman-Wunsch algorithm and finish the alignment. Optional: redo the same example with a cost of gap of 1 and a cost of substitions of 3 to compare the final alignment in both cases. 
 
 
-**Important take-home message:** The final alignment depends on the costs of gaps and substitutions.
+{: .important }
+**Take-home message:** The final alignment depends on the costs of gaps and substitutions.
 
 
----
-class: left, top
-
-# MSA algorithm
 ## 3. Multiple sequence alignment
 
 - The Needleman-Wunsch is the magic algorithm that allows us to align two sequences
@@ -240,36 +234,22 @@ class: left, top
 - Iterative refinement algorithm: improvement over progressive alignment by doing sequential alignments until convergence of score (e.g. mafft, muscle)
 
 
-### Progressive alignment
+### Progressive alignment algorithm
 
-Steps:
 1. Compute rooted binary tree (guide tree) from pairwise distances
 2. Build MSA from the bottom (leaves) up (root)
 
 
----
-class: left, top
+{: .highlight }
+Wait a minute, what is a rooted binary tree?
 
-# Wait a minute, what is a rooted binary tree?
-
-
----
-class: left, top
-
-# Progressive alignment
-
-What are the steps that we need to know?
 
 <div style="text-align:center"><img src="../assets/pics/fig9.9.png" width="550"/></div>
 
-_Figure 9.9 in Warnow_
+_Figure 9.9 in Warnow (2018) Computational phylogenetics_
 
 
-
----
-class: left, top
-
-# Progressive alignment
+### Progressive alignment algorithm
 
 1. Align all pairs of sequences using the Needleman-Wunsch algorithm
 2. For every pairwise alignment, we calculate its cost based on the cost of gap (e.g. unit cost) and the cost of substitution (e.g. unit cost)
@@ -285,61 +265,51 @@ class: left, top
 - Perform alignment of alignments (missing)
 
 
----
-class: left, top
-
 # How to align alignments
 
 We need a new concept called "profile".
-
-<div class="image123">
-    <img src="../assets/pics/table9.7.png" height="400"  style="float:left">
-    <img class="middle-img" src="../assets/pics/table9.8.png" height="400">
-</div>
-
-
----
-class: left, top
-
-# How to align alignments
-
-1. Construct profiles
-2. Define the cost of putting $a_i, b_j$ together. We want to minimize the expected cost between profiles
-3. Use Needleman-Wunsch to align $P_1$ and $P_2$ based on the costs
-
-
----
-class: left, top
-
-# How to align alignments: defining the costs
-
-- Treat $a_i$ in $P_1$ and $b_j$ in $P_2$ as probability models: $P(x|a_i)$ is the probability of observing nucleotide $x$ in position $i$ on $P_1$ (Example: What is $P(A|a_1)$?)
 
 <div class="image123">
     <img src="../assets/pics/table9.7.png" height="200"  style="float:left">
     <img class="middle-img" src="../assets/pics/table9.8.png" height="200">
 </div>
 
-- Define the cost as
 
-<div style="text-align:center"><img src="../assets/pics/cost-progressive.png" width="200"/></div>
 
-- **In-class exercise:** What is the $cost(a_3,b_2)$?
+## Aligning alignments
 
----
-class: left, top
+1. Construct profiles
+2. Define the cost of putting $a_i, b_j$ together. We want to minimize the expected cost between profiles
+3. Use Needleman-Wunsch to align $P_1$ and $P_2$ based on the costs
+
+
+### Aligning alignments: defining the costs
+
+Treat $a_i$ in $P_1$ and $b_j$ in $P_2$ as probability models: $P(x \vert a_i)$ is the probability of observing nucleotide $x$ in position $i$ on $P_1$ (Example: What is $P(A \vert a_1)$?)
+
+<div class="image123">
+    <img src="../assets/pics/table9.7.png" height="200"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" height="200">
+</div>
+
+Define the cost as
+
+<div style="text-align:center"><img src="../assets/pics/cost-progressive.png" width="400"/></div>
+
+{: .highlight }
+**In-class exercise:** What is the $cost(a_3,b_2)$?
+
+
 
 # Homework
 
 **Instructions:** Build the cost matrix for the two following profiles. This means that you want to calculate $cost(a_i,b_j)$ for all $i$ and $j$.
 
 <div class="image123">
-    <img src="../assets/pics/table9.7.png" height="300"  style="float:left">
-    <img class="middle-img" src="../assets/pics/table9.8.png" height="300">
+    <img src="../assets/pics/table9.7.png" height="200"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" height="200">
 </div>
 
----
-class: left, top
 
 # Aligning the alignments
 
@@ -357,12 +327,12 @@ b6 [ 1/3  1  9/12 8/9 11/15]
 
 and we will use it to align the two profiles $P_1 = a_1 a_2 a_3 a_4 a_5$ and $P_2 = b_1 b_2 b_3 b_4 b_5 b_6$ with Needleman-Wunsch. The cost matrix above provides the costs of substitutions and we assume a cost of gap of 1.
 
-**Note:** The video on canvas has two errors: $cost(a3,b1)=1/4$ instead of 1 and $cost(a4,b6)=7/9$ instead of 8/9.
+{: .note }
+The video on canvas has two errors: $cost(a3,b1)=1/4$ instead of 1 and $cost(a4,b6)=7/9$ instead of 8/9.
 
+{: .highlight }
 **In-class activity:** Let's recall Needleman-Wunsch: we need the $F(i,j)$ matrix and then trace back the alignment. Let's do here together some of the entries of the $F(i,j)$ matrix.
 
----
-class: left, top
 
 # Homework
 
@@ -371,11 +341,8 @@ class: left, top
 1. Build the F matrix
 2. Trace back the alignment from the bottom right corner
 
----
-class: left, top
 
-# Homework solution:
-
+**Solution:**
 You should get the following alignment which we can translate back to the original sequences.
 
 <div class="image123">
@@ -383,25 +350,18 @@ You should get the following alignment which we can translate back to the origin
     <img class="middle-img" src="../assets/pics/table9.10.png" height="300">
 </div>
 
----
-class: left, top
 
-# MSA key insights
+{: .important }
+**MSA key insights**
 - Needleman-Wunsch lies at the core of MSA:
   - if we have two sequences, we align them with Needleman-Wunsch
   - if we have two alignments, we first convert them to profiles, and then align the profiles with Needleman-Wunsch
 - The final alignment will depend on the assumptions on the cost of substitutions and costs of gaps
 
----
-class: left, top
 
-# Homework recap
+{: .highlight }
+**Homework recap** [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/needleman-hw.md).
 
-Practice Needleman-Wunsch algorithm:
 
-1. Finish the F matrix for the Needleman-Wunsch algorithm to align two sequences
-2. Finish the cost matrix of substitutions for the alignment of alignments
-3. With the cost matrix of substitutions, finish the Needleman-Wunsch algorithm to align two alignments
-4. Complete the canvas quiz
 
-**Deadline:** February 23rd, 2022
+
