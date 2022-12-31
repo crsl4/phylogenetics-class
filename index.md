@@ -13,7 +13,7 @@ A course in the theory and practice of phylogenetic inference from DNA sequence 
 - Spring 2023: Tuesday and Thursday 1:00-2:15pm
 - Instructor: Claudia Solis-Lemus, PhD 
     - Email: solislemus@wisc.edu
-    - website: https://solislemuslab.github.io/
+    - Website: [https://solislemuslab.github.io/](https://solislemuslab.github.io/)
 - Office hours: Tuesday 2:15-3:15pm, or by appointment
 
 

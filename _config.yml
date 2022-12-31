@@ -27,3 +27,4 @@ callouts:
   warning:
     title: Warning
     color: red
+latex: katex

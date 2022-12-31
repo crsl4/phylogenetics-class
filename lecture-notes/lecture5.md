@@ -4,7 +4,7 @@ title: Alignment I
 nav_order: 3
 ---
 
-# Lecture 5
+# Alignment methods
 
 ### Previous class check-up
 - We are familiar with git/github
@@ -13,13 +13,14 @@ nav_order: 3
       - `git pull` to update them, or 
       - fork and `git pull upstream master`
 - We understand the importance of reproducible scripts
-    - **Reproducibility Resolution 2023**: let's all make a commitment today to do one reproducible thing in our research ([google slides](https://docs.google.com/presentation/d/13bqKroBmXnIV4HI6UD_pYz9GE71jcuW989yaTwCvWSM/edit?usp=sharing))
+    - **Reproducibility Resolution 2023**: let's all make a commitment today to do one reproducible thing in our research (google slides link in canvas)
+    - We created a github repo for the class project (remember to add me as collaborator to your repo)
 
-### Previous class check-up (learn@home)
+### Learn@Home: Sequencing check-up
 - We understand sequencing technologies
 - We learned a bit about `phyluce` as a pipeline for phylogenomics on UCEs and about `FastQC` for QC of raw reads
-- We start thinking about data for the class project and start working on QC -> beginning of work from home in your data!
-  - Remember to add me as collaborator to your repo (instructions in slack)
+- We start thinking about data for the class project and start working on QC if needed -> beginning of work from home in your data!
+
 
 ### Learning objectives
 
@@ -28,11 +29,8 @@ At the end of today's session, you
 - will be able to assess the strengths and weaknesses of each type of algorithm
 - will learn to use different software options: ClustalW, T-Coffee and MUSCLE
 
-### No pre-class work!
-
-
----
-class: left, top
+{: .note }
+No pre-class work.
 
 # What is multiple sequence alignment (MSA)?
 
@@ -40,17 +38,14 @@ class: left, top
 - Intuitively, an MSA method inserts gap characters (`-`) inside input sequences to produce a set of longer sequences that are all of the same length, such that residues at the same position in different sequences (aligned residues) share some common properties (homology)
 - MSA is a crucial step since phylogenetic inference methods assume that residue homology relationships are correctly reflected by the input sequences
 
----
-class: left, top
 
 # What is multiple sequence alignment (MSA)?
 
 <div style="text-align:center"><img src="../assets/pics/fig9.1.png" width="750"/></div>
 
-_Figure 9.1 in Warnow_
+_Figure 9.1 in Warnow (2018) Computational phylogenetics_
 
----
-class: left, top
+
 
 # What is multiple sequence alignment (MSA)?
 
@@ -58,10 +53,8 @@ The true MSA reflects the historical substitution, insertion and deletion evolut
 
 <div style="text-align:center"><img src="../assets/pics/fig9.2.png" width="750"/></div>
 
-_Figure 9.2 in Warnow_
+_Figure 9.2 in Warnow (2018) Computational phylogenetics_
 
----
-class: left, top
 
 # Why is it one of the most computationally intensive tasks?
 
@@ -80,9 +73,6 @@ AG-AT
 ```
 
 
----
-class: left, top
-
 ## In-class activity
 
 **Table 9.1** (Warnow). What would be the alignment of the sequence `S=ACATTA` which evolves into `S'=TACA` if we knew the _true_ evolutionary events?
@@ -91,34 +81,22 @@ class: left, top
 - substitution of `T` into `C`
 - insersion of `T` at the front
 
----
-class: left, top
 
 ## In-class activity
 
 **Table 9.2** (Warnow). Without knowing the _true_ evolutionary events from `S=ACATTA` to `S'=TACA`, what would you think is a good alignment?
 
----
-class: left, top
-
-## In-class activity
-
-**Table 9.2** (Warnow). Without knowing the _true_ evolutionary events from `S=ACATTA` to `S'=TACA`, what would you think is a good alignment?
 
 **Solution:** You probably choose an alignment where none (or few) of the _true_ homology relationships are correct.
 - The true alignment has 4 events: 2 deletions, 1 insersion, 1 substitution
 - The estimated alignment we created now also has 4 events: 3 deletions and 1 insersion
 - The algorithm will ultimately choose an alignment based on how we penalize each of the events
 
----
-class: left, top
 
-## First key insight for MSA
-
+{: .important }
+**First key insight for MSA:**
 We are guiding the algorithms by selecting the penalties for evolutionary events: substitutions, deletions, insersions. It has nothing to do with _true_ evolutionary events or _true_ homology.
 
----
-class: left, top
 
 # MSA algorithm
 
@@ -132,29 +110,16 @@ Steps in MSA:
 2. Learn to obtain the optimal pairwise alignment with the minimum cost ("edit distance")
 3. Learn to obtain the optimal multiple sequence alignment: we need to be able to align alignments
 
----
-class: left, top
-
-# MSA algorithm
 ## 1. Cost of evolutionary events
 
 - cost of deletion/insersion (cost of gap): 1
 - cost of substitution: 1
 
 
-**Note:** Some software/books will actually use "weights" instead of costs:
-- weight for match: 5
-- weight for gap: -1
-- weight for mismatch (substitution): -1
-
+{: .note }
+Some software/books will use "weights" instead of costs: weight for match: 5; weight for gap: -1; weight for mismatch (substitution): -1.
 I prefer to use costs because the idea of negative weights is not intuitive.
 
-
----
-class: left, top
-
-# MSA algorithm
-## 1. Cost of evolutionary events
 ### In-class activity
 
 **Table 9.3** (Warnow). How would you align the sequences `S=AACT` and `S'=CTGG` when:
@@ -162,12 +127,6 @@ class: left, top
 - cost of substitution: 3
 ?
 
-
----
-class: left, top
-
-# MSA algorithm
-## 1. Cost of evolutionary events
 ### In-class activity
 
 **Table 9.3** (Warnow). How would you change the alignment between sequences `S=AACT` and `S'=CTGG` if the costs were: 
@@ -175,11 +134,6 @@ class: left, top
 - cost of substitution: 1
 
 
----
-class: left, top
-
-# MSA algorithm
-## 1. Cost of evolutionary events
 
 There are other ways to measure cost/penalty:
 - sequence identity: number of identical sites in an alignment divided by the total number of aligned positions
@@ -190,10 +144,7 @@ There are other ways to measure cost/penalty:
 
 - We will continue to use cost for simplicity
 
----
-class: left, top
 
-# MSA algorithm
 ## 2. Pairwise sequence alignment
 
 - Pairwise alignment of short toy sequences (like in the examples) can be done by hand
@@ -202,13 +153,10 @@ class: left, top
 - Dynamic programming: optimization algorithm that simplifies a complicated problem by breaking it down into simpler sub-problems in a recursive manner
 
 
----
-class: left, top
-
-# Needleman-Wunsch algorithm
+### Needleman-Wunsch algorithm
 
 - **Ingredients:** 
-  - Two sequences: $A=a_1 a_2 ...a_m$ and $B=b_1 b_2 ...b_n$
+  - Two sequences: $$A=a_1 a_2 ...a_m$$ and $$B=b_1 b_2 ...b_n$$
   - 1) cost of gap and 2) cost of substitution
 - Denote $F(i,j)$ the minimum cost to align sub-sequences $A_i$ and $B_j$ based on the costs
 - **Main principle:** When we want to compute $F(i,j)$, we assume that we have already computed all smaller sequences (sub-problems): $F(i-1,j-1), F(i,j-1), F(i-1,j)$.
@@ -219,12 +167,8 @@ The final site of the alignment must take one of the following forms:
 2. $a_i$ is aligned with a gap in the final site. Then $A_{i-1}$ and $B_{j}$ defined a pairwise alignment
 3. $b_j$ is aligned with a gap in the final site. Then $A_{i}$ and $B_{j-1}$ defined a pairwise alignment
 
----
-class: left, top
 
-# Needleman-Wunsch algorithm
-
-### Example of notation
+#### Example of notation
 
 Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you want to align sites $a_5$ ( $i=5$ ) and $b_3$ ( $j=3$ )
 
@@ -232,10 +176,8 @@ Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you wan
 2. $a_5$ is aligned with a gap in the final site. Then $A_4=a_1 a_2 a_3 a_4$ and $B_3=b_1 b_2 b_3$ define a pairwise alignment
 3. $b_3$ is aligned with a gap in the final site. Then $A_5=a_1 a_2 a_3 a_4 a_5$ and $B_2=b_1 b_2$ define a pairwise alignment
 
----
-class: left, top
 
-# Needleman-Wunsch algorithm: Costs
+#### Needleman-Wunsch algorithm: Costs
 
 1. If $a_i$ and $b_j$ are aligned together in the final site, then the cost is 0 if $a_i=b_j$ and 1 (or whatever cost of substitution defined) if they are different. Hence, the total cost is $F(i,j) = F(i-1,j-1)+cost(a_i,b_j)$
 2. If $a_i$ is aligned with a gap in the final site, then the cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i-1,j)+1$
@@ -245,10 +187,8 @@ How to know which of the three options to do? We choose the one with minimum cos
 
 $F(i,j)=min {F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 }$.
 
----
-class: left, top
 
-# Needleman-Wunsch algorithm
+### Needleman-Wunsch algorithm
 
 Steps:
 1. Compute $F(i,j)$ for every $i,j$ and put in a matrix (sometimes denoted dynamic programming (DP) matrix). First column/row correspond to gap and F(0,0)=0
@@ -257,27 +197,13 @@ Steps:
 
 <div style="text-align:center"><img src="../assets/pics/fig9.3.png" width="450"/></div>
 
-_Figure 9.3 from Warnow_
+_Figure 9.3 from Warnow (2018) Computational phylogenetics_
 
----
-class: left, top
 
-# Needleman-Wunsch algorithm
+### In-class example
 
-### Example
+We want to align $S_1=ATCG$ and $S_2=TCA$ for a cost of substitution of 1 and cost of gap of 2. We will work through the steps of creating the F matrix in class, and then, as homework, you can complete the whole matrix.
 
-We want to align $S_1=ATCG$ and $S_2=TCA$ for a cost of substitution of 1 and cost of gap of 2.
-
----
-class: left, top
-
-# Needleman-Wunsch algorithm
-
-### Example
-
-We want to align $S_1=ATCG$ and $S_2=TCA$ for a cost of substitution of 1 and cost of gap of 2.
-
-**Homework:** Complete at home the F matrix (details in next slide).
 
 **How do we get the alignment after building the F matrix?** We trace back the arrows from the bottom right corner:
 ```
