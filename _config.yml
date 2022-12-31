@@ -27,4 +27,18 @@ callouts:
   warning:
     title: Warning
     color: red
-latex: katex
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+mathjax-processor:
+    src:
+      - https://polyfill.io/v3/polyfill.min.js?features=es6
+      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    config:
+      tex:
+        inlineMath:
+          - ['$','$']
+          - ['\(','\)']
+        displayMath:
+          - ['$$','$$']
+          - ['\[','\]']
