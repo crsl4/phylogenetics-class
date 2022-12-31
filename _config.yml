@@ -29,3 +29,6 @@ callouts:
     color: red
 compress_html:
   blanklines: true
+# LaTeX rendering via "katex" (KaTeX, default) or "mathjax" (MathJax) or "none" / "off" (NO rendering)
+# https://github.com/just-the-docs/just-the-docs/issues/198
+latex: katex

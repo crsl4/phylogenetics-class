@@ -156,7 +156,7 @@ There are other ways to measure cost/penalty:
 ### Needleman-Wunsch algorithm
 
 - **Ingredients:** 
-  - Two sequences: \(A=a_1 a_2 ...a_m\) and $$B=b_1 b_2 ...b_n$$
+  - Two sequences: $$A=a_1 a_2 ...a_m$$ and $$B=b_1 b_2 ...b_n$$
   - 1) cost of gap and 2) cost of substitution
 - Denote $F(i,j)$ the minimum cost to align sub-sequences $A_i$ and $B_j$ based on the costs
 - **Main principle:** When we want to compute $F(i,j)$, we assume that we have already computed all smaller sequences (sub-problems): $F(i-1,j-1), F(i,j-1), F(i-1,j)$.
