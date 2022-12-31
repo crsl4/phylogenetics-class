@@ -40,15 +40,10 @@ No pre-class work.
 - MSA is a crucial step since phylogenetic inference methods assume that residue homology relationships are correctly reflected by the input sequences
 
 
-# What is multiple sequence alignment (MSA)?
-
 <div style="text-align:center"><img src="../assets/pics/fig9.1.png" width="750"/></div>
 
 _Figure 9.1 in Warnow (2018) Computational phylogenetics_
 
-
-
-# What is multiple sequence alignment (MSA)?
 
 The true MSA reflects the historical substitution, insertion and deletion evolutionary events:
 
@@ -56,12 +51,11 @@ The true MSA reflects the historical substitution, insertion and deletion evolut
 
 _Figure 9.2 in Warnow (2018) Computational phylogenetics_
 
+{: .highlight }
+**Why is it one of the most computationally intensive tasks?**
+Alignment can be not identifiable or unique.
 
-# Why is it one of the most computationally intensive tasks?
-
-- Alignment can be not identifiable or unique
-
-#### Example 9.1
+## Example 9.1
 Suppose that we knew the _true_ evolutionary events from sequence `ACAT` to `AGAT`. Suppose that we knew that it was not a substitution, but a deletion of `C` (thus creating `AAT`) followed by an insersion of `G`. Even in this scenario (when we know the truth), there are two ways to represent the alignment:
 ```
 AC-AT
@@ -73,8 +67,7 @@ A-CAT
 AG-AT
 ```
 
-
-## In-class activity
+## In-class activities
 
 **Table 9.1** (Warnow). What would be the alignment of the sequence `S=ACATTA` which evolves into `S'=TACA` if we knew the _true_ evolutionary events?
 - deletion of the first two nucleotides `AC`
@@ -82,11 +75,9 @@ AG-AT
 - substitution of `T` into `C`
 - insersion of `T` at the front
 
-
-## In-class activity
+**Solution:** In class.
 
 **Table 9.2** (Warnow). Without knowing the _true_ evolutionary events from `S=ACATTA` to `S'=TACA`, what would you think is a good alignment?
-
 
 **Solution:** You probably choose an alignment where none (or few) of the _true_ homology relationships are correct.
 - The true alignment has 4 events: 2 deletions, 1 insersion, 1 substitution
@@ -106,7 +97,7 @@ We are guiding the algorithms by selecting the penalties for evolutionary events
 **Output:** aligned sequences (same length) where each site is an assertion of homology
 
 
-Steps in MSA:
+**Steps in MSA:**
 1. Define cost of each event: deletion, insertion, substitution
 2. Learn to obtain the optimal pairwise alignment with the minimum cost ("edit distance")
 3. Learn to obtain the optimal multiple sequence alignment: we need to be able to align alignments
@@ -121,20 +112,20 @@ Steps in MSA:
 Some software/books will use "weights" instead of costs: weight for match: 5; weight for gap: -1; weight for mismatch (substitution): -1.
 I prefer to use costs because the idea of negative weights is not intuitive.
 
-### In-class activity
+### In-class activities
 
 **Table 9.3** (Warnow). How would you align the sequences `S=AACT` and `S'=CTGG` when:
 - cost of gap: 1
 - cost of substitution: 3
 ?
 
-### In-class activity
-
 **Table 9.3** (Warnow). How would you change the alignment between sequences `S=AACT` and `S'=CTGG` if the costs were: 
 - cost of gap: 4
 - cost of substitution: 1
 
+**Solution:** In class.
 
+## Other types of costs
 
 There are other ways to measure cost/penalty:
 - sequence identity: number of identical sites in an alignment divided by the total number of aligned positions
@@ -143,7 +134,7 @@ There are other ways to measure cost/penalty:
 <div style="text-align:center"><img src="../assets/pics/blosum62.png" width="350"/></div>
 
 
-- We will continue to use cost for simplicity
+We will continue to use cost for simplicity.
 
 
 ## 2. Pairwise sequence alignment
@@ -154,13 +145,15 @@ There are other ways to measure cost/penalty:
 - Dynamic programming: optimization algorithm that simplifies a complicated problem by breaking it down into simpler sub-problems in a recursive manner
 
 
-### Needleman-Wunsch algorithm
+## Needleman-Wunsch algorithm
 
 - **Ingredients:** 
   - Two sequences: $$A=a_1 a_2 ...a_m$$ and $$B=b_1 b_2 ...b_n$$
   - 1) cost of gap and 2) cost of substitution
 - Denote $F(i,j)$ the minimum cost to align sub-sequences $A_i$ and $B_j$ based on the costs
-- **Main principle:** When we want to compute $F(i,j)$, we assume that we have already computed all smaller sequences (sub-problems): $F(i-1,j-1), F(i,j-1), F(i-1,j)$.
+
+{: .note }
+**Main principle:** When we want to compute $F(i,j)$, we assume that we have already computed all smaller sequences (sub-problems): $F(i-1,j-1), F(i,j-1), F(i-1,j)$.
 
 The final site of the alignment must take one of the following forms:
 
@@ -169,16 +162,16 @@ The final site of the alignment must take one of the following forms:
 3. $b_j$ is aligned with a gap in the final site. Then $A_{i}$ and $B_{j-1}$ defined a pairwise alignment
 
 
-#### Example of notation
+### Example of notation
 
-Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you want to align sites $a_5$ ( $i=5$ ) and $b_3$ ( $j=3$ )
+Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you want to align sites $a_5$ ( $i=5$ ) and $b_3$ ( $j=3$ ). We have three options:
 
 1. $a_5$ and $b_3$ are aligned together in the final site. Then the other sites define a pairwise alignment of $A_4=a_1 a_2 a_3 a_4$ and $B_2=b_1 b_2$ (we do not know how at this point)
 2. $a_5$ is aligned with a gap in the final site. Then $A_4=a_1 a_2 a_3 a_4$ and $B_3=b_1 b_2 b_3$ define a pairwise alignment
 3. $b_3$ is aligned with a gap in the final site. Then $A_5=a_1 a_2 a_3 a_4 a_5$ and $B_2=b_1 b_2$ define a pairwise alignment
 
 
-#### Needleman-Wunsch algorithm: Costs
+### Needleman-Wunsch algorithm: Costs
 
 1. If $a_i$ and $b_j$ are aligned together in the final site, then the cost is 0 if $a_i=b_j$ and 1 (or whatever cost of substitution defined) if they are different. Hence, the total cost is $F(i,j) = F(i-1,j-1)+cost(a_i,b_j)$
 2. If $a_i$ is aligned with a gap in the final site, then the cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i-1,j)+1$
@@ -186,7 +179,7 @@ Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you wan
 
 How to know which of the three options to do? We choose the one with minimum cost!
 
-$F(i,j)=min \{F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 \}$.
+$F(i,j)=min \\{F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 \\}$.
 
 
 ### Needleman-Wunsch algorithm
@@ -199,14 +192,14 @@ $F(i,j)=min \{F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 \}$.
 
 _Figure 9.3 from Warnow (2018) Computational phylogenetics_
 
-
-### In-class example
-
+{: .highlight }
+**In-class example:**
 We want to align $S_1=ATCG$ and $S_2=TCA$ for a cost of substitution of 1 and cost of gap of 2. We will work through the steps of creating the F matrix in class, and then, as homework, you can complete the whole matrix.
 
 
-**How do we get the alignment after building the F matrix?** We trace back the arrows from the bottom right corner:
+## How do we get the alignment after building the F matrix?
 
+We trace back the arrows from the bottom right corner:
 
 <div style="text-align:center"><img src="../assets/pics/nw-ex.png" width="300"/></div>
 
@@ -214,11 +207,6 @@ We want to align $S_1=ATCG$ and $S_2=TCA$ for a cost of substitution of 1 and co
 ATCG
 -TCA
 ```
-
-
-# Homework: Needleman-Wunsch algorithm
-
-**Instructions:** Watch the class video on canvas with the rest of the steps of the Needleman-Wunsch algorithm and finish the alignment. Optional: redo the same example with a cost of gap of 1 and a cost of substitions of 3 to compare the final alignment in both cases. 
 
 
 {: .important }
@@ -234,14 +222,14 @@ ATCG
 - Iterative refinement algorithm: improvement over progressive alignment by doing sequential alignments until convergence of score (e.g. mafft, muscle)
 
 
-### Progressive alignment algorithm
+## Progressive alignment
 
 1. Compute rooted binary tree (guide tree) from pairwise distances
 2. Build MSA from the bottom (leaves) up (root)
 
 
 {: .highlight }
-Wait a minute, what is a rooted binary tree?
+What is a rooted binary tree?
 
 
 <div style="text-align:center"><img src="../assets/pics/fig9.9.png" width="550"/></div>
@@ -258,7 +246,7 @@ _Figure 9.9 in Warnow (2018) Computational phylogenetics_
   - For the leaves, we build the pairwise alignments for (a,b) and for (d,e) using the Needleman-Wunsch algorithm
   - For internal nodes, we need to know how to align alignments
 
-#### What are the ingredients that we need to know to perform MSA via progressive alignment?
+### What are the ingredients that we need to know to perform MSA via progressive alignment?
 - Perform pairwise sequence alignment via Needleman-Wunsch (check!)
 - Calculate the cost of a pairwise sequence alignment (check!)
 - Calculate a tree from distances (Lecture 8)
@@ -270,8 +258,8 @@ _Figure 9.9 in Warnow (2018) Computational phylogenetics_
 We need a new concept called "profile".
 
 <div class="image123">
-    <img src="../assets/pics/table9.7.png" height="200"  style="float:left">
-    <img class="middle-img" src="../assets/pics/table9.8.png" height="200">
+    <img src="../assets/pics/table9.7.png" width="200"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" width="200">
 </div>
 
 
@@ -285,14 +273,14 @@ We need a new concept called "profile".
 
 ### Aligning alignments: defining the costs
 
-Treat $a_i$ in $P_1$ and $b_j$ in $P_2$ as probability models: $P(x \vert a_i)$ is the probability of observing nucleotide $x$ in position $i$ on $P_1$ (Example: What is $P(A \vert a_1)$?)
+Treat $a_i$ in $P_1$ and $b_j$ in $P_2$ as probability models: $P(x \vert a_i)$ is the probability of observing nucleotide $x$ in position $i$ on the profile $P_1$ (Example: What is $P(A \vert a_1)$?)
 
 <div class="image123">
     <img src="../assets/pics/table9.7.png" height="200"  style="float:left">
     <img class="middle-img" src="../assets/pics/table9.8.png" height="200">
 </div>
 
-Define the cost as
+We define the cost as
 
 <div style="text-align:center"><img src="../assets/pics/cost-progressive.png" width="400"/></div>
 
@@ -311,7 +299,7 @@ Define the cost as
 </div>
 
 
-# Aligning the alignments
+# Aligning the alignments: we have the cost matrix, now what?
 
 Assume we got the following cost matrix
 
@@ -352,11 +340,7 @@ You should get the following alignment which we can translate back to the origin
 
 
 {: .important }
-**MSA key insights**
-- Needleman-Wunsch lies at the core of MSA:
-  - if we have two sequences, we align them with Needleman-Wunsch
-  - if we have two alignments, we first convert them to profiles, and then align the profiles with Needleman-Wunsch
-- The final alignment will depend on the assumptions on the cost of substitutions and costs of gaps
+**MSA key insights** Needleman-Wunsch lies at the core of MSA: if we have two sequences, we align them with Needleman-Wunsch; if we have two alignments, we first convert them to profiles, and then align the profiles with Needleman-Wunsch. The final alignment will depend on the assumptions on the cost of substitutions and costs of gaps
 
 
 {: .highlight }
