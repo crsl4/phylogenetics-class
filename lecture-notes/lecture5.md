@@ -334,7 +334,7 @@ The video on canvas has two errors: $cost(a3,b1)=1/4$ instead of 1 and $cost(a4,
 You should get the following alignment which we can translate back to the original sequences.
 
 <div class="image123">
-    <img src="../assets/pics/table9.9.png" width="100"  style="float:left">
+    <img src="../assets/pics/table9.9.png" width="300"  style="float:left">
     <img class="middle-img" src="../assets/pics/table9.10.png" width="300">
 </div>
 
