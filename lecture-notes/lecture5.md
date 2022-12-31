@@ -2,6 +2,7 @@
 layout: default
 title: Alignment I
 nav_order: 3
+mathjax: true
 ---
 
 # Alignment methods
