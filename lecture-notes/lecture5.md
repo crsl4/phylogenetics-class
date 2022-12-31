@@ -258,8 +258,8 @@ _Figure 9.9 in Warnow (2018) Computational phylogenetics_
 We need a new concept called "profile".
 
 <div class="image123">
-    <img src="../assets/pics/table9.7.png" width="200"  style="float:left">
-    <img class="middle-img" src="../assets/pics/table9.8.png" width="200">
+    <img src="../assets/pics/table9.7.png" width="300"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" width="300">
 </div>
 
 
@@ -276,8 +276,8 @@ We need a new concept called "profile".
 Treat $a_i$ in $P_1$ and $b_j$ in $P_2$ as probability models: $P(x \vert a_i)$ is the probability of observing nucleotide $x$ in position $i$ on the profile $P_1$ (Example: What is $P(A \vert a_1)$?)
 
 <div class="image123">
-    <img src="../assets/pics/table9.7.png" height="200"  style="float:left">
-    <img class="middle-img" src="../assets/pics/table9.8.png" height="200">
+    <img src="../assets/pics/table9.7.png" width="300"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" width="300">
 </div>
 
 We define the cost as
@@ -294,8 +294,8 @@ We define the cost as
 **Instructions:** Build the cost matrix for the two following profiles. This means that you want to calculate $cost(a_i,b_j)$ for all $i$ and $j$.
 
 <div class="image123">
-    <img src="../assets/pics/table9.7.png" height="200"  style="float:left">
-    <img class="middle-img" src="../assets/pics/table9.8.png" height="200">
+    <img src="../assets/pics/table9.7.png" width="300"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" width="300">
 </div>
 
 
@@ -334,8 +334,8 @@ The video on canvas has two errors: $cost(a3,b1)=1/4$ instead of 1 and $cost(a4,
 You should get the following alignment which we can translate back to the original sequences.
 
 <div class="image123">
-    <img src="../assets/pics/table9.9.png" height="100"  style="float:left">
-    <img class="middle-img" src="../assets/pics/table9.10.png" height="300">
+    <img src="../assets/pics/table9.9.png" width="100"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.10.png" width="300">
 </div>
 
 
