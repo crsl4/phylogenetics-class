@@ -151,7 +151,4 @@ You should get the following alignment which we can translate back to the origin
 **Homework recap** [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-needleman.md).
 
 {: .highlight }
-**For next class:** Read the paper corresponding to your group (in canvas):
-- [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/)
-- [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623)
-- [T-Coffee](https://www.sciencedirect.com/science/article/pii/S0022283600940427)
+**For next class:** Read the paper corresponding to your group (in canvas): [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/), [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623), [T-Coffee](https://www.sciencedirect.com/science/article/pii/S0022283600940427)
