@@ -4,309 +4,154 @@ title: Alignment II
 nav_order: 4
 ---
 
-# Lecture 5
+# Alignment methods (Part 2)
 
 ### Previous class check-up
-- We reviewed the algorithms for pairwise and multiple sequence alignments
+- We reviewed the algorithms for pairwise and multiple sequence alignments (Needleman-Wunsch algorithm)
 
 ### Learning objectives
 
 At the end of today's session, you
 - will be able to explain the most widely used algorithms for multiple sequence alignment
-- will be able to assess the strengths and weaknesses of each type of algorithm
-- will learn to use different software options: ClustalW, T-Coffee and MUSCLE
 
-### No pre-class work!
+{: .note }
+No pre-class work.
 
----
-class: left, top
+## 3. Multiple sequence alignment
 
-# MSA key insights
-- Needleman-Wunsch lies at the core of MSA:
-  - if we have two sequences, we align them with Needleman-Wunsch
-  - if we have two alignments, we first convert them to profiles, and then align the profiles with Needleman-Wunsch
-- The final alignment will depend on the assumptions on the cost of substitutions and costs of gaps
+- The Needleman-Wunsch is the magic algorithm that allows us to align two sequences
+- We want to expand the pairwise sequence alignment to multiple sequence alignment
+- Progressive alignment: the most widely used algorithm (e.g. ClustalW)
+- Consistency-based scoring: improvement over progressive alignment by using a more strict score function (e.g. T-Coffee)
+- Iterative refinement algorithm: improvement over progressive alignment by doing sequential alignments until convergence of score (e.g. mafft, muscle)
 
----
-class: left, top
 
-# Progressive alignment: ClustalW
+## Progressive alignment
 
 1. Compute rooted binary tree (guide tree) from pairwise distances
 2. Build MSA from the bottom (leaves) up (root)
 
-<div style="text-align:center"><img src="../assets/pics/fig9.9.png" width="400"/></div>
 
-_Figure 9.9 in Warnow_
+{: .highlight }
+What is a rooted binary tree?
 
-[Thompson, 1994, ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/)
 
----
-class: left, top
+<div style="text-align:center"><img src="../assets/pics/fig9.9.png" width="550"/></div>
 
-# Iterative refinement: MUSCLE
+_Figure 9.9 in Warnow (2018) Computational phylogenetics_
 
-<div style="text-align:center"><img src="../assets/pics/muscle.png" width="600"/></div>
 
-[Edgar, 2004, MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623)
+### Progressive alignment algorithm
 
----
-class: left, top
+1. Align all pairs of sequences using the Needleman-Wunsch algorithm
+2. For every pairwise alignment, we calculate its cost based on the cost of gap (e.g. unit cost) and the cost of substitution (e.g. unit cost)
+3. We estimate the tree from distances: we will learn this in Lecture 8. Let's pretend we already have the tree
+4. We build the alignments on the tree from the leaves to the root (bottom-up)  
+  - For the leaves, we build the pairwise alignments for (a,b) and for (d,e) using the Needleman-Wunsch algorithm
+  - For internal nodes, we need to know how to align alignments
 
-# Consistency-based scoring: T-Coffee
+### What are the ingredients that we need to know to perform MSA via progressive alignment?
+- Perform pairwise sequence alignment via Needleman-Wunsch (check!)
+- Calculate the cost of a pairwise sequence alignment (check!)
+- Calculate a tree from distances (Lecture 8)
+- Perform alignment of alignments (missing)
 
-<div style="text-align:center"><img src="../assets/pics/tcoffee.gif" width="250"/></div>
 
-[Notredame, 2000, T-Coffee](https://www.sciencedirect.com/science/article/pii/S0022283600940427)
+# How to align alignments
 
+We need a new concept called "profile".
 
----
-class: left, top
+<div class="image123">
+    <img src="../assets/pics/table9.7.png" width="300"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" width="300">
+</div>
 
-# MSA software key insights
 
-- No perfect method
-- No automatic method
-  - All methods require manual work of comparing results from different alignment parameters and from different sofware
-- Take notes of the choices you made and keep track of all comparisons to justify final choice
-- We probably don't spend as much time as we should on the alignment step of the phylogenomic pipeline
-  - We want a blackbox that does not exist yet!
 
+## Aligning alignments
 
----
-class: left, top
+1. Construct profiles
+2. Define the cost of putting $a_i, b_j$ together. We want to minimize the expected cost between profiles
+3. Use Needleman-Wunsch to align $P_1$ and $P_2$ based on the costs
 
-## Other algorithms
 
-### Genetic algorithm
-- SAGA uses the WSP objective function but uses genetic algorithms instead of dynamic programming (individual=alignment)
-- very accurate
-- more scalable than T-coffee, but still not super scalable
+### Aligning alignments: defining the costs
 
-### Hidden markov model
-- [UPP](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0688-z)
-- [pasta](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4424971/)
+Treat $a_i$ in $P_1$ and $b_j$ in $P_2$ as probability models: $P(x \vert a_i)$ is the probability of observing nucleotide $x$ in position $i$ on the profile $P_1$ (Example: What is $P(A \vert a_1)$?)
 
-### Simultaneous estimation tree/alignment
-- [sate](https://phylo.bio.ku.edu/software/sate/sate.html)
+<div class="image123">
+    <img src="../assets/pics/table9.7.png" width="300"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" width="300">
+</div>
 
----
-class: left, top
+We define the cost as
 
-### Other considerations
+<div style="text-align:center"><img src="../assets/pics/cost-progressive.png" width="400"/></div>
 
-- Nucleotide vs amino acid sequence
-  - when there is choice (protein-coding genes), amino acid alignments are easier to carry out and less ambiguous; also nucleotide alignments do not recognize codon as a unit and can break up the reading frame; typically, you align the amino acids and then generate the corresponding nucleotide sequence alignment
-  - when sequences are not protein coding, only choice is to align nucleotides
-- Manual editing and visualizing alignments
-  - manual editing is scary because it is not reproducible
-  - but many times it is necessary because automatic alignment methods are not as accurate as they should be
+{: .highlight }
+**In-class exercise:** What is the $cost(a_3,b_2)$?
 
 
-### Which program to choose?
-- not a clear answer
-- scalability vs accuracy
-- HW reading: [Alignathon](https://genome.cshlp.org/content/24/12/2077)
-- **Strategy:**
-  - Run multiple programs and parameter choices
-  - Filtering is more important than the specific program used (more on filtering tomorrow)
-  - Read program papers and documentation carefully (more on this tomorrow)
-  - Take good note of choices and keep track of all comparisons to justify final choice
-
-
----
-class: left, top
-
-# Software overview
-
-## ClustalW
-
-- [ClustalW](http://www.clustal.org/clustal2/)
-- From the [docs](http://www.clustal.org/download/clustalw_help.txt):
-
-```
-DATA (sequences)
-
--INFILE=file.ext                             :input sequences.
--PROFILE1=file.ext  and  -PROFILE2=file.ext  :profiles (old alignment).
-
-
-                VERBS (do things)
-
--OPTIONS            :list the command line parameters
--HELP  or -CHECK    :outline the command line params.
--FULLHELP           :output full help content.
--ALIGN              :do full multiple alignment.
--TREE               :calculate NJ tree.
--PIM                :output percent identity matrix (while calculating the tree)
--BOOTSTRAP(=n)      :bootstrap a NJ tree (n= number of bootstraps; def. = 1000).
--CONVERT            :output the input sequences in a different file format.
-```
-
----
-class: left, top
-
-## ClustalW
-
-```
-                PARAMETERS (set things)
-
-***General settings:****
--INTERACTIVE :read command line, then enter normal interactive menus
--QUICKTREE   :use FAST algorithm for the alignment guide tree
--TYPE=       :PROTEIN or DNA sequences
--NEGATIVE    :protein alignment with negative values in matrix
--OUTFILE=    :sequence alignment file name
--OUTPUT=     :GCG, GDE, PHYLIP, PIR or NEXUS
--OUTORDER=   :INPUT or ALIGNED
--CASE        :LOWER or UPPER (for GDE output only)
--SEQNOS=     :OFF or ON (for Clustal output only)
--SEQNO_RANGE=:OFF or ON (NEW: for all output formats)
--RANGE=m,n   :sequence range to write starting m to m+n
--MAXSEQLEN=n :maximum allowed input sequence length
--QUIET       :Reduce console output to minimum
--STATS=      :Log some alignents statistics to file
-```
-
----
-class: left, top
-
-## ClustalW
-
-```
-***Multiple Alignments:***
--NEWTREE=      :file for new guide tree
--USETREE=      :file for old guide tree
--MATRIX=       :Protein weight matrix=BLOSUM, PAM, GONNET, ID or filename
--DNAMATRIX=    :DNA weight matrix=IUB, CLUSTALW or filename
--GAPOPEN=f     :gap opening penalty        
--GAPEXT=f      :gap extension penalty
--ENDGAPS       :no end gap separation pen. 
--GAPDIST=n     :gap separation pen. range
--NOPGAP        :residue-specific gaps off  
--NOHGAP        :hydrophilic gaps off
--HGAPRESIDUES= :list hydrophilic res.    
--MAXDIV=n      :% ident. for delay
--TYPE=         :PROTEIN or DNA
--TRANSWEIGHT=f :transitions weighting
--ITERATION=    :NONE or TREE or ALIGNMENT
--NUMITER=n     :maximum number of iterations to perform
--NOWEIGHTS     :disable sequence weighting
-```
-
----
-class: left, top
-
-## ClustalW
-
-What are the default values?
-
-Another thing to notice:
-
-```
-==ITERATION==
-
- A remove first iteration scheme has been added. This can be used to improve the final
- alignment or improve the alignment at each stage of the progressive alignment. During the 
- iteration step each sequence is removed in turn and realigned. If the resulting alignment 
- is better than the  previous alignment it is kept. This process is repeated until the score
- converges (the  score is not improved) or until the maximum number of iterations is 
- reached. The user can  iterate at each step of the progressive alignment by setting the 
- iteration parameter to  TREE or just on the final alignment by seting the iteration 
- parameter to ALIGNMENT. The default is no iteration. The maximum number of  iterations can 
- be set using the numiter parameter. The default number of iterations is 3.
-  
- -ITERATION=    :NONE or TREE or ALIGNMENT
- 
- -NUMITER=n     :Maximum number of iterations to perform
-```
-
-**Further reading:** Read the ClustalW [documentation](http://www.clustal.org/download/clustalw_help.txt). Is it clear what the algorithm is doing and how to best select the parameters involved? What is missing (if any) from this documentation?
-
----
-class: left, top
-
-## T-Coffee
-
-- [T-Coffee](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#quick-start-t-coffee)
-
-```shell
-$ t_coffee sample_seq1.fasta
-```
-
-- When aligning, T-Coffee will always at least generate three files:
-  - `sample_seq1.aln` : Multiple Sequence Alignment (ClustalW format by default)
-  - `sample_seq1.dnd` : guide tree (Newick format)
-  - `sample_seq1.html` : colored MSA according to consistency (html format)
-- `T-Coffee` also has a great [documentation](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#document-tcoffee_main_documentation)
-- Specifically, it has a good description of the parameters, see [here](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#t-coffee-parameters-flags)
-- Don't forget to check out [M-Coffee](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#m-coffee) that combines the output of eight aligners (MUSCLE, ProbCons, POA, DIALIGN-T, MAFFT, ClustalW, PCMA and T-Coffee)
-
----
-class: left, top
-
-## MUSCLE
-
-- [MUSCLE](https://www.drive5.com/muscle/)
-- The different parameter options are explained [here](https://www.drive5.com/muscle/manual/options.html)
-- The default settings are chosen for maximum accuracy (how?), but you can change the settings for more speed (see [here](https://www.drive5.com/muscle/manual/index.html))
-
-
----
-class: left, top
-
-### In-class exercise (or homework)
-
-**Instructions:** Run and compare the results of all three MSA software on a toy dataset of primates. You can use my reproducible script as guideline: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md).
-
-**ClustalW**
-
-1. Download [ClustalW](http://www.clustal.org/clustal2/)
-2. Download the `primatesAA.fasta` file from the Phylogenetic Handbook [website](https://www.kuleuven.be/aidslab/phylogenybook/Data_sets.html) (22 primate aminoacid sequences). The website stopped working at some point, so we have the file in the class repo.
-3. Run `ClustalW`, see [docs](http://www.clustal.org/download/clustalw_help.txt)
-
-**T-Coffee**
-
-1. Download [T-Coffee](http://www.tcoffee.org/Projects/tcoffee/index.html#DOWNLOAD)
-2. Run `T-Coffee` on the same `primatesAA.fasta` data. See the [docs](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#quick-start-t-coffee)
-
-**MUSCLE**
-
-1. Download [MUSCLE](https://www.drive5.com/muscle/downloads.htm)
-2. Run `MUSCLE` on the same `primatesAA.fasta` data. See the [docs](https://www.drive5.com/muscle/manual/basic_alignment.html)
-
-
-
----
-class: left, top
 
 # Homework
 
-**Instructions:**
+**Instructions:** Build the cost matrix for the two following profiles. This means that you want to calculate $cost(a_i,b_j)$ for all $i$ and $j$.
 
-1. Read the [Alignathon](https://genome.cshlp.org/content/24/12/2077) paper for more information on how to select a MSA method
-2. Choose the alignment method that you like the best on your project dataset
-  - Note: for this HW, you only need to run one MSA method, but for your final project, you are expected to run at least two to compare the results
-  - Don't forget to include in your reproducible script a short description of the chosen algorithm, its assumptions and limitations (see the [software cheatsheet](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/software-cheatsheet.md))
-3. Make sure to keep notes in your reproducible script and keep the most updated version on github (it is important to push your work to github since this allows me to check what you are doing and offer suggestions)
-4. Submit the link to your github commit in canvas
-
-**Deadline:** March 2nd, 2022
-
-**Note:** You do not need to have the output of the aligning to submit the HW, only need the commands you used.
+<div class="image123">
+    <img src="../assets/pics/table9.7.png" width="300"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.8.png" width="300">
+</div>
 
 
+# Aligning the alignments: we have the cost matrix, now what?
+
+Assume we got the following cost matrix
+
+```  
+     a1   a2  a3  a4   a5
+b1 [ 1/3  1  1    1   8/15 ]  
+b2 [  1   1  1/4  2/3  1   ]  
+b3 [  1   0  3/4  1/3  1   ]
+b4 [  1   1  1/4  2/3  1   ]
+b5 [  1   0  3/4  1/3  1   ]
+b6 [ 1/3  1  9/12 8/9 11/15]
+```
+
+and we will use it to align the two profiles $P_1 = a_1 a_2 a_3 a_4 a_5$ and $P_2 = b_1 b_2 b_3 b_4 b_5 b_6$ with Needleman-Wunsch. The cost matrix above provides the costs of substitutions and we assume a cost of gap of 1.
+
+{: .note }
+The video on canvas has two errors: $cost(a3,b1)=1/4$ instead of 1 and $cost(a4,b6)=7/9$ instead of 8/9.
+
+{: .highlight }
+**In-class activity:** Let's recall Needleman-Wunsch: we need the $F(i,j)$ matrix and then trace back the alignment. Let's do here together some of the entries of the $F(i,j)$ matrix.
+
+
+# Homework
+
+**Instructions:** Finish Needleman-Wunsch on the two profiles.
+
+1. Build the F matrix
+2. Trace back the alignment from the bottom right corner
+
+
+**Solution:**
+You should get the following alignment which we can translate back to the original sequences.
+
+<div class="image123">
+    <img src="../assets/pics/table9.9.png" width="300"  style="float:left">
+    <img class="middle-img" src="../assets/pics/table9.10.png" width="300">
+</div>
+
+
+{: .important }
+**MSA key insights** Needleman-Wunsch lies at the core of MSA: if we have two sequences, we align them with Needleman-Wunsch; if we have two alignments, we first convert them to profiles, and then align the profiles with Needleman-Wunsch. The final alignment will depend on the assumptions on the cost of substitutions and costs of gaps
+
+
+{: .highlight }
+**Homework recap** [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-needleman.md).
+
+{: .highlight }
 **For next class:** Read the paper corresponding to your group (in canvas):
 - [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/)
 - [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623)
 - [T-Coffee](https://www.sciencedirect.com/science/article/pii/S0022283600940427)
-
----
-class: left, top
-
-# Further reading
-
-Learn more:
-- Read Chapter 3 of the Phylogenetic Handbook (HB)
-- Read Sections 9.1-9.5, 9.11, 9.12, 9.13 of [Computational phylogenetics](https://www.amazon.com/Computational-Phylogenetics-Introduction-Designing-Estimation/dp/1107184711) (Warnow) 
-- Read HAL 2.3 on a new alignment method `MACSE`

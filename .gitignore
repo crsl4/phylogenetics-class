@@ -2,6 +2,7 @@
 side-docs/*
 data/*
 announcements/*
+exercises/phyluce-tutorial/*
 
 # Compiled source #
 ###################

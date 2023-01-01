@@ -15,7 +15,7 @@ At the end of today's session, you
 
 {: .note }
 **Pre-class work:**
-Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/shell-resources.md) and do canvas quiz
+Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/hw-shell.md) and do canvas quiz
 
 
 ## Reproducibility
@@ -358,7 +358,7 @@ which will change as people merge their additions via pull requests. You will ne
 
 # Homework
 
-Find description of the reproducibility homework in [here](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/git-hw.md).
+Find description of the reproducibility homework in [here](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/hw-git.md).
 
 
 

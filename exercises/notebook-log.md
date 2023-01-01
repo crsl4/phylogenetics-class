@@ -3,13 +3,11 @@ layout: default
 nav_exclude: true
 ---
 
-
 # Notebook reproducible script for Botany 563
-Written by CSL in Spring 2021
-Updated by CSL in Spring 2022
+(Written by CSL in Spring 2021; Updated by CSL in Spring 2022)
 
 
-## phyluce
+## QC with phyluce
 
 ### To do
 - look for assembly alternatives to trinity for Mac
@@ -237,7 +235,7 @@ We will not go over alignment at this stage as we will cover this in the next cl
 
 1. Downloaded [ClustalW](http://www.clustal.org/clustal2/) file `clustalw-2.1-macosx.dmg` and copied the folder into `Dropbox/software`
 
-2. Downloaded the `primatesAA.fasta` file from the Phylogenetic Handbook [website](https://www.kuleuven.be/aidslab/phylogenybook/Data_sets.html). I had to copy and paste the sequences into a file with the same name. The website stopped working at some point, so we have the file in the class repo.
+2. Downloaded the `primatesAA.fasta` file from the Phylogenetic Handbook [website](https://www.kuleuven.be/aidslab/phylogenybook/Data_sets.html). I had to copy and paste the sequences into a file with the same name. The website stopped working at some point, so we have the file in the class repo [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data).
 
 ```shell
 cd Dropbox/Documents/teaching/phylogenetics-class/BOT563/data
@@ -1270,7 +1268,7 @@ primatesAA 22 seqs, max length 551, avg  length 504
 00:00:00     10 MB(0%)  Iter  20  100.00%  Refine biparts
 ```
 
-## OrthoFinder
+## Orthology detection (optional topic) with OrthoFinder
 
 Following the steps in the [tutorial](https://davidemms.github.io/orthofinder_tutorials/downloading-and-running-orthofinder.html).
 

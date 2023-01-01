@@ -12,4 +12,4 @@ nav_exclude: true
 
 3. If necessary, read the [lecture notes](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4.md)
 
-4. Do the [Sequencing HW](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/seq-hw.md)
+4. Do the [Sequencing HW](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/hw-seq.md)
