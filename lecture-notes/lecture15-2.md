@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Co-estimation II
-nav_order: 21
+nav_order: 22
 ---
 
 ### Previous class check-up

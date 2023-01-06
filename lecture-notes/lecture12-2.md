@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bayesian Inference II
-nav_order: 15
+nav_order: 16
 ---
 
 ### Previous class check-up

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: The coalescent II
-nav_order: 18
+nav_order: 19
 ---
 
 ### Previous class check-up

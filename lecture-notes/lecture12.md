@@ -1,5 +1,5 @@
 ---
 layout: default
 title: Bayesian Inference I
-nav_order: 14
+nav_order: 15
 ---

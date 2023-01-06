@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Co-estimation I
-nav_order: 20
+nav_order: 21
 ---
 
 # Lecture 15

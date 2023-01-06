@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Maximum Likelihood II
-nav_order: 12
+nav_order: 13
 ---
 
 ### Previous class check-up
