@@ -50,13 +50,13 @@ By the end of the course, you will be able to
 | 02/07 | HW due: [Reproducibility](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/hw-git.md) | | | | |
 | 02/09 | Alignment (paper discussion) | One paper assigned per student: 1) [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/), 2) [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623), 3) [T-Coffee](https://www.sciencedirect.com/science/article/pii/S0022283600940427) | | [lecture5-3](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture5-3.html) | |
 | 02/09 | HW due: [Learn@Home: Sequencing](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture4-learn-home.md) | | | | |
-| 02/14 | Alignment (computer lab) | | | [lecture5-4](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture5-4.html) | 1) Read [Alignathon paper](https://genome.cshlp.org/content/24/12/2077); 2) Choose and run an alignment method on your data (github commit) (due 02/21) |
-| 02/14 | HW due: Needleman-Wunsch | | | | |
+| 02/14 | Alignment (computer lab) | | | [lecture5-4](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture5-4.html) | [Alignment HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-alignment.md) (due 02/21) |
+| 02/14 | HW due: [Needleman-Wunsch HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-needleman.md) | | | | |
 | 02/16 | Overview of phylogenetic inference | | You will be able to explain the overall methodology of phylogenetic inference as well as the main weaknesses | [lecture7.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture7.pdf) | [Learn@Home: Orthology and Filtering](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture6.md) (due 02/23) |
 | 02/21 | Distance and parsimony methods (Part 1)  | Optional readings: HB Ch 5-6, Baum Ch 7-8 | You will be able to explain both algorithms to reconstruct trees: 1) based on distances and 2) based on parsimony | [lecture8.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture8.md) | | 
-| 02/21 | HW due: Alignment | | | | |
+| 02/21 | HW due: [Alignment HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-alignment.md) | | | | |
 | 02/23 | Distance and parsimony methods (Part 2) |  |  |  | | 
-| 02/23 | HW due: Learn@Home Orthology and Filtering | | | | |
+| 02/23 | HW due: [Learn@Home: Orthology and Filtering](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture6.md) | | | | |
 | 02/28 | Distance and parsimony methods (computer lab) | [Install R](https://cloud.r-project.org/) | | |  Run distance and parsimony methods on your own data (git commit) (due 03/07) |
 | 03/02 | Models of evolution (Part 1)  | HAL 1.1 and canvas quiz | You will be able to explain the main characteristics and assumptions of the substitution models | [lecture9.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture9.pdf) | | 
 | 03/07 | Models of evolution (Part 2) | | | | | 

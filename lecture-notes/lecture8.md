@@ -4,6 +4,15 @@ title: Distance and Parsimony I
 nav_order: 8
 ---
 
+---
+class: left, top
+
+# Final project datasets
+
+Let's check the different datasets that will be used in the final projects:
+[google slides](https://docs.google.com/presentation/d/1Z8cU-S2xu4XOi4BzJeNbOqqc0_GheqOKiSde7TtRyoo/edit?usp=sharing)
+
+
 # Lecture 8
 
 ### Previous class check-up

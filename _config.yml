@@ -7,6 +7,7 @@ exclude:
    - lecture-notes/lecture1.md
    - lecture-notes/lecture2.md
    - lecture-notes/lecture4.md
+   - lecture-notes/lecture6.md
 aux_links:
   "Materials on GitHub":
     - "//github.com/crsl4/phylogenetics-class"

@@ -1,18 +1,23 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 6</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Botany/Plant Path 563" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lecture 6
+## Filtering and Orthology detection
+### Botany/Plant Path 563
+
 ---
-title: "Lecture 6"
-author: "Botany/Plant Path 563"
-subtitle: "Filtering and Orthology detection"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: yes
-      countIncrementalSlides: no
-  html_document:
-    df_print: paged
----
+
 class: left, top
 
 
@@ -52,7 +57,7 @@ class: left, top
 
 ### What are the problematic regions of an aligment?
 
-<div style="text-align:center"><img src="../assets/pics/fig8hal.png" width="400"/></div>
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig8hal.png" width="400"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
@@ -78,7 +83,7 @@ there is a critical point beyond which to align sequences is not possible, or bi
 meaningful: too many substitutions or indels have occurred
 
 - High-throughput sequencing or annotation errors 
-    - Sequencing errors -> small indels in nucleotide alignments -> errors in translation
+    - Sequencing errors -&gt; small indels in nucleotide alignments -&gt; errors in translation
     - Errors in homology annotation can lead to the inclusion of sequences that are not homologous
     - All sequences are homologous but some are erroneously considered as being
 orthologous (derived from ancestral copy by speciation) while actually being paralogous
@@ -115,14 +120,14 @@ class: left, top
 
 ## Comparison of filtering methods
 
-<div style="text-align:center"><img src="../assets/pics/fig12hal.png" width="700"/></div>
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig12hal.png" width="700"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
 
 ## Comparison of filtering methods
 
-<div style="text-align:center"><img src="../assets/pics/table1hal.png" width="500"/></div>
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/table1hal.png" width="500"/&gt;&lt;/div&gt;
 
 - [OMM_MACSE pipeline](https://github.com/ranwez/MACSE_V2_PIPELINES) and [HmmCleaner](https://metacpan.org/pod/distribution/Bio-MUST-Apps-HmmCleaner/bin/HmmCleaner.pl) among the best filtering methods in this study
   - Journal club: [DiFranco et al, 2019, hmmCleaner](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-019-1350-2)
@@ -153,7 +158,7 @@ class: left, top
 
 # Orthologous groups
 
-<div style="text-align:center"><img src="../assets/pics/fig1hal2.4.png" width="750"/></div>
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/fig1hal2.4.png" width="750"/&gt;&lt;/div&gt;
 
 _Figure 1 in HAL 2.4_
 
@@ -197,7 +202,7 @@ class: left, top
 - In BLAST: gene _i_ in genome _I_ is BBH of gene _j_ in genome _J_ if query of genome _I_ with gene _j_ hits gene _i_ and viceversa
 - Learn more:
   - Original paper: [Overbeek et al 1999](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC15866/)
-  - Bidirectional Best Hits miss many orthologs in duplication-rich clades such as plants and animals [Dalquen & Dessimoz, 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3814191/)
+  - Bidirectional Best Hits miss many orthologs in duplication-rich clades such as plants and animals [Dalquen &amp; Dessimoz, 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3814191/)
 
 
 ---
@@ -254,14 +259,14 @@ class: left, top
 
 ### Graph-based methods
 
-<div style="text-align:center"><img src="../assets/pics/graph-clustering.png" width="550"/></div>
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/graph-clustering.png" width="550"/&gt;&lt;/div&gt;
 
 ---
 class: left, top
 
 ### MCL algorithm
 
-<div style="text-align:center"><img src="../assets/pics/mcl-algorithm.png" width="450"/></div>
+&lt;div style="text-align:center"&gt;&lt;img src="../assets/pics/mcl-algorithm.png" width="450"/&gt;&lt;/div&gt;
 
 Learn more: [MCL slices](https://sites.cs.ucsb.edu/~xyan/classes/CS595D-2009winter/MCL_Presentation2.pdf) and [MCL tutorial](https://micans.org/mcl/).
 
@@ -298,7 +303,131 @@ class: left, top
 # Further reading
 
 - Learn more about the [Quest for Orthologs](https://questfororthologs.org/) meeting
-- Read about BBH in the original paper [Overbeek et al 1999](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC15866/) and its limitations [Dalquen & Dessimoz, 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3814191/)
+- Read about BBH in the original paper [Overbeek et al 1999](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC15866/) and its limitations [Dalquen &amp; Dessimoz, 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3814191/)
 - Read Inferring Orthologs: Open Questions and Perspectives in [Tekaia2016](https://journals.sagepub.com/doi/10.4137/GEI.S37925)
 - Read Finding Orthologs in the Twilight and Midnight Zones of Sequence Similarity in [Haberman2016](https://link.springer.com/chapter/10.1007%2F978-3-319-41324-2_22)
 
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
