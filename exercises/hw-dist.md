@@ -3,7 +3,7 @@ layout: default
 nav_exclude: true
 ---
 
-# Sequencing HW
+# Distance and Parsimony HW
 
 **Instructions:**
 
