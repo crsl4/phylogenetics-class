@@ -6,9 +6,8 @@ nav_order: 8
 
 # Distance and Parsimony methods
 
-## Final project datasets
-
-First, let's check the different datasets that will be used in the final projects (google slides link in canvas).
+{: .highlight }
+**Final project datasets:** First, let's check the different datasets that will be used in the final projects (google slides link in canvas).
 
 
 ### Previous class check-up
