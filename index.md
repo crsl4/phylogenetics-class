@@ -58,7 +58,7 @@ By the end of the course, you will be able to
 | 02/23 | Distance and parsimony methods (Part 2) |  |  | [lecture8-2](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture8-2.html) | | 
 | 02/23 | HW due: [Learn@Home: Orthology and Filtering](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture6-learn-home.md) | | | | |
 | 02/28 | Distance and parsimony methods (computer lab) | [Install R](https://cloud.r-project.org/) | | [lecture8-3](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture8-3.html) |  [Distance and Parsimony HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-dist.md) (due 03/07) |
-| 03/02 | Models of evolution (Part 1)  | HAL 1.1 and canvas quiz | You will be able to explain the main characteristics and assumptions of the substitution models | [lecture9.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture9.pdf) | | 
+| 03/02 | Models of evolution (Part 1)  | HAL 1.1 and canvas quiz | You will be able to explain the main characteristics and assumptions of the substitution models | [lecture9](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture9.html) | | 
 | 03/07 | Models of evolution (Part 2) | | | | | 
 | 03/07 | HW due: [Distance and Parsimony HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-dist.md) | | | | |
 | 03/09 | Maximum likelihood  | HAL 1.2 and canvas quiz | You will be able to explain the main steps in maximum likelihood inference and the strength/weaknesses of the approach | [lecture10.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture10.pdf) | |
