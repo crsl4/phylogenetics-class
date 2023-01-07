@@ -4,7 +4,7 @@ title: Distance and Parsimony I
 nav_order: 8
 ---
 
-# Distance and Parsimony methods
+# Distance and Parsimony methods (Part 1)
 
 {: .highlight }
 **Final project datasets:** First, let's check the different datasets that will be used in the final projects (google slides link in canvas).

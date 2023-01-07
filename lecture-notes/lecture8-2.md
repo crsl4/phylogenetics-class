@@ -4,6 +4,7 @@ title: Distance and Parsimony II
 nav_order: 9
 ---
 
+# Distance and Parsimony methods (Part 2)
 
 # Parsimony-based methods
 

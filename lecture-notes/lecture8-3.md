@@ -4,6 +4,7 @@ title: Distance and Parsimony III
 nav_order: 10
 ---
 
+# Distance and Parsimony methods (Part 3: computer lab)
 
 # Software R package _ape_: Distance-based methods
 
