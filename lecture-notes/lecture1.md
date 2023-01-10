@@ -55,9 +55,16 @@ class: left, top
 ### Iceberg: passive vs active learning
 
 - Bad news: This can be a time-consuming class
+  - Selected comments from student evaluations
+    - It would be nice to have more hours to practice the different programs/commands we treated in the course
+    - I would suggest increasing the number of lecture hours; two days per week seemed a little short
+    - I think the course could be divided into two courses in order to have time to explain the concepts well
+  - For a 3-credit class, we only have two 75-minute classes per week.
 - Good news: Time spent learning phylogenetics today will save you time when doing your own research
   - The measure of success is how much you learned
   - How much you learn is entirely up to you: more time dedicated at home, more learning
+  - All materials are online for future reference
+  - Grading: continuous formal assessments vs final project (more later)
 
 ---
 class: left, top
@@ -69,6 +76,8 @@ class: left, top
 3. Read the material in preparation for the lectures (ungraded quizzes aim to help you keep up with readings)
 4. Attend and actively participate in lecture and in-class activities
 5. Join the slack workspace and actively engage in questions and answers (more on slack below)
+
+
 
 ---
 class: left, top
