@@ -79,7 +79,7 @@ By the end of the course, you will be able to
 | 04/20 | Co-estimation methods  | Optional reading: HB 18 | You will be able to explain the main components of co-estimation methods and follow the BEAST tutorial | [lecture15](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture15.html) | |
 | 04/25 | Co-estimation methods (computer lab) | Optional: Read BEAST papers: [one](https://bmcecolevol.biomedcentral.com/articles/10.1186/1471-2148-7-214), [two](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006650) | | [lecture15-2](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture15-2.html) | |
 | 04/25 | HW due: The coalescent | | | | |
-| 04/27 | What else is out there? (Final project Q&A) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) again | You will hear a brief overview of topics not covered in this class and will have access to resources to learn more | [lecture16.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture16.md) | |
+| 04/27 | What else is out there? (Final project Q&A) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) again | You will hear a brief overview of topics not covered in this class and will have access to resources to learn more | [lecture16](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture16.html) | |
 | 05/02 | Project presentations
 | 05/04 | Project presentations
 | 05/05 | Final project due  | | | |
