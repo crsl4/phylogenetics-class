@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Intro to sequences
+title: Orthology and Filtering
 nav_exclude: true
 ---
 
