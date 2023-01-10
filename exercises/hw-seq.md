@@ -29,7 +29,7 @@ nav_exclude: true
     - The data should have more than one locus/gene/marker to perform multilocus analyses
     - Genes or loci should be orthologs and single copies
     - The data can be alignments that have undergone QC already. You do not need to start with raw reads necessarily, but if you are using clean alignments, make sure that you know what software was used to align them
-2. Create your reproducible notebook (preferably md format, for example `notebook-log.md`)
+2. Create your reproducible notebook (preferably md format, for example [`notebook-log.md`](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/notebook-log.md))
 3. Add a short description of your dataset to your notebook and add one slide describing your dataset to share with the class in the [class google slides](https://docs.google.com/presentation/d/1Z8cU-S2xu4XOi4BzJeNbOqqc0_GheqOKiSde7TtRyoo/edit?usp=sharing)
 4. Identify the stage of your dataset
     - Do you have raw reads? Perform the quality control steps with FastQC
