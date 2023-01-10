@@ -76,13 +76,13 @@ By the end of the course, you will be able to
 | 04/13 | The coalescent (paper discussion) | One paper per student: [ASTRAL](https://arxiv.org/abs/1904.03826) or [BUCKy](https://academic.oup.com/mbe/article/24/2/412/1146040) | | [lecture14-2.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture14-2.md) | Run ASTRAL or BUCKy on your own data (due 04/25) |
 | 04/13 | HW due: [Bayesian Inference HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-bayesian.md) | | | | |
 | 04/18 | The coalescent (networks) | [SNaQ chapter](https://github.com/crsl4/phylogenetics-class/tree/master/assets/snaq.pdf) and quiz | | [lecture14-3.pdf](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture14-3.pdf) | |
-| 04/20 | Co-estimation methods  | Optional reading: HB 18 | You will be able to explain the main components of co-estimation methods and follow the BEAST tutorial | [lecture15.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture15.md) | |
-| 04/25 | Co-estimation methods (paper discussion and computer lab) | Read BEAST papers: [one](https://bmcecolevol.biomedcentral.com/articles/10.1186/1471-2148-7-214), [two](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006650) | | [lecture15-2.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture15-2.md) | |
+| 04/20 | Co-estimation methods  | Optional reading: HB 18 | You will be able to explain the main components of co-estimation methods and follow the BEAST tutorial | [lecture15](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture15.html) | |
+| 04/25 | Co-estimation methods (computer lab) | Optional: Read BEAST papers: [one](https://bmcecolevol.biomedcentral.com/articles/10.1186/1471-2148-7-214), [two](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006650) | | [lecture15-2](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture15-2.html) | |
 | 04/25 | HW due: The coalescent | | | | |
 | 04/27 | What else is out there? (Final project Q&A) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) again | You will hear a brief overview of topics not covered in this class and will have access to resources to learn more | [lecture16.md](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture16.md) | |
 | 05/02 | Project presentations
 | 05/04 | Project presentations
-| **05/05** | Final project due  | | | |
+| 05/05 | Final project due  | | | |
 
 
 ### More details
