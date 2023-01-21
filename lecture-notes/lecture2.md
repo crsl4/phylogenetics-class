@@ -25,59 +25,12 @@ At the end of today's session, you will identify the different components in phy
 
 - Don't forget the canvas quiz!
 
----
-class: left, top
-
-## The story of the conundrum of the evolution of COVID19 in four acts
-
-![](../assets/pics/forster.png)
-
-[Foster et al, 2020](http://dx.doi.org/10.1073/pnas.2004999117)
-
----
-class: left, top
-
-![](../assets/pics/sanchez-pacheco.png)
-
-- [Sanchez-Pacheco et al, 2020](https://www.pnas.org/content/117/23/12518)
-- Median-joining network (MJN) is not a phylogenetic network
-- MJN are constructed with a distance-basec criteria: not suitable for modeling the mutational process in viruses
-
----
-class: left, top
-
-![](../assets/pics/Mavian.png)
-
-- [Mavian et al, 2020](http://dx.doi.org/10.1073/pnas.2007295117)
-- Distant outgroup (sequence identity between SARS-CoV-2 and the bat virus is only 96.2%)
-
----
-class: left, top
-
-![](../assets/pics/forster2.png)
-
-- [Foster et al, 2020](https://www.pnas.org/content/117/23/12524)
-
----
-class: left, top
-
-## To sum up...
-
-![](../assets/pics/morel.png)
-
-- [Morel et al, 2020](https://pubmed.ncbi.nlm.nih.gov/33316067/)
-
----
-class: left, top
-
-### [HAL 2.1] To What Extent Current Limits of Phylogenomics Can Be Overcome?
+# [HAL 2.1] To What Extent Current Limits of Phylogenomics Can Be Overcome?
 
 #### Concept flowchart
 
 <div style="text-align:center"><img src="../assets/slides/lecture2/lecture2.001.jpeg" width="650"/></div>
 
----
-class: left, top
 
 ## Evolution is complex (Figure 1, HAL 2.1, Simion et al 2020)
 
@@ -86,17 +39,9 @@ class: left, top
 **Ideal evolutionary model:** theoretical model that accounts for all processes in a holistic manner. It is unrealistic and computationally prohibited, so we need divide-and-conquer and approximation approaches.
 
 
----
-class: left, top
-
 ## Phylogenomic approach: divide-and-conquer (Figure 2, HAL 2.1, Simion et al 2020)
 
 <div style="text-align:center"><img src="../assets/pics/hal2.1-fig2.png" width="650"/></div>
-
----
-class: left, top
-
-## Phylogenomic approach: divide-and-conquer (Figure 2, HAL 2.1, Simion et al 2020)
 
 1. genome annotation, 
 2. searching for homologous genes, 
@@ -116,20 +61,9 @@ class: left, top
     - even species tree inference or a priori knowledge of the species tree. 
 - More on orthology prediction in HAL 2.4 and Lecture 6.
 
----
-class: left, top
-
-## Phylogenomic approach: divide-and-conquer (Figure 2, HAL 2.1, Simion et al 2020)
-
-
 ### 4. Producing alignments
 Multiple homologous or orthologous sequences are then jointly aligned using one of the
 many available sequence alignment software packages. More in HAL 2.2 and Lectures 4 and 5.
-
----
-class: left, top
-
-## Phylogenomic approach: divide-and-conquer (Figure 2, HAL 2.1, Simion et al 2020)
 
 #### 5&6. Phylogenomic analyses
 Two paths:
@@ -150,8 +84,6 @@ relationships or when the sampling is devoid of ultra-close speciation events, w
 use of single gene trees is more appropriate for more recent speciation events, even when
 closely-spaced in time.
 
----
-class: left, top
 
 ## Cost of over-simplification
 
@@ -163,11 +95,6 @@ class: left, top
     - Genome annotation errors
         - often assumes that genomes do not have any evolutionary history
         - current annotation methods do not model chromosome structure, protein folding or interaction with other genomic regions
-
----
-class: left, top
-
-## Cost of over-simplification
 
 - Model violations
     - Sequence alignment model violations
@@ -181,9 +108,6 @@ class: left, top
 
 - Software errors
     - script/software does not produce the intended results
-
----
-class: left, top
 
 
 ## Types of error
@@ -203,8 +127,6 @@ species) in these phylogenomic datasets can reveal various levels of data qualit
     - Data quality governs the crucial phylogenetic signal-to-noise ratio upon which
 the accuracy of the inferred species tree strongly depends
 
----
-class: left, top
 
 ## Types of error
 
@@ -216,10 +138,6 @@ or xenologous (i.e. stemming from horizontal transfer)
 - Inaccurate gene tree inference can hamper the classification of two sequences
 as orthologous (e.g. if only one of them evolved rapidly)
 
----
-class: left, top
-
-## Types of error
 
 ### Phylogenetic inference simplifying assumptions
 - All sites evolved at the same rate? No -> Gamma component in models
@@ -235,9 +153,6 @@ and convincingly concluded that modelling site-heterogeneity was more important
 than modelling partition-wide heterotachy
 
 
----
-class: left, top
-
 ## Robustness to errors
 
 - Large data
@@ -251,8 +166,6 @@ class: left, top
     - rapid diversification on ancient speciation events
     - progressive loss of signal through multiple substitutions
 
----
-class: left, top
 
 ## Conclusions
 - Importance of data quality and model/software choices
@@ -267,8 +180,6 @@ class: left, top
 - What are the assumptions and limitations of this method?
 - How do I evaluate the outcome?
 
----
-class: left, top
 
 # Wrapping-up class
 
@@ -280,11 +191,6 @@ class: left, top
     - Goal is not to fully understand it
     - Read with relaxed state of mind: what is the main idea?
     - We will re-read and discuss this paper by the end of the semester
-
----
-class: left, top
-
-## Coming up: Reproducibility and computational tools (terminal, git)
 
   
 ## Cited papers in this lecture

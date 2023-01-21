@@ -5,7 +5,7 @@ nav_exclude: true
 
 # Sequencing HW
 
-## Part 1: Wrap up class work
+## Part 1: FastQC and phyluce (optional)
 
 **Objective:** Read more about UCEs and continue working on phyluce or FastQC.
 
@@ -16,7 +16,6 @@ nav_exclude: true
     - Continue with the [phyluce tutorial I](https://phyluce.readthedocs.io/en/latest/tutorial-one.html)
     - Continue learning how to use [FASTQC](https://raw.githubusercontent.com/s-andrews/FastQC/master/README.txt)
 
-**Deadline:** No deadline. Completion of this HW is not evaluated.
 
 ## Part 2: Choosing your data and performing QC if necessary
 
