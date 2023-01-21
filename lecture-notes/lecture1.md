@@ -84,7 +84,7 @@ class: left, top
 
 ## Class communication: Slack
 
-Slack join link in canvas (expires February 16th). Let's use this time to go over the workspace for those not familiar with slack.
+Slack join link in canvas (expires on January 28th). Let's use this time to go over the workspace for those not familiar with slack.
 
 Slack rules:
 
