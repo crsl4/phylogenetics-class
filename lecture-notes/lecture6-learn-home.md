@@ -7,7 +7,7 @@ nav_exclude: true
 # Orthology and Filtering
 
 
-1. Watch the YouTube video with the lecture (time)
+1. Watch the [YouTube video](https://youtu.be/s6A0LPnNC-A) with the lecture (Time: 24 minutes)
 
 2. If necessary, read the [lecture notes](https://github.com/crsl4/phylogenetics-class/tree/master/lecture-notes/lecture6.md)
 
