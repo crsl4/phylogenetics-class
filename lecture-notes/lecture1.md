@@ -56,9 +56,9 @@ class: left, top
 
 - Bad news: This can be a time-consuming class
   - Selected comments from student evaluations
-    - It would be nice to have more hours to practice the different programs/commands we treated in the course
-    - I would suggest increasing the number of lecture hours; two days per week seemed a little short
-    - I think the course could be divided into two courses in order to have time to explain the concepts well
+      - It would be nice to have more hours to practice the different programs/commands we treated in the course
+      - I would suggest increasing the number of lecture hours; two days per week seemed a little short
+      - I think the course could be divided into two courses in order to have time to explain the concepts well
   - For a 3-credit class, we only have two 75-minute classes per week.
 - Good news: Time spent learning phylogenetics today will save you time when doing your own research
   - The measure of success is how much you learned
@@ -72,10 +72,10 @@ class: left, top
 ## How do I take full advantage of the class?
 
 1. Bring your own data to play with
-2. Be reproducible from day 1 (more on reproducibility in lecture 2 and 3)
+2. Be reproducible from the start (more on reproducibility in lecture 2 and 3)
 3. Read the material in preparation for the lectures (ungraded quizzes aim to help you keep up with readings)
 4. Attend and actively participate in lecture and in-class activities
-5. Join the slack workspace and actively engage in questions and answers (more on slack below)
+5. Join the slack workspace and actively engage in questions and answers (more on slack later)
 
 
 
@@ -95,7 +95,7 @@ Slack rules:
 
 ### First HW (very very important!):
 - Join to slack (we can give some minutes today for people to do it)
-- Post something in #botany563: cute photos, question to engaged the community, short intro, favorite restaurant in Madison, favorite winter activity
+- Post something in #botany563: cute photos of pets, question to engaged the community, short intro, favorite restaurant in Madison, favorite winter activity
 - **Deadline:** Friday January 26th, before class.
 
 ---
@@ -124,15 +124,15 @@ class: left, top
 ## Grading
 
 Formal assessments (canvas):
-- Ungraded: complete/incomplete
-- No late submission
+- Not graded: complete/incomplete
+- Half the points for one week late submission
 - You can miss 4 assessments without penalty
 
 Github commits (canvas):
 - To encourage work on your project since the beginning
-- Ungraded: complete/incomplete
-- No late submission
-- You can 2 assessments without penalty
+- Not graded: complete/incomplete
+- Half the points for one week late submission
+- You can miss 2 assessments without penalty
 
 Final report and reproducible:
 - Up to one week late submission (for 20% point penalty)
