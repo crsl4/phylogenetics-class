@@ -147,7 +147,7 @@ git push
 ```
 
 {: .note }
-If you use RStudio or Visual Studio Code (VSCode), you can do these commands in the text editor directly (not on the terminal).
+If you use RStudio or Visual Studio Code (VSCode), you can do these commands in the text editor directly via some buttons in the interface (not on the terminal).
 
 
 
@@ -334,7 +334,7 @@ Local after: A--B--D--(merge commit)
 
 **Objective:** Lose the fear of git conflicts.
 
-**Time:** 20-25 minutes
+**Time:** 25-30 minutes
 
 **Instructions:** 
 
@@ -345,7 +345,7 @@ Individually,
 git clone [URL]
 ```
 3. Add the best book you read in 2022 to the `best-books.md` file. Use your preferred text editor
-4. Git add, git commit and git push to your fork
+4. Git add, git commit and git push to your fork:
 ```
 git add .
 git commit -m "informative message"

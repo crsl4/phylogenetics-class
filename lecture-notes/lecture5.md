@@ -31,6 +31,9 @@ At the end of today's session, you
 {: .note }
 No pre-class work.
 
+{: .important }
+After today, we will assume that 1) we are all comfortable with the terminal and 2) we are all comfortable with git/github. If you are still struggling with the terminal and/or git/github, please check out the resources at the end of the [Reproducibility notes](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture3.html)
+
 # What is multiple sequence alignment (MSA)?
 
 - Homology is inferred from an input of sequences that are assumed to have an evolutionary relationship: descended from a common ancestor
