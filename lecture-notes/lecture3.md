@@ -341,9 +341,17 @@ Local after: A--B--D--(merge commit)
 Individually,
 1. Fork the [phylo-class-social](https://github.com/crsl4/phylo-class-social) repository
 2. Git clone the forked repository in your local machine
+```
+git clone [URL]
+```
 3. Add the best book you read in 2022 to the `best-books.md` file. Use your preferred text editor
 4. Git add, git commit and git push to your fork
-5. Do a pull request to merge your additions to the original repository
+```
+git add .
+git commit -m "informative message"
+git push
+```
+5. Do a pull request to merge your additions to the original repository (this is done on GitHub)
 
 {: .warning }
 **Challenge:** Your file needs to be compatible with the most updated version of `best-books.md`
