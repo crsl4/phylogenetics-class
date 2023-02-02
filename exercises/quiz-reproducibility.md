@@ -7,7 +7,7 @@ nav_exclude: true
 
 **Objective:** Checkpoint to determine if you are comfortable with the reproducibility skills needed for the class.
 
-**Time:** 25 minutes.
+**Time:** 20 minutes.
 
 **Instructions:** 
 
