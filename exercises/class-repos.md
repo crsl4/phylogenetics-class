@@ -7,3 +7,6 @@ nav_exclude: true
 Ben Klementz: <https://github.com/bklementz/563-Final-Project.git>
 
 Kaitlyn Abshire: <https://github.com/kaitlynmabshire/Botany563-Final-Project.git>
+
+Rajvi Patel: <https://github.com/Rajvi-P/phylogenetics-final.git>
+
