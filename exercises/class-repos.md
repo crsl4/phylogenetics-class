@@ -20,3 +20,4 @@ Ellie Coppock <https://github.com/ecoppock02/Botany563_Phylo_Project.git>
 
 Corbin Bryan: <https://github.com/CorbinBryan/SectAmanitaPhylo.git>
 
+Wanting Wei: <https://github.com/wantingwei/botany563_phylo_final.git>
