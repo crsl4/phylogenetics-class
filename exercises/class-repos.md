@@ -26,3 +26,5 @@ Corbin Bryan: <https://github.com/CorbinBryan/SectAmanitaPhylo.git>
 Wanting Wei: <https://github.com/wantingwei/botany563_phylo_final.git>
 
 Madelyn Garbo https://github.com/MadelynGarbo/Final-Project-Botany.git 
+
+Hunter Ries: <https://github.com/RiesHunter/myProject.git>
