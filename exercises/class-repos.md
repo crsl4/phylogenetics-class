@@ -4,6 +4,9 @@ nav_exclude: true
 ---
 
 # Class project github repositories
+
+Haley Pifher: https://github.com/HaleyPifher/hmw1.git
+
 Ben Klementz: <https://github.com/bklementz/563-Final-Project.git>
 
 Kaitlyn Abshire: <https://github.com/kaitlynmabshire/Botany563-Final-Project.git>
@@ -21,3 +24,4 @@ Ellie Coppock <https://github.com/ecoppock02/Botany563_Phylo_Project.git>
 Corbin Bryan: <https://github.com/CorbinBryan/SectAmanitaPhylo.git>
 
 Wanting Wei: <https://github.com/wantingwei/botany563_phylo_final.git>
+
