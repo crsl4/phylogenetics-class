@@ -28,3 +28,10 @@ Wanting Wei: <https://github.com/wantingwei/botany563_phylo_final.git>
 Madelyn Garbo https://github.com/MadelynGarbo/Final-Project-Botany.git 
 
 Hunter Ries: <https://github.com/RiesHunter/myProject.git>
+
+Alec Lewis: https://github.com/alecclewis/Botany-563-final
+
+Aidyn Kehrli https://github.com/aidynkehrli/Botany-563.git
+
+Quaid Handy https://github.com/qhandyy/Bot563_Project_Version1
+
