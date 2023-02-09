@@ -20,6 +20,9 @@ At the end of today's session, you
 No pre-class work.
 
 
+{: .highlight }
+Let's take a look at data from last year's projects [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/data-examples.md).
+
 
 # MSA software key insights
 
