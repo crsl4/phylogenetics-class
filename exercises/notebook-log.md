@@ -548,7 +548,7 @@ PHYLIP-Alignment file created   [primatesAA-aligned.fasta]
 
 1. To download [T-Coffee](http://www.tcoffee.org/Projects/tcoffee/index.html#DOWNLOAD), we follow the steps in the [documentation](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html)
 
-- Download the tar file from [here](http://www.tcoffee.org/Packages/Stable/Latest/): `T-COFFEE_distribution_Version_13.45.0.4846264.tar.gz`
+- Download the tar file from [here](http://tcoffee-packages.s3-website.eu-central-1.amazonaws.com/#Stable/Latest/): `T-COFFEE_distribution_Version_13.45.0.4846264.tar.gz`
 
 - Move to the software folder:
 ```shell
