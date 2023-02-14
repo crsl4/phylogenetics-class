@@ -191,7 +191,7 @@ $ t_coffee sample_seq1.fasta
 **ClustalW**
 
 1. Download [ClustalW](http://www.clustal.org/clustal2/)
-2. Download the `primatesAA.fasta` file from the Phylogenetic Handbook [website](https://www.kuleuven.be/aidslab/phylogenybook/Data_sets.html) (22 primate aminoacid sequences). The website stopped working at some point, so we have the file in the class repo [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data).
+2. Download the `primatesAA.fasta` file from the Phylogenetic Handbook website (22 primate aminoacid sequences). The website stopped working at some point, so we have the file in the class repo [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data).
 3. Run `ClustalW`, see [docs](http://www.clustal.org/download/clustalw_help.txt)
 
 **T-Coffee**
