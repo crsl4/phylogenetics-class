@@ -235,8 +235,15 @@ We will not go over alignment at this stage as we will cover this in the next cl
 
 1. Downloaded [ClustalW](http://www.clustal.org/clustal2/) file `clustalw-2.1-macosx.dmg` and copied the folder into `Dropbox/software`
 
+Note that for Mac users, the executable in the link can be too old and incompatible. A reliable alternative is to install through conda (see [here](https://anaconda.org/bioconda/clustalw)):
+```
+conda install -c bioconda clustalw
+```
+Note that if you use this option, the executable `clustalw` will be added automatically to your path and you can call it from anywhere in the terminal.
+
 2. Downloaded the `primatesAA.fasta` file from the Phylogenetic Handbook [website](https://www.kuleuven.be/aidslab/phylogenybook/Data_sets.html). I had to copy and paste the sequences into a file with the same name. The website stopped working at some point, so we have the file in the class repo [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data).
 
+You can check how many sequences you have with `grep`:
 ```shell
 cd Dropbox/Documents/teaching/phylogenetics-class/BOT563/data
 grep ">" primatesAA.fasta | wc -l ## 22
@@ -244,7 +251,7 @@ grep ">" primatesAA.fasta | wc -l ## 22
 
 3. We find the running commands in the [docs](http://www.clustal.org/download/clustalw_help.txt)
 
-4. We run the command
+4. We run the command. Note that you do not need the full path if you installed ClustalW with conda, you only need to call `clustalw`
 
 ```shell
 $ ~/Dropbox/software/clustalw-2.1-macosx/clustalw2 -ALIGN -INFILE=primatesAA.fasta -OUTFILE=primatesAA-aligned.fasta -OUTPUT=FASTA
