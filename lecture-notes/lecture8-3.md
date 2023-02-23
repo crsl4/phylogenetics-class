@@ -19,7 +19,7 @@ nav_order: 10
 **Time:** 20 minutes
 
 **Instructions:** 
-1. Follow the R commands to obtain a ME tree from the sample data (or your own data!). The commands are listed in the [PDF tutorial]((https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf) that we are using as guideline, in our reproducible script [notebook-log.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/notebook-log.md) and on the following slides.
+1. Follow the R commands to obtain a ME tree from the sample data (or your own data!). The commands are listed in the [PDF tutorial](https://adegenet.r-forge.r-project.org/files/MSc-intro-phylo.1.1.pdf) that we are using as guideline, in our reproducible script [notebook-log.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/notebook-log.md) and on the following slides.
 2. After the allotted time, we will compare our work all together.
 
 ## Solution
