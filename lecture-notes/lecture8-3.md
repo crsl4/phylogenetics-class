@@ -43,7 +43,7 @@ dna <- fasta2DNAbin(file="http://adegenet.r-forge.r-project.org/files/usflu.fast
 ```
 
 4) Computing the genetic distances. They choose a Tamura
-and Nei 1993 model which allows for different rates of transitions and transversions, heterogeneous base frequencies, and between-site variation of the substitution rate (more on Lecture 9).
+and Nei 1993 model which allows for different rates of transitions and transversions, heterogeneous base frequencies, and between-site variation of the substitution rate (more on Models of Evolution).
 ```r
 D <- dist.dna(dna, model="TN93")
 ```
