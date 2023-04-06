@@ -2761,3 +2761,8 @@ algaemb-mb.nex.ckp~    algaemb-mb.nex.p       algaemb-mb.nex.trprobs
 ```
 
 For more on interpreting the results, continue reading the tutorial [here](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab#Running_MrBayes_and_interpreting_the_results).
+
+- Note that the `prset` lines are setting up the priors (how to set priors? Look at the [MrBayes tutorial](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab))
+- Note that the `lset` line is defining the substitution model (also check the MrBayes tutorial for other models; you can use the same model as for maximum likelihood)
+- The `mcmcp` line has the settings for the MCMC. You DO NOT want to only run 10000 generations (ngen=10000). Please increase this number a lot for your project.
+- Last, check out the Tracer tutorial (same link as MrBayes) on how we assess if the chain converged and had good mixing
