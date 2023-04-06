@@ -18,6 +18,9 @@ curl -O http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/da
 You can also use the primates fasta file that you aligned with ClustalW, MUSCLE or T-Coffee. 
 
 {: .important }
+Make sure to read the [MrBayes tutorial](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab) carefully to determine the appropriate MrBayes block for your data.
+
+{: .important }
 **Bonus points** for paying attention to the importants aspects that affect the performance of the chosen method.
 
 {: .important }

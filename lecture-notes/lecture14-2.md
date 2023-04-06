@@ -31,7 +31,7 @@ At the end of today's session, you will be able to
 We need multiple estimated gene trees (or estimated posterior distributions of gene trees from MrBayes) to run these methods. Both software provide toy data that we will use.
 
 {: .note }
-I still have not added these steps to the reproducible script: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md).
+These steps are not added to the reproducible script: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md). So, try to figure out the steps on your end and add them to your own reproducible script.
 
 
 ## Homework
