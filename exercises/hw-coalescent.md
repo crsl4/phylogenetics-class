@@ -13,4 +13,4 @@ nav_exclude: true
 3. Submit the link to your github commit in canvas
 
 
-**Note:** You do not need to have the output of the ML method to submit the HW, only need the commands you used.
+**Note:** You do not need to have the output to submit the HW, only need the commands you used.
