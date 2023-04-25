@@ -33,4 +33,7 @@ At the end of today's session, you will be able to
 - [Setting priors](https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures/blob/master/2019-08-12_SettingPriors.pdf)
 - [Troubleshooting](https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures/blob/master/2019-08-13_Troubleshooting.pdf)
 
+Documentation to learn more in the future:
+- [First tutorial](https://beast.community/first_tutorial) to run a simple BEAST analysis
+- [Second tutorial](https://beast.community/second_tutorial) to interpret the results
 
