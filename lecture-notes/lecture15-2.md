@@ -78,7 +78,7 @@ _We used X (reference) which [short description of the methodology]. We chose X 
 
 ## Final presentations (on last week of classes)
 
-- Final presentation is XX minutes long (very strict!)
+- Final presentation is 7 minutes long (very strict!)
 - Students divided in the two dates
 - We meet in class as usual
 - Students unable to attend in person due to exam or travel conflicts can choose to present remotely or to submit a video recording of their presentation
