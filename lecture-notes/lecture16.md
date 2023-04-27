@@ -116,7 +116,7 @@ nav_order: 23
   - Reproducible script
   - [Project guidelines](https://crsl4.github.io/phylogenetics-class/lecture-notes/project.html)
 - Presentations: May 2 and 4
-  - XX-minute presentations (very strict!)
+  - 7-minute presentations (very strict!)
   - Please send me your slides at 12pm (or earlier) on the day you are presenting
 - Official student evaluations
   - Forward me the email by May 8th to receive HW credit
