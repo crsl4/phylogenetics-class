@@ -44,7 +44,7 @@ By the end of the course, you will be able to
 2. Plan and produce reproducible scripts with the analysis of your own biological data
 3. Justify the data and model choices in your own data analysis
 4. Interpret the results of the most widely used phylogenetic methods in biological terms
-5. Orally present the results of your own phylogenomic data analyses based on the best scientific and reproducibility practices
+5. Orally present the results of your own phylogenomic data analyses based on the best scientific and reproducibility practices (graduate students only)
 
 
 ## Textbooks:
@@ -84,7 +84,7 @@ Out-of-class communication will be done via Slack where students will be able to
     - Coalescent method
 - Final research report (50 points)
 - Reproducible script (10 points)
-- Final presentation (10 points). The presentation is not graded. All students get 10 points for presenting their work on the assigned day. There are no exceptions on the day and students unable to attend class on those days can record their presentation and turn it in ahead of time.
+- Final presentation (10 points). The presentation is not graded. All students get 10 points for presenting their work on the assigned day. There are no exceptions on the day and students unable to attend class on those days can record their presentation and turn it in ahead of time. The presentation is required for graduate students, and is optional for undergraduate students, but provides extra points.
 
 Research report and reproducible script can be submitted up to one week late to the original deadline, bit they lose 20% of available points. That is, final research report is worth 50 points if turned in on time, but only 40 points if turned in one week late.
 
