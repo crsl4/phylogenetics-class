@@ -10,7 +10,7 @@ nav_order: 1
 
 A course in the theory and practice of phylogenetic inference from DNA sequence data. Students will learn all the necessary components of state-of-the-art phylogenomic analyses and apply the knowledge to the data analyses of their own organisms.
 
-- Spring 2023: Tuesday and Thursday 1:00-2:15pm
+- Spring 2024: Tuesday and Thursday 1:00-2:15pm
 - Instructor: Claudia Solis-Lemus, PhD 
     - Email: solislemus@wisc.edu
     - Website: [https://solislemuslab.github.io/](https://solislemuslab.github.io/)
