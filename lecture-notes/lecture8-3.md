@@ -68,6 +68,9 @@ title("A simple NJ tree")
 <div style="text-align:center"><img src="../assets/pics/nj-tree.png" width="350"/></div>
 
 
+{: .highlight }
+How do we interpret the tree?
+
 ## Summary of Software R package _ape_
 
 Main distance functions:

@@ -188,6 +188,9 @@ Your files should follow the good naming practices. Read [Jenny Bryan's notes](h
 - Meaningful names
 - Easy to sort
 
+{: .warning }
+Points will be deducted for file names that do not follow the good naming practices! Most common mistake: spaces in file names.
+
 
 ## A cautionary tale
 
