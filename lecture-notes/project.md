@@ -25,6 +25,7 @@ class: left, top
 
 - Not enough to write: "we used X, Y, and Z"
 - Better to write: "We used X (reference) which [short description of the methodology]. We chose X because [short description of strengths]. We know that X has the following limitations [short description of weaknesses] and that it has the main following assumptions [short description of the assumptions]. The software X requires the user to input the following parameters: [parameter/user choices selected]"
+- Use the Methods section in [Yi et al (2021)](https://pubmed.ncbi.nlm.nih.gov/33607033/) as a template of how to write the Methods section in your project
 
 ---
 class: left, top
