@@ -19,7 +19,7 @@ class: left, top
 # Welcome to Botany/Plant Path 563: Phylogenetic Analysis of Molecular Data!
 
 ### Introductions
-Let's start with short introductions: name, year, program and one word that describes how you feel at the beginning of 2023 (repetitions allowed).
+Let's start with short introductions: name, year, program and one word that describes how you feel at the beginning of 2024 (repetitions allowed).
 
 ---
 class: left, top
@@ -84,7 +84,7 @@ class: left, top
 
 ## Class communication: Slack
 
-Slack join link in canvas (expires on January 28th). Let's use this time to go over the workspace for those not familiar with slack.
+Slack join link in canvas (expires on January 29th). Let's use this time to go over the workspace for those not familiar with slack.
 
 Slack rules:
 
@@ -96,7 +96,7 @@ Slack rules:
 ### First HW (very very important!):
 - Join to slack (we can give some minutes today for people to do it)
 - Post something in #botany563: cute photos of pets, question to engaged the community, short intro, favorite restaurant in Madison, favorite winter activity
-- **Deadline:** Friday January 26th, before class.
+- **Deadline:** Thursday January 25th, before class.
 
 ---
 class: left, top
@@ -164,7 +164,7 @@ class: left, top
 
 ## Learning values
 
-To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1qSx12EXpJAleLc30UCJPIN6c4i0h1iWVnITIrdjSNCM/edit?usp=sharing).
+To conclude class, let's do an exercise on learning values. Open this [shared google doc](https://docs.google.com/presentation/d/1OO6hHqE_xABVZHjNgd7QrONgxSBEO-sQmjMxMI7QqKM/edit?usp=sharing).
 
 
 ## Questions?

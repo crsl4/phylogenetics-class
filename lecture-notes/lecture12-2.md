@@ -31,8 +31,8 @@ At the end of today's session, you will be able to
 **Instructions:**
 
 1. Separate group discussions (30 minutes): Students will discuss with their respective groups and prepare a 10-minute presentation for the whole class. Use the [software cheatsheet](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/software-cheatsheet.md) as guideline for your discussion and presentation. Use these google slides:
-  - [MrBayes](https://docs.google.com/presentation/d/1AM3hB53Yc0TOMilK5WtqqLHNUaGnWX0Lk3aknvqE4WE/edit?usp=sharing)
-  - [RevBayes](https://docs.google.com/presentation/d/1E73CFSq2EIRzHSGXX6D9l7K1IV6wS5L8rzkLB3ifXUc/edit?usp=sharing)
+  - [MrBayes](https://docs.google.com/presentation/d/1epdzO4n2cmkQnCxceU17BjnwXdRuYkVOQygeDjhkrqc/edit?usp=drive_link)
+  - [RevBayes](https://docs.google.com/presentation/d/1rnouEMQYAMY6r2OnWt3BbQ9xHD_UCIKPqQPFvVjLyxA/edit?usp=drive_link)
 2. Group presentations (20 minutes total; 10 minutes per group): Each group will summarize their discussion in a 10-minute presentation to the class.
 
 

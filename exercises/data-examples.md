@@ -3,7 +3,7 @@ layout: default
 nav_exclude: true
 ---
 
-# Examples of data from last year
+# Examples of data from previous years
 
 - I plan to reconstruct the phylogeny of neotropical Ficus sect. Pharmacosycea by using nuclear regions publicly available in GenBank (e.g., ITS, ETS, G3pdh), and previously used by Pederneiras et al. (2015) and Machado et al. (2018). The phylogenetic tree will aid in clarifying species concepts in this widely cryptic clade through phylogenetic comparative methods.
 

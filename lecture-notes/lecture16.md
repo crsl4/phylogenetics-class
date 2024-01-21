@@ -111,16 +111,16 @@ nav_order: 23
 
 # Final housekeeping
 
-- Project deadline: May 5th
+- Project deadline: May 6th
   - Final project
   - Reproducible script
   - [Project guidelines](https://crsl4.github.io/phylogenetics-class/lecture-notes/project.html)
-- Presentations: May 2 and 4
+- Presentations: Apr 30 and May 2
   - 7-minute presentations (very strict!)
   - Please send me your slides at 12pm (or earlier) on the day you are presenting
 - Official student evaluations
-  - Forward me the email by May 8th to receive HW credit
+  - Forward me the email by May 6th to receive HW credit
 - Class feedback google form (link on canvas and slack)
   - Highly appreciated
   - Less than 5 minutes to respond
-- Advice for future students: [slides](https://docs.google.com/presentation/d/1qSx12EXpJAleLc30UCJPIN6c4i0h1iWVnITIrdjSNCM/edit?usp=sharing)
+- Advice for future students: [slides](https://docs.google.com/presentation/d/1OO6hHqE_xABVZHjNgd7QrONgxSBEO-sQmjMxMI7QqKM/edit?usp=drive_link)
