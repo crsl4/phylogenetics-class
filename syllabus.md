@@ -7,7 +7,7 @@ nav_exclude: true
 # Syllabus: Botany/Plant Path 563 
 ## Phylogenetic Analysis of Molecular Data (UW-Madison)
 
-Spring 2023: Tuesdays and Thursdays 1:00-2:15pm
+Spring 2024: Tuesdays and Thursdays 1:00-2:15pm
 
 **Instructor:** 
 
@@ -164,6 +164,17 @@ Note: this is not a grading rubric. This table is meant to give you an idea of w
 8. Reconciliation
 9. Species delimitation
 10. SNP methods
+
+## Expectations
+
+Students enrolled in the class are expected to:
+- keep up with the class material
+- attend lectures as much as possible
+- read carefully the pre-class materials
+- ask questions when things are unclear
+- take ownership of their learning experience
+- attend office hours to resolve doubts and problems regarding the class material or the final project
+- participate in class discussions
 
 
 ## Academic Policies
