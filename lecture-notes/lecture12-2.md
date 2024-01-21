@@ -20,7 +20,7 @@ At the end of today's session, you will be able to
 
 - Read the papers corresponding to your group (in canvas):
   - [MrBayes1](https://academic.oup.com/bioinformatics/article/17/8/754/235132) and [MrBayes2](https://academic.oup.com/bioinformatics/article/19/12/1572/257621)
-  - [Larget and Simon, 1999](https://academic.oup.com/mbe/article/16/6/750/2925469)
+  - [RevBayes](https://academic.oup.com/sysbio/article/65/4/726/1753608)
 
 
 
@@ -32,7 +32,7 @@ At the end of today's session, you will be able to
 
 1. Separate group discussions (30 minutes): Students will discuss with their respective groups and prepare a 10-minute presentation for the whole class. Use the [software cheatsheet](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/software-cheatsheet.md) as guideline for your discussion and presentation. Use these google slides:
   - [MrBayes](https://docs.google.com/presentation/d/1AM3hB53Yc0TOMilK5WtqqLHNUaGnWX0Lk3aknvqE4WE/edit?usp=sharing)
-  - [Larget Simon (1999)](https://docs.google.com/presentation/d/1E73CFSq2EIRzHSGXX6D9l7K1IV6wS5L8rzkLB3ifXUc/edit?usp=sharing)
+  - [RevBayes](https://docs.google.com/presentation/d/1E73CFSq2EIRzHSGXX6D9l7K1IV6wS5L8rzkLB3ifXUc/edit?usp=sharing)
 2. Group presentations (20 minutes total; 10 minutes per group): Each group will summarize their discussion in a 10-minute presentation to the class.
 
 
