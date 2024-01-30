@@ -347,7 +347,7 @@ Individually,
 ```
 git clone [URL]
 ```
-3. Add the best book you read in 2022 to the `best-books.md` file. Use your preferred text editor
+3. Add the best book you read in 2023 to the `best-books.md` file. Use your preferred text editor
 4. Git add, git commit and git push to your fork:
 ```
 git add .
