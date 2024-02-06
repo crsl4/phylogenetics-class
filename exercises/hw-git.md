@@ -32,9 +32,9 @@ nav_exclude: true
 
 **Instructions:** 
 
-1. Follow the steps above to create a github repository and to git clone it locally
+1. Follow the steps in class to create a github repository and to git clone it locally
 2. Make sure that your folder has the right structure
 3. Create a `notebook-log.md` and a `.gitignore` file. Hint: Checkout the `.gitignore` file of the `phylo-class-social` repository
-4. Add the link to your repository via a pull request to the [class-repos.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/class-repos.md) file. Note that you might need to resolve conflicts before your pull request is successfully merged
+4. Add the link to your repository via a pull request to the [class-repos.md](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/class-repos.md) file. Note that you might need to resolve conflicts before your pull request is successfully merged. Recall the exercise on adding your book to `phylo-class-social`.
 5. Submit the link to your repo and to the pull request in canvas
 
