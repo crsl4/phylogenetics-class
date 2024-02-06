@@ -9,4 +9,4 @@ nav_exclude: true
 * Zach Farrand: https://github.com/zfarrand/Farrand_PhyloProject.git
 * Jinhui: https://github.com/JinhuiWangwisc/Jinhui_Botany_563.git
 * Avery Imes: https://github.com/aimes1/PhyloGen563.git
-
+* Joseph: https://github.com/jrtwalston/myProject.git
