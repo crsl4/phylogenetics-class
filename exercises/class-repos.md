@@ -16,3 +16,4 @@ nav_exclude: true
 * Ben: https://github.com/benhaef/phylogenetics_project 
 * Josh: https://github.com/jderuyter/slc4-phylogeny.git
 * Harrison: https://github.com/harrisonestes/Harrison563project.git
+* Thalia: https://github.com/thohenkirk/phylo-final-project.git
