@@ -6,6 +6,10 @@ nav_order: 10
 
 # Distance and Parsimony methods (Part 3: computer lab)
 
+{: .highlight }
+**Final project datasets:** First, let's check the different datasets that will be used in the final projects (google slides link in canvas).
+
+
 # Software R package _ape_: Distance-based methods
 
 - _ape_ is one of the most widely used phylogenetic software
