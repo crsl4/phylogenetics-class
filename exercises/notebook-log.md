@@ -1227,6 +1227,8 @@ OUTPUT RESULTS
 
 1. Downloaded [MUSCLE](https://www.drive5.com/muscle/downloads.htm) with file `muscle3.8.31_i86darwin64.tar.gz`
 
+Note that from 2024 on, MUSCLE is not downloaded as a tar file, but as an executable directy, so you might need to skip step 2. Check the MUSCLE [docs](https://drive5.com/muscle5/manual/install.html) if your computer does not recognize the file as an executable.
+
 2. Move to software and untar:
 ```shell
 mv ~/Downloads/muscle3.8.31_i86darwin64.tar.gz ~/Dropbox/software/
