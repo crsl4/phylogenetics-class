@@ -1,0 +1,3 @@
+Data will come from GenBank from the paper Liu and Smith from 2021.
+
+For homework due 2-20-2024, I am still unsure what alignment method to use for my data. I believe that ClustalW would be best, but my laptop's operating system is too new to work with it. I have downloaded 25 nucleotides from GenBank all from the paper Liu and Smith. I do not plan on using T-Coffee because of Dr. Claudia's suggestion (since it would likely be the slowest or most complex). M-Coffee intrigued me but that seems too complex for right now. I plan on going to office hours next week when Dr. Claudia is back because I am confused on how I would know how to write a reproducible script based on an alignment method from the Alignathon paper.
