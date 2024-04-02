@@ -20,6 +20,8 @@ At the end of today's session, you will be able to
 
 - Optional readings: HB Ch 5-6, Baum Ch 7-8
 
+{: .highlight }
+**Final project datasets:** First, let's check the different datasets that will be used in the final projects (google slides link in canvas).
 
 {: .note }
 **Phylogenetic inference:** Step 1) Choose the criterion to use: distances, parsimony, likelihood. Step 2) Search the space of trees until you find the optimum
