@@ -33,8 +33,8 @@ At the end of today's session, you will be able to
 **Instructions:**
 
 1. Separate group discussions (30 minutes): Students will discuss with their respective groups and prepare a 10-minute presentation for the whole class. Use the [software cheatsheet](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/software-cheatsheet.md) as guideline for your discussion and presentation. Use these google slides:
-  - [RAxML](https://docs.google.com/presentation/d/1nyhsvDzDWgpzL5S-LdfvW9Rb1oJLI3DKu7NAFsrVk-w/edit?usp=drive_link)
-  - [IQ-Tree](https://docs.google.com/presentation/d/1rZz5DYNQwxkEFQv9B2V2mfTdpeBKJ0a8ZqkSnJ_RQdY/edit?usp=drive_link)
+  - [RAxML](https://docs.google.com/presentation/d/1zJ2fJpWHywxnuIdVbwzkPAT7ZgTp9q5a3oUO31doYXM/edit?usp=sharing)
+  - [IQ-Tree](https://docs.google.com/presentation/d/1YL_ds1n1dcaY-k8ybMjtLyjVNa1sG6qV6qxBhlKl0RM/edit?usp=sharing)
 2. Group presentations (20 minutes total; 10 minutes per group): Each group will summarize their discussion in a 10-minute presentation to the class.
 
 {: .important }
