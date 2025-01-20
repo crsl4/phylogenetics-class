@@ -4,7 +4,7 @@ nav_exclude: true
 ---
 
 # Notebook reproducible script for Botany 563
-(Written by CSL in Spring 2021; Updated by CSL in Spring 2022)
+(Written by CSL in Spring 2021; Updated by CSL in Spring 2022; Updated by CSL in Spring 2025)
 
 
 ## QC with phyluce
@@ -230,6 +230,18 @@ We will not go over alignment at this stage as we will cover this in the next cl
 
 
 ## Alignment methods
+
+Recently, we found out that it is easier to install all three software via [BioConda](https://bioconda.github.io/):
+
+```
+conda install -c bioconda clustalw
+conda install -c bioconda t-coffee
+conda install -c bioconda muscle
+```
+
+For some people, it is easier to do the similar installation but with [MiniConda](https://docs.anaconda.com/free/miniconda/).
+
+The following sections include description of installation of each software, but that can be skipped if installation has been success with BioConda or MiniConda.
 
 ### ClustalW
 
