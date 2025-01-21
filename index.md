@@ -37,7 +37,7 @@ By the end of the course, you will be able to
 
 
 
-## Schedule 2024
+## Schedule 2025
 
 | Session | Topic | Pre-class work | At the end of the session | Lecture notes | Homework | 
 | :---:   | :---: | :---:       | :---:                     | :---: | :---: | 
