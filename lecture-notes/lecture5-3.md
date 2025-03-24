@@ -81,9 +81,9 @@ _Figure 9.9 in Warnow (2018) Computational phylogenetics_
 **Instructions:**
 
 1. Separate group discussions (25 minutes): Students will discuss with their respective groups and prepare a 10-minute presentation for the whole class. Use these google slides:
-  - [ClustalW](https://docs.google.com/presentation/d/1eEstaSwu54rkQERawbAFIdZk9DFL31axmTo0lGmunOs/edit?usp=drive_link)
-  - [MUSCLE](https://docs.google.com/presentation/d/1UWCriupXTdaP0pP3MC77N3Zv92k-JmHZ31wjO-zCGXc/edit?usp=drive_link)
-  - [T-Coffee](https://docs.google.com/presentation/d/1Xr2HAaxCLTX_VWFXWhfyOksjM3moG0rD7D3lQ-_rl7Q/edit?usp=drive_link)
+  - [ClustalW](https://docs.google.com/presentation/d/1FNd-wAynbsTjxFQvKh9L6R_SFLEeRHTbLDUQifb-Vzc/edit#slide=id.p)
+  - [MUSCLE](https://docs.google.com/presentation/d/1RlTcmfqFhnzXg1PcXalzDcRhUGqERVIaUvgka-NzNzA/edit#slide=id.p)
+  - [T-Coffee](https://docs.google.com/presentation/d/1clva1o8mRdZpfRuuXvprAX78PQdoDjm1HWKaS8kS-o4/edit#slide=id.p)
 
 2. Group presentations (30 minutes total; 10 minutes per group): Each group will summarize their discussion in a 10-minute presentation to the class.
 
