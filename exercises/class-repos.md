@@ -6,6 +6,8 @@ nav_exclude: true
 
 # Class project github repositories
 
+
+- Alan Liu: https://github.com/zliu822/Botany563Project.git
 - Tom's Repo: https://github.com/Tcoyne3/TomCoyneProjectFolder.git
 - Lilly's repository: https://github.com/lillianmager/PhyloProject.git
 - Emma: https://github.com/EPD1223/Final_project.git
