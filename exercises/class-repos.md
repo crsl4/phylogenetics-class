@@ -5,6 +5,8 @@ nav_exclude: true
 
 # Class project github repositories
 
+
+- Kirsty: https://github.com/yuchangyue1209/class-project.git
 - Lindsay: https://github.com/lpropst140/pl-path.git
 - Sara's Repository: https://github.com/seengel11/botany563.git
 - Ty: https://github.com/tyyxuu/Phylogenetic-project.git
