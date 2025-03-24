@@ -2,11 +2,12 @@
 layout: default
 nav_exclude: true
 
-Link to my repository: https://github.com/EPD1223/Final_project.git
 ---
 
 # Class project github repositories
 
+- Lilly's repository: https://github.com/lillianmager/PhyloProject.git
+- Emma: https://github.com/EPD1223/Final_project.git
 - Aharon: https://github.com/schlepandslide/phylogenetics-class.git
 - Lauren: https://github.com/ltennyson/springproject.git
 - Kirsty: https://github.com/yuchangyue1209/class-project.git
@@ -16,6 +17,4 @@ Link to my repository: https://github.com/EPD1223/Final_project.git
 - Sydney B: https://github.com/sydneyajo/PPiPFK.git
 - Melette: https://github.com/mrdevore/PP563.git
 - Michael Hall's Phylogenetic Project Github Repository Link https://github.com/mdhUW07/myProject.git
-
-
 
