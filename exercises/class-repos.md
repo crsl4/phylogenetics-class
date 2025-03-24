@@ -7,6 +7,7 @@ nav_exclude: true
 # Class project github repositories
 
 
+- Gannon: https://github.com/gannon21k/GannonPLPATH.git 
 - Shuqi: https://github.com/Shuqi-Ouyang/Botany563-classfiles.git
 - Jeremy Abels: https://github.com/jeremyabels/JAbelsBot563
 - Alan Liu: https://github.com/zliu822/Botany563Project.git
