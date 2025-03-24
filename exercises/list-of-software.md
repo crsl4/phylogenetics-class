@@ -38,6 +38,20 @@ which meant that the OS version was too advanced. But I ended up able to install
 conda create -n clustalw2 -c biobuilds -y clustalw
 ```
 
+Some people also had trouble with `libcxx` not installed. Alternatives that worked:
+
+```
+conda install conda-forge/label/libcxx_macos_lt_12::libcxx
+```
+
+or 
+
+```
+conda install -c conda-forge libcxx
+conda install -c conda-forge clustalw
+```
+
+
 ### OrthoFinder
 
 In Mac, you can install with (thanks Grant!):
