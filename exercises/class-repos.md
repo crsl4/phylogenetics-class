@@ -6,7 +6,6 @@ nav_exclude: true
 
 # Class project github repositories
 
-
 - Grace Swenson https://github.com/graceswenson/project.git
 - Gannon: https://github.com/gannon21k/GannonPLPATH.git 
 - Shuqi: https://github.com/Shuqi-Ouyang/Botany563-classfiles.git
@@ -24,4 +23,4 @@ nav_exclude: true
 - Sydney B: https://github.com/sydneyajo/PPiPFK.git
 - Melette: https://github.com/mrdevore/PP563.git
 - Michael Hall's Phylogenetic Project Github Repository Link https://github.com/mdhUW07/myProject.git
-
+- Mike Hensley: https://github.com/mdhensley7/BOT563_MH
