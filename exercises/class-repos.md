@@ -7,6 +7,7 @@ nav_exclude: true
 # Class project github repositories
 
 
+- Jeremy Abels: https://github.com/jeremyabels/JAbelsBot563
 - Alan Liu: https://github.com/zliu822/Botany563Project.git
 - Tom's Repo: https://github.com/Tcoyne3/TomCoyneProjectFolder.git
 - Lilly's repository: https://github.com/lillianmager/PhyloProject.git
