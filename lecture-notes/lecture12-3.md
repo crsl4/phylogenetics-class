@@ -8,17 +8,14 @@ nav_order: 17
 
 **Instructions:** Run MrBayes on the toy dataset described below. You can use my reproducible script as guideline: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md).
 
-[MrBayes tutorial](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab)
 
-New toy dataset: Download the data (`algaemb.nex`)
-```
-curl -O http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/algaemb.nex
-```
+New toy dataset (`algaemb.nex`) in the `data` folder.
+
 
 You can also use the primates fasta file that you aligned with ClustalW, MUSCLE or T-Coffee. 
 
 {: .important }
-Make sure to read the [MrBayes tutorial](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab) carefully to determine the appropriate MrBayes block for your data.
+After the computer lab, make sure to read the [MrBayes tutorial](https://github.com/gdw-workshop/2018_GDW_Workshop/blob/master/exercises/MrBayesTutorial.md) carefully to determine the appropriate MrBayes block for your data.
 
 {: .important }
 **Bonus points** for paying attention to the importants aspects that affect the performance of the chosen method.
