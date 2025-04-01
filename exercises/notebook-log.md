@@ -2211,10 +2211,9 @@ Analysis results written to:
 
 Date and Time: Sun Mar  7 07:48:33 2021
 ```
+## MrBayes 
 
-## MrBayes
-
-Following [this tutorial](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab).
+We followed [this tutorial](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab) but note that the link is broken now. The commands are still below.
 
 1. Download MrBayes from [here](http://nbisweden.github.io/MrBayes/). In mac:
 ```shell
@@ -2232,7 +2231,7 @@ sudo chown -R $(whoami) /usr/local/Cellar/open-mpi/4.1.0
 brew reinstall mrbayes
 ```
 
-2. Download the data (`algaemb.nex`)
+2. We downloaded the data (`algaemb.nex`) from the link below, but it is broken, so we can now use the data file that is already in the [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data) in the class repository.
 
 ```shell
 cd Dropbox/Documents/teaching/phylogenetics-class/BOT563/data
@@ -2774,9 +2773,10 @@ algaemb-mb.nex.ckp     algaemb-mb.nex.mcmc    algaemb-mb.nex.t       algaemb-mb.
 algaemb-mb.nex.ckp~    algaemb-mb.nex.p       algaemb-mb.nex.trprobs
 ```
 
-For more on interpreting the results, continue reading the tutorial [here](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab#Running_MrBayes_and_interpreting_the_results).
-
-- Note that the `prset` lines are setting up the priors (how to set priors? Look at the [MrBayes tutorial](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_MrBayes_Lab))
+- Note that the `prset` lines are setting up the priors 
 - Note that the `lset` line is defining the substitution model (also check the MrBayes tutorial for other models; you can use the same model as for maximum likelihood)
 - The `mcmcp` line has the settings for the MCMC. You DO NOT want to only run 10000 generations (ngen=10000). Please increase this number a lot for your project.
 - Last, check out the Tracer tutorial (same link as MrBayes) on how we assess if the chain converged and had good mixing
+
+
+We can now learn more in [this new tutorial](https://github.com/gdw-workshop/2018_GDW_Workshop/blob/master/exercises/MrBayesTutorial.md).
