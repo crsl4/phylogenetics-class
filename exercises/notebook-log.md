@@ -2231,6 +2231,8 @@ sudo chown -R $(whoami) /usr/local/Cellar/open-mpi/4.1.0
 brew reinstall mrbayes
 ```
 
+Note that some people can install with `brew install mrbayes open-mpi`. Also, there are new instructions to git clone and compile directly [here](https://github.com/NBISweden/MrBayes/tree/v3.2.7a).
+
 2. We downloaded the data (`algaemb.nex`) from the link below, but it is broken, so we can now use the data file that is already in the [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data) in the class repository.
 
 ```shell
