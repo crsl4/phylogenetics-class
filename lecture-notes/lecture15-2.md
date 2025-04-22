@@ -30,7 +30,7 @@ At the end of today's session, you will be able to
 Instructions: Choose a tutorial from the whole list of [BEAST tutorials](https://taming-the-beast.org/tutorials/). Two that stand out: 
 
 - [Intro to BEAST](https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/)
-- [Multispecies coalescent on *BEAST](https://taming-the-beast.org/tutorials/StarBeast-Tutorial/)
+- [Multispecies coalescent on StarBEAST3](https://github.com/rbouckaert/starbeast3/blob/master/workshop/README.md)
 
 Create our own reproducible script.
 
