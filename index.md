@@ -81,8 +81,8 @@ By the end of the course, you will be able to
 | 04/22 | HW due: [Coalescent HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md) | | | | |
 | 04/24 | What else is out there? (Final project Q&A) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) again | You will hear a brief overview of topics not covered in this class and will have access to resources to learn more | [lecture16](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture16.html) | |
 | 04/29 | **No class:** Time to work on project
-| 05/01 | Project presentations
-| 05/06 | Project presentations
+| 05/01 | Project presentations (Russell 216)
+| 05/06 | Project presentations (Russell A228)
 | 05/07 | Final project+reproducible script due  | | | |
 
 
