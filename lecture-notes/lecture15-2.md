@@ -4,6 +4,8 @@ title: Co-estimation II
 nav_order: 22
 ---
 
+# Co-estimation Methods (Part 2)
+
 ### Previous class check-up
 - We studied the co-estimation method in BEAST
 
@@ -60,7 +62,7 @@ Final project content:
 - Abstract: 200 words or less
 - Introduction: convey the background, objective and significance of your analysis
 - Materials and Methods: describe in details the data and the different methods, software, assumptions or any methodological - choices that you did; appropriately cite other papers or software used
-  - Use the Methods section in [Yi et al (2021)](https://pubmed.ncbi.nlm.nih.gov/33607033/) as a template of how to write the Methods section in your project
+  - Use the Methods section in [Yi et al (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8347878/) as a template of how to write the Methods section in your project
 - Results: clearly and effectively describe the results of your analysis
 - Discussion: summarize the conclusion of your findings and highlight any weaknesses or limitations of your approach
 - References
