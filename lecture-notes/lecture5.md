@@ -26,11 +26,15 @@ mathjax: true
 At the end of today's session, you
 - will be able to explain the most widely used algorithms for pairwise sequence alignment (Needleman-Wunsch algorithm)
 
-{: .note }
-No pre-class work.
+{: .important-title }
+> Pre-class work
+>
+> None.
 
-{: .important }
-After today, we will assume that 1) we are all comfortable with the terminal and 2) we are all comfortable with git/github. Note that no one needs to memorize anything. You will always have access to the notes and google. If you are still struggling with the terminal and/or git/github, please check out the resources at the end of the [Reproducibility notes](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture3.html). Let's do [this short quiz](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/quiz-reproducibility.md).
+{: .new-title }
+> Stop and check
+> 
+> After today, we will assume that 1) we are all comfortable with the terminal and 2) we are all comfortable with git/github. Note that no one needs to memorize anything. You will always have access to the notes and google. If you are still struggling with the terminal and/or git/github, please check out the resources at the end of the [Reproducibility notes](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture3.html). Let's do [this short quiz](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/quiz-reproducibility.md).
 
 # What is multiple sequence alignment (MSA)?
 
@@ -84,7 +88,7 @@ AG-AT
 - The algorithm will ultimately choose an alignment based on how we penalize each of the events
 
 
-{: .important }
+{: .highlight }
 **First key insight for MSA:**
 We are guiding the algorithms by selecting the penalties for evolutionary events: substitutions, deletions, insersions. It has nothing to do with _true_ evolutionary events or _true_ homology.
 
@@ -107,7 +111,7 @@ We are guiding the algorithms by selecting the penalties for evolutionary events
 - cost of substitution: 1
 
 
-{: .note }
+{: .highlight }
 Some software/books will use "weights" instead of costs: weight for match: 5; weight for gap: -1; weight for mismatch (substitution): -1.
 I prefer to use costs because the idea of negative weights is not intuitive.
 
@@ -152,10 +156,12 @@ We will continue to use cost for simplicity.
 
 We will define a matrix $F$ whose entries $F(i,j)$ will represent the minimum cost to align sub-sequences $A_i$ and $B_j$ based on the costs.
 
-{: .highlight }
-Stop and check: Do you know what a matrix is and how (i,j) entries are defined?
+{: .new-title }
+> Stop and check
+> 
+> Do you know what a matrix is and how (i,j) entries are defined?
 
-{: .note }
+{: .highlight }
 **Main principle:** When we want to compute $F(i,j)$, we assume that we have already computed all smaller sequences (sub-problems): $F(i-1,j-1), F(i,j-1), F(i-1,j)$.
 
 The algorithm will focus on two residues at a time: $a_i$ and $b_j$, and for them, they are three options:
@@ -215,7 +221,9 @@ ATCG
 {: .important }
 **Take-home message:** The final alignment depends on the costs of gaps and substitutions.
 
-{: .important }
-You can watch all the steps of the Needleman-Wunsch algoritm in this [YouTube video](https://www.youtube.com/watch?v=1m6F_PsIx5w).
+{: .warning-title }
+> YouTube
+> 
+> You can watch all the steps of the Needleman-Wunsch algoritm in this [YouTube video](https://www.youtube.com/watch?v=1m6F_PsIx5w).
 
 

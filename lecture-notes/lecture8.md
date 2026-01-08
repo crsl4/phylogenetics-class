@@ -16,14 +16,17 @@ At the end of today's session, you will be able to
 - assess the strenghts and weaknesses of every approach
 - use R for tree estimation based on distances or parsinomy
 
-### Pre-class work
+{: .important-title}
+> Pre-class work
+> 
+> Optional readings: HB Ch 5-6, Baum Ch 7-8
 
-- Optional readings: HB Ch 5-6, Baum Ch 7-8
+{: .new-title }
+> Stop and check
+> 
+> **Final project datasets:** First, let's check the different datasets that will be used in the final projects (google slides link in canvas).
 
 {: .highlight }
-**Final project datasets:** First, let's check the different datasets that will be used in the final projects (google slides link in canvas).
-
-{: .note }
 **Phylogenetic inference:** Step 1) Choose the criterion to use: distances, parsimony, likelihood. Step 2) Search the space of trees until you find the optimum
 
 # Phylogenetic methods
@@ -95,7 +98,7 @@ UPGMA: $d_{(AB)k} = \frac{N_A d_{A,k}+N_B d_{B,k}}{N_A + N_B}$ (averaged by numb
 
 3) Repeat until all taxa are clustered
 
-{: .note }
+{: .highlight }
 We are not searching the space of trees here. This is an algorithm that returns a tree that agrees with the distances provided.
 
 

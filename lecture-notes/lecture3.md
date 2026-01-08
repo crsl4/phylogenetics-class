@@ -173,10 +173,7 @@ If you use RStudio or Visual Studio Code (VSCode), you can do these commands in 
 {: .highlight }
 > Summary until this point
 >
-> - git basics
->  - git add
->  - git commit
->  - git push
+> - git basics: git add, git commit, git push
 > - git can be used nicely via the terminal, but there are interfaces (e.g. within RStudio or VSCode) that can be more interactive than the terminal
 > - We want to work off a text file (or md file), and use the git basics to have our github version updated at all moment
 
@@ -329,7 +326,7 @@ Local after: A--B--D--(merge commit)
 {: .warning-title }
 > YouTube
 >
-> You can watch all these concepts again in the [YouTube video](https://www.youtube.com/watch?v=7KCqpL0cde8)
+> You can watch all these concepts again in the [YouTube video](https://www.youtube.com/watch?v=7KCqpL0cde8).
 
 # In-class exercise with git
 

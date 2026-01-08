@@ -11,12 +11,16 @@ nav_order: 6
 At the end of today's session, you
 - will learn to use different software options: MAFFT and MUSCLE
 
-{: .note }
-Pre-class work: Read the paper corresponding to your canvas group: [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623), [MAFFT](https://academic.oup.com/nar/article/30/14/3059/2904316)
+{: .important-title }
+> Pre-class work
+>
+> Read the paper corresponding to your canvas group: [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623), [MAFFT](https://academic.oup.com/nar/article/30/14/3059/2904316)
 
 
-{: .highlight }
-First, let's take a look at data from last year's projects [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/data-examples.md).
+{: .new-title }
+> Stop and check
+> 
+> First, let's take a look at data from last year's projects [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/data-examples.md).
 
 ## Iterative refinement: MUSCLE and MAFFT
 

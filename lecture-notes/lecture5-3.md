@@ -15,31 +15,36 @@ At the end of today's session, you will be able to
 - highlight the main strengths and weaknesses of ClustalW and how to run it
 
 
-### Pre-class work
+{: .important-title}
+> Pre-class work
+>
+> Read the paper [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/).
 
-Read the paper [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/)
 
-
-### Project checklist: heavy HW on your data starting now
-
-- Until now:
-  - Created your project github repo
-  - Added the link to the `class-repos.md` via pull request
-  - Added me as collaborator on your github repo
-  - Data chosen and added 1 slide about it to the shared google slides (link in canvas)
-      - Don't wait on your data: you can use public data because you will be creating scripts to use later on the "real" data
-  - Added a description about your data in your `notebook-log.md` (or similar reproducible script) in your github repo and pushed
-  - QC on your data if needed: not perfect/complete, but at least a plan pushed to your github repo
-- Next item: 
-  - Alignment work pushed to your github repo
-
-### Expectations as we move forward to heavy HW on your data
-- You will be working on your data at home:
-  - Troubleshooting with different data formats
-  - Troubleshooting with software installation for your operating system
-- Actively ask questions!
-  - Slack
-  - Office hours
+{: .new-title}
+> Stop and check
+> 
+> **Project checklist:** heavy HW on your data starting now
+>
+> Until now:
+>
+>  - Created your project github repo
+>  - Added the link to the `class-repos.md` via pull request
+>  - Added me as collaborator on your github repo
+>  - Data chosen and added 1 slide about it to the shared google slides (link in canvas. Don't wait on your data: you can use public data because you will be creating scripts to use later on the "real" data
+>  - Added a description about your data in your `notebook-log.md` (or similar reproducible script) in your github repo and pushed
+>  - QC on your data if needed: not perfect/complete, but at least a plan pushed to your github repo
+> - Next item: Alignment work pushed to your github repo
+>
+> **Expectations as we move forward** to heavy HW on your data
+>
+> You will be working on your data at home:
+>  - Troubleshooting with different data formats
+>  - Troubleshooting with software installation for your operating system
+>
+> Actively ask questions!
+>  - Slack
+>  - Office hours
 
 
 # Alignment software: Progressive alignment (ClustalW)
@@ -80,7 +85,7 @@ conda install -c bioconda clustalw
 ```
 For some people, it is easier to do the similar installation but with [MiniConda](https://docs.anaconda.com/free/miniconda/). There is also more information on how to download it in the [ClustalW website](http://www.clustal.org/clustal2/)
 
-{: .note }
+{: .highlight }
 Check you have ClustalW correctly installed by typing `clustalw` in the terminal.
 
 We will use the `primatesAA.fasta` file from the Phylogenetic Handbook [website](https://www.kuleuven.be/aidslab/phylogenybook/Data_sets.html). I had to copy and paste the sequences into a file with the same name. The website stopped working at some point, so we have the file in the class repo [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data).
@@ -485,8 +490,10 @@ Another thing to notice:
  -NUMITER=n     :Maximum number of iterations to perform
 ```
 
-{: .note }
-**Further reading:** Read the ClustalW [documentation](http://www.clustal.org/download/clustalw_help.txt). Is it clear what the algorithm is doing and how to best select the parameters involved? What is missing (if any) from this documentation?
+{: .important-title }
+> Further reading
+>
+> Read the ClustalW [documentation](http://www.clustal.org/download/clustalw_help.txt). Is it clear what the algorithm is doing and how to best select the parameters involved? What is missing (if any) from this documentation?
 
 
 
