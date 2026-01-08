@@ -12,7 +12,7 @@ nav_order: 5
 ### Learning objectives
 
 At the end of today's session, you will be able to
-- highlight the main strengths and weaknesses of ClustalW and run it
+- highlight the main strengths and weaknesses of ClustalW and how to run it
 
 
 ### Pre-class work

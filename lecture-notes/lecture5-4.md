@@ -1,30 +1,87 @@
 ---
 layout: default
-title: Alignment IV
+title: Alignment (MUSCLE, MAFFT)
 nav_order: 6
 ---
 
-
-# Alignment methods (Part 4: computer lab)
-
-### Previous class check-up
-- We reviewed the algorithms for pairwise and multiple sequence alignments
+# Alignment methods (MUSCLE, MAFFT)
 
 ### Learning objectives
 
 At the end of today's session, you
-- will learn to use different software options: ClustalW, T-Coffee and MUSCLE
-
+- will learn to use different software options: MAFFT and MUSCLE
 
 {: .note }
-No pre-class work.
+Pre-class work: Read the paper corresponding to your canvas group: [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623), [MAFFT](https://academic.oup.com/nar/article/30/14/3059/2904316)
 
 
 {: .highlight }
-Let's take a look at data from last year's projects [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/data-examples.md).
+First, let's take a look at data from last year's projects [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/data-examples.md).
+
+## Iterative refinement: MUSCLE and MAFFT
+
+<div style="text-align:center"><img src="../assets/pics/muscle.png" width="600"/></div>
+
+[Edgar, 2004, MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623)
+
+[Katoh et al, 2002, MAFFT](https://academic.oup.com/nar/article/30/14/3059/2904316)
+
+Note that you can easily install the two software with [BioConda](https://bioconda.github.io/) again:
+
+```
+conda install -c bioconda muscle
+conda install -c bioconda mafft
+```
+
+# In-class activity: MUSCLE and MAFFT
+
+## In-groups time: 30 minutes
+
+Google slides:
+
+- [MAFFT](https://docs.google.com/presentation/d/1mul9d-rTo1-gk3NJlWQwT5MVV9toHgHIuMRR1Tlgfos/edit?usp=sharing)
+- [MUSCLE](https://docs.google.com/presentation/d/1EoDrQhpS8u7DzfiDeButf-NZrC5PE6W00v5p9r7zhbE/edit?usp=sharing)
+
+**Instructions:** Work individually or in teams (people that read the same paper as you).
+In the slides:
+1. Write down one claim that the authors make about their method (e.g. accuracy, speed, robustness, scalability)
+2. Run the software on the `primatesAA.fasta` data and write down the command you ran in the slides
+3. Write a paragraph suitable for a paper Methods section that:
+  a. Describes what you did
+  b. Expliclty connects your choices to the claims described in the paper
+  c. Makes clear what assumptions you are relying on
+  d. Note that you may not say 'default parameters' without explaining what that implies in terms of the method
+
+## Whole group activity: 20 minutes
+
+One person per method will present their work to the class.
+
+## Relevant links
+- [MUSCLE docs](https://www.drive5.com/muscle/manual/basic_alignment.html)
+- [MAFFT docs](https://mafft.cbrc.jp/alignment/software/manual/manual.html)
+
+# Comparing all three software
+
+Let's open all three in [AlignmentViewer](https://alignmentviewer.org/):
+```
+primatesAA-aligned.fasta        ## clustalw
+primatesAA-aligned-muscle.fasta ## muscle
+primatesAA-aligned-mafft.fasta  ## mafft
+```
+
+Looking at all three alignments, think of:
+- One region where all three agree
+- One region where at least two disagree
+- One region you would be uncomfortable using for phylogenetic inference
+- Which method tends to introduce: More gaps? Longer indels? Better conservation?
 
 
-# MSA software key insights
+{: .highlight }
+**Homework:** Check out the alignment HW [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-alignment.md).
+
+
+
+# Final MSA insights
 
 - No perfect method
 - No automatic method
@@ -38,7 +95,7 @@ Let's take a look at data from last year's projects [here](https://github.com/cr
 ### Genetic algorithm
 - SAGA uses the WSP objective function but uses genetic algorithms instead of dynamic programming (individual=alignment)
 - very accurate
-- more scalable than T-coffee, but still not super scalable
+- not scalable
 
 ### Hidden markov model
 - [UPP](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0688-z)
@@ -48,17 +105,7 @@ Let's take a look at data from last year's projects [here](https://github.com/cr
 - [sate](https://phylo.bio.ku.edu/software/sate/sate.html)
 
 
-### Other considerations
-
-- Nucleotide vs amino acid sequence
-  - when there is choice (protein-coding genes), amino acid alignments are easier to carry out and less ambiguous; also nucleotide alignments do not recognize codon as a unit and can break up the reading frame; typically, you align the amino acids and then generate the corresponding nucleotide sequence alignment
-  - when sequences are not protein coding, only choice is to align nucleotides
-- Manual editing and visualizing alignments
-  - manual editing is scary because it is not reproducible
-  - but many times it is necessary because automatic alignment methods are not as accurate as they should be
-
-
-### Which program to choose?
+## Which program to choose?
 - Not a clear answer
 - Scalability vs accuracy
 - HW reading: [Alignathon](https://genome.cshlp.org/content/24/12/2077)
@@ -67,62 +114,6 @@ Let's take a look at data from last year's projects [here](https://github.com/cr
   - Filtering is more important than the specific program used (more on filtering later)
   - Read program papers and documentation carefully
   - Take good note of choices and keep track of all comparisons to justify final choice
-
-
-# Software tools for alignment
-
-
-
-
-## T-Coffee
-
-[T-Coffee documentation](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#quick-start-t-coffee)
-
-```shell
-$ t_coffee sample_seq1.fasta
-```
-
-- When aligning, T-Coffee will always at least generate three files:
-  - `sample_seq1.aln` : Multiple Sequence Alignment (ClustalW format by default)
-  - `sample_seq1.dnd` : guide tree (Newick format)
-  - `sample_seq1.html` : colored MSA according to consistency (html format)
-- `T-Coffee` also has a great [documentation](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#document-tcoffee_main_documentation)
-- Specifically, it has a good description of the parameters, see [here](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#t-coffee-parameters-flags)
-- Don't forget to check out [M-Coffee](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#m-coffee) that combines the output of eight aligners (MUSCLE, ProbCons, POA, DIALIGN-T, MAFFT, ClustalW, PCMA and T-Coffee)
-
-
-## MUSCLE
-
-- [MUSCLE documentation](https://www.drive5.com/muscle/)
-- The different parameter options are explained [here](https://www.drive5.com/muscle/manual/options.html)
-- The default settings are chosen for maximum accuracy (how?), but you can change the settings for more speed (see [here](https://www.drive5.com/muscle/manual/index.html))
-
-
-
-# In-class exercise
-
-**Instructions:** Run and compare the results of all three MSA software on the toy dataset of primates (see the class repo [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data)). You can use my reproducible script as guideline: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md).
-
-**ClustalW**
-
-1. Download [ClustalW](http://www.clustal.org/clustal2/)
-2. Download the `primatesAA.fasta` file from the Phylogenetic Handbook website (22 primate aminoacid sequences). The website stopped working at some point, so we have the file in the class repo [data folder](https://github.com/crsl4/phylogenetics-class/tree/master/data).
-3. Run `ClustalW`, see [docs](http://www.clustal.org/download/clustalw_help.txt)
-
-**T-Coffee**
-
-1. Download [T-Coffee](http://www.tcoffee.org/Projects/tcoffee/index.html#DOWNLOAD)
-2. Run `T-Coffee` on the same `primatesAA.fasta` data. See the [docs](http://www.tcoffee.org/Projects/tcoffee/documentation/index.html#quick-start-t-coffee)
-
-**MUSCLE**
-
-1. Download [MUSCLE](https://www.drive5.com/muscle/downloads.htm)
-2. Run `MUSCLE` on the same `primatesAA.fasta` data. See the [docs](https://www.drive5.com/muscle/manual/basic_alignment.html)
-
-
-
-{: .highlight }
-**Homework:** Check out the alignment HW [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-alignment.md).
 
 
 # Learn more!
