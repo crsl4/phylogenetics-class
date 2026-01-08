@@ -7,12 +7,12 @@ nav_order: 4
 # Alignment methods (Part 2)
 
 ### Previous class check-up
-- We reviewed the algorithms for pairwise and multiple sequence alignments (Needleman-Wunsch algorithm)
+- We reviewed the algorithms for pairwise sequence alignments (Needleman-Wunsch algorithm)
 
 ### Learning objectives
 
 At the end of today's session, you
-- will be able to explain the most widely used algorithms for multiple sequence alignment
+- will be able to explain the most widely used algorithm for multiple sequence alignment
 
 {: .note }
 No pre-class work.
@@ -20,9 +20,8 @@ No pre-class work.
 ## 3. Multiple sequence alignment
 
 - The Needleman-Wunsch is the magic algorithm that allows us to align two sequences
-- We want to expand the pairwise sequence alignment to multiple sequence alignment
+- We want to expand the pairwise sequence alignment to **multiple** sequence alignment
 - Progressive alignment: the most widely used algorithm (e.g. ClustalW)
-- Consistency-based scoring: improvement over progressive alignment by using a more strict score function (e.g. T-Coffee)
 - Iterative refinement algorithm: improvement over progressive alignment by doing sequential alignments until convergence of score (e.g. mafft, muscle)
 
 
@@ -102,6 +101,8 @@ We define the cost as
     <img class="middle-img" src="../assets/pics/table9.8.png" width="300">
 </div>
 
+{: .important }
+You can watch the computation of the cost matrix in this [YouTube video](https://www.youtube.com/watch?v=2eauIKsKDk0). This video has two errors: $cost(a3,b1)=1/4$ instead of 1 and $cost(a4,b6)=7/9$ instead of 8/9.
 
 # Aligning the alignments: we have the cost matrix, now what?
 
@@ -119,16 +120,13 @@ b6 [ 1/3  1  9/12 8/9 11/15]
 
 and we will use it to align the two profiles $P_1 = a_1 a_2 a_3 a_4 a_5$ and $P_2 = b_1 b_2 b_3 b_4 b_5 b_6$ with Needleman-Wunsch. The cost matrix above provides the costs of substitutions and we assume a cost of gap of 1.
 
-{: .note }
-The video on canvas has two errors: $cost(a3,b1)=1/4$ instead of 1 and $cost(a4,b6)=7/9$ instead of 8/9.
-
 {: .highlight }
 **In-class activity:** Let's recall Needleman-Wunsch: we need the $F(i,j)$ matrix and then trace back the alignment. Let's do here together some of the entries of the $F(i,j)$ matrix.
 
 
 # Homework
 
-**Instructions:** Finish Needleman-Wunsch on the two profiles.
+**Instructions:** Finish Needleman-Wunsch on the two profiles. You can watch some of the steps in this [YouTube video](https://www.youtube.com/watch?v=ndOk3aXEq14).
 
 1. Build the F matrix
 2. Trace back the alignment from the bottom right corner
@@ -151,4 +149,12 @@ You should get the following alignment which we can translate back to the origin
 **Homework recap** [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-needleman.md).
 
 {: .highlight }
-**For next class:** Read the paper corresponding to your group (in canvas): [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/), [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623), [T-Coffee](https://www.sciencedirect.com/science/article/pii/S0022283600940427)
+**For next class:** Read the paper [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/)
+
+Pay attention to:
+- What does ClustalW assume about sequence relatedness before alignment?
+- What is the role of guide trees and why does that matter?
+- What do progressive alignment errors imply for downstream analyses?
+- What information is encoded in gap penalties and sequence weighting?
+- Does ClustalW claim to infer homology, or does it assume it?
+- Under what conditions do the authors caution against overinterpretation?
