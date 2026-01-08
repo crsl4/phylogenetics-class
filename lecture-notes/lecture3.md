@@ -17,7 +17,6 @@ At the end of today's session, you
 **Pre-class work:**
 Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/hw-shell.md) and do canvas quiz
 
-
 ## Reproducibility
 
 **What does it mean to be reproducible?** It means that you are able to redo the exact same analysis today, tomorrow or in 10 years and get the same results.
@@ -73,8 +72,8 @@ See the [sarscov2phylo](https://github.com/roblanf/sarscov2phylo) github reposit
 # Ingredients of a successful reproducible practice
 1. Text editor: Text notes, [Visual Studio Code](https://code.visualstudio.com/), [Emacs](https://www.gnu.org/software/emacs/), [RStudio](https://rstudio.com/)
 2. Knowledge of markdown syntax (which is the same for Rmarkdown)
-3. Knowledge of version control via git/GitHub
-4. Right folder structure
+3. Right folder structure
+4. Knowledge of version control via git/GitHub
 
 
 ## 2. Markdown syntax
@@ -83,13 +82,32 @@ Borrowing Cecile Ane's [class notes](http://cecileane.github.io/computingtools/p
 
 We can see this format if we look at the local version of the md lecture files. Note that GitHub renders the md files as they would look in html format.
 
+## 3. Right folder format and filenames
 
-## 3. Version control via git/GitHub
+Your project folder should have the following subfolders:
+- scripts
+- data
+- results
+- figures
+- manuscript
 
-### 3.1 Why version control with git/github?
+Your files should follow the good naming practices. Read [Jenny Bryan's notes](https://speakerdeck.com/jennybc/how-to-name-files). In a nutshell,
+
+- No spaces
+- No symbols
+- Meaningful names
+- Easy to sort
+
+{: .warning }
+Points will be deducted for file names that do not follow the good naming practices! Most common mistake: spaces in file names.
+
+
+
+## 4. Version control via git/GitHub
+
+### 4.1 Why version control with git/github?
 
 <div style="text-align:center"><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" width="350"/></div>
-
 
 - Keep track of history of changes of files in your project
 - Time travel: access to files from the past
@@ -98,7 +116,7 @@ We can see this format if we look at the local version of the md lecture files. 
 *Using a Git commit is like using anchors and other protection when climbing. If you’re crossing a dangerous rock face you want to make sure you’ve used protection to catch you if you fall. Commits play a similar role: if you make a mistake, you can’t fall past the previous commit. Coding without commits is like free-climbing: you can travel much faster in the short-term, but in the long-term the chances of catastrophic failure are high! Like rock climbing protection, you want to be judicious in your use of commits. Committing too frequently will slow your progress; use more commits when you’re in uncertain or dangerous territory. Commits are also helpful to others, because they show your journey, not just the destination* -- Hadley Wickham
 
 
-### 3.2 Setting everything up
+### 4.2 Setting everything up
 - Register for github account [here](https://happygitwithr.com/github-acct.html); Think carefully about your username!
 - Install [git](https://happygitwithr.com/install-git.html)
 - Configuration of git [here](https://happygitwithr.com/hello-git.html)
@@ -110,7 +128,7 @@ Stop and check: Do you know how to open the terminal? Do you get an actual path 
 If you are a windows user, you might need a bit more one-on-one help, so it is ok to chat more after class
 
 
-### 3.3 Now, you want to start your project: git basics
+### 4.3 Now, you want to start your project: git basics
 
 When you are starting your project, you basically need to create the local folder, and the github repository. The order of these steps can vary, but I have found that the more straight-forward order is the following:
 
@@ -150,17 +168,6 @@ git push
 If you use RStudio or Visual Studio Code (VSCode), you can do these commands in the text editor directly via some buttons in the interface (not on the terminal).
 
 
-
-### 3.4 Other useful git commands
-```
-git status          ## check status of repo
-git log             ## log of commits
-git log --oneline
-git diff            ## compare versions
-git pull            ## pull commits from remote (github)
-git pull --ff-only  ## pull commits avoiding merge issues
-```
-
 {: .highlight }
 Summary until this point
 - git basics
@@ -171,40 +178,27 @@ Summary until this point
 - We want to work off a text file (or md file), and use the git basics to have our github version updated at all moment
 
 
-
-## 4. Right folder format and filenames
-
-Your project folder should have the following subfolders:
-- scripts
-- data
-- results
-- figures
-- manuscript
-
-Your files should follow the good naming practices. Read [Jenny Bryan's notes](https://speakerdeck.com/jennybc/how-to-name-files). In a nutshell,
-
-- No spaces
-- No symbols
-- Meaningful names
-- Easy to sort
-
-{: .warning }
-Points will be deducted for file names that do not follow the good naming practices! Most common mistake: spaces in file names.
-
-
 ## A cautionary tale
 
 <div style="text-align:center"><img src="../assets/pics/add-files.png" width="650"/></div>
 
 
+## More advanced git usage
 
-## 3. More advanced git usage
+Other useful git commands
+```
+git status          ## check status of repo
+git log             ## log of commits
+git log --oneline
+git diff            ## compare versions
+git pull            ## pull commits from remote (github)
+git pull --ff-only  ## pull commits avoiding merge issues
+```
 
-### 3.6 Forking other people's repository
+### 4.4 Forking other people's repository
 
 Sometimes you identify a repository that does work that you are interested in, but perhaps you would like to do some modification.
 You can fork this repository, and work on the forked version as if it were your own repository (everything we've studied applies).
-
 
 
 ![Image from Jenny Bryan](https://happygitwithr.com/img/fork-them.jpeg)
@@ -252,13 +246,11 @@ git pull upstream master
 After you've done work in your fork, and are ready to create a pull request in github, see [here](https://happygitwithr.com/pr-extend.html).
 
 
-
-### 3.7 Troubleshooting
+### 4.5 Troubleshooting
 
 <div style="text-align:center"><img src="https://imgs.xkcd.com/comics/git.png" width="350"/></div>
 
 _Reference: xkcd_
-
 
 
 We all make mistakes with git and it will not be possible to go over the extensive list of things that could go wrong. If you made a mistake, don't panic!
@@ -267,7 +259,7 @@ Read [these great notes](http://sethrobertson.github.io/GitFixUm/fixup.html) on 
 We will go over one type of common issue that will be relevant for our in-class exercise.
 
 
-#### 3.7.1 Git push/pull issues
+#### 4.5.1 Git push/pull issues
 
 Imagine if two people are pushing changes to the same repository. You are working locally, but forget to do `git pull` before make any changes (or perhaps you and the other people are working at the exact same time and the other person pushes their changes before you). When you try to push your changes, you can't, because your code has diverged from the remote code:
 ```

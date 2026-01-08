@@ -12,7 +12,7 @@ nav_exclude: true
 **Instructions:**
 
 1. Read my [notes on mindful programming](https://github.com/crsl4/mindful-programming/blob/master/lecture.md)
-2. Watch a summary of today's class in [this 20-minute YouTube video](https://www.youtube.com/watch?v=7KCqpL0cde8)
+2. Re-watch a summary of today's class in [this 20-minute YouTube video](https://www.youtube.com/watch?v=7KCqpL0cde8)
 3. Complete the canvas quiz
 
 
