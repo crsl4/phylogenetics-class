@@ -39,10 +39,13 @@ Y:A
 Z:C
 ```
 
-- **Full solution:** see this [YouTube video](https://youtu.be/lJaFPek3eAc)
 - Note that this is only one site! We need to repeat this process for every site and add up the lengths
-- More on Newick (parenthetical) format [here](https://en.wikipedia.org/wiki/Newick_format)
+- More on Newick (parenthetical) format [here](https://en.wikipedia.org/wiki/Newick_format) and [Instagram photo](https://www.instagram.com/p/DChwR5evREo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==) of the restaurant where the Newick format was invented
 
+{: .warning-title}
+> youtube
+> 
+> Watch the full algorithm in this [YouTube video](https://youtu.be/lJaFPek3eAc)
 
 Just as in MSA, we cannot do this by hand and there are dynamic programming algorithms that help us (what was dynamic programming?): 
 - Fitch algorithm (HB Box 8.2) for equal costs
@@ -70,15 +73,17 @@ Z:C
 ```
 using the Fitch algorithm.
 
-- **Full solution:** see this [YouTube video](https://youtu.be/bZdEkYyq2hQ)
+
+{: .warning-title}
+> youtube
+> 
+> Watch the full algorithm in this [YouTube video](https://youtu.be/bZdEkYyq2hQ).
+
+{: .highlight }
 - **Homework:** Redo the algorithm with different root positions to verify that you get the same length
 
 {: .highlight }
 **Phylogenetic inference: Maximum Parsimony (MP) tree:** Step 1) Evaluate the parsimony score of a given tree (length) with Fitch algorithm. Step 2) Search the space of trees until you find the optimum.
 
-## Some downsides
-
-- Parsimony methods have been shown to produce inconsistent trees
-- Read more in [Felsenstein 1978](https://academic.oup.com/sysbio/article/27/4/401/1734959?login=true)
-
- 
+{: .warning }
+** Some downsides:** Parsimony methods have been shown to produce inconsistent trees. Read more in [Felsenstein 1978](https://academic.oup.com/sysbio/article/27/4/401/1734959?login=true)
