@@ -35,7 +35,6 @@ At the end of today's session, you will be able to
 
 # Distance-based methods
 
-{: .highlight }
 **Goal:** Fit a tree to a matrix of pairwise genetic distances
 
 ## Computing the distances
@@ -60,18 +59,17 @@ _Figure 5.2 in HB 5_
       - However, keep in mind that searching the space would not necessarily achieve the optimum either because many times the search is not exhaustive
     
 
-## Cluster analysis
+## 1. Cluster analysis
 
 - Constructs ultrametric trees (rooted trees in which all the end nodes are equidistant from the root)
 - Only possible assuming a **molecular clock**:
-  - Zuckerland and Pauling published two fundamental papers on the evolutionary rate of proteins
+  - [Zuckerland and Pauling](https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9781483227344500176) published two fundamental papers on the evolutionary rate of proteins
   - They noticed that the genetic distance of two sequences coding for the same protein on different species seems to increase linearly with divergence time
   - This seems to imply that the rate of evolution for any given protein is constant: existence of a molecular clock
   - This assumption is used for dating the divergences in the tree
   - The molecular clock assumption aligns with the neutral theory of evolution (vs positive selection theory) and implies that deviations from clock-like behavior may reveal adaptive evolution, relaxing functional constraints or changes in effective population size
   - How to test the clock hypothesis? HB 11
 - Constructs ultrametric trees (rooted trees in which all the end nodes are equidistant from the root)
-- Only possible assuming a **molecular clock**:
 
 <div style="text-align:center"><img src="../assets/pics/Fig11.1HB.png" width="550"/></div>
 
@@ -98,7 +96,7 @@ UPGMA: $d_{(AB)k} = \frac{N_A d_{A,k}+N_B d_{B,k}}{N_A + N_B}$ (averaged by numb
 3) Repeat until all taxa are clustered
 
 {: .note }
-We are not searching the space of trees here, this is an algorithm that returns a tree that agrees with the distances provided.
+We are not searching the space of trees here. This is an algorithm that returns a tree that agrees with the distances provided.
 
 
 ## Cluster analysis example
@@ -118,7 +116,7 @@ F  8  8  8  8  8
 Watch again in [YouTube video](https://youtu.be/jLQAwlODdCo).
 
 
-## Minimum evolution
+## 2. Minimum evolution
 - We want to reconstruct a tree with minimum length
 - The length of the tree is inferred from the genetic distances
 - It does not reconstruct ultrametric trees, but additive trees
@@ -160,17 +158,6 @@ _Box 5.2 in HB11:_ Note that there are many errors in the book.
 
 **Solution:** See this [YouTube video](https://youtu.be/n1BEd05IpEk) with all the steps in the algorithm.
 
-
-# Distance-based methods: Main conclusions
-- Two steps
-  1. genetic distances from a p-distance and a model of evolution
-  2. a phylogenetic tree is constructed from the distances
-- Distance methods reduce the phylogenetic information to one value per pair of sequences, so many times regarded as inferior compared to character-based methods (less stat power due to the loss of info)
-- But unlike parsimony, they rely on an evolution model but the result will depend on which model is chosen (more on Lecture 9 and 12)
-- They do not have the model flexibility as likelihood-based models
-- Under standard conditions, NJ trees are meant to estimate accurate trees and they are very fast to be estimated
-- However, these methods assume the distances are accurate. Noisy distances can affect the estimated tree
-- Aside from the ME algorithm that aims to find the tree that minimizes the tree length, there are other ME algorithms that aim to find the tree that minimize the differences between the genetic distances and the tree distances (called OLS=ordinary least squares): $F = \sum_{i,j} (D_{ij}-d_{ij})^2$ where $D_{ij}$ are the tree distances and $d_{ij}$ are the observed genetic distances
 
 
 

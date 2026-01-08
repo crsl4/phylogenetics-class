@@ -28,8 +28,8 @@ nav_order: 9
 1. Determine the amount of character change required to explain the data by a given tree
 2. Search over all possible tree topologies
 
-- We need to be able to calculate the length of a proposed tree which is defined as the amount of character change implied by a most parsimonious reconstruction of internal nodes
-- Just as in MSA, we need to have costs for substitutions (equal costs or unequal costs)
+
+We need to be able to calculate the length (parsimony score) of a proposed tree which is defined as the amount of character change implied by a most parsimonious reconstruction of internal nodes. Just as in MSA, we need to have costs for substitutions (equal costs or unequal costs).
 
 **Example:** Evaluate the length of the `((W,Y),(X,Z));` tree given the site:
 ```

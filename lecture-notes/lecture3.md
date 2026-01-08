@@ -13,9 +13,10 @@ At the end of today's session, you
 - will lose fear of git/GitHub conflicts
 - will prioritize reproducibility and good computing practices throughout the semester (and beyond)
 
-{: .note }
-**Pre-class work:**
-Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/hw-shell.md) and do canvas quiz
+{: .important-title }
+> Pre-class work
+>
+> Review [shell resources](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/hw-shell.md) and do canvas quiz
 
 ## Reproducibility
 
@@ -65,7 +66,7 @@ This is the time to worry about grammar and beautiful writing
 See the [sarscov2phylo](https://github.com/roblanf/sarscov2phylo) github repository for an example.
 
 
-{: .note }
+{: .highlight }
 **In this class,** we will focus on reproducible scripts for us only (not publication-ready scripts).
 
 
@@ -121,11 +122,12 @@ Points will be deducted for file names that do not follow the good naming practi
 - Install [git](https://happygitwithr.com/install-git.html)
 - Configuration of git [here](https://happygitwithr.com/hello-git.html)
 
-{: .highlight }
-Stop and check: Do you know how to open the terminal? Do you get an actual path (folder location) when you type `which git` in the terminal?
-
-{: .note }
-If you are a windows user, you might need a bit more one-on-one help, so it is ok to chat more after class
+{: .new-title }
+> Stop and check
+>
+> Do you know how to open the terminal? Do you get an actual path (folder location) when you type `which git` in the terminal?
+>
+> If you are a windows user, you might need a bit more one-on-one help, so it is ok to chat more after class
 
 
 ### 4.3 Now, you want to start your project: git basics
@@ -164,18 +166,19 @@ git commit -m "updated readme"
 git push
 ```
 
-{: .note }
+{: .highlight }
 If you use RStudio or Visual Studio Code (VSCode), you can do these commands in the text editor directly via some buttons in the interface (not on the terminal).
 
 
 {: .highlight }
-Summary until this point
-- git basics
-  - git add
-  - git commit
-  - git push
-- git can be used nicely via the terminal, but there are interfaces (e.g. within RStudio or VSCode) that can be more interactive than the terminal
-- We want to work off a text file (or md file), and use the git basics to have our github version updated at all moment
+> Summary until this point
+>
+> - git basics
+>  - git add
+>  - git commit
+>  - git push
+> - git can be used nicely via the terminal, but there are interfaces (e.g. within RStudio or VSCode) that can be more interactive than the terminal
+> - We want to work off a text file (or md file), and use the git basics to have our github version updated at all moment
 
 
 ## A cautionary tale
@@ -323,7 +326,10 @@ Local after: A--B--D--(merge commit)
                 \_C_/
 ```
 
-
+{: .warning-title }
+> YouTube
+>
+> You can watch all these concepts again in the [YouTube video](https://www.youtube.com/watch?v=7KCqpL0cde8)
 
 # In-class exercise with git
 
