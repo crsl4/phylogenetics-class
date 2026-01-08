@@ -46,6 +46,8 @@ Google slides:
 In the slides:
 1. Write down one claim that the authors make about their method (e.g. accuracy, speed, robustness, scalability)
 2. Run the software on the `primatesAA.fasta` data and write down the command you ran in the slides
+  - [MUSCLE docs](https://www.drive5.com/muscle/manual/basic_alignment.html)
+  - [MAFFT docs](https://mafft.cbrc.jp/alignment/software/manual/manual.html)
 3. Write a paragraph suitable for a paper Methods section that:
   a. Describes what you did
   b. Expliclty connects your choices to the claims described in the paper
@@ -55,10 +57,6 @@ In the slides:
 ## Whole group activity: 20 minutes
 
 One person per method will present their work to the class.
-
-## Relevant links
-- [MUSCLE docs](https://www.drive5.com/muscle/manual/basic_alignment.html)
-- [MAFFT docs](https://mafft.cbrc.jp/alignment/software/manual/manual.html)
 
 # Comparing all three software
 

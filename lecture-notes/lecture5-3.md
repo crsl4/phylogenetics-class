@@ -20,7 +20,7 @@ At the end of today's session, you will be able to
 Read the paper [ClustalW](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC308517/)
 
 
-# Project checklist: heavy HW on your data starting now
+### Project checklist: heavy HW on your data starting now
 
 - Until now:
   - Created your project github repo
