@@ -18,8 +18,7 @@ mathjax: true
 
 ### Learn@Home: Sequencing check-up
 - We understand sequencing technologies
-- We learned a bit about `phyluce` as a pipeline for phylogenomics on UCEs and about `FastQC` for QC of raw reads
-- We start thinking about data for the class project and start working on QC if needed -> beginning of work from home in your data!
+- We start thinking about data for the class project -> beginning of work from home in your data!
 
 
 ### Learning objectives
@@ -35,7 +34,7 @@ After today, we will assume that 1) we are all comfortable with the terminal and
 
 # What is multiple sequence alignment (MSA)?
 
-- Homology is inferred from an input of sequences that are assumed to have an evolutionary relationship: descended from a common ancestor
+- We infer homology when sequences are evolutionarily related: that is, when they descend from a common ancestor
 - Intuitively, an MSA method inserts gap characters (`-`) inside input sequences to produce a set of longer sequences that are all of the same length, such that residues at the same position in different sequences (aligned residues) share some common properties (homology)
 - MSA is a crucial step since phylogenetic inference methods assume that residue homology relationships are correctly reflected by the input sequences
 
@@ -150,12 +149,16 @@ We will continue to use cost for simplicity.
 - **Ingredients:** 
   - Two sequences: $$A=a_1 a_2 ...a_m$$ and $$B=b_1 b_2 ...b_n$$
   - 1) cost of gap and 2) cost of substitution
-- Denote $F(i,j)$ the minimum cost to align sub-sequences $A_i$ and $B_j$ based on the costs
+
+We will define a matrix $F$ whose entries $F(i,j)$ will represent the minimum cost to align sub-sequences $A_i$ and $B_j$ based on the costs.
+
+{: .highlight }
+Stop and check: Do you know what a matrix is and how (i,j) entries are defined?
 
 {: .note }
 **Main principle:** When we want to compute $F(i,j)$, we assume that we have already computed all smaller sequences (sub-problems): $F(i-1,j-1), F(i,j-1), F(i-1,j)$.
 
-The final site of the alignment must take one of the following forms:
+The algorithm will focus on two residues at a time: $a_i$ and $b_j$, and for them, they are three options:
 
 1. $a_i$ and $b_j$ are aligned together in the final site. Then the other sites define a pairwise alignment of $A_{i-1}$ and $B_{j-1}$
 2. $a_i$ is aligned with a gap in the final site. Then $A_{i-1}$ and $B_{j}$ defined a pairwise alignment
@@ -173,18 +176,18 @@ Let $A=a_1 a_2 a_3 a_4 a_5 a_6$ and $B=b_1 b_2 b_3 b_4 b_5$, and suppose you wan
 
 ### Needleman-Wunsch algorithm: Costs
 
-1. If $a_i$ and $b_j$ are aligned together in the final site, then the cost is 0 if $a_i=b_j$ and 1 (or whatever cost of substitution defined) if they are different. Hence, the total cost is $F(i,j) = F(i-1,j-1)+cost(a_i,b_j)$
-2. If $a_i$ is aligned with a gap in the final site, then the cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i-1,j)+1$
-3. If $b_j$ is aligned with a gap in the final site, then the cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i,j-1)+1$
+1. If $a_i$ and $b_j$ are aligned together, then the cost is 0 if $a_i=b_j$ and 1 (or whatever cost of substitution defined) if they are different. Hence, the total cost is $F(i,j) = F(i-1,j-1)+cost(a_i,b_j)$
+2. If $a_i$ is aligned with a gap, then the cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i-1,j)+1$
+3. If $b_j$ is aligned with a gap, then the cost is 1 (or whatever the cost of gap is). Hence, the the total cost is $F(i,j) = F(i,j-1)+1$
 
 How to know which of the three options to do? We choose the one with minimum cost!
 
 $F(i,j)=min \\{F(i-1,j-1)+cost(a_i,b_j), F(i-1,j)+1, F(i,j-1)+1 \\}$.
 
 
-### Needleman-Wunsch algorithm
+## Needleman-Wunsch algorithm
 
-1. Compute $F(i,j)$ for every $i,j$ and put in a matrix (sometimes denoted dynamic programming (DP) matrix). First column/row correspond to gap and F(0,0)=0
+1. Compute $F(i,j)$ for every $i,j$ and put in a matrix. First column/row correspond to gap and F(0,0)=0
 2. As you fill the matrix, keep track of which of the three entries gave you the minimum with an arrow
 3. Trace back the arrows to construct the alignment (diagonal arrow=nucleotide, vertical/horizontal arrow=gap replacing the nucleotide the arrow is pointing)
 
@@ -212,6 +215,7 @@ ATCG
 {: .important }
 **Take-home message:** The final alignment depends on the costs of gaps and substitutions.
 
-
+{: .important }
+You can watch all the steps of the Needleman-Wunsch algoritm in this [YouTube video](https://www.youtube.com/watch?v=1m6F_PsIx5w).
 
 
