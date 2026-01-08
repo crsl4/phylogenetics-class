@@ -116,7 +116,10 @@ E  6  6  6  4
 F  8  8  8  8  8
 ```
 
-Watch again in [YouTube video](https://youtu.be/jLQAwlODdCo).
+{: .warning-title}
+> youtube
+>
+> Watch again in [YouTube video](https://youtu.be/jLQAwlODdCo).
 
 
 ## 2. Minimum evolution
@@ -159,7 +162,10 @@ F  8  11  8  9  8
 {: .warning }
 _Box 5.2 in HB11:_ Note that there are many errors in the book.
 
-**Solution:** See this [YouTube video](https://youtu.be/n1BEd05IpEk) with all the steps in the algorithm.
+{: .warning-title}
+> youtube
+>
+> See this [YouTube video](https://youtu.be/n1BEd05IpEk) with all the steps in the algorithm.
 
 
 
