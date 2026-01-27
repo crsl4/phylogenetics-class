@@ -36,6 +36,11 @@ At the end of today's session, you
 > 
 > After today, we will assume that 1) we are all comfortable with the terminal and 2) we are all comfortable with git/github. Note that no one needs to memorize anything. You will always have access to the notes and google. If you are still struggling with the terminal and/or git/github, please check out the resources at the end of the [Reproducibility notes](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture3.html). Let's do [this short quiz](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/quiz-reproducibility.md).
 
+{: .important-title }
+> Ask ChatGPT
+>
+> This is a ChatGPT-friendly class! Use ChatGPT to troubleshoot computer issues (keep in mind it sometimes lie).
+
 # What is multiple sequence alignment (MSA)?
 
 - We infer homology when sequences are evolutionarily related: that is, when they descend from a common ancestor
