@@ -195,6 +195,16 @@ git pull            ## pull commits from remote (github)
 git pull --ff-only  ## pull commits avoiding merge issues
 ```
 
+{: .new-title }
+> Stop and check
+>
+> The first time that you try to `git push`, `git` might need to authenticate your GitHub account. You need to use a "Personal Access Token", not a password.
+
+{: .important-title }
+> Ask ChatGPT
+>
+> This is a ChatGPT-friendly class! Ask ChatGPT "how do I set up a personal access token to git push?"
+
 ### 4.4 Forking other people's repository
 
 Sometimes you identify a repository that does work that you are interested in, but perhaps you would like to do some modification.
