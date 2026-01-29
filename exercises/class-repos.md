@@ -6,7 +6,7 @@ nav_exclude: true
 
 # Class project github repositories
 
-
+- Katie Burnham: https://github.com/k8eburnham/phylogenetics563.git
 - Grace Swenson https://github.com/graceswenson/project.git
 - Gannon: https://github.com/gannon21k/GannonPLPATH.git 
 - Shuqi: https://github.com/Shuqi-Ouyang/Botany563-classfiles.git
