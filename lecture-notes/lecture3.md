@@ -338,6 +338,11 @@ Local after: A--B--D--(merge commit)
 >
 > You can watch all these concepts again in the [YouTube video](https://www.youtube.com/watch?v=7KCqpL0cde8).
 
+{: .important-title }
+> Ask ChatGPT
+>
+> If it is the first time git pushing from your computer, you will be asked to write your GitHub username and "password", but it should not be your password, but a "Personal Access Token". Check out [these instructions](https://chatgpt.com/share/69791f14-32ac-800b-b5f2-2f223a4d4a53) from ChatGPT to create a token.
+
 # In-class exercise with git
 
 **Objective:** Lose the fear of git conflicts.
