@@ -74,7 +74,7 @@ By the end of the course, you will be able to
 | 03/31 | Spring break
 | 04/02 | Spring break
 | 04/07 | The coalescent  | HAL 3.1 and quiz, HAL 3.3 and quiz | You will be able to explain the coalescent model for species trees and networks | [lecture14](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture14.html) | |
-| 04/09 | The coalescent (computer lab) | Read [ASTRAL](https://arxiv.org/abs/1904.03826) and [BUCKy](https://academic.oup.com/mbe/article/24/2/412/1146040) | | [lecture14-2.md](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture14-2.html) | [Coalescent HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md) (due 04/21) |
+| 04/09 | The coalescent (ASTRAL) | Read [ASTRAL](https://arxiv.org/abs/1904.03826) | | [lecture14-2.md](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture14-2.html) | [Coalescent HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md) (due 04/21) |
 | 04/09 | HW due: [Bayesian Inference HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-bayesian.md) | | | | |
 | 04/14 | The coalescent (networks) | [SNaQ chapter](https://github.com/crsl4/phylogenetics-class/tree/master/assets/snaq.pdf) and quiz | | [lecture14-3](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture14-3.html) | |
 | 04/16 | Co-estimation methods  | Optional reading: HB 18 | You will be able to explain the main components of co-estimation methods and follow the BEAST tutorial | [lecture15](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture15.html) | |
