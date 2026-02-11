@@ -81,11 +81,14 @@ By the end of the course, you will be able to
 | 04/21 | Co-estimation methods (computer lab) | Optional: Read BEAST papers: [one](https://bmcecolevol.biomedcentral.com/articles/10.1186/1471-2148-7-214), [two](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006650) | | [lecture15-2](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture15-2.html) | |
 | 04/21 | HW due: [Coalescent HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md) | | | | |
 | 04/23 | What else is out there? (Final project Q&A) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) again | You will hear a brief overview of topics not covered in this class and will have access to resources to learn more | [lecture16](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture16.html) | |
-| 04/28 | **No class:** Time to work on project
+| 04/28 | Project presentations
 | 04/30 | Project presentations
-| 05/05 | Project presentations
-| 05/08 | Final project+reproducible script due  | | | |
+| 05/04 | Final project+reproducible script due  | | | |
 
+{: .important-title}
+> Late submissions
+> 
+> No late submission available for project presentations. Project and reproducible script can be turned after the deadline, but before May 10th for 20% penalty.
 
 ### More details
 

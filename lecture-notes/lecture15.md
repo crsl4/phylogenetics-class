@@ -16,9 +16,10 @@ At the end of today's session, you will be able to
 - identify the main parts of co-estimation methods
 - follow the BEAST tutorial
 
-### Pre-class work
-
-- Optional reading HB 18
+{: .important-title}
+> Pre-class work
+>
+> Optional reading HB 18
 
 
 
