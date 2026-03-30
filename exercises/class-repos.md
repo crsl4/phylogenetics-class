@@ -1,3 +1,4 @@
+---
 layout: default
 nav_exclude: true
 
@@ -5,6 +6,7 @@ nav_exclude: true
 
 # Class project github repositories
 
+- Sam https://github.com/sgagnier06/Project_Botany563.git
 - Ari https://github.com/anmaurer/ProjectBotany563.git 
 - Sabah https://github.com/Sabah-hoq/PL_PATH_563_Project
 - Swathisri Venkatesh: https://github.com/svenkatesh06/Botany653.git
