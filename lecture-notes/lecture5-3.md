@@ -389,9 +389,6 @@ Group 21: Sequences:  22      Score:8718
 Alignment Score 573733
 
 
-WARNING: Truncating sequence names to 10 characters for PHYLIP output.
-
-
 FASTA-Alignment file created   [primatesAA-aligned.fasta]
 ```
 
