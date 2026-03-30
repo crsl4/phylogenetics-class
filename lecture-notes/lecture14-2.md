@@ -1,10 +1,10 @@
 ---
 layout: default
-title: The coalescent II
+title: The coalescent (ASTRAL)
 nav_order: 19
 ---
 
-# The coalescent (Part 2: Computer lab)
+# The coalescent (ASTRAL)
 
 ### Previous class check-up
 - We studied the coalescent model on a species tree
@@ -12,34 +12,37 @@ nav_order: 19
 ### Learning objectives
 
 At the end of today's session, you will be able to
-- use ASTRAL and BUCKy software
-
-### Pre-class work
-
-- Read the papers:
-  - [ASTRAL](https://arxiv.org/abs/1904.03826)
-  - [BUCKy](https://academic.oup.com/mbe/article/24/2/412/1146040?login=true)
+- use ASTRAL software
 
 
-# In-class exercise
+{: .important-title}
+> Pre-class work
+>
+> Read the paper: [ASTRAL](https://arxiv.org/abs/1904.03826)
 
-**Instructions:** Run both coalescent software (ASTRAL and BUCKy). 
+# Software: In-class exercise
 
-- [ASTRAL](https://github.com/smirarab/ASTRAL/blob/master/astral-tutorial.md)
-- [BUCKy](https://pages.stat.wisc.edu/~larget/AustinWorkshop/tutorial.pdf)
+**Instructions:** Up until now, you have followed the commands I provide for the computer lab. This time work individually or in teams to run ASTRAL on the toy data `song_mammals.424.gene.tre` in the [ASTRAL github](https://github.com/smirarab/ASTRAL). 
 
-We need multiple estimated gene trees (or estimated posterior distributions of gene trees from MrBayes) to run these methods. Both software provide toy data that we will use.
+You can follow the instructions to install and run ASTRAL in the [documentation](https://github.com/smirarab/ASTRAL/blob/master/astral-tutorial.md).
 
-{: .note }
-These steps are not added to the reproducible script: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md). So, try to figure out the steps on your end and add them to your own reproducible script.
+Keep good notes of all the steps you are running for ASTRAL in a md file (as we have done so far in class) and write down an accompanying paragraph for a Methods section in the paper describing your ASTRAL analysis.
 
-
-## Homework
-
-See the details of the Coalescent HW in [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md). 
+You can read the estimated species tree in R. Note that the name of the file could be different depending on what you chose.
+```r
+library(ape)
+tre = read.tree(file="song-astral.tre")
+plot(tre)
+```
 
 {: .important }
 **Take-home message:** always read carefully the paper and the documentation of any phylogenetic method you use
 
 {: .note }
 Create your own [cheatsheet](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/software-cheatsheet.md) with description, strengths, weaknesses, assumptions and user choices (and other things you find relevant).
+
+## Homework
+
+See the details of the Coalescent HW in [here](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md). 
+
+
