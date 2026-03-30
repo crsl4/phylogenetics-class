@@ -5,6 +5,7 @@ nav_exclude: true
 
 # Class project github repositories
 
+- Ari https://github.com/anmaurer/ProjectBotany563.git 
 - Sabah https://github.com/Sabah-hoq/PL_PATH_563_Project
 - Swathisri Venkatesh: https://github.com/svenkatesh06/Botany653.git
 - Nathan: https://github.com/nathanlin-uw/phylo-class
@@ -19,7 +20,5 @@ nav_exclude: true
 - Rose Andrews: https://github.com/roseandrews/Botany563Project.git
 - Benjamin :https://github.com/Blackk-Einstein/Phylogenetics-repository-for-PLANTPATH-563
 - Audrey Mergenthaler: https://github.com/amergenthale/phylogenetics-class.git 
-
-
 
 
