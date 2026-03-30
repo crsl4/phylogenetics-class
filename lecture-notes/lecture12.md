@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bayesian Inference I
+title: Bayesian Inference
 nav_order: 15
 ---
 
