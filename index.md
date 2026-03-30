@@ -69,23 +69,26 @@ By the end of the course, you will be able to
 | 03/17 | Bayesian inference (Part 1) | HAL 1.4 and canvas quiz | You will be able to explain the main components of Bayesian inference and their effect on the inference performance | [lecture12](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture12.html) | |
 | 03/19 | Bayesian inference (Part 2) | Read [Nascimento et al, 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5624502/) and quiz | | | Read [YangRannala1997](https://pubmed.ncbi.nlm.nih.gov/9214744/) | 
 | 03/19 | HW due: [Maximum Likelihood HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-ml.md) | | | | |
-| 03/24 | Bayesian inference (paper discussion) | Read depending on your canvas group: 1) MrBayes papers: [one](https://academic.oup.com/bioinformatics/article/17/8/754/235132), [two](https://academic.oup.com/bioinformatics/article/19/12/1572/257621); 2) [RevBayes](https://academic.oup.com/sysbio/article/65/4/726/1753608) | | [lecture12-2](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture12-2.html) | 
-| 03/26 | Bayesian inference (computer lab) | | | [lecture12-3](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture12-3.html) | [Bayesian Inference HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-bayesian.md) (due 04/09) |
+| 03/24 | Bayesian inference (MrBayes) | Read MrBayes papers: [one](https://academic.oup.com/bioinformatics/article/17/8/754/235132), [two](https://academic.oup.com/bioinformatics/article/19/12/1572/257621) | | [lecture12-2](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture12-2.html) | 
+| 03/26 | Tree Visualization | | | [lecture12-3](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture12-3.html) | [Bayesian Inference HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-bayesian.md) (due 04/09) |
 | 03/31 | Spring break
 | 04/02 | Spring break
 | 04/07 | The coalescent  | HAL 3.1 and quiz, HAL 3.3 and quiz | You will be able to explain the coalescent model for species trees and networks | [lecture14](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture14.html) | |
-| 04/09 | The coalescent (computer lab) | Read [ASTRAL](https://arxiv.org/abs/1904.03826) and [BUCKy](https://academic.oup.com/mbe/article/24/2/412/1146040) | | [lecture14-2.md](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture14-2.html) | [Coalescent HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md) (due 04/21) |
+| 04/09 | The coalescent (ASTRAL) | Read [ASTRAL](https://arxiv.org/abs/1904.03826) | | [lecture14-2.md](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture14-2.html) | [Coalescent HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md) (due 04/21) |
 | 04/09 | HW due: [Bayesian Inference HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-bayesian.md) | | | | |
 | 04/14 | The coalescent (networks) | [SNaQ chapter](https://github.com/crsl4/phylogenetics-class/tree/master/assets/snaq.pdf) and quiz | | [lecture14-3](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture14-3.html) | |
 | 04/16 | Co-estimation methods  | Optional reading: HB 18 | You will be able to explain the main components of co-estimation methods and follow the BEAST tutorial | [lecture15](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture15.html) | |
 | 04/21 | Co-estimation methods (computer lab) | Optional: Read BEAST papers: [one](https://bmcecolevol.biomedcentral.com/articles/10.1186/1471-2148-7-214), [two](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006650) | | [lecture15-2](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture15-2.html) | |
 | 04/21 | HW due: [Coalescent HW](https://github.com/crsl4/phylogenetics-class/blob/master/exercises/hw-coalescent.md) | | | | |
 | 04/23 | What else is out there? (Final project Q&A) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) again | You will hear a brief overview of topics not covered in this class and will have access to resources to learn more | [lecture16](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture16.html) | |
-| 04/28 | **No class:** Time to work on project
+| 04/28 | Project presentations
 | 04/30 | Project presentations
-| 05/05 | Project presentations
-| 05/08 | Final project+reproducible script due  | | | |
+| 05/04 | Final project+reproducible script due  | | | |
 
+{: .important-title}
+> Late submissions
+> 
+> No late submission available for project presentations. Project and reproducible script can be turned after the deadline, but before May 10th for 20% penalty.
 
 ### More details
 
