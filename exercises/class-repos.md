@@ -5,7 +5,7 @@ nav_exclude: true
 ---
 
 # Class project github repositories
-
+* [Canyang Zhao](https://github.com/canyang25/Phylogenetics)
 
 - Katie: https://github.com/k8eburnham/phylogenetics563.git
 - Riya Tanwar: https://github.com/RiyaTanwar1/phylogeneticsRiyaTanwar
