@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maximum Likelihood I
+title: Maximum Likelihood
 nav_order: 12
 ---
 
