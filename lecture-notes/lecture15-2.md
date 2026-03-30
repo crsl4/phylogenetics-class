@@ -16,26 +16,26 @@ At the end of today's session, you will be able to
 - use BEAST software
 
 
-### Pre-class work (optional)
+{: .important-title}
+> Pre-class work
+>
+> Optional reading of the papers:
+>
+> BEAST 1: [Drummond and Rambaut, 2007](https://bmcecolevol.biomedcentral.com/articles/10.1186/1471-2148-7-214)
+>
+> BEAST 2: [Bouckaert et al 2019](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006650)
 
-- Read the papers:
-  - BEAST 1: [Drummond and Rambaut, 2007](https://bmcecolevol.biomedcentral.com/articles/10.1186/1471-2148-7-214)
-  - BEAST 2: [Bouckaert et al 2019](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006650)
 
 
+# Software In-class dynamic: Taming the BEAST tutorial
 
-# In-class dynamic: Taming the BEAST tutorial
 
-
-Instructions: Choose a tutorial from the whole list of [BEAST tutorials](https://taming-the-beast.org/tutorials/). Two that stand out: 
+**Instructions:** Choose a tutorial from the whole list of [BEAST tutorials](https://taming-the-beast.org/tutorials/). Two that stand out: 
 
 - [Intro to BEAST](https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/)
 - [Multispecies coalescent on StarBEAST3](https://github.com/rbouckaert/starbeast3/blob/master/workshop/README.md)
 
 Create our own reproducible script.
-
-{: .note }
-I still have not added these steps to the reproducible script: [notebook-log.md](https://github.com/crsl4/phylogenetics-class/tree/master/exercises/notebook-log.md).
 
 
 {: .important }
