@@ -87,11 +87,5 @@ _We used X (reference) which [short description of the methodology]. We chose X 
 - Students unable to attend in person due to exam or travel conflicts can choose to present remotely or to submit a video recording of their presentation
 
 
-## Student evaluations
-
-- Forward me the email after completion of the evaluation and it will count as one HW
-  - Note that the email does not have information on your answers
-- I have my own short survey to help me improve the class (on the last class)
-
 
 
