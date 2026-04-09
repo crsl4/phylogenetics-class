@@ -34,6 +34,7 @@ library(ape)
 tre = read.tree(file="song-astral.tre")
 plot(tre)
 ```
+Note that ASTRAL has their own support values (not bootstrap) which are done by default. More info in [this paper](https://academic.oup.com/mbe/article/33/7/1654/2579300?guestAccessKey=).
 
 {: .important }
 **Take-home message:** always read carefully the paper and the documentation of any phylogenetic method you use
