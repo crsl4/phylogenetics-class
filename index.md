@@ -83,7 +83,7 @@ By the end of the course, you will be able to
 | 04/23 | What else is out there? (Final project Q&A) | Read [Jermiin2020](https://academic.oup.com/nargab/article/2/2/lqaa041/5861483) again | You will hear a brief overview of topics not covered in this class and will have access to resources to learn more | [lecture16](https://crsl4.github.io/phylogenetics-class/lecture-notes/lecture16.html) | |
 | 04/28 | Project presentations
 | 04/30 | Project presentations
-| 05/04 | Final project+reproducible script due  | | | |
+| 05/06 | Final project+reproducible script due  | | | |
 
 {: .important-title}
 > Late submissions
