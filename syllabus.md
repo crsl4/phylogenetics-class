@@ -86,7 +86,7 @@ Out-of-class communication will be done via Slack where students will be able to
 - Reproducible script (10 points)
 - Final presentation (10 points). The presentation is not graded. All students get 10 points for presenting their work on the assigned day. There are no exceptions on the day and students unable to attend class on those days can record their presentation and turn it in ahead of time. The presentation is required for graduate students, and is optional for undergraduate students, but provides extra points.
 
-Research report and reproducible script can be submitted up to one week late to the original deadline, bit they lose 20% of available points. That is, final research report is worth 50 points if turned in on time, but only 40 points if turned in one week late.
+Research report and reproducible script can be submitted up to one week late to the original deadline (exact date in canvas), but they lose 20% of available points. That is, final research report is worth 50 points if turned in on time, but only 40 points if turned in one week late.
 
 ### Final project content
 
